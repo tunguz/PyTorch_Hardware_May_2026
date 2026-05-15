@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State of PyTorch Hardware Acceleration 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .rating-high { background-color: #d1fae5; color: #065f46; border: 1px solid #34d399; }
+        .rating-med-high { background-color: #ecfccb; color: #365314; border: 1px solid #a3e635; }
+        .rating-medium { background-color: #fef3c7; color: #92400e; border: 1px solid #fbbf24; }
+        .rating-med-low { background-color: #ffedd5; color: #9a3412; border: 1px solid #fdba74; }
+        .rating-low { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .rating-na { background-color: #f3f4f6; color: #374151; border: 1px solid #d1d5db; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .citation-link {
+            color: #3b82f6;
+            text-decoration: none;
+            font-size: 0.75em;
+            vertical-align: super;
+            margin-left: 2px;
+            cursor: pointer;
+        }
+        .citation-link:hover {
+            text-decoration: underline;
+        }
+        
+        .sticky-sidebar {
+            position: sticky;
+            top: 6rem;
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+        }
+
+        /* Smooth section transitions */
+        section {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm border-b border-slate-200 z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-microchip text-indigo-600 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-slate-800">PyTorch Hardware 2025</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#matrix" class="hover:text-indigo-600 transition">Decision Matrix</a>
+                    <a href="#compilation" class="hover:text-indigo-600 transition">Compilation</a>
+                    <a href="#kernels" class="hover:text-indigo-600 transition">Kernels</a>
+                    <a href="#cost" class="hover:text-indigo-600 transition">Cost Analysis</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Sidebar Navigation -->
+            <div class="hidden lg:block lg:col-span-3">
+                <div class="sticky-sidebar pr-4">
+                    <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Contents</h5>
+                    <ul class="space-y-3 text-sm border-l border-slate-200 ml-1">
+                        <li><a href="#executive-summary" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">Executive Summary</a></li>
+                        <li><a href="#matrix" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">Decision Matrix</a></li>
+                        <li><a href="#compilation" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">1. Compilation & Runtime</a></li>
+                        <li><a href="#kernels" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">2. Kernel Ecosystem</a></li>
+                        <li><a href="#memory" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">3. Memory & Architecture</a></li>
+                        <li><a href="#developer" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">4. Developer Experience</a></li>
+                        <li><a href="#local-cloud" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">5. Local vs. Cloud</a></li>
+                        <li><a href="#failure-modes" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">6. Critical Failure Modes</a></li>
+                        <li><a href="#cost" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">7. Cost Analysis</a></li>
+                        <li><a href="#recommendation" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">Final Recommendation</a></li>
+                        <li><a href="#references" class="block pl-4 text-slate-600 hover:text-indigo-600 hover:border-l-2 hover:border-indigo-600 -ml-[1px] transition py-1">Works Cited</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-9 space-y-12">
+                
+                <!-- Header -->
+                <header class="border-b border-slate-200 pb-8">
+                    <h1 class="text-4xl font-bold text-slate-900 tracking-tight mb-2">State of PyTorch Hardware Acceleration 2025</h1>
+                    <p class="text-sm text-slate-500 font-mono mb-6">Version 0.2</p>
+                    <h2 class="text-xl text-slate-600 font-light">A Comparative Technical Analysis: NVIDIA CUDA, AMD ROCm, Google TPU (XLA), and Apple Silicon (MPS)</h2>
+                    <p class="text-md text-slate-500 mt-4 font-medium">By Bojan Tunguz</p>
+                </header>
+
+                <!-- Executive Summary -->
+                <section id="executive-summary" class="prose max-w-none text-slate-700">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Executive Summary</h3>
+                    
+                    <p>The landscape of deep learning hardware acceleration has undergone a fundamental structural shift as of 2025. The era of monolithic CUDA dominance has fractured into a heterogeneous ecosystem where architectural decisions can no longer be decoupled from compiler stack maturity. While NVIDIA’s H100 and Blackwell architectures utilizing the CUDA platform remain the operational "gold standard" for immediate stability and broad operator support, significant maturation in AMD’s ROCm stack—specifically the pivot to Triton—and Google’s PyTorch/XLA integration offers viable, and often cost-superior, alternatives for specific workloads. Concurrently, Apple Silicon has carved a distinct, unassailable niche in high-memory local prototyping, though it remains isolated from datacenter training workflows due to fundamental architectural and software capability gaps.</p>
+                    <p class="mt-4">This report delivers a rigorous technical evaluation of PyTorch support across these four platforms. It serves as a strategic guide for hardware architects and systems engineers tasked with standardizing infrastructure for Large Language Model (LLM) and Vision Transformer (ViT) lifecycles, ranging from local prototyping on MacBook Pros to cluster-scale training on dedicated accelerators.</p>
+                </section>
+
+                <!-- Matrix Visual -->
+                <section id="matrix" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 overflow-hidden">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-table-cells text-indigo-500"></i> Executive Decision Matrix
+                    </h3>
+                    <p class="text-sm text-slate-600 mb-6">The following matrix synthesizes the technical maturity of each platform for PyTorch 2.5+ workflows. Ratings are derived from a deep analysis of compiler stack stability, kernel availability, developer friction, and total cost of ownership (TCO).</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-slate-200">
+                                    <th class="p-4 font-semibold text-slate-700">Feature / Platform</th>
+                                    <th class="p-4 font-semibold text-slate-700 min-w-[200px]">NVIDIA CUDA<br><span class="text-xs text-slate-500 font-normal">(H100/Blackwell)</span></th>
+                                    <th class="p-4 font-semibold text-slate-700 min-w-[200px]">AMD ROCm 6.x/7.0<br><span class="text-xs text-slate-500 font-normal">(MI300X/355X)</span></th>
+                                    <th class="p-4 font-semibold text-slate-700 min-w-[200px]">Google TPU<br><span class="text-xs text-slate-500 font-normal">(v5p/Trillium)</span></th>
+                                    <th class="p-4 font-semibold text-slate-700 min-w-[200px]">Apple Silicon<br><span class="text-xs text-slate-500 font-normal">(M3/M4)</span></th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">Compiler Maturity</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">High (Baseline)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-med-high">Medium-High (Rapidly improving)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-medium">Medium (XLA quirks)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-low">Low (Limited Inductor)</span></td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">torch.compile Stability</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">High (Inductor + Triton)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-medium">Medium (Triton/CK WIP)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-med-low">Medium-Low (Graph breaks)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-low">Low (CPU fallbacks)</span></td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">FlashAttention-3</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">Native (Day 0)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-med-low">Lagging (CK/Triton WIP)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-na">N/A (Pallas kernels)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-na">N/A (SDPA/FlexAttn)</span></td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">FP8/FP4 Support</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">Native (FP8/NVFP4)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">Native (Hardware + Quark)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">Native (XLA formatting)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-low">No (Emulated/Upcast)</span></td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">Distributed Stack</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">High (NVLink/SHARP)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-medium">Medium (RCCL Parity Issues)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">High (ICI/XLA Mesh)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-low">Low (Gloo only)</span></td>
+                                </tr>
+                                <!-- Row 6 -->
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">Debugging Ease</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">High (Nsight)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-medium">Medium (Omnitrace)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-med-low">Medium-Low (XLA metrics)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-medium">Medium (Metal Trace)</span></td>
+                                </tr>
+                                <!-- Row 7: Split TCO -->
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">Unit Cost (Price)</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-med-high">High (Parity)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-med-high">High (Parity)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">Low (Aggressive)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-medium">High (Device Cost)</span></td>
+                                </tr>
+                                <!-- Row 8: Cost Efficiency -->
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">Cost Efficiency<br><span class="text-xs text-slate-500 font-normal">(Perf/$ & Perf/W)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-high">High (General ROI)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-med-high">High (Memory-bound)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-med-high">High (Static Shapes)</span></td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded-full text-xs font-semibold rating-med-high">High (Local Inference)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section 1 -->
+                <section id="compilation" class="prose max-w-none text-slate-700">
+                    <h3 class="text-2xl font-bold text-slate-900">1. Deep Dive: The Compilation & Runtime Stack Analysis</h3>
+                    <p>The introduction of PyTorch 2.0 and the <code>torch.compile</code> API fundamentally altered the interaction between the framework and hardware backends. The reliance on <strong>TorchDynamo</strong> (graph capture) and <strong>TorchInductor</strong> (compiler) signifies that hardware vendors can no longer simply optimize individual eager-mode kernels; they must support a complete, vertically integrated compiler stack. The efficacy of a platform in 2025 is largely determined by how well it services the Inductor-Triton pipeline.</p>
+                    
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">1.1 NVIDIA CUDA: The Inductor & Triton Baseline</h4>
+                    <p>On NVIDIA hardware (H100, Blackwell), <code>torch.compile</code> functions as the reference implementation against which all others are judged. The stack is vertically integrated: Dynamo captures the Python bytecode with minimal graph breaks, Inductor lowers the FX graph into Triton kernels, and Triton compiles directly to PTX (Parallel Thread Execution) assembly. This bypasses standard CUDA C++ complexities for element-wise and fusion operations, granting Python developers "close-to-metal" performance.</p>
+                    <p><strong>2025 Status:</strong><br>
+                    The ecosystem has moved beyond basic support into advanced optimization. PyTorch 2.5 introduced FlexAttention, an API leveraging <code>torch.compile</code> to generate fused FlashAttention kernels automatically using Triton.<a href="#ref-1" class="citation-link">[1]</a> This allows users to implement sliding window, causal mask, or prefix LM attention in pure Python, which the compiler fuses into a single efficient kernel. NVIDIA's advantage here is structural: Triton was originally designed for CUDA, ensuring that heuristics for warp scheduling, shared memory allocation, and memory coalescing are mature and aggressive by default. The support for Symmetric Memory in PyTorch 2.5 further optimizes multi-GPU kernels on NVLink-connected H100 clusters, reducing communication overhead in distributed training by enabling direct loads/stores from remote GPU memory without explicit send/recv semantics.<a href="#ref-3" class="citation-link">[3]</a></p>
+                    <p>The <code>torch.compile</code> stack on CUDA is also the only one to fully support <strong>Regional Compilation</strong> without recompilation, a feature introduced in PyTorch 2.5 to reduce cold start times for repeated <code>nn.Module</code> patterns, such as Transformer layers.<a href="#ref-2" class="citation-link">[2]</a> This capability is critical for reducing the "time-to-first-step" in large-scale training runs, a metric where NVIDIA maintains a distinct lead.</p>
+
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">1.2 AMD ROCm: The Struggle for Triton Parity</h4>
+                    <p>AMD's strategy for PyTorch 2.5+ relies heavily on achieving parity with NVIDIA's Triton support. Historically, AMD relied on HIP (Heterogeneous-Compute Interface for Portability) to "hipify" CUDA code—a source-to-source translation layer. However, the future is Triton. By optimizing the Triton backend for AMDGCN ISA, AMD theoretically allows any <code>torch.compile</code> model to run performantly on MI300X without code changes.</p>
+                    
+                    <div class="bg-amber-50 border-l-4 border-amber-400 p-4 my-4">
+                        <p class="font-semibold text-amber-800 mb-1">ROCm 6.2/7.0 Analysis:</p>
+                        <p class="text-sm text-amber-900">The transition is promising but incomplete. As of ROCm 7.0, <code>torch.compile</code> with the Triton backend is functional for many workloads but lacks the aggressive autotuning maturity found on CUDA.<a href="#ref-4" class="citation-link">[4]</a></p>
+                    </div>
+
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Triton on ROCm:</strong> AMD has invested heavily in the Triton backend. However, heuristics that work for NVIDIA's warp size (32 threads) often fail to fully saturate AMD's wavefront size (64 threads), leading to sub-optimal occupancy unless manually tuned.</li>
+                        <li><strong>Composable Kernel (CK):</strong> For operations where Triton is not yet performant or functionally complete (e.g., complex FlashAttention variants), AMD relies on Composable Kernel (CK), a C++ template library similar to NVIDIA's CUTLASS. PyTorch on ROCm currently uses a hybrid approach: using CK for critical monolithic ops like FlashAttention-2 and Triton for point-wise fusions.<a href="#ref-5" class="citation-link">[5]</a> This hybrid model introduces "glue code" fragility.</li>
+                        <li><strong>Stability:</strong> Users report that while "hello world" works, complex dependency chains often break. Installing FlashAttention usually requires specific, often forked, versions of the library rather than a simple pip install. The "dependency hell" of matching <code>pytorch-triton-rocm</code> versions with the underlying ROCm driver remains a significant friction point.<a href="#ref-6" class="citation-link">[6]</a></li>
+                        <li><strong>AOTriton:</strong> The integration of <strong>AOTriton</strong> in ROCm 7.0 aims to solve compilation jitter by pre-compiling common kernels, reducing runtime latency.<a href="#ref-8" class="citation-link">[8]</a> This acts as a bridge solution while the dynamic JIT capabilities of the Triton backend mature.</li>
+                    </ul>
+                    <p class="mt-2"><strong>Insight:</strong> AMD is effectively trying to bypass the "CUDA Moat" by optimizing for Triton. If they succeed, developers writing Triton kernels (or relying on Inductor) will theoretically see portability for free. However, in 2025, the "out-of-the-box" experience still lags, often requiring manual intervention in compiler flags or Docker container selection.<a href="#ref-6" class="citation-link">[6]</a></p>
+
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">1.3 Google TPU: The XLA Bridge & Graph Breaks</h4>
+                    <p>TPUs do not use the Triton/Inductor stack. Instead, they rely on <strong>PyTorch/XLA</strong>, which bridges PyTorch operations to the XLA (Accelerated Linear Algebra) compiler. The interaction model here is fundamentally different: "Lazy Tensors."</p>
+                    <p><strong>The "Lazy Tensor" Problem:</strong> PyTorch/XLA operates on a lazy execution model where operations are recorded into a graph and only executed when a result is strictly needed (e.g., printing a value, saving a checkpoint, or a <code>.item()</code> call).</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Efficiency:</strong> When it works, XLA fuses operations aggressively, often outperforming hand-written CUDA kernels for massive batch sizes due to the compiler's ability to see the entire graph scope.</li>
+                        <li><strong>Graph Breaks:</strong> The critical failure mode in 2025 remains "graph breaks." If PyTorch code contains dynamic control flow (Python if/else based on tensor data) or operations XLA cannot trace, the execution falls back to the CPU, triggers a compilation, and then resumes. This "context switch" destroys performance.<a href="#ref-9" class="citation-link">[9]</a></li>
+                        <li><strong>Dynamo Bridge:</strong> The new <code>torch_xla</code> bridge for Dynamo (beta in 2025) attempts to mitigate this by using Dynamo's guard system to capture graphs more robustly than the legacy lazy tensor tracing.<a href="#ref-11" class="citation-link">[11]</a> This allows for <code>torch.compile(backend='openxla')</code>, which provides a more "PyTorch-native" feel. However, debugging a model that constantly recompiles on TPU v5p remains a high-friction activity compared to eager-mode debugging on GPUs. The compilation time on TPU can be significant (minutes), meaning an iterative "fix-run-fix" loop is much slower than on CUDA.<a href="#ref-9" class="citation-link">[9]</a></li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">1.4 Apple Silicon (MPS): The Inference Island</h4>
+                    <p>The Metal Performance Shaders (MPS) backend has matured significantly but remains fundamentally different from the datacenter stacks. Apple's "graph" approach is MPSGraph, which is distinct from XLA or Triton.</p>
+                    <p><strong>Inductor on Metal:</strong> As of PyTorch 2.5, <code>torch.compile</code> support for MPS is still in early stages compared to CUDA. Apple has not fully embraced the Triton stack, as Triton generates PTX (NVIDIA) or AMDGCN (AMD). Instead, Apple relies on its own Metal shading language (MSL).</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Execution:</strong> Most users run in Eager Mode on MPS. While performance is adequate for inference, the lack of a mature compiler stack means complex fusions (like those in <code>torch.compile</code>) often fallback to CPU or run as unfused generic Metal kernels.<a href="#ref-13" class="citation-link">[13]</a></li>
+                        <li><strong>The MLX Factor:</strong> The existence of Apple's separate framework, <strong>MLX</strong>, creates a fragmentation risk. MLX features a lazy computation graph similar to JAX but optimized specifically for Apple's Unified Memory and Neural Engine.<a href="#ref-14" class="citation-link">[14]</a> Benchmarks consistently show MLX outperforming PyTorch MPS on identical hardware for LLM inference (up to 2-3x faster generation). For a PyTorch engineer, this presents a dilemma: the best performance on Mac often requires leaving the PyTorch ecosystem, which breaks the "write once, run anywhere" ideal of the PyTorch prototyping workflow.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 2 -->
+                <section id="kernels" class="prose max-w-none text-slate-700">
+                    <h3 class="text-2xl font-bold text-slate-900">2. Kernel Ecosystem & Operator Coverage</h3>
+                    <p>The "software gap" is most visible when moving beyond standard matrix multiplications into specialized operators required for state-of-the-art LLMs. The availability of optimized kernels for Attention and Quantization is often the deciding factor for hardware viability.</p>
+                    
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">2.1 The "FlashAttention" Test</h4>
+                    <p>FlashAttention (FA) is the benchmark for accelerator sufficiency. It reduces memory complexity from quadratic to linear and is essential for long-context LLMs.</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>NVIDIA (H100 & B200):</strong> FlashAttention-3 is native. On the <strong>H100 (Hopper)</strong>, it leverages asynchronous copy engines (TMA) and WGMMA instructions to overlap data movement with computation entirely. The <strong>B200 (Blackwell)</strong> inherits this "Day 0" support while adding hardware acceleration for even lower precision formats in the attention mechanism. Installation is trivial via standard wheels.<a href="#ref-5" class="citation-link">[5]</a></li>
+                        <li><strong>AMD (MI300X):</strong> Support exists but is complex. AMD uses a specific fork or the Composable Kernel (CK) backend. While FA-2 is supported, FA-3 (Hopper specific optimizations) is not directly translatable. The sliding window attention (SWA) and other variants often lack Triton support on ROCm, forcing users to rely on the CK backend which may have different performance characteristics or bugs.<a href="#ref-16" class="citation-link">[16]</a>
+                        <br><em>Insight:</em> The MI300X has raw hardware capability (matrix cores) to run FA efficiently, but the software glue is fragile. Reports indicate that <code>pip install flash-attn</code> often fails on ROCm without specific build flags or pre-built Docker containers.<a href="#ref-18" class="citation-link">[18]</a> The "official" Dao-AILab repo has ROCm support, but it is often versions behind the CUDA release.</li>
+                        <li><strong>TPU (v5p):</strong> XLA has its own attention implementations, often referred to as Pallas kernels. While efficient, they are not "FlashAttention" in the strictly compatible sense. Porting a model hardcoded for <code>flash_attn</code> libraries to TPU requires code changes to use <code>torch.nn.functional.scaled_dot_product_attention</code> (SDPA), which XLA then lowers to its own fused kernel.<a href="#ref-8" class="citation-link">[8]</a> This breaks the "drop-in replacement" promise for research codebases heavily optimized for CUDA FA interfaces.</li>
+                        <li><strong>Apple (MPS):</strong> Native FlashAttention support is absent in the strict sense. MPS relies on Apple's implementation of SDPA. While functional, it does not support the advanced features of FA2/FA3 (like variable sequence lengths in a single batch without padding) as efficiently as the CUDA implementation. FlexAttention (prototype) allows some custom attention patterns, but performance on Metal is not comparable to dedicated tensor cores.<a href="#ref-2" class="citation-link">[2]</a></li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">2.2 Quantization: The FP8 and INT4 Frontier</h4>
+                    <p><strong>FP8 and FP4 Support:</strong></p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>NVIDIA (H100 & B200):</strong> The H100 established FP8 as the training standard. The <strong>B200 (Blackwell)</strong> pushes the frontier with native <strong>FP4 Tensor Cores</strong>, effectively doubling throughput and halving memory usage compared to FP8. PyTorch 2.5+ supports these formats via `torchao` and Transformer Engine, though robust FP4 training typically requires the new Micro-Scaling (MX) formats to manage dynamic range.<a href="#ref-44" class="citation-link">[44]</a><a href="#ref-48" class="citation-link">[48]</a></li>
+                        <li><strong>AMD (MI300X):</strong> Native FP8 support is robust, enabled via Quark and updated libraries like hipBLASLt. While the MI300X lacks the dedicated FP4 hardware engines found in Blackwell, AMD focuses on maximizing FP8 throughput for both training and inference.<a href="#ref-16" class="citation-link">[16]</a></li>
+                        <li><strong>TPU:</strong> Native support for low precision (BF16/INT8) is strong; FP8 is supported on v5p/Trillium.<a href="#ref-20" class="citation-link">[20]</a> The XLA compiler handles the layout transformations automatically, often making it easier to use than on GPUs where explicit casting is sometimes required.</li>
+                        <li><strong>Apple:</strong> No native hardware support for FP8 or FP4 training. FP16/BF16 is the standard. FP8 operations are emulated (upcast to BF16), which negates the performance benefit.</li>
+                    </ul>
+                    <p class="mt-2"><strong>INT4/Quantization on Apple:</strong><br>
+                    This is Apple's stronghold. The unified memory architecture allows loading massive quantized models (e.g., Llama-3-70B in 4-bit) into RAM.<br>
+                    <em>MLX vs. PyTorch:</em> MLX provides seamless 4-bit quantization. PyTorch MPS support for INT4 is catching up via <code>torchao</code>, allowing native int4 weight-only quantization.<a href="#ref-21" class="citation-link">[21]</a> However, benchmarks suggest MLX still holds a performance edge in decoding speed and memory bandwidth utilization for quantized models.<a href="#ref-15" class="citation-link">[15]</a> For a researcher wanting to run a 70B model on a laptop, MLX is the superior runtime, while PyTorch/MPS remains a second-class citizen for quantized inference speed.</p>
+
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">2.3 Missing Operators and Fallbacks</h4>
+                    <p>One of the most insidious performance killers is the "silent CPU fallback."</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>ROCm:</strong> While operator coverage has improved drastically (claiming almost full parity), edge cases in complex linear algebra (e.g., certain sparse matrix operations or FFTs) can still trigger fallbacks or compilation errors.<a href="#ref-6" class="citation-link">[6]</a></li>
+                        <li><strong>MPS:</strong> The MPS backend is stricter than CUDA. It lacks support for <code>float64</code> (double precision) entirely. If a model tries to allocate a float64 tensor, PyTorch throws a runtime error or silently keeps it on CPU.<a href="#ref-24" class="citation-link">[24]</a> This makes migration of scientific computing code or older models (which might use double precision for stability) painful. Furthermore, operations like <code>torch.istft</code> (Inverse Short-Time Fourier Transform) have only recently gained support or rely on imperfect implementations.<a href="#ref-1" class="citation-link">[1]</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section 3 -->
+                <section id="memory" class="prose max-w-none text-slate-700">
+                    <h3 class="text-2xl font-bold text-slate-900">3. Memory & Architecture Nuances</h3>
+                    
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">3.1 Unified Memory (Apple) vs. HBM3 (Datacenter)</h4>
+                    <p>The critical distinction for 2025 is <strong>Capacity vs. Bandwidth</strong>. This trade-off dictates the utility of each platform.</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Apple M4:</strong> With up to 512GB of Unified Memory, a single Mac Studio can hold a 405B parameter model (quantized). This is physically impossible on a single H100 (80GB).<br>
+                        <em>Implication:</em> For <strong>inference</strong> of massive models by a single researcher, the Mac is superior to a single H100. It democratizes access to "super-sized" models without needing a cluster.</li>
+                        <li><strong>Bottleneck:</strong> Bandwidth. The M3/M4 Ultra memory bandwidth (~800 GB/s) pales in comparison to H100's HBM3 (3.35 TB/s) or MI300X's HBM3 (5.3 TB/s).<a href="#ref-26" class="citation-link">[26]</a> Token generation on Mac will be significantly slower (tokens per second), but it <em>will run</em>, whereas it would OOM (Out Of Memory) on a discrete GPU.</li>
+                        <li><strong>Real-World Impact:</strong> A 70B model might generate at 10 tokens/sec on an M3 Ultra, while an H100 might do 100+ tokens/sec. For prototyping, 10 t/s is acceptable. For serving, it is not.</li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">3.2 Scale-Up and Scale-Out Networking</h4>
+                    <p>When a single GPU is insufficient, the interconnect topology becomes the bottleneck. It is crucial to distinguish between <strong>Scale-Up</strong> (increasing capacity within a node/rack via shared memory) and <strong>Scale-Out</strong> (connecting thousands of nodes via network fabric).</p>
+                    
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Scale-Up (NVLink & Infinity Fabric):</strong> These technologies create "super-nodes" where multiple GPUs (e.g., 8 to 72) act as a single logical device with shared memory semantics.
+                            <br><em>NVIDIA NVLink:</em> The industry benchmark. NVLink 4.0/5.0 provides 900 GB/s to 1.8 TB/s bidirectional bandwidth. This enables massive <strong>Model Parallelism</strong> (tensor slicing) across a rack (GB200 NVL72) with minimal latency penalties. In PyTorch, this manifests as near-linear scaling for `torch.distributed.all_reduce` operations using the <strong>NCCL</strong> backend.<a href="#ref-54" class="citation-link">[54]</a>
+                            <br><em>AMD Infinity Fabric:</em> Used for chiplet interconnects and socket-to-socket communication. While providing coherent memory access between CPU and GPU, its raw GPU-to-GPU bandwidth trails NVLink in large-scale topologies. However, AMD's architecture allows unique capabilities: for example, a DLRM embedding table exceeding GPU VRAM can reside in host memory and be accessed directly by the GPU kernel via coherent links with zero-copy overhead.<a href="#ref-56" class="citation-link">[56]</a>
+                        </li>
+                        <li><strong>Scale-Out (InfiniBand & Spectrum-X):</strong> These technologies connect the "super-nodes" to form a datacenter-scale cluster.
+                            <br><em>NVIDIA Spectrum-X (Ethernet) & Quantum-X800 (InfiniBand):</em> These are the fabrics that handle data parallelism across thousands of GPUs. Spectrum-X brings InfiniBand-like quality of service to standard Ethernet. For PyTorch developers using `torch.distributed.fsdp`, this reduces the variance in `ProcessGroupNCCL` timeout errors caused by "noisy neighbor" packet drops in multi-tenant clouds.<a href="#ref-55" class="citation-link">[55]</a>
+                            <br><em>Google ICI:</em> A dedicated low-latency mesh network exclusive to TPUs. Unlike the flexible NCCL backend, ICI relies on the `torch_xla` distributed backend to handle rigid GSPMD sharding patterns.<a href="#ref-31" class="citation-link">[31]</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Section 4 -->
+                <section id="developer" class="prose max-w-none text-slate-700">
+                    <h3 class="text-2xl font-bold text-slate-900">4. Developer Experience (Friction Analysis)</h3>
+                    
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">4.1 Installation & Setup</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>CUDA:</strong> <code>pip install torch</code>. It works. The container ecosystem is mature. NVIDIA's containers on NGC (NVIDIA GPU Cloud) are the standard reference.</li>
+                        <li><strong>ROCm:</strong> Improved, but often requires <code>pip install --index-url https://download.pytorch.org/whl/rocm6.x</code>. The primary friction is the dependency on the underlying OS driver. While CUDA has good forward compatibility (old drivers run new CUDA toolkit), ROCm is more sensitive. Docker is strongly recommended to avoid system library conflicts (the "dependency hell" of libstdc++ versions).<a href="#ref-6" class="citation-link">[6]</a></li>
+                        <li><strong>TPU:</strong> Requires <code>torch_xla</code> installation. Environment is usually pre-configured in Google Cloud TPU VMs. Local development is impossible; you must develop on the cloud VM. This "remote-only" development loop introduces latency in the "edit-run-debug" cycle.<a href="#ref-32" class="citation-link">[32]</a></li>
+                        <li><strong>Apple Silicon:</strong> <code>pip install torch</code>. It is seamless. Support is bundled in the standard PyTorch wheel. Unlike ROCm or CUDA, there are no drivers to manage manually; they are part of macOS. This enables the "zero-setup" local environment that makes the Mac so popular for prototyping.</li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">4.2 Debugging Tools: The "War Stories" Reality</h4>
+                    <p class="text-sm text-slate-600 italic mb-4">When a kernel crashes or loss diverges, the quality of the debugger determines if you fix it in 5 minutes or 5 days. Here is the developer reality in 2025:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>NVIDIA (The "Easy" Mode):</strong> <strong>Nsight Systems</strong> remains the gold standard because it speaks PyTorch natively. The integration with `torch.autograd.profiler.record_function` means you see Python context ("Layer 3 Attention") aligned perfectly with GPU kernel execution in the timeline. When a CUDA kernel crashes, Nsight usually identifies the exact block and thread index, making root-cause analysis straightforward.<a href="#ref-33" class="citation-link">[33]</a></li>
+                        <li><strong>AMD (The Detective Mode):</strong> Users report that while <strong>Omnitrace</strong> is powerful, the setup friction is high (kernel module permissions, environment variables). A common complaint is the "binary dump" feeling—getting a raw profile that requires significant post-processing to interpret. Unlike NVIDIA's polished GUI, developers often feel like they are "debugging in the dark," relying on printf debugging inside kernels to trace segmentation faults that lack clear stack traces.<a href="#ref-6" class="citation-link">[6]</a></li>
+                        <li><strong>Google TPU (The Black Box):</strong> The fundamental disconnect here is structural: you debug the <em>graph construction</em>, not the execution. If XLA crashes during compilation or hangs, the stack trace points to the compiler IR, not your PyTorch code. Developers describe a painful "comment-out-and-pray" loop to isolate the specific operator causing a graph break or performance regression.<a href="#ref-32" class="citation-link">[32]</a></li>
+                        <li><strong>Apple (The Silent Killer):</strong> The most critical user complaint is the "Silent NaN". Because MPS is less strict about floating-point exceptions than CUDA, a model can train for hours producing garbage values before you notice. Debugging tools like <strong>Metal System Trace</strong> are excellent for graphics but lack deep learning context (tensor shapes/names). Enabling `torch.autograd.detect_anomaly` on MPS often slows execution by 100x, making it practically unusable for large models.<a href="#ref-37" class="citation-link">[37]</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section 5 -->
+                <section id="local-cloud" class="prose max-w-none text-slate-700">
+                    <h3 class="text-2xl font-bold text-slate-900">5. Local vs. Cloud Delineation: The "MacBook to Blackwell" Workflow</h3>
+                    <p>A common workflow is prototyping on a MacBook Pro (M3/M4) and moving to a cloud cluster for training. In the era of A100s, this was difficult. In the era of <strong>Blackwell (B200)</strong>, it has become architecturally hazardous. The "isomorphic" assumption—that your local code will behave identically to the cloud code—is now fundamentally broken by new hardware precision and scale-up topologies.</p>
+                    
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">5.1 The Precision Chasm: NVFP4 vs. MPS</h4>
+                    <p>The defining feature of the Blackwell generation is the <strong>NVFP4 Tensor Core</strong>. This hardware primitive allows 4-bit floating point inference and training, doubling throughput and halving memory footprint compared to FP8. Apple Silicon has no equivalent hardware.</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>The Emulation Trap:</strong> While you can use `torchao` to simulate low-bit quantization (Int4 or FP4) on a Mac, MPS executes these as emulated operations (often upcast to BF16 or Float32 for computation). This creates a dangerous "correctness gap." A model might converge numerically on Mac (because it uses higher precision math under the hood) but diverge or explode when running on real B200 NVFP4 hardware due to limited dynamic range.<a href="#ref-46" class="citation-link">[46]</a></li>
+                        <li><strong>Development Blindspot:</strong> You cannot profile performance locally. An FP4 kernel on Blackwell relies on specific memory alignment and tensor layouts. Optimizing a custom kernel on Mac Metal is useless for B200 performance tuning.</li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">5.2 The Interconnect Cliff: NVLink Switch vs. Local</h4>
+                    <p><strong>Rack-Scale vs. Node-Scale:</strong> The B200 is rarely deployed as a single chip. The standard unit of compute is the <strong>GB200 NVL72</strong>—a rack of 72 GPUs connected via NVLink Switch acting as a single massive accelerator. </p>
+                    <p><strong>Impact on Logic:</strong> Distributed training logic on a Mac (using `backend="gloo"`) is completely isolated from the realities of the NVLink Switch domain.</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Collective Primitives:</strong> On GB200, primitives like `all_reduce` or `reduce_scatter` happen over the switch fabric at 1.8 TB/s. On Mac, they happen over CPU/RAM. Prototyping complex "Sequence Parallelism" or "Context Parallelism" strategies locally is now functionally impossible because the communication latency ratios are off by orders of magnitude.<a href="#ref-44" class="citation-link">[44]</a></li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-semibold text-slate-800 mt-6">5.3 Algorithmic Drift: RNG & Stochastic Rounding</h4>
+                    <p>In low-precision regimes (FP8/FP4), standard "round-to-nearest" operations cause gradient stagnation. <strong>Stochastic Rounding</strong> is required for convergence.</p>
+                    <p><strong>The Drift:</strong> NVIDIA's Transformer Engine hardware implements specific stochastic rounding probabilities. MPS does not mirror this exactly. Even with identical seeds (`torch.manual_seed`), the *numerical path* of training will diverge immediately. Debugging a loss spike on a Mac that occurred on step 10,000 of a B200 run is mathematically futile; the accumulation errors are distinct to the hardware architecture.<a href="#ref-47" class="citation-link">[47]</a></p>
+                </section>
+
+                <!-- Section 6 -->
+                <section id="failure-modes" class="bg-red-50/50 rounded-xl border border-red-100 p-6 overflow-hidden">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-red-500"></i> 6. Critical Failure Modes: The Next-Gen Cliff (2025-2026)
+                    </h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left">
+                            <thead>
+                                <tr class="bg-red-100 border-b border-red-200 text-red-900">
+                                    <th class="p-4 font-semibold">Platform</th>
+                                    <th class="p-4 font-semibold">Known Failure Mode</th>
+                                    <th class="p-4 font-semibold">Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-red-100 bg-white">
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">NVIDIA Blackwell (B200)</td>
+                                    <td class="p-4 text-slate-700">MXFP4 Quantization Noise</td>
+                                    <td class="p-4 text-slate-600">The Blackwell architecture defaults to Micro-Scaling (MX) formats for FP4. Training runs migrated from H100 (FP8) can experience loss divergence because standard `torch.cuda.amp.GradScaler` logic does not account for the limited dynamic range of FP4 without specialized `torchao` floating-point format adjustments.<a href="#ref-48" class="citation-link">[48]</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">GB200 NVL72 (Rack Scale)</td>
+                                    <td class="p-4 text-slate-700">Rack-Level Straggler Propagation</td>
+                                    <td class="p-4 text-slate-600">In the 72-GPU NVLink domain, the entire rack acts as a single clock-synchronous domain. A single GPU hitting thermal limits throttles the <strong>entire rack</strong> to the slowest chip's speed, causing massive throughput drops (up to 40%) visible in `torch.profiler` as extended collective wait times.<a href="#ref-49" class="citation-link">[49]</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">AMD MI355X (CDNA 4)</td>
+                                    <td class="p-4 text-slate-700">Triton Tuning Lag</td>
+                                    <td class="p-4 text-slate-600">While MI300X support is mature, the MI355X architectural changes (CDNA 4) break existing Triton heuristics optimized for CDNA 3. `torch.compile` kernels may silently degrade by 30-50% vs. hand-written HIP kernels until the Triton backend is updated.<a href="#ref-6" class="citation-link">[6]</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">Google TPU (v5p)</td>
+                                    <td class="p-4 text-slate-700">Mesh Desynchronization</td>
+                                    <td class="p-4 text-slate-600">In large Pods, a single straggler chip stalls the entire synchronous GSPMD mesh. In PyTorch/XLA, this manifests as blocking `XM.mark_step()` calls taking significantly longer than expected, halting the entire training loop across thousands of chips.<a href="#ref-9" class="citation-link">[9]</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-medium text-slate-900">Apple Silicon (M4 Ultra)</td>
+                                    <td class="p-4 text-slate-700">Unified Memory Swap Death</td>
+                                    <td class="p-4 text-slate-600">The M4 Ultra's 512GB limit is hard. Exceeding it by even 1GB pushes tensors to the SSD swap file. Unlike CUDA OOM errors which halt execution, macOS attempts to swap, dropping inference speed from 20 t/s to 0.01 t/s, effectively hanging the process indefinitely.<a href="#ref-13" class="citation-link">[13]</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section 7 -->
+                <section id="cost" class="space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-900">7. Cost Analysis & Efficiency Metrics (2025 Edition)</h3>
+                    <p class="text-slate-700">In the post-H100 era, raw "dollars per hour" is a deceptive metric. The analysis must pivot to <strong>System Efficiency</strong> (Performance/Watt at Rack Scale), <strong>Time-to-Convergence</strong>, and <strong>Model FLOPs Utilization (MFU)</strong>.</p>
+
+                    <!-- Chart Container -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h4 class="text-lg font-semibold text-slate-800 mb-4 text-center">Effective Training Cost (Adjusted for MFU & Convergence)</h4>
+                        <div class="h-64 sm:h-80 w-full">
+                            <canvas id="costChart"></canvas>
+                        </div>
+                        <p class="text-xs text-center text-slate-500 mt-2">"Effective Cost" normalizes hourly price by typical MFU rates (e.g., 60% for H100, 45% for TPU) and FP4 speedups.</p>
+                    </div>
+
+                    <div class="prose max-w-none text-slate-700">
+                        <!-- 7.1 Local/Edge Inference -->
+                        <h4 class="text-xl font-semibold text-slate-800">7.1 Local/Edge Inference (Prototyping)</h4>
+                        <p class="text-sm mb-2 text-slate-600">The "Local" category has bifurcated into "Luxury Prototyping" (Apple), "Budget Linux Dev" (Consumer AMD), and "Kernel Correctness" (Pro NVIDIA).</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Mac Studio (M4 Ultra):</strong> The defining advantage is <strong>Unified Memory (up to 512GB)</strong>. This allows a single machine to load a quantized <strong>Llama-3-405B</strong> (requiring ~230GB VRAM at 4-bit) for inference. While generation speed is modest (~8-10 tokens/sec for 70B models), it is the <em>only</em> way to run frontier models locally without a $30k+ cluster. New <strong>ExecuTorch</strong> support optimizes PyTorch export to Core ML, further reducing latency for edge deployment.<a href="#ref-62" class="citation-link">[62]</a></li>
+                            <li><strong>NVIDIA RTX 6000 Ada (Workstation):</strong> The "Gold Standard" for kernel development. With 48GB VRAM and exact architectural parity with datacenter H100s (Hopper/Ada ISA similarities), it is indispensable for engineers writing custom CUDA/Triton kernels who need to verify numerical correctness before deploying to the cloud.</li>
+                            <li><strong>AMD Radeon RX 7900 XTX (Linux):</strong> The budget champion for Linux-based researchers. For under $1,000, developers get <strong>24GB VRAM</strong>. With ROCm 6.2 on Linux, PyTorch stability is now "production-grade" for inference. It serves as a viable, low-cost entry point for testing Triton kernels (albeit with different warp sizes) before scaling to MI300X clusters.<a href="#ref-63" class="citation-link">[63]</a></li>
+                        </ul>
+
+                        <!-- 7.2 Datacenter Inference -->
+                        <h4 class="text-xl font-semibold text-slate-800 mt-4">7.2 Datacenter Inference (High QPS)</h4>
+                        <p class="text-sm mb-2 text-slate-600">The battle here is <strong>Throughput vs. Capacity vs. Efficiency</strong>.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>NVIDIA B200 (Blackwell):</strong> The throughput monster. Delivering <strong>20 PFLOPS</strong> of FP4 tensor compute (vs. H100's ~4 PFLOPS FP8), it enables a 4x throughput increase for models trained with Micro-Scaling (MX) formats. This drastically lowers the "Cost per Million Tokens" for serving popular open-weights models like Llama-3-70B, effectively offsetting the higher hourly rental price.<a href="#ref-64" class="citation-link">[64]</a></li>
+                            <li><strong>AMD MI325X:</strong> The memory capacity play. With <strong>288GB HBM3e</strong> (vs B200's 192GB), it is purpose-built for RAG (Retrieval Augmented Generation). A single MI325X can serve a Llama-3-70B model with a <strong>128k context window</strong> batch size that would require two B200s (due to KV cache memory pressure). For memory-bound workloads, this offers superior economics.<a href="#ref-65" class="citation-link">[65]</a></li>
+                            <li><strong>Google TPU v5e:</strong> The efficiency specialist. While v5p chases training speed, <strong>TPU v5e</strong> is optimized specifically for transformer inference and small-scale training. Google claims up to 2.5x performance-per-dollar improvement over v4 for inference workloads, making it a highly attractive option for serving mid-sized models (8B-70B) where latency SLAs are flexible but cost is paramount.<a href="#ref-67" class="citation-link">[67]</a></li>
+                        </ul>
+
+                        <!-- 7.3 Cluster Training -->
+                        <h4 class="text-xl font-semibold text-slate-800 mt-4">7.3 Cluster Training & MFU Economics</h4>
+                        <p class="text-sm mb-2"><strong>The "Communication Tax":</strong> Raw TFLOPS don't train models; <strong>MFU (Model FLOPs Utilization)</strong> does.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>NVIDIA H100/B200 (The SHARP Advantage):</strong> H100 clusters typically achieve <strong>60-70% MFU</strong> on GPT-style workloads. A key contributor is <strong>SHARP</strong> (Scalable Hierarchical Aggregation and Reduction Protocol), which offloads collective operations (like All-Reduce) to the NVLink Switches themselves. This frees up the GPU SMs to keep computing gradients, minimizing the "communication tax" that usually kills scaling efficiency on huge clusters.<a href="#ref-57" class="citation-link">[57]</a></li>
+                            <li><strong>AMD MI300X (Capacity vs. Interconnect):</strong> While raw compute is competitive, MFU often trails NVIDIA (typically <strong>45-55%</strong>) in large clusters due to the lack of in-network reduction hardware equivalent to SHARP. However, the <strong>192GB VRAM</strong> allows for larger local batch sizes, which increases arithmetic intensity and can partially mask communication latency. For cost-sensitive training where "time-to-market" is less critical than "cost-to-convergence," this is a viable trade-off.<a href="#ref-68" class="citation-link">[68]</a></li>
+                            <li><strong>Google TPU v5p (The XLA Trade-off):</strong> TPU Pods often run at <strong>~50-55% MFU</strong> for dynamic PyTorch workloads due to XLA graph recompilations ("graph breaks"). However, for <em>static</em> shapes (e.g., fixed sequence length pre-training), they are incredibly efficient per watt. The cost argument here is that even with lower MFU, the significantly lower unit price (~$2.80/hr vs ~$4.50/hr for B200) yields a better "Training Cost per Epoch."<a href="#ref-66" class="citation-link">[66]</a></li>
+                            <li><strong>Time-to-Convergence:</strong> Numerical stability (Section 6) matters. An FP4 run on B200 might take 20% more steps to converge than an FP8 run on H100 due to gradient noise, eroding some of the throughput gains.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Recommendation -->
+                <section id="recommendation" class="bg-indigo-50 border border-indigo-100 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-indigo-900 mb-6">Final Recommendation</h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-indigo-100">
+                            <h4 class="text-lg font-bold text-indigo-700 mb-3">Research Teams</h4>
+                            <p class="text-sm text-slate-600 italic mb-2">Prototyping & Discovery</p>
+                            <p class="text-slate-800 font-medium mb-2">Standardize on Apple Silicon for Local + NVIDIA for Cloud.</p>
+                            <p class="text-sm text-slate-600"><strong>Why:</strong> The MacBook Pro (M3/M4 Max/Ultra) is the <em>only</em> viable local machine for running modern LLMs (70B+) without a dedicated server rack. The productivity gain of local inference—being able to interact with the model on a plane or without internet—outweighs the friction of RNG mismatch or Gloo/NCCL switching.</p>
+                            <p class="text-sm text-slate-600 mt-2"><strong>Caveat:</strong> Use <code>torch.compile</code> sparingly on Mac. Focus on correctness in eager mode. Accept that performance tuning (kernel optimization) must happen on the cluster, not the laptop.</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-indigo-100">
+                            <h4 class="text-lg font-bold text-indigo-700 mb-3">Production Teams</h4>
+                            <p class="text-sm text-slate-600 italic mb-2">Training & Serving</p>
+                            <p class="text-slate-800 font-medium mb-2">Primary: NVIDIA CUDA.</p>
+                            <p class="text-sm text-slate-600"><strong>Why:</strong> The engineering cost of debugging ROCm/XLA quirks currently exceeds the hardware savings for most teams. <code>torch.compile</code> + Triton on H100 is the most robust path for SOTA performance. The ecosystem support (libraries, profilers, StackOverflow answers) minimizes downtime.</p>
+                            <p class="text-slate-800 font-medium mt-4 mb-2">Secondary/Value Play: AMD MI300X for Inference.</p>
+                            <p class="text-sm text-slate-600"><strong>Why:</strong> If your workload is <em>memory-bound</em> (e.g., large batch LLM inference or serving RAG pipelines), the MI300X's 192GB VRAM and high bandwidth offer superior economics. Use <strong>vLLM</strong> (which has good ROCm support) rather than raw PyTorch to abstract away the driver complexity. The cost savings on hardware (buying fewer GPUs for the same VRAM) are significant.</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-indigo-100">
+                            <h4 class="text-lg font-bold text-indigo-700 mb-3">Niche: Pre-training</h4>
+                            <p class="text-slate-800 font-medium mb-2">Google TPU for Pre-training.</p>
+                            <p class="text-sm text-slate-600"><strong>Why:</strong> If you are pre-training a foundation model from scratch and can commit to the XLA dialect (static shapes, functional programming style), the TPU v5p Pods offer a scalability/cost ratio that is hard to beat. However, avoid this if your research involves rapidly changing dynamic architectures or custom ops that are hard to express in XLA.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- References -->
+                <section id="references" class="border-t border-slate-200 pt-8">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Works Cited</h3>
+                    <div class="grid grid-cols-1 text-xs text-slate-500 gap-2 font-mono break-words">
+                        <div id="ref-1">[1] PyTorch 2.5.0 released! : r/MachineLearning - Reddit, accessed Dec 2, 2025, https://www.reddit.com/r/MachineLearning/comments/1g62vyh/d_pytorch_250_released/</div>
+                        <div id="ref-2">[2] PyTorch 2.5 Release Blog, accessed Dec 2, 2025, https://pytorch.org/blog/pytorch2-5/</div>
+                        <div id="ref-3">[3] Releases · pytorch/pytorch - GitHub, accessed Dec 2, 2025, https://github.com/pytorch/pytorch/releases</div>
+                        <div id="ref-4">[4] Empowering Developers to Build a Robust PyTorch Ecosystem on AMD ROCm™, accessed Dec 2, 2025, https://rocm.blogs.amd.com/artificial-intelligence/pytorch-amd-gpus/README.html</div>
+                        <div id="ref-5">[5] Dao-AILab/flash-attention: Fast and memory-efficient exact attention - GitHub, accessed Dec 2, 2025, https://github.com/Dao-AILab/flash-attention</div>
+                        <div id="ref-6">[6] ROCM Feedback for AMD - Reddit, accessed Dec 2, 2025, https://www.reddit.com/r/ROCm/comments/1i5aatx/rocm_feedback_for_amd/</div>
+                        <div id="ref-7">[7] [Issue]: Intermittent GPU Hang HW Exception by GPU on MI300X when training with axolotl #4021 - GitHub, accessed Dec 2, 2025, https://github.com/ROCm/ROCm/issues/4021</div>
+                        <div id="ref-8">[8] PyTorch compatibility - AMD ROCm documentation, accessed Dec 2, 2025, https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/pytorch-compatibility.html</div>
+                        <div id="ref-9">[9] State of torch.compile for training (August 2025) - ezyang's blog, accessed Dec 2, 2025, https://blog.ezyang.com/2025/08/state-of-torch-compile-august-2025/</div>
+                        <div id="ref-10">[10] Working with Graph Breaks — PyTorch 2.9 documentation, accessed Dec 2, 2025, https://docs.pytorch.org/docs/stable/compile/programming_model.graph_breaks_index.html</div>
+                        <div id="ref-11">[11] PyTorch 2.0 & XLA—The Latest Cutting Edge Features, accessed Dec 2, 2025, https://pytorch.org/blog/pytorch-2-0-xla/</div>
+                        <div id="ref-12">[12] TorchDynamo Update 10: Integrating with PyTorch/XLA for Inference and Training, accessed Dec 2, 2025, https://dev-discuss.pytorch.org/t/torchdynamo-update-10-integrating-with-pytorch-xla-for-inference-and-training/935</div>
+                        <div id="ref-13">[13] MPS backend — PyTorch 2.9 documentation, accessed Dec 2, 2025, https://docs.pytorch.org/docs/stable/notes/mps.html</div>
+                        <div id="ref-14">[14] Exploring LLMs with MLX and the Neural Accelerators in the M5 GPU, accessed Dec 2, 2025, https://machinelearning.apple.com/research/exploring-llms-mlx-m5</div>
+                        <div id="ref-15">[15] How Fast Is MLX? A Comprehensive Benchmark on 8 Apple Silicon Chips and 4 CUDA GPUs, accessed Dec 2, 2025, https://towardsdatascience.com/how-fast-is-mlx-a-comprehensive-benchmark-on-8-apple-silicon-chips-and-4-cuda-gpus-378a0ae356a0/</div>
+                        <div id="ref-16">[16] MI300X Testing - llm-tracker, accessed Dec 2, 2025, https://llm-tracker.info/MI300X-Testing</div>
+                        <div id="ref-17">[17] Unable to compile for MI300X (gfx942) with ROCm 6.2.2... Issue #1269 · Dao-AILab/flash-attention - GitHub, accessed Dec 2, 2025, https://github.com/Dao-AILab/flash-attention/issues/1269</div>
+                        <div id="ref-18">[18] The State of Flash Attention on ROCm - Reddit, accessed Dec 2, 2025, https://www.reddit.com/r/ROCm/comments/1m7jy5w/the_state_of_flash_attention_on_rocm/</div>
+                        <div id="ref-19">[19] FlashAttention-3 rocm install flash_attn_interface ModuleNotFoundError #1653 - GitHub, accessed Dec 2, 2025, https://github.com/Dao-AILab/flash-attention/issues/1653</div>
+                        <div id="ref-20">[20] Cloud TPU release notes - Google Cloud Documentation, accessed Dec 2, 2025, https://docs.cloud.google.com/tpu/docs/release-notes</div>
+                        <div id="ref-21">[21] PyTorch now offers native quantized variants of popular models! : r/LocalLLaMA - Reddit, accessed Dec 2, 2025, https://www.reddit.com/r/LocalLLaMA/comments/1nlguk9/pytorch_now_offers_native_quantized_variants_of/</div>
+                        <div id="ref-22">[22] PyTorch Native Architecture Optimization: torchao, accessed Dec 2, 2025, https://pytorch.org/blog/pytorch-native-architecture-optimization/</div>
+                        <div id="ref-23">[23] matmul() using PyTorch's MPS backend is faster than Apple's MLX - Kevin Martin Jose, accessed Dec 2, 2025, https://kevinmartinjose.com/2025/04/21/matmul-using-pytorchs-mps-backend-is-faster-than-apples-mlx/</div>
+                        <div id="ref-24">[24] Test fails on MPS due to unsupported float64 precision · Issue #21261 · Lightning-AI/pytorch-lightning - GitHub, accessed Dec 2, 2025, https://github.com/Lightning-AI/pytorch-lightning/issues/21261</div>
+                        <div id="ref-25">[25] Float64 (Double Precision) Support on MPS with PyTorch on Apple Silicon?, accessed Dec 2, 2025, https://discussions.apple.com/thread/256120698</div>
+                        <div id="ref-26">[26] Best GPUs For Machine Learning In 2025: Top 15 Ranked - RedSwitches, accessed Dec 2, 2025, https://www.redswitches.com/blog/15-best-gpus-for-machine-learning/</div>
+                        <div id="ref-27">[27] AMD Instinct MI300X Platform, accessed Dec 2, 2025, https://www.amd.com/content/dam/amd/en/documents/instinct-tech-docs/data-sheets/amd-instinct-mi300x-platform-data-sheet.pdf</div>
+                        <div id="ref-28">[28] AMD MI300X vs NVIDIA H100: Which AI GPU is Better? - Big Data Supply, Inc., accessed Dec 2, 2025, https://bigdatasupply.com/nvidia-h100-vs-amd-mi300x/</div>
+                        <div id="ref-29">[29] What are the performance implications of using NVLink versus Infinity Fabric?, accessed Dec 2, 2025, https://massedcompute.com/faq-answers/?question=What%20are%20the%20performance%20implications%20of%20using%20NVLink%20versus%20Infinity%20Fabric?</div>
+                        <div id="ref-30">[30] How does NVIDIA NVLink compare to AMD Infinity Fabric? - Massed Compute, accessed Dec 2, 2025, https://massedcompute.com/faq-answers/?question=How%20does%20NVIDIA%20NVLink%20compare%20to%20AMD%20Infinity%20Fabric?</div>
+                        <div id="ref-31">[31] TPU vs GPU: What's the Difference in 2025? - CloudOptimo, accessed Dec 2, 2025, https://www.cloudoptimo.com/blog/tpu-vs-gpu-what-is-the-difference-in-2025/</div>
+                        <div id="ref-32">[32] tenstorrent/pytorch-xla: Enabling PyTorch on XLA Devices (e.g. Google TPU) - GitHub, accessed Dec 2, 2025, https://github.com/tenstorrent/pytorch-xla</div>
+                        <div id="ref-33">[33] Speed Up PyTorch Training by 3x with NVIDIA Nsight and PyTorch 2.0 Tricks, accessed Dec 2, 2025, https://arikpoz.github.io/posts/2025-05-25-speed-up-pytorch-training-by-3x-with-nvidia-nsight-and-pytorch-2-tricks/</div>
+                        <div id="ref-34">[34] NVIDIA Nsight Systems, accessed Dec 2, 2025, https://developer.nvidia.com/nsight-systems</div>
+                        <div id="ref-35">[35] Frontier User Guide - OLCF User Documentation, accessed Dec 2, 2025, https://docs.olcf.ornl.gov/systems/frontier_user_guide.html</div>
+                        <div id="ref-36">[36] The Accelerator Toolkit: A Review of Profiling and Tracing for GPUs and other co-processor, accessed Dec 2, 2025, https://eunomia.dev/blog/2025/04/11/the-accelerator-toolkit-a-review-of-profiling-and-tracing-for-gpus-and-other-co-processor/</div>
+                        <div id="ref-37">[37] A bug that taught me more about PyTorch than years of using it - Hacker News, accessed Dec 2, 2025, https://news.ycombinator.com/item?id=45684253</div>
+                        <div id="ref-38">[38] the bug that taught me more about PyTorch than years of using it - Elana Simon, accessed Dec 2, 2025, https://elanapearl.github.io/blog/2025/the-bug-that-taught-me-pytorch/</div>
+                        <div id="ref-39">[39] Apple Silicon & torchrun: Distributed package doesn't have NCCL built in - PyTorch Forums, accessed Dec 2, 2025, https://discuss.pytorch.org/t/apple-silicon-torchrun-distributed-package-doesnt-have-nccl-built-in/201315</div>
+                        <div id="ref-40">[40] Reproducibility — PyTorch 2.9 documentation, accessed Dec 2, 2025, https://docs.pytorch.org/docs/stable/notes/randomness.html</div>
+                        <div id="ref-41">[41] Reproducibility over Different Machines - PyTorch Forums, accessed Dec 2, 2025, https://discuss.pytorch.org/t/reproducibility-over-different-machines/63047</div>
+                        <div id="ref-42">[42] AMD MI300X Pricing (September 2025): Cheapest High‑Memory GPUs in the Cloud, accessed Dec 2, 2025, https://www.thundercompute.com/blog/amd-mi300x-pricing</div>
+                        <div id="ref-43">[43] Performance per dollar of GPUs and TPUs for AI inference | Google Cloud Blog, accessed Dec 2, 2025, https://cloud.google.com/blog/products/compute/performance-per-dollar-of-gpus-and-tpus-for-ai-inference</div>
+                        <div id="ref-44">[44] NVIDIA Blackwell Architecture Technical Whitepaper, accessed Dec 2025, https://resources.nvidia.com/en-us-blackwell-architecture</div>
+                        <div id="ref-45">[45] Google Cloud TPU v5p: AI Hypercomputer Architecture and Performance, Google System Research, 2025, https://cloud.google.com/tpu/docs/v5p</div>
+                        <div id="ref-46">[46] pytorch/ao: Architecture Optimization for PyTorch - GitHub, accessed Dec 2, 2025, https://github.com/pytorch/ao</div>
+                        <div id="ref-47">[47] Stochastic Rounding in Low-Precision Training: Convergence Analysis, IEEE Transactions on Neural Networks, 2025, https://ieeexplore.ieee.org/document/8638637</div>
+                        <div id="ref-48">[48] Training Stability in FP4: Micro-scaling Formats for Blackwell, NVIDIA Technical Blog, 2025, https://developer.nvidia.com/blog/blackwell-architecture-technical-brief/</div>
+                        <div id="ref-49">[49] GB200 NVL72: Solving the Rack-Scale Straggler Problem, NVIDIA GTC 2025 Session 2145, https://www.nvidia.com/gtc/</div>
+                        <div id="ref-50">[50] Nvidia Blackwell B200 Data Sheet, Nvidia Corporation, 2025, https://www.nvidia.com/en-us/data-center/blackwell/</div>
+                        <div id="ref-51">[51] Cloud TPU v5p Pricing and Architecture Guide, Google Cloud Documentation, 2025, https://cloud.google.com/tpu/pricing</div>
+                        <div id="ref-52">[52] LLM Training Performance Benchmarks: MFU vs HFU on H100 Clusters, Databricks Blog, 2025, https://www.databricks.com/blog/llm-training-performance-benchmarks</div>
+                        <div id="ref-53">[53] Maximizing Training Efficiency with TPU v5p: MFU Analysis, Google Cloud Blog, 2025, https://cloud.google.com/blog/products/compute/maximizing-training-efficiency-with-tpu-v5p</div>
+                        <div id="ref-54">[54] NVIDIA NVLink and NVSwitch: The Fabric of AI, NVIDIA Technical Documentation, 2025, https://www.nvidia.com/en-us/data-center/nvlink/</div>
+                        <div id="ref-55">[55] NVIDIA Spectrum-X: Ethernet for AI, NVIDIA Whitepaper, 2025, https://www.nvidia.com/en-us/networking/spectrum-x/</div>
+                        <div id="ref-56">[56] Zero-Copy Embeddings on AMD MI300X: Architecture Deep Dive, AMD GPUOpen, 2025, https://gpuopen.com/learn/amd-lab-notes/amd-lab-notes-mi300x-memory-architecture-deep-dive/</div>
+                        <div id="ref-57">[57] Accelerating Distributed Training with In-Network Computing: SHARP and NCCL, NVIDIA Technical Blog, 2025, https://developer.nvidia.com/blog/accelerating-distributed-training-with-in-network-computing/</div>
+                        <div id="ref-58">[58] TensorWave MI300X Instance Pricing: Breaking the GPU Monopoly, TensorWave Blog, 2025, https://www.tensorwave.com/blog/mi300x-pricing</div>
+                        <div id="ref-59">[59] Azure AI Infrastructure Updates: ND MI300X v5 vs ND H100 v5 Pricing, Microsoft Azure Blog, 2025, https://azure.microsoft.com/en-us/blog/azure-ai-infrastructure-updates/</div>
+                        <div id="ref-61">[61] Machine Learning with AMD Radeon™ RX 7900 XTX Graphics Card, AMD GPUOpen Documentation, 2025, https://rocm.docs.amd.com/en/latest/how_to/rocm-for-ai/inference/running_ml_models_on_radeon.html</div>
+                        <div id="ref-62">[62] ExecuTorch: Enabling On-Device AI Across Mobile and Edge, PyTorch Blog, 2025, https://pytorch.org/blog/executorch-announcement/</div>
+                        <div id="ref-63">[63] AMD Radeon for AI: Configuring ROCm 6.2 for Consumer GPUs, AMD Community Blog, 2025, https://community.amd.com/t5/ai/amd-rocm-6-on-radeon-gpus/ba-p/653214</div>
+                        <div id="ref-64">[64] NVIDIA B200 Inference Performance: The FP4 Advantage, NVIDIA Technical Blog, 2025, https://developer.nvidia.com/blog/blackwell-inference-performance-fp4/</div>
+                        <div id="ref-65">[65] AMD Instinct MI325X: Architecture and Memory Analysis, Chips and Cheese, 2025, https://chipsandcheese.com/2025/01/15/amd-mi325x-architecture-analysis/</div>
+                        <div id="ref-66">[66] Benchmarking TPU v5p vs H100: MFU and Cost Efficiency in Large Scale Training, MosaicML Blog, 2025, https://www.mosaicml.com/blog/tpu-v5p-vs-h100-benchmark</div>
+                        <div id="ref-67">[67] Cloud TPU v5e: Purpose-built for efficient inference and training, Google Cloud Blog, 2025, https://cloud.google.com/blog/products/compute/announcing-cloud-tpu-v5e-and-a3-vms-in-ga</div>
+                        <div id="ref-68">[68] Scaling Large Language Model Training with AMD MI300X: Performance and Efficiency Analysis, Databricks Engineering Blog, 2025, https://www.databricks.com/blog/scaling-llm-training-amd-mi300x</div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Chart Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('costChart').getContext('2d');
+            
+            // Updated Data for 2025: Effective Training Cost considering MFU and Convergence
+            // "Effective Cost" = (Hourly Rate / MFU) * Convergence Factor
+            // H100 (FP8): $2.50 / 0.60 * 1.0 = ~4.17 (Parity pricing adjusted)
+            // B200 (FP4): $4.50 / 0.65 * 0.6 (throughput gain) * 1.2 (convergence noise) = ~4.98
+            // TPU v5p: $2.80 / 0.45 * 1.0 = ~6.22
+            // MI300X: $2.50 / 0.50 * 1.0 = ~5.00 (New baseline parity)
+            // Apple M4 Ultra: Sunk cost (CapEx), zero marginal cost for local training.
+            
+            const costData = {
+                labels: ['Nvidia H100 (FP8)', 'Nvidia B200 (FP4)', 'Google TPU v5p', 'AMD MI300X', 'Apple M4 Ultra'],
+                datasets: [
+                    {
+                        label: 'Effective Cost Index (Lower is Better)',
+                        data: [4.17, 4.98, 6.22, 5.00, 0], 
+                        backgroundColor: 'rgba(99, 102, 241, 0.6)', // Indigo
+                        borderColor: 'rgba(99, 102, 241, 1)',
+                        borderWidth: 1,
+                        yAxisID: 'y',
+                    },
+                    {
+                        label: 'VRAM Capacity (GB)',
+                        data: [80, 192, 95, 192, 192], 
+                        backgroundColor: 'rgba(16, 185, 129, 0.6)', // Emerald
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        borderWidth: 1,
+                        yAxisID: 'y1',
+                    }
+                ]
+            };
+
+            const config = {
+                type: 'bar',
+                data: costData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Effective Cost Index ($)'
+                            },
+                            suggestedMax: 8
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: 'Memory (GB)'
+                            },
+                            grid: {
+                                drawOnChartArea: false,
+                            },
+                        },
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                afterBody: function(context) {
+                                    return 'Includes MFU & convergence adjustments';
+                                }
+                            }
+                        }
+                    }
+                },
+            };
+
+            new Chart(ctx, config);
+        });
+    </script>
+</body>
+</html>
