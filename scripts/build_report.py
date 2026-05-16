@@ -184,6 +184,7 @@ def build_html(md_text: str) -> None:
     .sidebar-link a:hover {{ color: #4f46e5; border-left: 2px solid #4f46e5; }}
     .report-body {{ font-size: 1rem; line-height: 1.76; color: #334155; }}
     .report-body h2 {{ scroll-margin-top: 6rem; margin-top: 3.5rem; margin-bottom: 1rem; font-size: 1.55rem; line-height: 1.2; font-weight: 800; color: #0f172a; }}
+    .report-body h3 {{ scroll-margin-top: 6rem; margin-top: 2rem; margin-bottom: .75rem; font-size: 1.15rem; line-height: 1.25; font-weight: 800; color: #0f172a; }}
     .report-body p {{ margin: 1rem 0; }}
     .report-body strong {{ color: #0f172a; font-weight: 700; }}
     .report-body code {{ background: #eef2ff; color: #3730a3; padding: .12rem .3rem; border-radius: .25rem; font-size: .9em; }}
@@ -316,6 +317,7 @@ def build_pdf(md_text: str) -> None:
     title_style = ParagraphStyle("Title", parent=styles["Title"], fontName="Helvetica-Bold", fontSize=24, leading=29, alignment=TA_CENTER, spaceAfter=12)
     subtitle_style = ParagraphStyle("Subtitle", parent=styles["Normal"], fontSize=12, leading=16, alignment=TA_CENTER, textColor=colors.HexColor("#475569"), spaceAfter=24)
     h2_style = ParagraphStyle("H2", parent=styles["Heading2"], fontName="Helvetica-Bold", fontSize=15, leading=18, spaceBefore=14, spaceAfter=8, textColor=colors.HexColor("#0f172a"))
+    h3_style = ParagraphStyle("H3", parent=styles["Heading3"], fontName="Helvetica-Bold", fontSize=11.2, leading=14, spaceBefore=10, spaceAfter=5, textColor=colors.HexColor("#0f172a"))
     body_style = ParagraphStyle("Body", parent=styles["BodyText"], fontSize=9.6, leading=13.2, spaceAfter=7, textColor=colors.HexColor("#1f2937"))
     small_style = ParagraphStyle("Small", parent=styles["BodyText"], fontSize=8.3, leading=11, textColor=colors.HexColor("#475569"), spaceAfter=6)
 
@@ -343,6 +345,15 @@ def build_pdf(md_text: str) -> None:
         table_lines: list[str] = []
         paragraph: list[str] = []
         for line in body.splitlines():
+            if line.startswith("### "):
+                if paragraph:
+                    story.append(make_para(" ".join(paragraph), body_style))
+                    paragraph = []
+                if table_lines:
+                    append_markdown_table(story, table_lines, small_style)
+                    table_lines = []
+                story.append(Paragraph(html.escape(line[4:].strip()), h3_style))
+                continue
             if line.startswith("|"):
                 if paragraph:
                     story.append(make_para(" ".join(paragraph), body_style))
