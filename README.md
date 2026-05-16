@@ -4,6 +4,8 @@ A comparative technical analysis of the PyTorch hardware acceleration landscape 
 of May 15, 2026, covering NVIDIA CUDA, AMD ROCm, Google TPU/XLA, and Apple
 Silicon MPS.
 
+Version: 0.2
+
 ## Read the Report
 
 - Interactive report: [tunguz.github.io/PyTorch_Hardware_May_2026](https://tunguz.github.io/PyTorch_Hardware_May_2026/)

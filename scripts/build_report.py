@@ -45,6 +45,8 @@ REPORT_URL = "https://tunguz.github.io/PyTorch_Hardware_May_2026/"
 REPO_URL = "https://github.com/tunguz/PyTorch_Hardware_May_2026"
 OLD_REPORT_URL = "https://tunguz.github.io/PyTorch_Hardware_2025/"
 OLD_REPO_URL = "https://github.com/tunguz/PyTorch_Hardware_2025"
+REPORT_VERSION = "0.2"
+REPORT_DATE = "May 15, 2026"
 
 RATINGS = {
     "NVIDIA CUDA": {
@@ -86,7 +88,6 @@ def slugify(text: str) -> str:
 
 
 def clean_source(text: str) -> str:
-    text = re.sub(r"\s*cite[^]+", "", text)
     replacements = {
         "\u2014": " - ",
         "\u2013": " - ",
@@ -155,7 +156,10 @@ def build_infographic() -> None:
 def build_html(md_text: str) -> None:
     intro, sections = split_sections(md_text)
     intro_body = intro.split("\n", 1)[1].strip() if intro.startswith("# ") else intro
-    report_html = markdown.markdown(intro_body + "\n\n" + "\n\n".join(f"## {t}\n\n{b}" for t, _, b in sections), extensions=["tables", "fenced_code"])
+    report_html = markdown.markdown(
+        intro_body + "\n\n" + "\n\n".join(f"## {t}\n\n{b}" for t, _, b in sections),
+        extensions=["tables", "fenced_code", "footnotes"],
+    )
     report_html = add_heading_ids(report_html, sections)
     nav = "\n".join(f'<li><a href="#{slug}">{title}</a></li>' for title, slug, _ in sections)
     platforms = list(RATINGS)
@@ -183,6 +187,10 @@ def build_html(md_text: str) -> None:
     .report-body p {{ margin: 1rem 0; }}
     .report-body strong {{ color: #0f172a; font-weight: 700; }}
     .report-body code {{ background: #eef2ff; color: #3730a3; padding: .12rem .3rem; border-radius: .25rem; font-size: .9em; }}
+    .report-body sup a {{ color: #4f46e5; text-decoration: none; font-weight: 700; }}
+    .report-body .footnote {{ margin-top: 2rem; border-top: 1px solid #e2e8f0; padding-top: 1rem; font-size: .88rem; }}
+    .report-body .footnote ol {{ padding-left: 1.25rem; }}
+    .report-body .footnote li {{ margin: .45rem 0; }}
     .report-body table, .matrix-table {{ width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .92rem; }}
     .report-body th, .report-body td, .matrix-table th, .matrix-table td {{ border: 1px solid #e2e8f0; padding: .85rem; vertical-align: top; }}
     .report-body th, .matrix-table th {{ background: #f1f5f9; color: #0f172a; font-weight: 700; text-align: left; }}
@@ -226,7 +234,7 @@ def build_html(md_text: str) -> None:
       </aside>
       <main class="lg:col-span-9 space-y-10">
         <header class="border-b border-slate-200 pb-8">
-          <p class="text-sm font-mono text-indigo-700 mb-3">Version 1.0 - May 15, 2026</p>
+          <p class="text-sm font-mono text-indigo-700 mb-3">Version {REPORT_VERSION} - {REPORT_DATE}</p>
           <h1 class="text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tight mb-4">{TITLE}</h1>
           <p class="text-xl text-slate-600 font-light">{SUBTITLE}</p>
           <p class="text-md text-slate-500 mt-4 font-medium">By {AUTHOR}</p>
@@ -326,27 +334,9 @@ def build_pdf(md_text: str) -> None:
         PageBreak(),
         Paragraph(TITLE, title_style),
         Paragraph(SUBTITLE, subtitle_style),
-        Paragraph(f"{AUTHOR} - Version 1.0 - May 15, 2026", subtitle_style),
+        Paragraph(f"{AUTHOR} - Version {REPORT_VERSION} - {REPORT_DATE}", subtitle_style),
         Spacer(1, 0.08 * inch),
     ]
-
-    matrix_data = [["Evaluation Area", *RATINGS.keys()]]
-    for feature in ["Maturity", "torch.compile", "Kernels", "Debugging", "Cost Efficiency"]:
-        matrix_data.append([feature, *[RATINGS[p][feature] for p in RATINGS]])
-    table = Table(matrix_data, colWidths=[1.1 * inch, 1.25 * inch, 1.25 * inch, 1.25 * inch, 1.35 * inch], repeatRows=1)
-    table.setStyle(TableStyle([
-        ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#e2e8f0")),
-        ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#0f172a")),
-        ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
-        ("FONTNAME", (0, 1), (0, -1), "Helvetica-Bold"),
-        ("FONTSIZE", (0, 0), (-1, -1), 8.2),
-        ("GRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#cbd5e1")),
-        ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#f8fafc")]),
-        ("LEFTPADDING", (0, 0), (-1, -1), 5),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 5),
-    ]))
-    story.extend([Paragraph("Executive Decision Matrix", h2_style), table, PageBreak()])
 
     for title, _, body in sections:
         story.append(Paragraph(html.escape(title), h2_style))
@@ -362,6 +352,12 @@ def build_pdf(md_text: str) -> None:
             if table_lines and not line.startswith("|"):
                 append_markdown_table(story, table_lines, small_style)
                 table_lines = []
+            if re.match(r"\[\^\d+\]:", line.strip()):
+                if paragraph:
+                    story.append(make_para(" ".join(paragraph), body_style))
+                    paragraph = []
+                story.append(make_para(line.strip(), small_style))
+                continue
             if not line.strip():
                 if paragraph:
                     story.append(make_para(" ".join(paragraph), body_style))
@@ -418,8 +414,10 @@ def build_readme() -> None:
     readme = f"""# {TITLE}
 
 A comparative technical analysis of the PyTorch hardware acceleration landscape as
-of May 15, 2026, covering NVIDIA CUDA, AMD ROCm, Google TPU/XLA, and Apple
+of {REPORT_DATE}, covering NVIDIA CUDA, AMD ROCm, Google TPU/XLA, and Apple
 Silicon MPS.
+
+Version: {REPORT_VERSION}
 
 ## Read the Report
 
