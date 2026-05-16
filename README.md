@@ -1,18 +1,21 @@
-# State of PyTorch Hardware Acceleration 2025
+# State of PyTorch Hardware Acceleration: May 2026
 
-A comparative technical analysis of the PyTorch hardware acceleration landscape in
-2025, covering NVIDIA CUDA, AMD ROCm, Google TPU/XLA, and Apple Silicon MPS.
+A comparative technical analysis of the PyTorch hardware acceleration landscape as
+of May 15, 2026, covering NVIDIA CUDA, AMD ROCm, Google TPU/XLA, and Apple
+Silicon MPS.
 
 ## Read the Report
 
-- Interactive report: [tunguz.github.io/PyTorch_Hardware_2025](https://tunguz.github.io/PyTorch_Hardware_2025/)
-- PDF version: [State of PyTorch Hardware Acceleration 2025.pdf](State%20of%20PyTorch%20Hardware%20Acceleration%202025.pdf)
+- Interactive report: [tunguz.github.io/PyTorch_Hardware_May_2026](https://tunguz.github.io/PyTorch_Hardware_May_2026/)
+- PDF version: [State of PyTorch Hardware Acceleration May 2026.pdf](State%20of%20PyTorch%20Hardware%20Acceleration%20May%202026.pdf)
+- Source research brief: [deep-research-report.md](deep-research-report.md)
 - Infographic: [infographic.jpeg](infographic.jpeg)
 
 ## Repository Contents
 
 - `index.html` - interactive GitHub Pages report
-- `State of PyTorch Hardware Acceleration 2025.pdf` - static PDF report
+- `State of PyTorch Hardware Acceleration May 2026.pdf` - static PDF report
+- `deep-research-report.md` - source research brief used for the report
 - `infographic.jpeg` - visual summary
 - `README.md` - project overview, license, and citation information
 
@@ -20,10 +23,25 @@ A comparative technical analysis of the PyTorch hardware acceleration landscape 
 
 If you use this work, please cite it as:
 
-Tunguz, B. (2025). *State of PyTorch Hardware Acceleration 2025*. GitHub Pages.
-https://tunguz.github.io/PyTorch_Hardware_2025/
+Tunguz, B. (2026). *State of PyTorch Hardware Acceleration: May 2026*. GitHub
+Pages. https://tunguz.github.io/PyTorch_Hardware_May_2026/
 
 BibTeX:
+
+```bibtex
+@misc{tunguz2026pytorchhardware,
+  author = {Tunguz, Bojan},
+  title = {State of PyTorch Hardware Acceleration: May 2026},
+  year = {2026},
+  howpublished = {\url{https://tunguz.github.io/PyTorch_Hardware_May_2026/}},
+  note = {GitHub repository: \url{https://github.com/tunguz/PyTorch_Hardware_May_2026}}
+}
+```
+
+This report builds on and cites the previous edition:
+
+Tunguz, B. (2025). *State of PyTorch Hardware Acceleration 2025*. GitHub Pages.
+https://tunguz.github.io/PyTorch_Hardware_2025/
 
 ```bibtex
 @misc{tunguz2025pytorchhardware,
