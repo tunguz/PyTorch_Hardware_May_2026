@@ -10,6 +10,7 @@ Version: 0.2
 
 - Interactive report: [tunguz.github.io/PyTorch_Hardware_May_2026](https://tunguz.github.io/PyTorch_Hardware_May_2026/)
 - PDF version: [State of PyTorch Hardware Acceleration May 2026.pdf](State%20of%20PyTorch%20Hardware%20Acceleration%20May%202026.pdf)
+- Reference Word document: [State of PyTorch Hardware Acceleration May 2026.docx](State%20of%20PyTorch%20Hardware%20Acceleration%20May%202026.docx)
 - Source research brief: [deep-research-report.md](deep-research-report.md)
 - Infographic: [infographic.jpeg](infographic.jpeg)
 - Backend position map: [backend-position-map.png](backend-position-map.png)
@@ -19,6 +20,7 @@ Version: 0.2
 
 - `index.html` - interactive GitHub Pages report
 - `State of PyTorch Hardware Acceleration May 2026.pdf` - static PDF report
+- `State of PyTorch Hardware Acceleration May 2026.docx` - reference Word document for the report
 - `deep-research-report.md` - source research brief used for the report
 - `infographic.jpeg` - visual summary
 - `backend-position-map.png` - two-axis backend ergonomics and scalability map

@@ -226,7 +226,7 @@ def build_position_map() -> None:
 
 def build_html(md_text: str) -> None:
     intro, sections = split_sections(md_text)
-    intro_body = intro.split("\n", 1)[1].strip() if intro.startswith("# ") else intro
+    intro_body = intro.split("\n", 1)[1].strip() if intro.startswith("# ") and "\n" in intro else ""
     report_html = markdown.markdown(
         intro_body + "\n\n" + "\n\n".join(f"## {t}\n\n{b}" for t, _, b in sections),
         extensions=["tables", "fenced_code", "footnotes"],
@@ -551,6 +551,7 @@ Version: {REPORT_VERSION}
 
 - Interactive report: [tunguz.github.io/PyTorch_Hardware_May_2026]({REPORT_URL})
 - PDF version: [State of PyTorch Hardware Acceleration May 2026.pdf](State%20of%20PyTorch%20Hardware%20Acceleration%20May%202026.pdf)
+- Reference Word document: [State of PyTorch Hardware Acceleration May 2026.docx](State%20of%20PyTorch%20Hardware%20Acceleration%20May%202026.docx)
 - Source research brief: [deep-research-report.md](deep-research-report.md)
 - Infographic: [infographic.jpeg](infographic.jpeg)
 - Backend position map: [backend-position-map.png](backend-position-map.png)
@@ -560,6 +561,7 @@ Version: {REPORT_VERSION}
 
 - `index.html` - interactive GitHub Pages report
 - `State of PyTorch Hardware Acceleration May 2026.pdf` - static PDF report
+- `State of PyTorch Hardware Acceleration May 2026.docx` - reference Word document for the report
 - `deep-research-report.md` - source research brief used for the report
 - `infographic.jpeg` - visual summary
 - `backend-position-map.png` - two-axis backend ergonomics and scalability map
