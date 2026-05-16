@@ -19,6 +19,7 @@ from reportlab.platypus import (
     Image as ReportImage,
     PageBreak,
     Paragraph,
+    Preformatted,
     SimpleDocTemplate,
     Spacer,
     Table,
@@ -330,14 +331,14 @@ def build_html(md_text: str) -> None:
         <article class="report-body bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-9">
           {report_html}
           <h2 id="citation">Citation</h2>
-          <p>This May 2026 report uses the same citation convention as the prior report and cites that prior work as its predecessor:</p>
-          <p>Tunguz, B. (2025). <em>State of PyTorch Hardware Acceleration 2025</em>. GitHub Pages. <a href="{OLD_REPORT_URL}">{OLD_REPORT_URL}</a></p>
-          <pre><code>@misc{{tunguz2025pytorchhardware,
+          <p>If you use this work, please cite it as:</p>
+          <p>Tunguz, B. (2026). <em>State of PyTorch Hardware Acceleration: May 2026</em>. GitHub Pages. <a href="{REPORT_URL}">{REPORT_URL}</a></p>
+          <pre><code>@misc{{tunguz2026pytorchhardware,
   author = {{Tunguz, Bojan}},
-  title = {{State of PyTorch Hardware Acceleration 2025}},
-  year = {{2025}},
-  howpublished = {{\\url{{{OLD_REPORT_URL}}}}},
-  note = {{GitHub repository: \\url{{{OLD_REPO_URL}}}}}
+  title = {{State of PyTorch Hardware Acceleration: May 2026}},
+  year = {{2026}},
+  howpublished = {{\\url{{{REPORT_URL}}}}},
+  note = {{GitHub repository: \\url{{{REPO_URL}}}}}
 }}</code></pre>
         </article>
       </main>
@@ -490,9 +491,17 @@ def build_pdf(md_text: str) -> None:
 
     story.append(PageBreak())
     story.append(Paragraph("Citation", h2_style))
-    story.append(make_para("This report cites the previous edition using the same citation convention used by the older GitHub repository.", body_style))
-    story.append(Paragraph(f"Tunguz, B. (2025). <i>State of PyTorch Hardware Acceleration 2025</i>. GitHub Pages.<br/>{OLD_REPORT_URL}", body_style))
-    story.append(make_para("The matching BibTeX entry is included in README.md and in the interactive HTML report.", small_style))
+    story.append(make_para("If you use this work, please cite it as:", body_style))
+    story.append(Paragraph(f"Tunguz, B. (2026). <i>State of PyTorch Hardware Acceleration: May 2026</i>. GitHub Pages.<br/>{REPORT_URL}", body_style))
+    story.append(make_para("BibTeX:", body_style))
+    story.append(Preformatted(textwrap.dedent(f"""\
+        @misc{{tunguz2026pytorchhardware,
+          author = {{Tunguz, Bojan}},
+          title = {{State of PyTorch Hardware Acceleration: May 2026}},
+          year = {{2026}},
+          howpublished = {{\\url{{{REPORT_URL}}}}},
+          note = {{GitHub repository: \\url{{{REPO_URL}}}}}
+        }}"""), small_style))
 
     def page_footer(canvas, document):
         canvas.saveState()
@@ -573,21 +582,6 @@ BibTeX:
   year = {{2026}},
   howpublished = {{\\url{{{REPORT_URL}}}}},
   note = {{GitHub repository: \\url{{{REPO_URL}}}}}
-}}
-```
-
-This report builds on and cites the previous edition:
-
-Tunguz, B. (2025). *State of PyTorch Hardware Acceleration 2025*. GitHub Pages.
-{OLD_REPORT_URL}
-
-```bibtex
-@misc{{tunguz2025pytorchhardware,
-  author = {{Tunguz, Bojan}},
-  title = {{State of PyTorch Hardware Acceleration 2025}},
-  year = {{2025}},
-  howpublished = {{\\url{{{OLD_REPORT_URL}}}}},
-  note = {{GitHub repository: \\url{{{OLD_REPO_URL}}}}}
 }}
 ```
 

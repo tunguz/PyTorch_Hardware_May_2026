@@ -1425,7 +1425,7 @@ endobj
 endobj
 237 0 obj
 <<
-/Author (Bojan Tunguz) /CreationDate (D:20260516120811-04'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260516120811-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (Bojan Tunguz) /CreationDate (D:20260516134602-04'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260516134602-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (State of PyTorch Hardware Acceleration: May 2026) /Trapped /False
 >>
 endobj
@@ -1556,10 +1556,10 @@ Gatn%?#S1G'Sc)N/'d6AfT,Q/m`NPB&r".WD@i7!a)/L9EH%FkS+uM5DRss!D%1512/1D,lh<M&4t-Z]
 endobj
 256 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 625
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 692
 >>
 stream
-GasIdc#9(*'Yih7GXjeh`\uJ:h3oou%^!*\*-S8[&TEB#!1>R0ZG1k7/p(g6%jE19Idd6L*XjIr=Emn!^p8K8c%'d^*eC.5L#N;;`T$c(\l&GN-ZV6q8^<aFJ>=C6.0h%p6$!3Qk8W&14dAD9(BgYE&:HSS]r`4*Pd^Qg=q.!BGm2/G.,O`eB8n)I8E"c*\^S@D=m]j4p0>fR-0#DlWts"f'h\!1#gFgA,nMEPN655W-mX7b]]R!t:p%C=ke1u41O]!!lk5?,$&kPg1A;nJ;[D[gW]u#Zle5`XE"VUQY7;/&`XH8JTskL]j7E>Sd;Z>dB_l]K>oV)p`kcc/E&El^p6C1V<./u?h,L+afUbE,^TY&!O2c%VD4!L(f@pu7[k9*UZ4"f]ct>O6j?Jhle+%Ve:tjRh`h.0X8`2eL\AeC]J\WC7Vt5H&$S"HZO)V?If2\[Ag-,i9rDW/@GXQ/#IRf,?F^AD(3-Q4r`N]dbaNh;-g_/)V'?J'"o&/]Ns03kMZRpj*aFjRc_Ll1qA!n#IJTI"!JLcn:^tBF2L:22(j5XC5D5"]Gk%@J?CLF_g5Lu3rl/6H%rS_ogg)A*d*;EW1kKo:4RA5L2EI0JncKeS@nI)WTroF~>endstream
+Gatn"dAttT(rbD2/&%?9n$o/bg8:u+fGnsVY^p;4fRk<O7[lJT>ack-pqJK(X^7R1]51/,0_oa<-g.i>Yl,47>LieL!l?Ym6D7K_M,=]#7sJ)D^(:(2b\cEsp$4$K.7mE&E>%H%!_VGTk8EKK4$\,bR%Xq%Jui\r_5&TG/h=HlHElL6!6(2Y5]I=R9;d&Y0SpEXiUJ1##p@pSlt>YN1e]JIV8Nk1[9Z9^aYFb:_Drr'"%67]@eP^=%$B!K`tV)(Dk4GN"`L6r7]O]:ll(Y!%jNt;Q9,@I1CJ>TZerQ'FL@1XVeC@<]:C6s=@/ohBH$uLOq$cBrcS\([GZ5)PX^0[^mj;T*APR8Y4m#=-E[GD52sj-4RF/@U>;p)+1Epj0F_8adi/GH5ramc!l5\BPlS4FX)?gZV-",mUE%,uhEA;qjrcqY?CJKL%^+dqq0dJ-TJC-6%)^G:+(urpe]s:V@8E=48MdD1F5#S/q:LHWrbn?ejLc%2T;a)EoE"bsU;^$pRN!Ie'<_-2;%&BiTZDWLHULEIOt-nk6g;ucL*H);GR(Effp)AhGhhu$ST22>I4VitCB4ER9r0\ZK)MZKFjE"%o,/dt>.B^0Xn4rV'ARZ32Cc,h[e$nC.^<ppdqPl7qgU$iE$;hj`gcB<+t^7'OZ%u4#a^3N\l<e_HQ$l`S,e>&IUV^ZD+7hr~>endstream
 endobj
 xref
 0 257
@@ -1823,7 +1823,7 @@ xref
 trailer
 <<
 /ID 
-[<e24809c701478fca5e4e2a531f17db79><e24809c701478fca5e4e2a531f17db79>]
+[<7980dd494ebe7b3ccaa072b0a55ae163><7980dd494ebe7b3ccaa072b0a55ae163>]
 % ReportLab generated PDF document -- digest (opensource)
 
 /Info 237 0 R
@@ -1831,5 +1831,5 @@ trailer
 /Size 257
 >>
 startxref
-482634
+482701
 %%EOF

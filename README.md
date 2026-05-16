@@ -44,21 +44,6 @@ BibTeX:
 }
 ```
 
-This report builds on and cites the previous edition:
-
-Tunguz, B. (2025). *State of PyTorch Hardware Acceleration 2025*. GitHub Pages.
-https://tunguz.github.io/PyTorch_Hardware_2025/
-
-```bibtex
-@misc{tunguz2025pytorchhardware,
-  author = {Tunguz, Bojan},
-  title = {State of PyTorch Hardware Acceleration 2025},
-  year = {2025},
-  howpublished = {\url{https://tunguz.github.io/PyTorch_Hardware_2025/}},
-  note = {GitHub repository: \url{https://github.com/tunguz/PyTorch_Hardware_2025}}
-}
-```
-
 ## License
 
 This repository is licensed under the Creative Commons Attribution 4.0
