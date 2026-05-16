@@ -362,6 +362,8 @@ def pdf_inline(text: str) -> str:
     text = html.escape(text)
     text = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", text)
     text = re.sub(r"`([^`]+)`", r'<font name="Courier">\1</font>', text)
+    text = re.sub(r"\[\^(\d+)\]:", r'<b><font color="#4f46e5">[\1]</font></b>', text)
+    text = re.sub(r"\[\^(\d+)\]", r'<super><font color="#4f46e5">[\1]</font></super>', text)
     return text
 
 
