@@ -125,6 +125,19 @@ def add_heading_ids(html_text: str, sections: list[tuple[str, str, str]]) -> str
     return html_text
 
 
+def add_visible_footnote_numbers(html_text: str) -> str:
+    def replacement(match: re.Match[str]) -> str:
+        number = match.group(1)
+        body = match.group(2)
+        return (
+            f'<li id="fn:{number}">\n'
+            f'<p><span class="footnote-number">{number}.</span> '
+            f'<span class="footnote-text">{body}</span></p>'
+        )
+
+    return re.sub(r'<li id="fn:(\d+)">\s*<p>(.*?)</p>', replacement, html_text, flags=re.S)
+
+
 def rating_badge(value: str) -> str:
     css = {"High": "rating-high", "Medium": "rating-medium", "Low": "rating-low"}[value]
     return f'<span class="rating {css}">{value}</span>'
@@ -218,6 +231,7 @@ def build_html(md_text: str) -> None:
         extensions=["tables", "fenced_code", "footnotes"],
     )
     report_html = add_heading_ids(report_html, sections)
+    report_html = add_visible_footnote_numbers(report_html)
     nav = "\n".join(f'<li><a href="#{slug}">{title}</a></li>' for title, slug, _ in sections)
     platforms = list(RATINGS)
     scores = {feature: [SCORES[RATINGS[p][feature]] for p in platforms] for feature in ["Maturity", "torch.compile", "Kernels", "Debugging", "Cost Efficiency"]}
@@ -247,8 +261,11 @@ def build_html(md_text: str) -> None:
     .report-body code {{ background: #eef2ff; color: #3730a3; padding: .12rem .3rem; border-radius: .25rem; font-size: .9em; }}
     .report-body sup a {{ color: #4f46e5; text-decoration: none; font-weight: 700; }}
     .report-body .footnote {{ margin-top: 2rem; border-top: 1px solid #e2e8f0; padding-top: 1rem; font-size: .88rem; }}
-    .report-body .footnote ol {{ list-style: decimal; list-style-position: outside; padding-left: 1.5rem; }}
-    .report-body .footnote li {{ display: list-item; margin: .45rem 0; padding-left: .25rem; }}
+    .report-body .footnote ol {{ list-style: none; padding-left: 0; }}
+    .report-body .footnote li {{ display: block; margin: .45rem 0; }}
+    .report-body .footnote li p {{ display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); column-gap: .65rem; align-items: start; }}
+    .report-body .footnote-number {{ color: #64748b; font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }}
+    .report-body .footnote-text {{ min-width: 0; }}
     .report-body img {{ display: block; width: 100%; max-width: 760px; height: auto; margin: 1.4rem auto; border: 1px solid #e2e8f0; border-radius: .5rem; }}
     .report-body table, .matrix-table {{ width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .92rem; }}
     .report-body th, .report-body td, .matrix-table th, .matrix-table td {{ border: 1px solid #e2e8f0; padding: .85rem; vertical-align: top; }}
