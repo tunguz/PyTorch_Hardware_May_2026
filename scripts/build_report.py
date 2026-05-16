@@ -358,17 +358,7 @@ def build_html(md_text: str) -> None:
     HTML_OUT.write_text(html_text, encoding="utf-8")
 
 
-def extract_footnote_urls(md_text: str) -> dict[str, str]:
-    urls: dict[str, str] = {}
-    for number, body in re.findall(r"^\[\^(\d+)\]:\s*(.+)$", md_text, flags=re.M):
-        match = re.search(r"https?://\S+", body)
-        if match:
-            urls[number] = match.group(0).rstrip(".,;)")
-    return urls
-
-
-def pdf_inline(text: str, citation_urls: dict[str, str] | None = None) -> str:
-    citation_urls = citation_urls or {}
+def pdf_inline(text: str) -> str:
     text = html.escape(text)
     text = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", text)
     text = re.sub(r"`([^`]+)`", r'<font name="Courier">\1</font>', text)
@@ -378,24 +368,29 @@ def pdf_inline(text: str, citation_urls: dict[str, str] | None = None) -> str:
         text,
     )
 
-    def footnote_link(number: str, label: str) -> str:
-        url = citation_urls.get(number)
-        if not url:
-            return f'<font color="#4f46e5">{label}</font>'
-        return f'<link href="{html.escape(url, quote=True)}"><font color="#4f46e5">{label}</font></link>'
-
-    text = re.sub(r"\[\^(\d+)\]:", lambda match: f"<b>{footnote_link(match.group(1), f'[{match.group(1)}]')}</b>", text)
-    text = re.sub(r"\[\^(\d+)\]", lambda match: f"<super>{footnote_link(match.group(1), f'[{match.group(1)}]')}</super>", text)
+    text = re.sub(
+        r"\[\^(\d+)\]:",
+        lambda match: f'<a name="ref-{match.group(1)}"/><b><font color="#4f46e5">[{match.group(1)}]</font></b>',
+        text,
+    )
+    text = re.sub(
+        r"\[\^(\d+)\]",
+        lambda match: (
+            f'<link href="#ref-{match.group(1)}">'
+            f'<super><font color="#4f46e5">[{match.group(1)}]</font></super>'
+            f"</link>"
+        ),
+        text,
+    )
     return text
 
 
-def make_para(text: str, style: ParagraphStyle, citation_urls: dict[str, str] | None = None) -> Paragraph:
-    return Paragraph(pdf_inline(text, citation_urls), style)
+def make_para(text: str, style: ParagraphStyle) -> Paragraph:
+    return Paragraph(pdf_inline(text), style)
 
 
 def build_pdf(md_text: str) -> None:
     _, sections = split_sections(md_text)
-    citation_urls = extract_footnote_urls(md_text)
     styles = getSampleStyleSheet()
     title_style = ParagraphStyle("Title", parent=styles["Title"], fontName="Helvetica-Bold", fontSize=24, leading=29, alignment=TA_CENTER, spaceAfter=12)
     subtitle_style = ParagraphStyle("Subtitle", parent=styles["Normal"], fontSize=12, leading=16, alignment=TA_CENTER, textColor=colors.HexColor("#475569"), spaceAfter=24)
@@ -430,20 +425,20 @@ def build_pdf(md_text: str) -> None:
         for line in body.splitlines():
             if line.startswith("### "):
                 if paragraph:
-                    story.append(make_para(" ".join(paragraph), body_style, citation_urls))
+                    story.append(make_para(" ".join(paragraph), body_style))
                     paragraph = []
                 if table_lines:
-                    append_markdown_table(story, table_lines, small_style, citation_urls)
+                    append_markdown_table(story, table_lines, small_style)
                     table_lines = []
                 story.append(Paragraph(html.escape(line[4:].strip()), h3_style))
                 continue
             image_match = re.match(r"!\[(.*?)\]\((.*?)\)", line.strip())
             if image_match:
                 if paragraph:
-                    story.append(make_para(" ".join(paragraph), body_style, citation_urls))
+                    story.append(make_para(" ".join(paragraph), body_style))
                     paragraph = []
                 if table_lines:
-                    append_markdown_table(story, table_lines, small_style, citation_urls)
+                    append_markdown_table(story, table_lines, small_style)
                     table_lines = []
                 image_path = ROOT / image_match.group(2)
                 if image_path.exists():
@@ -452,35 +447,35 @@ def build_pdf(md_text: str) -> None:
                 continue
             if line.startswith("|"):
                 if paragraph:
-                    story.append(make_para(" ".join(paragraph), body_style, citation_urls))
+                    story.append(make_para(" ".join(paragraph), body_style))
                     paragraph = []
                 table_lines.append(line)
                 continue
             if table_lines and not line.startswith("|"):
-                append_markdown_table(story, table_lines, small_style, citation_urls)
+                append_markdown_table(story, table_lines, small_style)
                 table_lines = []
             if re.match(r"\[\^\d+\]:", line.strip()):
                 if paragraph:
-                    story.append(make_para(" ".join(paragraph), body_style, citation_urls))
+                    story.append(make_para(" ".join(paragraph), body_style))
                     paragraph = []
-                story.append(make_para(line.strip(), small_style, citation_urls))
+                story.append(make_para(line.strip(), small_style))
                 continue
             if not line.strip():
                 if paragraph:
-                    story.append(make_para(" ".join(paragraph), body_style, citation_urls))
+                    story.append(make_para(" ".join(paragraph), body_style))
                     paragraph = []
                 continue
             paragraph.append(line.strip())
         if paragraph:
-            story.append(make_para(" ".join(paragraph), body_style, citation_urls))
+            story.append(make_para(" ".join(paragraph), body_style))
         if table_lines:
-            append_markdown_table(story, table_lines, small_style, citation_urls)
+            append_markdown_table(story, table_lines, small_style)
 
     story.append(PageBreak())
     story.append(Paragraph("Citation", h2_style))
-    story.append(make_para("This report cites the previous edition using the same citation convention used by the older GitHub repository.", body_style, citation_urls))
+    story.append(make_para("This report cites the previous edition using the same citation convention used by the older GitHub repository.", body_style))
     story.append(Paragraph(f"Tunguz, B. (2025). <i>State of PyTorch Hardware Acceleration 2025</i>. GitHub Pages.<br/>{OLD_REPORT_URL}", body_style))
-    story.append(make_para("The matching BibTeX entry is included in README.md and in the interactive HTML report.", small_style, citation_urls))
+    story.append(make_para("The matching BibTeX entry is included in README.md and in the interactive HTML report.", small_style))
 
     def page_footer(canvas, document):
         canvas.saveState()
@@ -493,13 +488,13 @@ def build_pdf(md_text: str) -> None:
     doc.build(story, onFirstPage=page_footer, onLaterPages=page_footer)
 
 
-def append_markdown_table(story: list, lines: list[str], style: ParagraphStyle, citation_urls: dict[str, str] | None = None) -> None:
+def append_markdown_table(story: list, lines: list[str], style: ParagraphStyle) -> None:
     rows = []
     for line in lines:
         cells = [cell.strip() for cell in line.strip("|").split("|")]
         if cells and all(set(cell) <= {"-", ":"} for cell in cells):
             continue
-        rows.append([Paragraph(pdf_inline(cell, citation_urls), style) for cell in cells])
+        rows.append([Paragraph(pdf_inline(cell), style) for cell in cells])
     if not rows:
         return
     col_count = len(rows[0])

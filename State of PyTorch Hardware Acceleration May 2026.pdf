@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 5 0 R /F3 6 0 R /F4 298 0 R
+/F1 2 0 R /F2 5 0 R /F3 6 0 R /F4 234 0 R
 >>
 endobj
 2 0 obj
@@ -20,7 +20,7 @@ s4IA0!"_al8O`[\!<<*j!([(is5<s:7<iNY!!#_f!%IsK!!iQ.!>5A7!!!!"!!*'"!?(qA!!!!"!!!!k
 endobj
 4 0 obj
 <<
-/Contents 303 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Contents 239 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] /XObject <<
 /FormXob.ada05acddf86fc4cb185e47db835a7ab 3 0 R
 >>
@@ -42,70 +42,52 @@ endobj
 endobj
 7 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 115.7568 434.904 128.567 444.12 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 221.9 0 ] /Rect [ 115.7568 434.904 128.567 444.12 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 131.2358 434.904 144.0461 444.12 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 204.9 0 ] /Rect [ 131.2358 434.904 144.0461 444.12 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
->> /Border [ 0 0 0 ] /Rect [ 146.7149 434.904 159.5251 444.12 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 187.9 0 ] /Rect [ 146.7149 434.904 159.5251 444.12 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/tpu7x)
->> /Border [ 0 0 0 ] /Rect [ 162.1939 434.904 175.0042 444.12 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 170.9 0 ] /Rect [ 162.1939 434.904 175.0042 444.12 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/macbook-pro/specs/)
->> /Border [ 0 0 0 ] /Rect [ 177.673 434.904 190.4832 444.12 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 91.9 0 ] /Rect [ 177.673 434.904 190.4832 444.12 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.amd.com/en/products/accelerators/instinct/mi300.html)
->> /Border [ 0 0 0 ] /Rect [ 193.152 434.904 205.9622 444.12 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 713.9 0 ] /Rect [ 193.152 434.904 205.9622 444.12 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/nvlink/)
->> /Border [ 0 0 0 ] /Rect [ 208.631 434.904 221.4413 444.12 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 696.9 0 ] /Rect [ 208.631 434.904 221.4413 444.12 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 224.1101 434.904 236.9203 444.12 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 662.9 0 ] /Rect [ 224.1101 434.904 236.9203 444.12 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://tunguz.github.io/PyTorch_Hardware_2025/)
->> /Border [ 0 0 0 ] /Rect [ 513.2928 235.704 526.103 244.92 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 617.9 0 ] /Rect [ 513.2928 235.704 526.103 244.92 ] /Subtype /Link /Type /Annot
 >>
 endobj
 16 0 obj
 <<
-/Annots [ 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R ] /Contents 304 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R ] /Contents 240 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -115,14 +97,12 @@ endobj
 endobj
 17 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 84.2784 395.464 92.81856 404.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 359.3 0 ] /Rect [ 84.2784 395.464 92.81856 404.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 18 0 obj
 <<
-/Annots [ 17 0 R ] /Contents 305 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 17 0 R ] /Contents 241 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -132,35 +112,27 @@ endobj
 endobj
 19 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
->> /Border [ 0 0 0 ] /Rect [ 431.1168 59.864 439.657 69.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 342.3 0 ] /Rect [ 431.1168 59.864 439.657 69.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 20 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 442.3258 59.864 455.136 69.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 221.9 0 ] /Rect [ 442.3258 59.864 455.136 69.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 21 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 457.8048 59.864 470.615 69.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 204.9 0 ] /Rect [ 457.8048 59.864 470.615 69.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 22 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/nvlink/)
->> /Border [ 0 0 0 ] /Rect [ 473.2838 59.864 486.0941 69.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 696.9 0 ] /Rect [ 473.2838 59.864 486.0941 69.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 23 0 obj
 <<
-/Annots [ 19 0 R 20 0 R 21 0 R 22 0 R ] /Contents 306 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 19 0 R 20 0 R 21 0 R 22 0 R ] /Contents 242 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -170,79 +142,57 @@ endobj
 endobj
 24 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 246.8832 653.664 255.4234 662.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 325.3 0 ] /Rect [ 246.8832 653.664 255.4234 662.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 25 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 258.0922 653.664 270.9024 662.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 662.9 0 ] /Rect [ 258.0922 653.664 270.9024 662.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 26 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html)
->> /Border [ 0 0 0 ] /Rect [ 273.5712 653.664 286.3814 662.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 645.9 0 ] /Rect [ 273.5712 653.664 286.3814 662.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 27 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://cloud.google.com/tpu/pricing)
->> /Border [ 0 0 0 ] /Rect [ 331.8432 554.264 340.3834 563.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 308.3 0 ] /Rect [ 331.8432 554.264 340.3834 563.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 28 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/tpu7x)
->> /Border [ 0 0 0 ] /Rect [ 343.0522 554.264 355.8624 563.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 170.9 0 ] /Rect [ 343.0522 554.264 355.8624 563.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 29 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/)
->> /Border [ 0 0 0 ] /Rect [ 358.5312 554.264 371.3414 563.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 153.9 0 ] /Rect [ 358.5312 554.264 371.3414 563.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 30 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/runtimes)
->> /Border [ 0 0 0 ] /Rect [ 374.0102 554.264 386.8205 563.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 125.9 0 ] /Rect [ 374.0102 554.264 386.8205 563.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 31 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/mac-studio/)
->> /Border [ 0 0 0 ] /Rect [ 244.8576 441.664 253.3978 450.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 291.3 0 ] /Rect [ 244.8576 441.664 253.3978 450.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 32 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 256.0666 441.664 268.8768 450.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 221.9 0 ] /Rect [ 256.0666 441.664 268.8768 450.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 33 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/macbook-pro/specs/)
->> /Border [ 0 0 0 ] /Rect [ 271.5456 441.664 284.3558 450.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 91.9 0 ] /Rect [ 271.5456 441.664 284.3558 450.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 34 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 287.0246 441.664 299.8349 450.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 741.9 0 ] /Rect [ 287.0246 441.664 299.8349 450.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 35 0 obj
@@ -264,7 +214,7 @@ endobj
 37 0 obj
 <<
 /Annots [ 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R 
-  34 0 R ] /Contents 307 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+  34 0 R ] /Contents 243 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] /XObject <<
 /FormXob.b4b44cead7253e9ecbff7226cfe25b92 35 0 R
 >>
@@ -276,70 +226,52 @@ endobj
 endobj
 38 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 432.1728 546.224 440.713 555.44 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 274.3 0 ] /Rect [ 432.1728 546.224 440.713 555.44 ] /Subtype /Link /Type /Annot
 >>
 endobj
 39 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 343.5744 433.624 356.3846 442.84 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 257.3 0 ] /Rect [ 343.5744 433.624 356.3846 442.84 ] /Subtype /Link /Type /Annot
 >>
 endobj
 40 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 359.0534 433.624 371.8637 442.84 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 221.9 0 ] /Rect [ 359.0534 433.624 371.8637 442.84 ] /Subtype /Link /Type /Annot
 >>
 endobj
 41 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/nvlink/)
->> /Border [ 0 0 0 ] /Rect [ 374.5325 433.624 387.3427 442.84 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 696.9 0 ] /Rect [ 374.5325 433.624 387.3427 442.84 ] /Subtype /Link /Type /Annot
 >>
 endobj
 42 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 321.024 65.61024 330.24 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 240.3 0 ] /Rect [ 52.8 321.024 65.61024 330.24 ] /Subtype /Link /Type /Annot
 >>
 endobj
 43 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 442.8384 208.424 455.6486 217.64 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 223.3 0 ] /Rect [ 442.8384 208.424 455.6486 217.64 ] /Subtype /Link /Type /Annot
 >>
 endobj
 44 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 458.3174 208.424 471.1277 217.64 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 221.9 0 ] /Rect [ 458.3174 208.424 471.1277 217.64 ] /Subtype /Link /Type /Annot
 >>
 endobj
 45 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html)
->> /Border [ 0 0 0 ] /Rect [ 473.7965 208.424 486.6067 217.64 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 645.9 0 ] /Rect [ 473.7965 208.424 486.6067 217.64 ] /Subtype /Link /Type /Annot
 >>
 endobj
 46 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 220.9056 82.624 233.7158 91.84 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 206.3 0 ] /Rect [ 220.9056 82.624 233.7158 91.84 ] /Subtype /Link /Type /Annot
 >>
 endobj
 47 0 obj
 <<
-/Annots [ 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 44 0 R 45 0 R 46 0 R ] /Contents 308 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 44 0 R 45 0 R 46 0 R ] /Contents 244 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -349,77 +281,57 @@ endobj
 endobj
 48 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/eager_mode.html)
->> /Border [ 0 0 0 ] /Rect [ 373.9872 653.664 386.7974 662.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 189.3 0 ] /Rect [ 373.9872 653.664 386.7974 662.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 49 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/xla)
->> /Border [ 0 0 0 ] /Rect [ 437.4912 527.864 450.3014 537.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 172.3 0 ] /Rect [ 437.4912 527.864 450.3014 537.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 50 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/tpu7x)
->> /Border [ 0 0 0 ] /Rect [ 452.9702 527.864 465.7805 537.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 170.9 0 ] /Rect [ 452.9702 527.864 465.7805 537.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 51 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/runtimes)
->> /Border [ 0 0 0 ] /Rect [ 468.4493 527.864 481.2595 537.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 125.9 0 ] /Rect [ 468.4493 527.864 481.2595 537.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 52 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/release/2.0/index.html)
->> /Border [ 0 0 0 ] /Rect [ 313.968 428.464 326.7782 437.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 155.3 0 ] /Rect [ 313.968 428.464 326.7782 437.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 53 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/learn/trace-vs-execution-time.html)
->> /Border [ 0 0 0 ] /Rect [ 329.447 428.464 342.2573 437.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 108.9 0 ] /Rect [ 329.447 428.464 342.2573 437.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 54 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 108.288 329.064 121.0982 338.28 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 138.3 0 ] /Rect [ 108.288 329.064 121.0982 338.28 ] /Subtype /Link /Type /Annot
 >>
 endobj
 55 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 123.767 329.064 136.5773 338.28 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 221.9 0 ] /Rect [ 123.767 329.064 136.5773 338.28 ] /Subtype /Link /Type /Annot
 >>
 endobj
 56 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/issues/150121)
->> /Border [ 0 0 0 ] /Rect [ 335.04 216.464 347.8502 225.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 121.3 0 ] /Rect [ 335.04 216.464 347.8502 225.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 57 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 314.7936 143.464 327.6038 152.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 104.3 0 ] /Rect [ 314.7936 143.464 327.6038 152.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 58 0 obj
 <<
-/Annots [ 48 0 R 49 0 R 50 0 R 51 0 R 52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 57 0 R ] /Contents 309 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 48 0 R 49 0 R 50 0 R 51 0 R 52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 57 0 R ] /Contents 245 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -429,70 +341,52 @@ endobj
 endobj
 59 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)
->> /Border [ 0 0 0 ] /Rect [ 414.0096 706.464 426.8198 715.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 87.3 0 ] /Rect [ 414.0096 706.464 426.8198 715.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 60 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)
->> /Border [ 0 0 0 ] /Rect [ 269.952 580.664 282.7622 589.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 70.3 0 ] /Rect [ 269.952 580.664 282.7622 589.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 61 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/warp-specialization/)
->> /Border [ 0 0 0 ] /Rect [ 102.9696 481.264 115.7798 490.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 741.9 0 ] /Rect [ 102.9696 481.264 115.7798 490.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 62 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html)
->> /Border [ 0 0 0 ] /Rect [ 431.856 381.864 444.6662 391.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 724.9 0 ] /Rect [ 431.856 381.864 444.6662 391.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 63 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 447.335 381.864 460.1453 391.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 221.9 0 ] /Rect [ 447.335 381.864 460.1453 391.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 64 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html)
->> /Border [ 0 0 0 ] /Rect [ 462.8141 381.864 475.6243 391.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 645.9 0 ] /Rect [ 462.8141 381.864 475.6243 391.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 65 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 514.4928 295.664 527.303 304.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 696.9 0 ] /Rect [ 514.4928 295.664 527.303 304.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 66 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/features/pallas.html)
->> /Border [ 0 0 0 ] /Rect [ 410.16 196.264 422.9702 205.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 679.9 0 ] /Rect [ 410.16 196.264 422.9702 205.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 67 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/perf/quantized_ops.html)
->> /Border [ 0 0 0 ] /Rect [ 476.9664 110.064 489.7766 119.28 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 662.9 0 ] /Rect [ 476.9664 110.064 489.7766 119.28 ] /Subtype /Link /Type /Annot
 >>
 endobj
 68 0 obj
 <<
-/Annots [ 59 0 R 60 0 R 61 0 R 62 0 R 63 0 R 64 0 R 65 0 R 66 0 R 67 0 R ] /Contents 310 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 59 0 R 60 0 R 61 0 R 62 0 R 63 0 R 64 0 R 65 0 R 66 0 R 67 0 R ] /Contents 246 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -502,63 +396,47 @@ endobj
 endobj
 69 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/issues/150121)
->> /Border [ 0 0 0 ] /Rect [ 541.4496 706.464 554.2598 715.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 645.9 0 ] /Rect [ 541.4496 706.464 554.2598 715.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 70 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/ml-explore/mlx/blob/main/README.md)
->> /Border [ 0 0 0 ] /Rect [ 117.36 580.664 130.1702 589.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 628.9 0 ] /Rect [ 117.36 580.664 130.1702 589.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 71 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)
->> /Border [ 0 0 0 ] /Rect [ 234.2112 520.864 247.0214 530.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 611.9 0 ] /Rect [ 234.2112 520.864 247.0214 530.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 72 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/stable/notes/mps.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 388.464 65.61024 397.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 594.9 0 ] /Rect [ 52.8 388.464 65.61024 397.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 73 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/)
->> /Border [ 0 0 0 ] /Rect [ 512.1792 262.664 524.9894 271.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 577.9 0 ] /Rect [ 512.1792 262.664 524.9894 271.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 74 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/macbook-pro/specs/)
->> /Border [ 0 0 0 ] /Rect [ 527.6582 262.664 540.4685 271.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 91.9 0 ] /Rect [ 527.6582 262.664 540.4685 271.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 75 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 543.1373 262.664 555.9475 271.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 741.9 0 ] /Rect [ 543.1373 262.664 555.9475 271.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 76 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/releases)
->> /Border [ 0 0 0 ] /Rect [ 520.7232 163.264 533.5334 172.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 560.9 0 ] /Rect [ 520.7232 163.264 533.5334 172.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 77 0 obj
 <<
-/Annots [ 69 0 R 70 0 R 71 0 R 72 0 R 73 0 R 74 0 R 75 0 R 76 0 R ] /Contents 311 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 69 0 R 70 0 R 71 0 R 72 0 R 73 0 R 74 0 R 75 0 R 76 0 R ] /Contents 247 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -568,120 +446,88 @@ endobj
 endobj
 78 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/v5p)
->> /Border [ 0 0 0 ] /Rect [ 204.7584 732.864 217.5686 742.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 543.9 0 ] /Rect [ 204.7584 732.864 217.5686 742.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 79 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/tpu7x)
->> /Border [ 0 0 0 ] /Rect [ 220.2374 732.864 233.0477 742.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 170.9 0 ] /Rect [ 220.2374 732.864 233.0477 742.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 80 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.amd.com/en/products/accelerators/instinct/mi300.html)
->> /Border [ 0 0 0 ] /Rect [ 235.7165 732.864 248.5267 742.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 713.9 0 ] /Rect [ 235.7165 732.864 248.5267 742.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 81 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/v6e)
->> /Border [ 0 0 0 ] /Rect [ 251.1955 732.864 264.0058 742.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 679.9 0 ] /Rect [ 251.1955 732.864 264.0058 742.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 82 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/)
->> /Border [ 0 0 0 ] /Rect [ 419.5872 567.464 432.3974 576.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 526.9 0 ] /Rect [ 419.5872 567.464 432.3974 576.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 83 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 435.0662 567.464 447.8765 576.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 741.9 0 ] /Rect [ 435.0662 567.464 447.8765 576.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 84 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.amd.com/en/products/accelerators/instinct/mi300.html)
->> /Border [ 0 0 0 ] /Rect [ 450.5453 567.464 463.3555 576.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 713.9 0 ] /Rect [ 450.5453 567.464 463.3555 576.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 85 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/nvlink/)
->> /Border [ 0 0 0 ] /Rect [ 466.0243 567.464 478.8346 576.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 696.9 0 ] /Rect [ 466.0243 567.464 478.8346 576.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 86 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/v6e)
->> /Border [ 0 0 0 ] /Rect [ 481.5034 567.464 494.3136 576.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 679.9 0 ] /Rect [ 481.5034 567.464 494.3136 576.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 87 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/stable/notes/mps.html)
->> /Border [ 0 0 0 ] /Rect [ 535.0944 468.064 547.9046 477.28 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 509.9 0 ] /Rect [ 535.0944 468.064 547.9046 477.28 ] /Subtype /Link /Type /Annot
 >>
 endobj
 88 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/get-started/locally/)
->> /Border [ 0 0 0 ] /Rect [ 513.7824 355.464 526.5926 364.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 492.9 0 ] /Rect [ 513.7824 355.464 526.5926 364.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 89 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/tpu7x)
->> /Border [ 0 0 0 ] /Rect [ 529.2614 355.464 542.0717 364.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 170.9 0 ] /Rect [ 529.2614 355.464 542.0717 364.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 90 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/runtimes)
->> /Border [ 0 0 0 ] /Rect [ 544.7405 355.464 557.5507 364.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 125.9 0 ] /Rect [ 544.7405 355.464 557.5507 364.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 91 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 342.264 65.61024 351.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 662.9 0 ] /Rect [ 52.8 342.264 65.61024 351.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 92 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html)
->> /Border [ 0 0 0 ] /Rect [ 113.616 203.264 126.4262 212.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 475.9 0 ] /Rect [ 113.616 203.264 126.4262 212.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 93 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 338.256 117.064 351.0662 126.28 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 458.9 0 ] /Rect [ 338.256 117.064 351.0662 126.28 ] /Subtype /Link /Type /Annot
 >>
 endobj
 94 0 obj
 <<
 /Annots [ 78 0 R 79 0 R 80 0 R 81 0 R 82 0 R 83 0 R 84 0 R 85 0 R 86 0 R 87 0 R 
-  88 0 R 89 0 R 90 0 R 91 0 R 92 0 R 93 0 R ] /Contents 312 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+  88 0 R 89 0 R 90 0 R 91 0 R 92 0 R 93 0 R ] /Contents 248 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -691,56 +537,42 @@ endobj
 endobj
 95 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/compile/programming_model.common_graph_breaks.html)
->> /Border [ 0 0 0 ] /Rect [ 455.4816 620.264 468.2918 629.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 430.9 0 ] /Rect [ 455.4816 620.264 468.2918 629.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 96 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 292.368 520.864 305.1782 530.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 402.9 0 ] /Rect [ 292.368 520.864 305.1782 530.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 97 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 307.847 520.864 320.6573 530.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 662.9 0 ] /Rect [ 307.847 520.864 320.6573 530.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 98 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/release/2.0/index.html)
->> /Border [ 0 0 0 ] /Rect [ 407.088 421.464 419.8982 430.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 385.9 0 ] /Rect [ 407.088 421.464 419.8982 430.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 99 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/learn/trace-vs-execution-time.html)
->> /Border [ 0 0 0 ] /Rect [ 422.567 421.464 435.3773 430.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 108.9 0 ] /Rect [ 422.567 421.464 435.3773 430.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 100 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/2.8/_sources/mps_environment_variables.md.txt)
->> /Border [ 0 0 0 ] /Rect [ 318.4608 308.864 331.271 318.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 368.9 0 ] /Rect [ 318.4608 308.864 331.271 318.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 101 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html)
->> /Border [ 0 0 0 ] /Rect [ 214.464 222.664 227.2742 231.88 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 351.9 0 ] /Rect [ 214.464 222.664 227.2742 231.88 ] /Subtype /Link /Type /Annot
 >>
 endobj
 102 0 obj
 <<
-/Annots [ 95 0 R 96 0 R 97 0 R 98 0 R 99 0 R 100 0 R 101 0 R ] /Contents 313 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 95 0 R 96 0 R 97 0 R 98 0 R 99 0 R 100 0 R 101 0 R ] /Contents 249 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -750,28 +582,22 @@ endobj
 endobj
 103 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 365.4912 283.264 378.3014 292.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 334.9 0 ] /Rect [ 365.4912 283.264 378.3014 292.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 104 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
->> /Border [ 0 0 0 ] /Rect [ 95.4912 183.864 108.3014 193.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 306.9 0 ] /Rect [ 95.4912 183.864 108.3014 193.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 105 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 505.2672 71.264 518.0774 80.48 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 289.9 0 ] /Rect [ 505.2672 71.264 518.0774 80.48 ] /Subtype /Link /Type /Annot
 >>
 endobj
 106 0 obj
 <<
-/Annots [ 103 0 R 104 0 R 105 0 R ] /Contents 314 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 103 0 R 104 0 R 105 0 R ] /Contents 250 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -781,42 +607,32 @@ endobj
 endobj
 107 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://cloud.google.com/tpu/pricing)
->> /Border [ 0 0 0 ] /Rect [ 460.4256 640.464 473.2358 649.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 272.9 0 ] /Rect [ 460.4256 640.464 473.2358 649.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 108 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/)
->> /Border [ 0 0 0 ] /Rect [ 475.9046 640.464 488.7149 649.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 153.9 0 ] /Rect [ 475.9046 640.464 488.7149 649.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 109 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/runtimes)
->> /Border [ 0 0 0 ] /Rect [ 491.3837 640.464 504.1939 649.68 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 125.9 0 ] /Rect [ 491.3837 640.464 504.1939 649.68 ] /Subtype /Link /Type /Annot
 >>
 endobj
 110 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 104.016 527.864 116.8262 537.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 255.9 0 ] /Rect [ 104.016 527.864 116.8262 537.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 111 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/get-started/locally/)
->> /Border [ 0 0 0 ] /Rect [ 357.456 454.864 370.2662 464.08 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 238.9 0 ] /Rect [ 357.456 454.864 370.2662 464.08 ] /Subtype /Link /Type /Annot
 >>
 endobj
 112 0 obj
 <<
-/Annots [ 107 0 R 108 0 R 109 0 R 110 0 R 111 0 R ] /Contents 315 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 107 0 R 108 0 R 109 0 R 110 0 R 111 0 R ] /Contents 251 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -826,7 +642,7 @@ endobj
 endobj
 113 0 obj
 <<
-/Contents 316 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Contents 252 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -836,670 +652,417 @@ endobj
 endobj
 114 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 449.3072 658.322 456.6909 666.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 421.3 0 ] /Rect [ 449.3072 658.322 456.6909 666.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 115 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 458.9983 658.322 466.382 666.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 359.3 0 ] /Rect [ 458.9983 658.322 466.382 666.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 116 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
->> /Border [ 0 0 0 ] /Rect [ 468.6894 658.322 476.073 666.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 342.3 0 ] /Rect [ 468.6894 658.322 476.073 666.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 117 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 478.3804 658.322 485.7641 666.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 274.3 0 ] /Rect [ 478.3804 658.322 485.7641 666.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 118 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 488.0715 658.322 499.147 666.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 138.3 0 ] /Rect [ 488.0715 658.322 499.147 666.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 119 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 501.4544 658.322 512.53 666.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 104.3 0 ] /Rect [ 501.4544 658.322 512.53 666.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 120 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)
->> /Border [ 0 0 0 ] /Rect [ 514.8374 658.322 525.9129 666.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 87.3 0 ] /Rect [ 514.8374 658.322 525.9129 666.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 121 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/warp-specialization/)
->> /Border [ 0 0 0 ] /Rect [ 528.2203 658.322 539.2958 666.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 741.9 0 ] /Rect [ 528.2203 658.322 539.2958 666.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 122 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/compile/programming_model.common_graph_breaks.html)
->> /Border [ 0 0 0 ] /Rect [ 541.6032 658.322 552.6787 666.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 430.9 0 ] /Rect [ 541.6032 658.322 552.6787 666.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 123 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 310 647.322 321.0755 655.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 221.9 0 ] /Rect [ 310 647.322 321.0755 655.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 124 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 323.3829 647.322 334.4584 655.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 204.9 0 ] /Rect [ 323.3829 647.322 334.4584 655.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 125 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
->> /Border [ 0 0 0 ] /Rect [ 336.7658 647.322 347.8414 655.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 187.9 0 ] /Rect [ 336.7658 647.322 347.8414 655.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 126 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 343.6648 619.322 354.7403 627.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 206.3 0 ] /Rect [ 343.6648 619.322 354.7403 627.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 127 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html)
->> /Border [ 0 0 0 ] /Rect [ 357.0477 619.322 368.1232 627.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 724.9 0 ] /Rect [ 357.0477 619.322 368.1232 627.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 128 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 370.4306 619.322 381.5062 627.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 696.9 0 ] /Rect [ 370.4306 619.322 381.5062 627.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 129 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 383.8136 619.322 394.8891 627.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 402.9 0 ] /Rect [ 383.8136 619.322 394.8891 627.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 130 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 397.1965 619.322 408.272 627.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 289.9 0 ] /Rect [ 397.1965 619.322 408.272 627.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 131 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.amd.com/en/products/accelerators/instinct/mi300.html)
->> /Border [ 0 0 0 ] /Rect [ 410.5794 619.322 421.6549 627.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 713.9 0 ] /Rect [ 410.5794 619.322 421.6549 627.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 132 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 423.9623 619.322 435.0378 627.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 662.9 0 ] /Rect [ 423.9623 619.322 435.0378 627.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 133 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html)
->> /Border [ 0 0 0 ] /Rect [ 437.3452 619.322 448.4208 627.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 645.9 0 ] /Rect [ 437.3452 619.322 448.4208 627.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 134 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://cloud.google.com/tpu/pricing)
->> /Border [ 0 0 0 ] /Rect [ 388.4267 569.322 395.8104 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 308.3 0 ] /Rect [ 388.4267 569.322 395.8104 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 135 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/eager_mode.html)
->> /Border [ 0 0 0 ] /Rect [ 398.1178 569.322 409.1933 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 189.3 0 ] /Rect [ 398.1178 569.322 409.1933 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 136 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/xla)
->> /Border [ 0 0 0 ] /Rect [ 411.5007 569.322 422.5762 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 172.3 0 ] /Rect [ 411.5007 569.322 422.5762 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 137 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/release/2.0/index.html)
->> /Border [ 0 0 0 ] /Rect [ 424.8836 569.322 435.9591 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 155.3 0 ] /Rect [ 424.8836 569.322 435.9591 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 138 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/features/pallas.html)
->> /Border [ 0 0 0 ] /Rect [ 438.2665 569.322 449.3421 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 679.9 0 ] /Rect [ 438.2665 569.322 449.3421 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 139 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/perf/quantized_ops.html)
->> /Border [ 0 0 0 ] /Rect [ 451.6495 569.322 462.725 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 662.9 0 ] /Rect [ 451.6495 569.322 462.725 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 140 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/v5p)
->> /Border [ 0 0 0 ] /Rect [ 465.0324 569.322 476.1079 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 543.9 0 ] /Rect [ 465.0324 569.322 476.1079 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 141 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/release/2.0/index.html)
->> /Border [ 0 0 0 ] /Rect [ 478.4153 569.322 489.4908 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 385.9 0 ] /Rect [ 478.4153 569.322 489.4908 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 142 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://cloud.google.com/tpu/pricing)
->> /Border [ 0 0 0 ] /Rect [ 491.7982 569.322 502.8737 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 272.9 0 ] /Rect [ 491.7982 569.322 502.8737 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 143 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/tpu7x)
->> /Border [ 0 0 0 ] /Rect [ 505.1811 569.322 516.2567 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 170.9 0 ] /Rect [ 505.1811 569.322 516.2567 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 144 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/)
->> /Border [ 0 0 0 ] /Rect [ 518.5641 569.322 529.6396 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 153.9 0 ] /Rect [ 518.5641 569.322 529.6396 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 145 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/runtimes)
->> /Border [ 0 0 0 ] /Rect [ 531.947 569.322 543.0225 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 125.9 0 ] /Rect [ 531.947 569.322 543.0225 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 146 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/learn/trace-vs-execution-time.html)
->> /Border [ 0 0 0 ] /Rect [ 545.3299 569.322 556.4054 577.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 108.9 0 ] /Rect [ 545.3299 569.322 556.4054 577.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 147 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/v6e)
->> /Border [ 0 0 0 ] /Rect [ 310 558.322 321.0755 566.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 679.9 0 ] /Rect [ 310 558.322 321.0755 566.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 148 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 552.6173 530.322 560.001 538.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 404.3 0 ] /Rect [ 552.6173 530.322 560.001 538.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 149 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/mac-studio/)
->> /Border [ 0 0 0 ] /Rect [ 310 519.322 317.3837 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 291.3 0 ] /Rect [ 310 519.322 317.3837 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 150 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/issues/150121)
->> /Border [ 0 0 0 ] /Rect [ 319.6911 519.322 330.7666 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 188 0 R /XYZ 52.8 121.3 0 ] /Rect [ 319.6911 519.322 330.7666 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 151 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/issues/150121)
->> /Border [ 0 0 0 ] /Rect [ 333.074 519.322 344.1495 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 645.9 0 ] /Rect [ 333.074 519.322 344.1495 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 152 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/ml-explore/mlx/blob/main/README.md)
->> /Border [ 0 0 0 ] /Rect [ 346.4569 519.322 357.5324 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 628.9 0 ] /Rect [ 346.4569 519.322 357.5324 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 153 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/stable/notes/mps.html)
->> /Border [ 0 0 0 ] /Rect [ 359.8398 519.322 370.9154 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 594.9 0 ] /Rect [ 359.8398 519.322 370.9154 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 154 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/)
->> /Border [ 0 0 0 ] /Rect [ 373.2228 519.322 384.2983 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 577.9 0 ] /Rect [ 373.2228 519.322 384.2983 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 155 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/stable/notes/mps.html)
->> /Border [ 0 0 0 ] /Rect [ 386.6057 519.322 397.6812 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 509.9 0 ] /Rect [ 386.6057 519.322 397.6812 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 156 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 399.9886 519.322 411.0641 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 458.9 0 ] /Rect [ 399.9886 519.322 411.0641 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 157 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/2.8/_sources/mps_environment_variables.md.txt)
->> /Border [ 0 0 0 ] /Rect [ 413.3715 519.322 424.447 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 368.9 0 ] /Rect [ 413.3715 519.322 424.447 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 158 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 426.7544 519.322 437.83 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 334.9 0 ] /Rect [ 426.7544 519.322 437.83 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 159 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 440.1374 519.322 451.2129 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 255.9 0 ] /Rect [ 440.1374 519.322 451.2129 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 160 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/macbook-pro/specs/)
->> /Border [ 0 0 0 ] /Rect [ 453.5203 519.322 464.5958 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 91.9 0 ] /Rect [ 453.5203 519.322 464.5958 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 161 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 466.9032 519.322 477.9787 527.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 741.9 0 ] /Rect [ 466.9032 519.322 477.9787 527.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 162 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/)
->> /Border [ 0 0 0 ] /Rect [ 364.4397 491.322 375.5152 499.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 526.9 0 ] /Rect [ 364.4397 491.322 375.5152 499.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 163 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html)
->> /Border [ 0 0 0 ] /Rect [ 377.8226 491.322 388.8981 499.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 475.9 0 ] /Rect [ 377.8226 491.322 388.8981 499.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 164 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html)
->> /Border [ 0 0 0 ] /Rect [ 391.2055 491.322 402.2811 499.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 225 0 R /XYZ 52.8 351.9 0 ] /Rect [ 391.2055 491.322 402.2811 499.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 165 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/nvlink/)
->> /Border [ 0 0 0 ] /Rect [ 404.5885 491.322 415.664 499.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 696.9 0 ] /Rect [ 404.5885 491.322 415.664 499.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 166 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://tunguz.github.io/PyTorch_Hardware_2025/)
->> /Border [ 0 0 0 ] /Rect [ 483.4534 474.322 494.5289 482.29 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 233 0 R /XYZ 52.8 617.9 0 ] /Rect [ 483.4534 474.322 494.5289 482.29 ] /Subtype /Link /Type /Annot
 >>
 endobj
 167 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 408.64 62.9426 418.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-168 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
 >> /Border [ 0 0 0 ] /Rect [ 166.2776 408.64 297.2931 418.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-169 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 391.64 62.9426 401.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-170 0 obj
+168 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
 >> /Border [ 0 0 0 ] /Rect [ 52.8 380.64 438.4014 390.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-171 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/get-started/locally/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 363.64 62.9426 373.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-172 0 obj
+169 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/get-started/locally/)
 >> /Border [ 0 0 0 ] /Rect [ 151.0471 363.64 287.1339 373.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-173 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 346.64 62.9426 356.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-174 0 obj
+170 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
 >> /Border [ 0 0 0 ] /Rect [ 170.8924 346.64 354.9532 356.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-175 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 329.64 62.9426 339.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-176 0 obj
+171 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
 >> /Border [ 0 0 0 ] /Rect [ 166.2776 329.64 297.2931 339.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-177 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 312.64 62.9426 322.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-178 0 obj
+172 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
 >> /Border [ 0 0 0 ] /Rect [ 166.2776 312.64 297.2931 322.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-179 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://cloud.google.com/tpu/pricing)
->> /Border [ 0 0 0 ] /Rect [ 52.8 295.64 62.9426 305.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-180 0 obj
+173 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://cloud.google.com/tpu/pricing)
 >> /Border [ 0 0 0 ] /Rect [ 171.656 295.64 302.215 305.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-181 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/mac-studio/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 278.64 62.9426 288.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-182 0 obj
+174 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.apple.com/mac-studio/)
 >> /Border [ 0 0 0 ] /Rect [ 111.3814 278.64 240.0729 288.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-183 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 261.64 62.9426 271.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-184 0 obj
+175 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
 >> /Border [ 0 0 0 ] /Rect [ 166.2776 261.64 297.2931 271.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-185 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 244.64 67.5574 254.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-186 0 obj
+176 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
 >> /Border [ 0 0 0 ] /Rect [ 170.8924 244.64 301.9079 254.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-187 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 227.64 67.5574 237.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-188 0 obj
+177 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
 >> /Border [ 0 0 0 ] /Rect [ 170.8924 227.64 301.9079 237.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-189 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 210.64 67.5574 220.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-190 0 obj
+178 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-8/)
 >> /Border [ 0 0 0 ] /Rect [ 170.8924 210.64 301.9079 220.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-191 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 193.64 67.5574 203.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-192 0 obj
+179 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
 >> /Border [ 0 0 0 ] /Rect [ 186.098 193.64 536.6485 203.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-193 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/eager_mode.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 176.64 67.5574 186.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-194 0 obj
+180 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/eager_mode.html)
 >> /Border [ 0 0 0 ] /Rect [ 175.2748 176.64 369.0217 186.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-195 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/xla)
->> /Border [ 0 0 0 ] /Rect [ 52.8 159.64 67.5574 169.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-196 0 obj
+181 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://github.com/pytorch/xla)
 >> /Border [ 0 0 0 ] /Rect [ 270.9904 159.64 378.9402 169.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-197 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/release/2.0/index.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 142.64 67.5574 152.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-198 0 obj
+182 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.pytorch.org/xla/release/2.0/index.html)
 >> /Border [ 0 0 0 ] /Rect [ 180.122 142.64 362.805 152.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-199 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 125.64 67.5574 135.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-200 0 obj
+183 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
 >> /Border [ 0 0 0 ] /Rect [ 175.5072 125.64 359.568 135.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-201 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/issues/150121)
->> /Border [ 0 0 0 ] /Rect [ 52.8 108.64 67.5574 118.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-202 0 obj
+184 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/issues/150121)
 >> /Border [ 0 0 0 ] /Rect [ 276.9913 108.64 457.3752 118.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-203 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 91.64 67.5574 101.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-204 0 obj
+185 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
 >> /Border [ 0 0 0 ] /Rect [ 175.5072 91.64 359.568 101.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-205 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 74.64 67.5574 84.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-206 0 obj
+186 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)
 >> /Border [ 0 0 0 ] /Rect [ 260.6237 74.64 515.276 84.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-207 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 57.64 67.5574 67.6 ] /Subtype /Link /Type /Annot
->>
-endobj
-208 0 obj
+187 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)
 >> /Border [ 0 0 0 ] /Rect [ 260.6237 57.64 515.276 67.6 ] /Subtype /Link /Type /Annot
 >>
 endobj
-209 0 obj
+188 0 obj
 <<
 /Annots [ 114 0 R 115 0 R 116 0 R 117 0 R 118 0 R 119 0 R 120 0 R 121 0 R 122 0 R 123 0 R 
   124 0 R 125 0 R 126 0 R 127 0 R 128 0 R 129 0 R 130 0 R 131 0 R 132 0 R 133 0 R 
@@ -1508,9 +1071,7 @@ endobj
   154 0 R 155 0 R 156 0 R 157 0 R 158 0 R 159 0 R 160 0 R 161 0 R 162 0 R 163 0 R 
   164 0 R 165 0 R 166 0 R 167 0 R 168 0 R 169 0 R 170 0 R 171 0 R 172 0 R 173 0 R 
   174 0 R 175 0 R 176 0 R 177 0 R 178 0 R 179 0 R 180 0 R 181 0 R 182 0 R 183 0 R 
-  184 0 R 185 0 R 186 0 R 187 0 R 188 0 R 189 0 R 190 0 R 191 0 R 192 0 R 193 0 R 
-  194 0 R 195 0 R 196 0 R 197 0 R 198 0 R 199 0 R 200 0 R 201 0 R 202 0 R 203 0 R 
-  204 0 R 205 0 R 206 0 R 207 0 R 208 0 R ] /Contents 317 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+  184 0 R 185 0 R 186 0 R 187 0 R ] /Contents 253 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1518,520 +1079,264 @@ endobj
 >> /Type /Page
 >>
 endobj
-210 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/warp-specialization/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 729.24 67.5574 739.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-211 0 obj
+189 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/warp-specialization/)
 >> /Border [ 0 0 0 ] /Rect [ 320.3505 729.24 479.9595 739.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-212 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 712.24 67.5574 722.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-213 0 obj
+190 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html)
 >> /Border [ 0 0 0 ] /Rect [ 52.8 701.24 461.4588 711.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-214 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 684.24 67.5574 694.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-215 0 obj
+191 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
 >> /Border [ 0 0 0 ] /Rect [ 186.098 684.24 536.6485 694.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-216 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/features/pallas.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 667.24 67.5574 677.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-217 0 obj
+192 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/features/pallas.html)
 >> /Border [ 0 0 0 ] /Rect [ 171.3406 667.24 372.4662 677.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-218 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/perf/quantized_ops.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 650.24 67.5574 660.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-219 0 obj
+193 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/perf/quantized_ops.html)
 >> /Border [ 0 0 0 ] /Rect [ 295.907 650.24 513.6492 660.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-220 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/issues/150121)
->> /Border [ 0 0 0 ] /Rect [ 52.8 633.24 67.5574 643.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-221 0 obj
+194 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/issues/150121)
 >> /Border [ 0 0 0 ] /Rect [ 276.9913 633.24 457.3752 643.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-222 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/ml-explore/mlx/blob/main/README.md)
->> /Border [ 0 0 0 ] /Rect [ 52.8 616.24 67.5574 626.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-223 0 obj
+195 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://github.com/ml-explore/mlx/blob/main/README.md)
 >> /Border [ 0 0 0 ] /Rect [ 129.3592 616.24 341.0673 626.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-224 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 599.24 67.5574 609.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-225 0 obj
+196 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)
 >> /Border [ 0 0 0 ] /Rect [ 260.6237 599.24 515.276 609.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-226 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/stable/notes/mps.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 582.24 67.5574 592.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-227 0 obj
+197 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.pytorch.org/docs/stable/notes/mps.html)
 >> /Border [ 0 0 0 ] /Rect [ 148.7563 582.24 337.8967 592.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-228 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 565.24 67.5574 575.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-229 0 obj
+198 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/)
 >> /Border [ 0 0 0 ] /Rect [ 213.3303 565.24 514.0725 575.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-230 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/releases)
->> /Border [ 0 0 0 ] /Rect [ 52.8 548.24 67.5574 558.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-231 0 obj
+199 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://github.com/pytorch/pytorch/releases)
 >> /Border [ 0 0 0 ] /Rect [ 139.0536 548.24 297.2848 558.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-232 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/v5p)
->> /Border [ 0 0 0 ] /Rect [ 52.8 531.24 67.5574 541.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-233 0 obj
+200 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/v5p)
 >> /Border [ 0 0 0 ] /Rect [ 130.7536 531.24 289.9227 541.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-234 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 514.24 67.5574 524.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-235 0 obj
+201 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/)
 >> /Border [ 0 0 0 ] /Rect [ 178.2628 514.24 455.9642 524.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-236 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/stable/notes/mps.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 497.24 67.5574 507.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-237 0 obj
+202 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.pytorch.org/docs/stable/notes/mps.html)
 >> /Border [ 0 0 0 ] /Rect [ 148.7563 497.24 337.8967 507.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-238 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/get-started/locally/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 480.24 67.5574 490.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-239 0 obj
+203 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/get-started/locally/)
 >> /Border [ 0 0 0 ] /Rect [ 155.6619 480.24 291.7487 490.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-240 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 463.24 67.5574 473.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-241 0 obj
+204 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html)
 >> /Border [ 0 0 0 ] /Rect [ 188.8702 463.24 425.5032 473.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-242 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 446.24 67.5574 456.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-243 0 obj
+205 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
 >> /Border [ 0 0 0 ] /Rect [ 52.8 435.24 438.4014 445.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-244 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/compile/programming_model.common_graph_breaks.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 418.24 67.5574 428.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-245 0 obj
+206 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/compile/programming_model.common_graph_breaks.html)
 >> /Border [ 0 0 0 ] /Rect [ 52.8 407.24 494.2521 417.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-246 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 390.24 67.5574 400.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-247 0 obj
+207 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
 >> /Border [ 0 0 0 ] /Rect [ 186.098 390.24 536.6485 400.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-248 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/release/2.0/index.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 373.24 67.5574 383.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-249 0 obj
+208 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.pytorch.org/xla/release/2.0/index.html)
 >> /Border [ 0 0 0 ] /Rect [ 180.122 373.24 362.805 383.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-250 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/docs/2.8/_sources/mps_environment_variables.md.txt)
->> /Border [ 0 0 0 ] /Rect [ 52.8 356.24 67.5574 366.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-251 0 obj
+209 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.pytorch.org/docs/2.8/_sources/mps_environment_variables.md.txt)
 >> /Border [ 0 0 0 ] /Rect [ 175.9554 356.24 462.8864 366.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-252 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 339.24 67.5574 349.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-253 0 obj
+210 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html)
 >> /Border [ 0 0 0 ] /Rect [ 188.8702 339.24 425.5032 349.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-254 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 322.24 67.5574 332.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-255 0 obj
+211 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
 >> /Border [ 0 0 0 ] /Rect [ 52.8 311.24 438.4014 321.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-256 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 294.24 67.5574 304.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-257 0 obj
+212 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
 >> /Border [ 0 0 0 ] /Rect [ 170.8924 294.24 301.9079 304.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-258 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 277.24 67.5574 287.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-259 0 obj
+213 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
 >> /Border [ 0 0 0 ] /Rect [ 186.098 277.24 536.6485 287.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-260 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://cloud.google.com/tpu/pricing)
->> /Border [ 0 0 0 ] /Rect [ 52.8 260.24 67.5574 270.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-261 0 obj
+214 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://cloud.google.com/tpu/pricing)
 >> /Border [ 0 0 0 ] /Rect [ 176.2708 260.24 306.8298 270.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-262 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 243.24 67.5574 253.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-263 0 obj
+215 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
 >> /Border [ 0 0 0 ] /Rect [ 175.5072 243.24 359.568 253.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-264 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/get-started/locally/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 226.24 67.5574 236.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-265 0 obj
+216 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/get-started/locally/)
 >> /Border [ 0 0 0 ] /Rect [ 155.6619 226.24 291.7487 236.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-266 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 209.24 67.5574 219.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-267 0 obj
+217 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-12-release-blog/)
 >> /Border [ 0 0 0 ] /Rect [ 175.5072 209.24 359.568 219.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-268 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 192.24 67.5574 202.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-269 0 obj
+218 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-11-release-blog/)
 >> /Border [ 0 0 0 ] /Rect [ 175.5072 192.24 359.568 202.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-270 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 175.24 67.5574 185.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-271 0 obj
+219 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://pytorch.org/blog/pytorch-2-7/)
 >> /Border [ 0 0 0 ] /Rect [ 170.8924 175.24 301.9079 185.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-272 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/tpu7x)
->> /Border [ 0 0 0 ] /Rect [ 52.8 158.24 67.5574 168.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-273 0 obj
+220 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/tpu7x)
 >> /Border [ 0 0 0 ] /Rect [ 257.4614 158.24 423.5527 168.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-274 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 141.24 67.5574 151.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-275 0 obj
+221 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/)
 >> /Border [ 0 0 0 ] /Rect [ 52.8 130.24 454.1548 140.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-276 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/runtimes)
->> /Border [ 0 0 0 ] /Rect [ 52.8 113.24 67.5574 123.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-277 0 obj
+222 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/runtimes)
 >> /Border [ 0 0 0 ] /Rect [ 273.6049 113.24 451.2166 123.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-278 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/learn/trace-vs-execution-time.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 96.24 67.5574 106.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-279 0 obj
+223 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.pytorch.org/xla/master/learn/trace-vs-execution-time.html)
 >> /Border [ 0 0 0 ] /Rect [ 255.2868 96.24 509.4411 106.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-280 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/macbook-pro/specs/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 79.24 67.5574 89.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-281 0 obj
+224 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.apple.com/macbook-pro/specs/)
 >> /Border [ 0 0 0 ] /Rect [ 204.1007 79.24 364.6227 89.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-282 0 obj
+225 0 obj
 <<
-/Annots [ 210 0 R 211 0 R 212 0 R 213 0 R 214 0 R 215 0 R 216 0 R 217 0 R 218 0 R 219 0 R 
-  220 0 R 221 0 R 222 0 R 223 0 R 224 0 R 225 0 R 226 0 R 227 0 R 228 0 R 229 0 R 
-  230 0 R 231 0 R 232 0 R 233 0 R 234 0 R 235 0 R 236 0 R 237 0 R 238 0 R 239 0 R 
-  240 0 R 241 0 R 242 0 R 243 0 R 244 0 R 245 0 R 246 0 R 247 0 R 248 0 R 249 0 R 
-  250 0 R 251 0 R 252 0 R 253 0 R 254 0 R 255 0 R 256 0 R 257 0 R 258 0 R 259 0 R 
-  260 0 R 261 0 R 262 0 R 263 0 R 264 0 R 265 0 R 266 0 R 267 0 R 268 0 R 269 0 R 
-  270 0 R 271 0 R 272 0 R 273 0 R 274 0 R 275 0 R 276 0 R 277 0 R 278 0 R 279 0 R 
-  280 0 R 281 0 R ] /Contents 318 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 189 0 R 190 0 R 191 0 R 192 0 R 193 0 R 194 0 R 195 0 R 196 0 R 197 0 R 198 0 R 
+  199 0 R 200 0 R 201 0 R 202 0 R 203 0 R 204 0 R 205 0 R 206 0 R 207 0 R 208 0 R 
+  209 0 R 210 0 R 211 0 R 212 0 R 213 0 R 214 0 R 215 0 R 216 0 R 217 0 R 218 0 R 
+  219 0 R 220 0 R 221 0 R 222 0 R 223 0 R 224 0 R ] /Contents 254 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -2039,108 +1344,58 @@ endobj
 >> /Type /Page
 >>
 endobj
-283 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 729.24 67.5574 739.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-284 0 obj
+226 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/)
 >> /Border [ 0 0 0 ] /Rect [ 52.8 718.24 438.4014 728.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-285 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.amd.com/en/products/accelerators/instinct/mi300.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 701.24 67.5574 711.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-286 0 obj
+227 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.amd.com/en/products/accelerators/instinct/mi300.html)
 >> /Border [ 0 0 0 ] /Rect [ 221.1572 701.24 464.7041 711.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-287 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/nvlink/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 684.24 67.5574 694.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-288 0 obj
+228 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.nvidia.com/en-us/data-center/nvlink/)
 >> /Border [ 0 0 0 ] /Rect [ 203.1711 684.24 381.2227 694.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-289 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/v6e)
->> /Border [ 0 0 0 ] /Rect [ 52.8 667.24 67.5574 677.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-290 0 obj
+229 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://docs.cloud.google.com/tpu/docs/v6e)
 >> /Border [ 0 0 0 ] /Rect [ 222.4105 667.24 381.5796 677.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-291 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 650.24 67.5574 660.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-292 0 obj
+230 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html)
 >> /Border [ 0 0 0 ] /Rect [ 186.098 650.24 536.6485 660.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-293 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html)
->> /Border [ 0 0 0 ] /Rect [ 52.8 633.24 67.5574 643.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-294 0 obj
+231 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html)
 >> /Border [ 0 0 0 ] /Rect [ 52.8 622.24 461.4588 632.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-295 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://tunguz.github.io/PyTorch_Hardware_2025/)
->> /Border [ 0 0 0 ] /Rect [ 52.8 605.24 67.5574 615.2 ] /Subtype /Link /Type /Annot
->>
-endobj
-296 0 obj
+232 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://tunguz.github.io/PyTorch_Hardware_2025/)
 >> /Border [ 0 0 0 ] /Rect [ 243.3182 605.24 426.0095 615.2 ] /Subtype /Link /Type /Annot
 >>
 endobj
-297 0 obj
+233 0 obj
 <<
-/Annots [ 283 0 R 284 0 R 285 0 R 286 0 R 287 0 R 288 0 R 289 0 R 290 0 R 291 0 R 292 0 R 
-  293 0 R 294 0 R 295 0 R 296 0 R ] /Contents 319 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Annots [ 226 0 R 227 0 R 228 0 R 229 0 R 230 0 R 231 0 R 232 0 R ] /Contents 255 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -2148,14 +1403,14 @@ endobj
 >> /Type /Page
 >>
 endobj
-298 0 obj
+234 0 obj
 <<
 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font
 >>
 endobj
-299 0 obj
+235 0 obj
 <<
-/Contents 320 0 R /MediaBox [ 0 0 612 792 ] /Parent 302 0 R /Resources <<
+/Contents 256 0 R /MediaBox [ 0 0 612 792 ] /Parent 238 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -2163,143 +1418,143 @@ endobj
   /Type /Page
 >>
 endobj
-300 0 obj
+236 0 obj
 <<
-/PageMode /UseNone /Pages 302 0 R /Type /Catalog
+/PageMode /UseNone /Pages 238 0 R /Type /Catalog
 >>
 endobj
-301 0 obj
+237 0 obj
 <<
-/Author (Bojan Tunguz) /CreationDate (D:20260516115647-04'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260516115647-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (Bojan Tunguz) /CreationDate (D:20260516120154-04'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260516120154-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (State of PyTorch Hardware Acceleration: May 2026) /Trapped /False
 >>
 endobj
-302 0 obj
+238 0 obj
 <<
 /Count 18 /Kids [ 4 0 R 16 0 R 18 0 R 23 0 R 37 0 R 47 0 R 58 0 R 68 0 R 77 0 R 94 0 R 
-  102 0 R 106 0 R 112 0 R 113 0 R 209 0 R 282 0 R 297 0 R 299 0 R ] /Type /Pages
+  102 0 R 106 0 R 112 0 R 113 0 R 188 0 R 225 0 R 233 0 R 235 0 R ] /Type /Pages
 >>
 endobj
-303 0 obj
+239 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 255
 >>
 stream
 GaqK(4_qqh&Dd"0hUm!J,l(3$f$]3]*?*;O<L3!)JhbeRo'^p#>VHCAh#"VU/<#P$mkP!K$&=^uF\!/sBgV[30rZ8&+^kPKp=iksd95n2M('>Jc,:q5[*'r'Rlbm9i)kp'N2P!+>$AJr4h(9WgB_G^In'9(H<ECT6LLQX[+FH`#eM=R-/(SqO2Bm!^WJ*?i_FNsO:OgL4?BL[Bkd1j1?_uLiEU,gJtEC8_$1s[Y=%M5pNaR/,5,XQo`lm36S/~>endstream
 endobj
-304 0 obj
+240 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 2826
 >>
 stream
 GauHLflGh:(4GpYgrdfZ;C$pdT`$/)T!:%GbTs?[RYN6:,hp2uDEs*MolG"\+XN:LfqjjCRoH0[me>McnArS0BE(a8U6eM6Hg?gWdrJ/hk_->@88jg?^-1eS,lD'/`;R7\/:9+>P7pFE_Y)$-_T6".Uc3\:l_TBAPE6kHOBU#le'52Hl'C06SQuUTa`m^YT="MgbF_r"hSCUB3(^W0<c#!iDtC.dD;=MG9q6I\Rhf+MmJ:Zu>REf`FS=955@eF)"oI;k:,r"<GaZt?F!DSpeX?tA4\o"E9._&^Q-T[k]_TDNiikXp+`;1C2"MK%,)EkOf&T2nKDAo^j3NoCnAkq&+%4]Ok&GM$L@9;'N6/@SnK".f%6:>n.Vcf>?:emB\h-o3EY>4iDi?I<i%KS-Gl?Tk?N'm"HqNQ<YN`Or]IKfNY,XCjUueN3cb=eF'2`@`?Iu_-SFXA3ETcj'09rTF.d>sAkL"&e&P_\93a-p?e)<$R]c_;-Y;bQSoi76`Cs,QM2pLOsW=;`o/i:h/;r^<q46bE[I_sHVmXu`fHMAnEqF>MANKOE%jgY]M>K#TIEB&1&_ZChCc\nk<#s0lPONk5VCo#rnWD&VWUmJs>>IApYht7tuf7-GMa"7NZ?GN-'d0@k(m2C/AA`EsKkAmsir+j/mdU\0#e]KfDB-mml^Ga6&:a%HfTk5fHbIZ,]h(e^qpL1#Q\KhEH<cEoV?Sr0[2%D3Xf!HsVLsf>'8ZS;V'ge1VjLSW*n'Ho$em&Fp_POQNVTH8bc^EF$:WfB`U]U+?Xn;dg%a&5;\JJ;YWEKb37@U92es46!)X",]dPV0Z;IdD%)''*S<=tj"i=+SQm)AJtLOO8+_,9QP5EOgbcDdp4U_(uo;W]t@ZpmXf%g1s.7$<a6<fJq7>34;SF@_KnBj8Zal,()6g,(GoP;5LQL/^jGelC:uc#doF;JR[/2k:AQ[h3oBM5Z!jL5Z7iA1r+l5f-Tj2R^,SC+??ib8rR="eo^n?6U&Q'9.)2`)_gd[8j?nMj!A<25:brTf#`o+Im4&)fc^QBfQ0A<RLm4:7\KtqZ(1-di2;qWk#BX^t23)bY8Cl%(-6CMM=n:]i32QG1F.-1Q0d?>%1RQd`-Grg#?\G+a6Q6'TFXI5KK'YBFqg/S84hh(,Casj('<G/4R![5b.3g^lY!^WMsI/&8Ra<j3[#BgkkEgG66!/QO@IJ7R6,>^BG"JUQEmBd,_s(qnKc5\>T70Hg&KaGu(9XIk!n';^n/"Q(l52.>jatlJfMp:(H2):)na+!%1LN_d\4Xc0e_!TX_sR<Mk9t#0'ZnQC6*Yd/>)W;VGjpn@aas^tt*jFUW/`DW#%G6ibOb]]9fk^ftVmU<9mn(3$E,IC[Y(CW!K(Dq)nD?k]buOmS%ZnI"$[L!Z1+69VE5Cs?br'cQ$P/guqGQ%<t'[+VCDfAU/ecP:9_IDS`bM6%7G:'ak8RQn9e,Vb5q]?4!uZ2lGtCq<,(3[?SY/-pDHAqi>E:A'FI+:DDqEuhV"IoVoY)CJo\I`(aC'SAQD^Wlobi?fco4IYpb(t_Mqapmh[#[cgiJ\X'sP+!CJdMS!I&,QNb2KH'80U!t<GPJm^-h#StHSE^A7p(_o<*L?qa]U^XrNWpt1*X,;'"dpgCILGIH)@e'9o66P?3oFC(+o9l!AQ-5^\SnEX1G/\04KW^M%gfQ/"Zae0Bu^JYQ4(k!>87=nr=umOeNu'L6gYo9l8,uT_?I/2O`La--^UJDc$kCEc2SCG*EUuW@Np5Z,5m`(JuYtI"bhSem*u9HpD@,67VQRL,FA?V$CbWT?!"7]D-Ft)L@)Uhk2_g.kZ4rRHO\Ei1A&q;@_J(/7d>Rr%+$\Wg4<aUK'*h-G=+>dl3XSjDNm+FGn[f"d_,fJp#d>A@C45;M+B)R-'L8RG!2kB6uRg>MW%D'gP'CS$T+_^Di9YS*j=oCld:2A#r=?i4AfA/F'?F9"3AO0kf>qs.?mgO2ta5Bpi&S\:@)_6$7:1Il_D.VE4(?;o2_UN<!#92InBEG"RKXZiWGgRR8MZV,eVO4/r"1#%Mn(0\Y,AYrgNsP9dCtO2tJr@Me`ac_Xk"X"*DZ")?gJ4pU/sqIbWDT4%hJT\kh6r<?mhpS/:bAkhmm1\$*233j3SDr$9K[m@Ge>h^A"pkEQ@*t%2gq(fsX%g+t7!\;m/I<U_B4rG`(6D,AqRI./b(<'*]a-6cOkPaq8%QC/s=758mhC%.nlbIoo9=Ts'MRBqg5%VO>HaK?WpK[IZAWB?(/b?W)DddX%a0#()hnK')KTN*O^Iq?BI\3#NU%aqr4NTDe"u:^?E\6"X+m,.W'c>bJ^E%bYWcW>T(dK^6QPdLgVITdRC2lCS++X2JC;;Ot.d1_%bkA]cD3[8VKfdtkg802qq;^/?2]!9rD,-MA!2'q4N>D21LZ5&J]Tq:erPa;f1j#RQlK0ZF2#ssQqAlcG,)gq+AR--C!JJ\.#n7^AWiF)aD:ohh&V)9Jc7r3lV^J91CE2L$&!Ui@5?>1t1AeWi'9?LJ?o!+F<I+tL3S@\\X<l"5=-pPQ'sn,&WQMPKrrs?MmPDM?H)Q=ImsMAZheP5!mV_6di"(]Z@"qukEHCLbS5ltn#n7`*"9Xk]5%:k!9"mCC\cl>d#[I,I)*[u^b7'^E@n;ne8lqjce1Y]^EnB/kWer=^0Xrk2]:5u[Woj<;*SKHlBRVYj20u8UiF=V?(]Ji2k0+W8TJ1YDaBr=ag>NgoDss8@37m3C/G^g9hfJX1f3PJhHRmn^pZ12iq67lfG2/#E_tot9;1^`>T#ag@D`cW<(cejLdX<(+r+^`Fg&D*%Tb-A~>endstream
 endobj
-305 0 obj
+241 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3320
 >>
 stream
 GauHNgQL=$&UjCTT_9[qXV&giW8u(jATne`en^<s>F!>56p_O;]Z;3Uo'Fuk1dHZ(N24jUO^7["!0H%#4uhbD^gf"rHM[ZK@-hh+m,^<iGs8iI0J@N7G5n/I]moSF7G!`"a39CPFsi[Q?8Q4g(kjctB20.1mOVd]8M>>Ef>H64Qle?`C;FdO4Pj-h?*PK^au3K2k.?*?B6O:o]DnJ:\b0DGba]s6I[;\k$ap9>!nDJ47"0`mBn:FT8Rd/f0kU]Ug^l\;c^VqM>_s8E%g'BHF.@JR#!EaZj&>TZ)rSuXI_aJ%"urrgO/_,CM2Spncbp><qhjk:YJf9rhi,7$ITNRg/GAY*cTG8Jhm]Jlo7KN]DJK/-#m65KJc5cKe'+OL]46lHPjG81k61Xn*e!eFPnJJbN8'**VdRX:KYbJ:>:<h!Ed:Vt&/)(a'7.\@26p>rc?LT-jRti'@I(iP8X'#^T3qTorma#Ma0WtMH,0f<Cr:%sXu8Tug76FBL-<U]cLXO19d]OjY=3WhCNQnFc&+(f?`tet!94IIAHm7R<O%iMDe)kbI57W(kF;Y5lAMMO9i"JNM1WokCF[]TWh&9PRn]Pf=VW^R3G'Y^7OV+m5h[eagQ(Z'LE+-@bqL?^a4OY=CaoA+R[%9,!/0'M<5l1qYI-7755k3G-WQG$WZ"jXWjF?GfbbqKr/8poC(r=:WS?]M$[js&KgdZ/X`KoQk-uuD5;sHqWNXpa@%S]4<ok21-LldV_p_KiKffU9Z:Abu]RlX*8hO2/6GO@tehCl>2-'7XL>uYsoP"!(Z>/;D/7>%VEig>m$d6s.5)79?2"TEu*rCXlhIsPZL#]N.k,"p1r5nl8]31uC('[qBa\jNF(Fa:M<\:E(3EO_ZQ?"-;f%GT(O*)\)qNfrcpgf.\CS<`Mp(@@'9tP#CJ;kTQTaa?qPBZJFm>"JBa,NE%G4upW)%C<g"7%6EC_:TO[)c@Y*r>V:r?=W^.TPsn'jAC\G?/42Hk$]F-]B(OE%Lkb8F1tCA9qgXJSf?LCl_NXBDCfck;TR]J4mn_q#YBLd_)^($CP#c2K*IN0rB(.cd>f\d0EN)(m*9`Oi#!bgJmH2%Ml%i!Aq<&!^1W9-h+*dit,A8hZ:BqGB5thZKYcAS$^<l`E"SKj]ah8I^4rJS(0)0&?k9N_gQmJ$?2qp,gQ[4r:omLi['_3<J$Vt.oDH>;DA:@X^D-bbsW&A!'([EQfN4Z5@q4:j54c.SEVSJV[7F-+S$,A3B@KTfZ,'FP-U(,mtraOU?A%pZ=.%dp%N=+DP8-#@brjbpV1*bGAY[qQFk]4m`F3*lV2dJ@o8kD*[CksUdH<j1XA/Z,K@+J_fO]V&(?NO*@\.V0uu<2Ffg>2kEe>V7_TA44i6AJH^OF[M]9J7n:NfD]iiQ!0+OmtI"9teJ/1FgUbS?PbeF$&d[!oEH\6H>e#mu:)^W6>>r5`2O<dU!"Ks3&8\?*(Ia@@AAHB,a866@95sN-iqU2Q=XI9#.l_Dg9_;'=D+k#H0jq=>hnQ[XW8qPh%0C5tg8JD$j;1=T7g&\Ef$1RNgW!c:LfVLlA@`!b/.l629+n1rloEtju/7EYu%&V\f/Blg?>G][J^$8XR(jK-4%O8s;H9,.o=EeP>CFD5afQUrFJo+]q*]Li^2_7:HTVWa;JcVkT5"%:?V8QV,\Wiq@DCO1G%7OL/b\5/O1NI8q(&!K]eeD7q$_Ig?9t+l>A1]R7'AEn@?%HA%!gAtF9FmAN-0Q`ZYL_&iVi,sKWbp1G2]>hLIOJ1j%Eue+'C)f,iYMkpKk!X^Ri'#G>/q^Q77nD3,0JI<$(2f3D@F]#J_.mJotZ+iCq=2g^fTIBmWAoE)l$1N!m!iX<WF&l0&&H<:K'MKn+AP8G-b(H]3MJm`hB@&LseZWhXRW%CRC.M$-F]ICEcuHJM9g)`blKdP3i6cBEei$Hk$PGnq"I(3VJ6.=rp'n*IAI4G59m$ed>>'es-:akYc>K)FiB1&tLr0EXQT@f'MPViI?lC'=r(C7/\T"PL+r+]%l"8T$4m3K7*\m3Zjol&-Usg?c9JQ2_N2O'7ZhAl2ql[,/'bKT=N7'icZ1%GSiC4Sm_.R<pQOQi&OY\6U^!WA84up]r2O$36=Rp7s4B4g-8'5_*8JT@e%-Xi%dMEg;JZ>M1-]3m;beaqCQlhj3'"k;5U5`\%B"r8bjY>7oJE?%l0>R#IgVY5+9D3_:3+ZIN;Pq_:Of\+F>,3"OtgEh2+h6a,)K\_.Y^X]/P[hU=1e9:#).nFd_idU_tRe93RZ\?V)0PnS5@s5?:q@"F"[_i;#2P7hbYK5[I*P!T^Ya)*hM$)?Fk8=f7\_d_aQ+WmodWcm()e<K\=nf_]E)NZbMJkmnLKs!M^^s!%"/'gX+$I>&)jVeUCP*bYfGQi+;K7T*s$DM`4iL0@h=<:5@3&/Yg56R78lS2]h=PIQgS+0<!NEh;[fUD_EG*TkIem$INa7i7W`oWr=\ZLeC"3T61@59n:[p1RTGYP^o0O^bptdb!])ohDi8,uZ]</#c/U<@o&.-)qBsqCebi"CQrH*W(2gJ*,BJN;<QSWd%QFn&>U9m$8]iQ[[@Y%Z2-j>SIH64$>]O;'7!BN[O02g!"]Xc>D5j>qd?pg`[t.isnE6?*+0<>j5R>$/tX[nBWSJ-!-/9/DSfuGt/ZMG:t!g`.mXq_X3/nDLCFHXTQS>&^Tu7^jhK,k5;d=Me01hjZ8_S*UsW^kqgjfLoddqT0UhLVL>A\f9T/5g9PVJlUj%hQT=np3H<4lFkj3/=oKNoFm:f-k!)_)o>e#Sh6?Li3!7LkV*XKG'7NbXf'6au8]oYroW>B#coN%>48#-]L(Vp]bNQT\.EleU[_3JR^0I6sk]kfsJ=;[6Oc'qA+&88Kf2g$9"E/$\o7%=OQ92"ZAZ`.51oHA320b;mH0G%WHHT=fGft7rMVkYBR`_Y=i-A)=eTrmYb[LKL5`Nd@0e]NS)GFI2d7:nH7Yip+Zo,M<S*gQ#=Oph`NgARHc3*C0.OJN0b'':G.s%?D*$!!tr&%bp12><4I%t11i_I4qO@8meiFG!sSA=.e83>I-IQE8&nA58"E?r8bKqsuD/oDNDrrHV-Y]\b_I>>G>m-mcM\s]Y1C?Vmh\4e;<L?9i3rY7JB^:Z9mJ7gSphRsoRd?\Rmm[T2]i4E;I\.k/o>te78K.Zs?VFK&*'<G;gdZD16"^]d@-B#Q3V5^J)gVrc*=\<1?g)0_a2d't?_/5INYm7a<OT!h:Gdd#-O?D!uc$tN824iN&J&mNG4tH@)=dP#7Va6OFluhNc.ip%r2,AX]8QFH%rrRu03mn~>endstream
 endobj
-306 0 obj
+242 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3497
 >>
 stream
 GauHN>EbO9(4OT5:sG2JW_EJGNAhAPSP)a6eNK*fHY00jCEM%K)q'6B&pAVOrLP6b^__BdTorA9Zu5%LIHU/Aj:E:03pL@F&b:*2?Jdc]EQMZ]*7+2sigtO"]__?%mKp+-DGBG?CGL)SImu!8pZAnW/Dp'dGsKLe:2oLK]r;_Xf=,/<N/Tr=(VC/dnr]6cL6de.[QFEm=aVNR+*#QN7"6u$!j=\PXr-[iK7=!RG/R(,$&f<LBX`S$lHXcdbs<Z1KE"*TR8$Ph*%(GZi]@1Rin0Y2:h0;GXFu)hrlMh;LF:nr.nTU!?Ji<3Z.2%KAs\H+`+tTVB7W!]Lc&%Z@&Hg+IrC*Yi`\-c6aatc6nR`_ZD60;d@D*A^9TP_^f_'mlXR5XHY'`dgtBMS4g6?6Z<h5F/3(njUttXeSu;kYrC?)J!ssItKd7b+b9Tb`*cB;ok2].6?D#k?=n6r/A6e\?'c3,T(T\TH4ABN]GhK#M8pNs+;TU1YjHe/hAC(cQWD%P3;_p%Zf+?LNHoTu*l8t4/?-<S@V?sn%OqU]s0S(5i)dY_+S45t"RR^Y+8]^KO_<2KCC30o_lQ]b/ji`s$&u'1D%1I_="d?ge)E0j@JX/Dk_P90k%0+&UZ=`^-4U[&\9RM$omOJRuM*E.jIKHuO2N86jC+faO.=#_l=/J'K(0`X]]5GtOe?HX.qH)EnQmm3VdGC.q2pu\#5,]P$BGPgj3?U`_kXX)X#m*'seY=3\O'][]M]"6q"l$+i3qNK^=fUobD%?\3,%(c:!$H75mUIfqi,BgU:$9H8n20&?nCM&o!"LjA)B1.i/eK^RNT>JT6t#kM+B[5XV2__\'P'eQB,2)q$47nfkn[+61U((Q&CgMJr3I3\.cu#-A$eB>o:0N63p8T<dgU2JH@RlF\IdV+XhY.Y_>b+(Ar8Z1R'O'\gqS$Sl0KPbm]>UV#:j*mRN;E#]C0n/$XP+;)0\97Zkc-oI.1Mfs"I84k=Psmq1XMW$_P6dP1>GT=%@+?1)juCIt)qUd3L6*'I"`)mP?A7Q4b@W@a?(l?trr.PRT#,U9)RYVaCX5%htBrbm84.07S@qs65j-`o!/Na\22_J3B!%kp`BZonR[Nb_)TGqss'bX>t]Op^j\V:%B'_,9_>X/t6qKq4L56N\>q#?ntMe:P3)c*EQ@YD8.7'&+A9O^?HuF%=>_f$T!,Xbncq$Da=0qchgq"K2G1Iid_Z)dYnrSn.7S:a&4c-#*X32&-gqXAkS'I.>=#$5&5ZL0iWC^ZOO`*U.N$S$6eHk'HjPiPPlC`I"'l@%4U1nT+Yk&9CaAZ:I])Y#6.l4pUAL'R'[7J0Y%sE]em1&q!Oa>S@NHg_ul2grG&!u_]W^BmB:-?D,I*F>Y"9;VYTMQo=1)*p=F4Z/l<U8S?WJH#,0G5Jo=ka6cWRq>`qD^-0q96i^t?e)ku1p6`Wkg/=D=ar39YVQ7dL0qf8j!go2I/pj@r8CVJVbg8EKWq+/%i4$9!Ui)QWpSssnr;b]&12Q]64RT=ZL>2<4j2s=]"XY0L8]'\26e4n7d;XM^klSu$?4LZcbm[c);=?,2m0m?015Q(dgK9*\hl;3W6eMB\R/l1a`2Bj$6\KL8F/1i$mXs4B[f?N5]P4XKF@e;P`'%X\%k_K@H1JOHDR`(^dn10dVeeYB@?p\BTQaJIZA<Y(O[,JP&FE58ng^CT"b"bpBo\R1I?j2GlB]%=m`hr<-1)aRYN\ArK$(A,B_if(0$>4fj=l+#=$-,[QY!"qH%\,%HZipWj5$IZ!%P&$%esloACD;9eo78u*$NKS.H>-0V),B+:[\Qo\C^m*r+?WPUfe_T"3:V.AS#-fb4c!E#E@)M3-i8)3P6e;b>=I"O\^(^<-sk,QqVZ>u]-%bf.Sl@_fq-AE#*Z.3->=de61s@_l+!$8oOj"O"dZCa5B4D0><i!;j]-u(D61!-,bpcPUM-MBK_'_6Nqk#7&LkN)6VDS42U8_kl<G),$18bR%8"d]?2[m>:>e)d>4a>!ahpsNr>j8QZ)fR/c#B1Fi<G@;A-J`k5%1%$^0U,RmZF$;Vf\uej^*eHM1;fJ"Mm+"YX76H"c50T+eV;tOFX^"+Qeu$!rai1IUH,#"f)8]!sImF<td?XVOAZqJRA6%=o8`<oa;&mpn9u(TpQUkdGVqHU$]n$g87HX9!f+d@D@[!VdO3L"j=AS!Y;r.>@6^Cc6.0AZ^cP]^b<2VFX=Q806e*r/rJR<9"n!KB?Q7Vo02[/&l#P;<$:9_d4B>Y1V2G;?Y`:]4@8,r\k8]%U`&d"p/nP>IEK>^!f'_Q<er5(\Rj'T@`iSVI0=O@(NAr,]gGhjVa.#pOpf[b4F@?K467W`6]p/NALI6H%i;#2lC/4\H_h_&,<u[MOCA[[iVlWs3Z.730^7._DFamo2:pN.hKgDQJt(:t,'1b!Cu&I!+.]_da@ql*jS=6mmWP;c62iF8!qg.'M6$nmUZ>9H[.oYFrNDq8qA\N(CQ^Vj-B09gXAp(3$jCHn]0;GHGY;ub0Dut$#/"sHKaC6=n3Nf0Ea)c]abS,Q;HcUt5W2UKog-W7aVn&ebm?#H&dQ#[USIUIJ8\"978Isnk>@/:&_K[t[u-MF>-=7BmLgjTh*5Ta[\0I5QuLaFp:#p9P@S=iHREa>cYGPPN_=sd0`YLK#)Bho3[Q$?&GYPEnC(l2lgf@hgSmuZSbc<84ff[3?OuJJ7t,C1mIh$Jdj]8sSJi;bGLPuemBa7p2%)%HZ-l[k>&Es`@VsG?7BG`6=qPfW:LDI.ltJY[mMr_qdJ"ZbXG8B:3*Ur8Mk^&`Lq-J/%Z=FN`3<I_3`8l1NH2X`1$:QaTG'oj!o>RrCMIVb]>ZOcGG/=MLh2ErO=k%ClZ&$!7$oBH$o:Q[qMb8,&,@JB`8SCM%X,?oV6!9P21sN7.mCU3P=I@SL%,:d#=Sbe#i_;2@j&JuN-+@Xl.15i(u(ADqV[FU@T/%8Wa//Z'pl#YU)OiiYT"?Z%]6t-<hE&A62MJ3J*:B]K"g@O%e>*?1,(G`LCn8<OKDJ9'fZNsH_rWE1aMor]\Rol`]e+'f6B@K-3o>+K5)9@YimNF?DS8/,;h'QCI:g6dd..UH8qo[qNmfL_\&9pFN=G@0H*e@'AuOhP"hV6cF&TjLmMshNkk+I[jcRK%>2(Rr8OS0(n@ZK"UA0F6C%nF]9J3J<n>;Pp.1`uWg*?4AM9nkF7G=(..lU5,M7h%8)FpA.UJP('gmk:JAhQa:?,n`$FtL$AQ@/&-;.`a'a,Y[\Kp^TKcSEk\lB1eS$s2@7r/VKL?;kuas6BWYbR;WQ4d`IEi/["e$_tsN5%?@oX"k1M%aE4!q`@`2J,FM'>0mHC`#7J+P>sOf@]+!e0?eW1][-)oo#LIEG3r1X==QB:(pY(Q6e/A"rsC$U$nY)Zoj:'>,iN0iNkt3W\\FjY-2&n](#(34<L;9TF/>fDY2?b5t:nEs1A;_-Z$Y#F8hUJqg/Wi^6>4(rC3nF,-UtVBkb$k~>endstream
 endobj
-307 0 obj
+243 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 2167
 >>
 stream
 Gau`T?#SK;&q/*0(_d.V>M'?QOnr`5$JYBT;&dbs'\i\tI9;V)E>t(aln1`mrq^tR8Pt<j-Pq't7?$G?\[,qobab*OKL5U+q#Ag#k\<Q4?VP2Hd42%c*5o4qV3e5q+.ium$XQp>Zf1dh\r7uXS:W_WQXN9J&guXY6"\"R-A1u9(+^k+!a)Sgm*0FE9j5oI_IT2kP+jY!rBREuC%W_*r+':m>m?5^e%K38.J`&`Ife@!FG+.9riicp+\tT-(;'ndP:<!4p!.eHEXF/_@CF,?/=\A&$M`Xj"t/X$-7;kcqUeF+PcdS\nu"^%(%&K&IHS@*lO)TqSY**m`V\@\_u&^.M%]8miRCp-dQd`e?tY.4G#!PbIU,gQ43F@aAh,G>_Af=UMcZ:d+.II`?-6PN_oO7<.'cNYPdbeXGXY34D&R72jkBLC[I!T>9ZNneq>E&TNt@G(=lj2Z>/Ua8H[p2&PUi[FpD9QHg9n>a<,\Vli2CsTj[%_P=dqIB/aCQPJ$#b@>BYOG"!t7K[7EO'3r?IsT'<VaAF5'5S&oURY$5'IjmW`6\c.SAV-Fo(0%*X"4.`DjV^hA3I^@M7Zp4F.QZk*/gAfR8=@ue-E6L$QNDW\kO1B4!W1%4q.QE<9'WUDc&;YN7?cY:<!\ZPGlEk@>7N-l"52\XITtUTtimKi;@'BoC0]f3#D%Wg@)L>P)'Y)-)3T73CgWR(8mbI^2a7]+B5Zb'LiL0+KAe><>.SDNPeJ/qGk_05gLr=is%S1)?0#9s\b]'4+Hh&'UcYOh)Q)bVVmQ`.VX]?=]HE3"-3D)heMqU.gY#*2)-d0rd::E@m*7+rKXNmB?HAeTO@JbjL<K5C1-9)eWe\WY0E/=Eg?u'UArB8;sML%>bNU`GB1G;YB'LELS2:(;n6GW_qVFrQ,R$GJ8ftV0L4cJqJU`f;V^?qHSW=GBropI]ZWFHReU$;S9FmKZ$QBAQ(/^c&t[B:2V[4>eT/Tocp.(..KdeheBMqf^+DRoXrB!1"'j/;cZkJC*LkN_hGlV/fMUg_`T99g^q<Q[=5$f.AhcF12R_m9/f*(1r-84t@?F&D/P*(tsbksfmVr.H?uGcImYW@4-`c'5F&]aLGN\j>:t>%c^=,RVEg"VamN74"W2)oO1uPFP1O.9pktOYrria-6H<Ffj%cjA>6*3[7.4p\I-aXeA1,LVg/)?D/kGPMa+DRimB`;/9j(i"%-fTWdH\$3Oj"U20Vg1n#Mu![2>_-eW!iZiDZGI02[C!O8CE2X&lGGKth.?Dc(o#%0!X$Uq-dNra&9QG"Mjd:muDkubG:_Wukr*oDcj+2rb2#Yccg[*t'GM!D^D&,c0Yc%%A3(CHOb-_@)"]FS6rrG2LhTT7g+*&JO.(P@a.-g),f_6HmdOD%lVj"*ctW@XG_2!UbTn+3Ci41]n8iY!h3g2GHnq%LkW14?0Tihngcq21ice+i"6]:;%?YaZ$>@kL[,G"=P51eWgj!U?[>*pss-gD:"jZ=upVR!;b@TMqpCmdnrQ"NDt66hSE%$-T`6!I&1]WO8iM;)VY]ap#K+7jbr9qsQq1.]=Xcg`ZF%!_]J7=0Q![S$plX,dd5Ps.F]K"h`e,X^oCl9I^sC._#;sRsjVV9^2M,^r<XSm>&Y*7djgQ\L4V)2l1^EWqQWfq^&Nj((QrLV.:4P^&hCBZ5e53=V("DK,M1cpC.C*$l#JIin.J>kT_PF0n*1:9;O>0n,(14hMeQT"*PtZh$Ya2_k(HOEM`=5H=QRQLA=#l`lD%(9Z=9>p3gKpn.A6`7#Q]loSD*"*UZP0jGMB#,i"\a#pO`jjt.q4g1oXS50Y@eL<*u,^L!2;rTIGn@sEh!'PL$ej,c((&Il4':1D)nT?ZOQqmf!gAfbeBa*5#]q\F];3qP-\V)C1u1hah\ajda&RTO_f+QV8_Ag*qM^@OEp:_Ne;bC.2'T#-)>#2lEk>W$o^7)e_>%B`uQN5uJOp<^>P,LC&4lH#$gg*.^;dc!+SD&m*U<-fHHeNm!^o+k^!&7Ms7&4)[7((ncEbA`%C!@71tS3?YT-DW*b%^)p*idV2:E"=sUBf>j6SWie"F?lp-$.2,f2NNHW1"9aP&EBc&qk\!H%DOtfHi=@^aEtT1f'te];^o"tPYC1:VX$@:8'rm4AX'9_&[&@p4?`Qp73>D2~>endstream
 endobj
-308 0 obj
+244 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3667
 >>
 stream
 Gb!Sm@;joA&cI0n@W5]>((qk6P&-sC$7E88^=nEZlOErQK<ZVed[j#_Zb)Hrqt5BD92^qL,`^:G6P1T$/agpNm$fqPL4/@G:Z)0kk<s6co]i_Xr;fVkl49X59s<ejqST3Ql>KGnMb,b.Iif\,#5upU7DmMldMl">)NK--;_iE#d'%X8Nh]MkN$@VWe'[Q/W_L.!GJYUU@3c;.KCPRJqE%FO_L$/P*$%hLe)C"(0pf9Gn3>l8qt'l#:6'\KBT0jqIl0FS7jn;::YS?b1cu9&p\j9_5H$eV8l6\n)c,r`m[]jX.H2FFa#G1^9c&t5;,XLedR\/M-&5hF=_d!0O%4[,*u<2%K"n_9Ot)tK\'cNc9,l:5?d@!=.VEIhjpTT@c*U\O*N!]tS6AOJB!)N4X4WR`OsU6#M/XZ)Kp.7-/2AqYR<%VLmQS;.$+=lf<5kAt7\g^d?<*<>F:Co(RT5BL;cuSH/7jrG[N8L>315jZQHJD8a6rG;HM\*=a"CuiepO]i8\\2Y(d)qf-=]nU8KY.^?JYU.2aqh9-q[nfl-t&Z)Eg#'ce6]N-SgVDX=UX@c0bJ1S*Q,O(XKKY1C^D@XaoWXAP/EC,X9=)bMY(Ng>GZuZ"m>`3F\50dcloqg,u7#?J1A5\^6?>4c(@E+ptrF-JF%)5,*SR##S69FF#tJ6@+i%IkkWS$r;30-`PIf@n,1Qb5q9+506P;EC]1iQ?:CadiKmH0gma*BIQ@/)CL&JV>RnhS1hp<&:VdZ^'rs$.4_YM7dWMWO!J=n3-eS3>okpD*UU@AJ(pDP!pk?4o54?&1Y<u'O.1)/pn_X^*jeR=^sE+RGdq]^`,:(rPsWXS<T[8KD3-LdnKY4>iiOhPYtf;YnZge2(U+41l5[pI_+'59,<BS$9H6*hXO0TS,;#uQ<U;1[CNjmOAN[@Y22hip_NM%*)S>GA$L<kg,BWXO>:gDSLJ7%)3DT`!`H.Uaf'6B5oR-GN)U=\_FeH;JO4mLO.TOQYCe[rc"Ld8Q$BC0N.Zq-dWC',p1;pB=&d0;%)[J9/O9c@T`W^a#DXi(%0A6mW+fp7&L7l#B7.b(c;AbpVES>,TY(?(qdIjN47"]nQ'4@19B.p;gVX/p!"#_nL.nB2'-)-3D?GkG9+!A195r0b),?Q?s(BQ/=[0rchQ-,p/V=!WRI$5g].oJsn0k;sGL[sFi?FH\7[uG?bA$8&@j"-]2O#);R-8\<R+7%9?YN->l\Dd4o5em@J)F\POOP&I+Lk[@.RPojt@3$=]A-_hIS@L0J"?mUBLlt,$:;N`aW4dhIB^D!QF:@ih@hLg?NqsH\ihtfCF4$'UbgOnR-GOu"",DO!i@5@5rdG(L;!cXC([U<1g:-j=H&sdebRr#<+Mu+q(sqC7G#a'3YQpFrASGnDdm^3*7mGFe$gUlMC*qMpl,^$0PPH#nODeP[\a[1aQOrPt`s]"YVT!Dh'1mcrhu5CE5.eSe5bu+YY-)*,]HA_/O3Tp_Rj/-WRB9?\NQOSUBY7IK[m%'+-5`D>e&sdCPcdcn!+M:k`(q1.2h^cWpF>6k5&bFY#//m-99mJNX]%<DJ!0@!5cCRNr;O86cN-MgKXBWhoEc8n;49g`h+UcO^=#Q\KbR+g2ahP\]AX&giL;G\ZqWgP,^(-V2^G>`.jX9j=4e8Z66f^p03sKl+ces4MLOQlh2fS/m?PEon/"8r+HR=q+u9G/Hm+fU^9H1\pXX,5H]LDWY:jW19U([EUSY7GB[\)RFm2l.rb)_mk3f%#_0<aGU+>$/k9S-\`,<*.CMRNG0<%&ioDc\6osNIV!b_;u2$+-8lRImYj2/uM>MoLoZFS2MOE>4mV)lFrdnZ:@F<L-Ch</mL;HX)%JLL0=__p@:<Q;U&/)rL&i`*/oI2PWMHbV_'dT9PRk81hQd-,sjB\`IhmiS<1mJk4OhZLn8obi:JEd*7aRYS`e"cE>QlrGF^TG2YZNIW;R*>Z<fp$2J?N'u,1VI4+=!_gG%6901XdbYtHgP^Af6j(J9d1Mf`!G6eufNb,XBc/l<fr5J.gkKlF^*)g9:glQ^Z@r)uph+]&h@l;=nkXK7IZu,m\R>XHoRg#YJJq=2hSTQR!PP[&f;8sILYVkROKl7q=$mG_co^WAcrA%#CVItcfYn^29];UUqtKjJ2>d3g]6)LkUT9C6Xt?>CQ,)D5>UXT[HBe<C\bUJqHhpaM\9[fHYEu`96[aoWo0?;MgjHo`558tka8L4MRMfQ!IRCV>a0&ueJ9!)rd/9Z%c`27L20,bbW+?cSj?)koLdu#n-%g:b\^];Q]<W^i=B0%?i#>eT;?[2k#(OEjjZH9OPr:m]?O/2RgG]MD)$9.X-kBnO]5)mG<!K'b,"[k<?Vg!W9]k,TnH;9'U2XJhKYC?GQuF#p#urSmO>VN)>3&s)mkdNX,cf-ep--DkVgqg8I2!5&geo\C1VV%J>khWSm=0bJ#/,IKLAGhf:nI.raDX9)-_S7f_G8;18Bk=JH5qD&*VrG6nY&DIqj%rX]g=LU>\746gLd.mC:$BVrs.%QQl,5F"Aso#%-r:IUIXDCk>@D[?P^C=kMaVqIY@5#*-_nokMD"$gIGb\)>pS4o769"Sh1Y:[WQQ<a$G&mM[Mm7qXDtAP8uZr(Wgt!Gr"+*RiPa+S5kCfG)=ON;*"$D!pW29,r:<>]H'rU2#XcWq]s8o+Cg&rSO(27n>oL*m*M&RRqs,q+A`RR<pUH2gYhQZN8(IpJDL?ZgA5@Y8!$AdU5.FaXu,#E?WKTW3='BK\*/[U0t7au8=!NRP.D@8>cp2c"Q/-+pp)O"^lErSb"4hkWVQ5Rk57k9"DJf5p#`eZo9s'bC"a[ofR%41g'c,UFj,58lpncn,AD,87?[g3<^DHWrB$$M%fsH400IZM1Z2!i1?W(tQ#g;t3b3>[s6f%/VE5IBpRlda;.nnNa]Kd'@a=<f1QBROIbke;;O%l8Qa=R'6",Sp)jV+R;s>[Y2cn%phFC=[St]G$+lqR?cfuW3_B;ubqa/OipqP;%a5<gn-_nSSP(%??U,O97)K#t:c/#tmEX]U:S6pXHKcud<j"Y70N0!\]#uqqH'&T_KU7Gj=T6Qk15p4`E<:=CRi@u%>$1'j8E>W:Z=-Xgg5`;.4.W]^75qJrL3PSg6->9>VFeKLBXjA>Zg10fT6U>e$EuD,DJM["EYr!r6m,=Dua.]Np&2XFd_8P[*XTF0_=)=)TI`iT1*UIEu_XQlP&:%nV80a]=EbR?f@<&gD6:#lAW?@&1BZEEua807iR-.tp,-9=,60/=X<PVMAm<QL-d-hH=d9Q4B,aIosUU1c?gRQ1$j_+"N\7F215UiJ?iF;4T0VZjKW3Qk&i:&ikn=A0[4B:'>7<i$W?nQE'PXQf5mmJ@Bn`k#j#Ca^6Tu3h`;V3SkHNo)R>Aq;\QQ"sV&DltCop^E?Hi*43=)mh^rU-hc+5T4e]K^aaIIV:Hnb1u1lK7+)o^)Emr<(pQ(Q.-(`aSh3`4)06@U!ueWALT)CoKpUrkZsP>)3I9+eBG'HEhBK>=!WjEtG<=Rr7ikO&m="pq\>,4luU[IjPM5`!-kY*4jW=\_#?)[N;.tjL3?WK#dQBg7Ns9,29iBjJ#cbIp)Q`*8]qRYO[;i'I^,kgeVfoA&>oR_\:aXmF<D@EUUu,XBkeA>-Z,LoY\EEWc)7i~>endstream
 endobj
-309 0 obj
+245 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3786
 >>
 stream
 GauHMD0$Z*&cSA/Ja&LNX`u!<P*5+pFC[m:SB/.=0[k-4N!Hut8ORcX$\0JHr;&Uh^qJ)Wf8ZZPjM`Hk!#E3D4T"L%7#^Z^K`@Y[69JV404%DlA1Em\0ps=DZ+LaZbKkY5/H0ZY5?oRopjI1&4e9eM75C@YY/aJ'b\-P;op)a#=tkfFcPFWfR*HB3>)9N^_p[1Z/&%<-gInTcF?EiV/s\_[je$54hST*-F`KA*YE^%Q/pe-/*N$5?:N=U1%nhggnt`tV(&`q?-5X&>*FFQiYnkFaG?A,1cc,\MC*jSiGdY=5`7`mCn7c7BS2QG#/apH8hmH[YSI<24+uMfcF(L's149kjn[DLNrS#mJ&^.<Ko^0fr/cXnE<TOE,A=;s(X4h0c9Z2@mb&o2.YJ0ejmRC_6F]b=.]Xe&FVHdm/9(C>'X_"&M;4(&=6Fp+5n)U[-V(/%@_HWGnE\hZqrDk'glFff*Y>%UN@V98Sb!]Opph&EAG*+-khn@?IiXTPrj4TKcTBn(IVCW\(8)n,BT-70C\JJoDQWiigY"C?\rRRE8s!mj6b378$I5gX2B7C>>3+;NW.+K@kBD:=uCU-!$3:-;:l@#M1/oZorKgI7lG1NXt<F39aR#T@#[e8e^Q1.6Wnkf_SJZ'T#jBBC[Kn8,RfY(5H9frs'.dVd4Z]DUJM9#O=Q6aS_=<VVPn6a*3rXf&_Pq(bKU[NqbN$N1;6^NUs.cH5L8nICSclU2gDd3s(@<Te2Q-A1FD]Y2YlI,#ZRETuZ;_@V=+C&2P`d3<q;Z)Gt41[TP]JQ2m;#5W_(RJ(o<s//11AN_rKsUTNeY,]=R9JVjD[1%tU@&:8YQb&!=RSCA=7&rs57k2\4j\K9&N[?U_p\i:m;]pB$=6SdG[>afJ;t0R472YI\&/MQB,b(_pV<]7[a'r^>WU$)&b&B5g1bS<LeT'scX/",-H+sHUc0X_\=Cek,.YRgMeaMu)6o28BE+FEIQF4*'B5HV-Ng_5).*X6qi/7r,i/hI@ZAS==`M_J%M[8qi>:n'dH\f4<`R.REq'B"Hapcbo(=TtLQdM'cRCa"7RR*0pji(&l;PJ$Q")Q3.*8bO23KiWeCmiO?qE!"A*XQbF1;tt'jsBg-[:H&QS1a<%BRSr,=Z2cP9QZl+TZ1hN/W!ro;)Lr[8Y/*"uf6B2>F@k\2@e.JKEUFnYo3q=Be_>4go%7-!K0Q5&@@Eg=64)?n+FgktNTg7d"%a#p.!6J3tMeq8VBa)'NR*bIt0A5Ve,tq+ZqBf$`^_=4tD7RGn'=JM*M02BAAqCE+t:341(ifF*C`T).U3#A->;[=ddG6tt;[0'1CB9WiEolYXPW?Q$2l"$*sHXq=!EhP;@e"dT#D6&Nrb4odn`K1mKq!9;5O"$$R$:=:X<1=!O[:K[[`o:dF@B%O_JVt\2AFK;UZ]cELr5Fdoj:o4-S?tqcdBo3&c,HkVipoV@<6:D=GNmi[1TD]tU+[g2#1JoQ'L:$U-kQ8*a,]ZA:gO`FEG`s.q(2XajOs7OQ\s$@ek1(oZA62fX:G,Bm)REWa@Id>@^,'T&/02\=<@u&l?Acb=;^8jWYj:57>_*UZGF89:#bI&Q9>e;tcO;j,9Zi=0e@H&\835(rg6rZ*o#=Dgj:?C4.4[b6p`$QnBi@*fll;An<VTrde<P'G^"n?*-JfE(HN)BKrqd4"46At-3bX!4HQ=sC7.$C:-TM-U-CR.Of>,09<_4R,b+4^PJ`re-n9bcZ"NqMM$Ws*M$4;i>"#)4B,HRjeRUdX>M:t734%eY:c)k);5aoW&V/TXAJ[SH%j@29?o#rPe)A;6J7ZBk]`A<%BPNVfiI:USF>W\cF\;Ke,esOrHn"-p'Cdhqd_--jKUek@(Cl]7?L0gu58colfgh\nHQZT:V7i'eU&[XrgTPI3Z6`0oq?E49G>8Y^.^WI"SSAn?89Vs^KAuZs8QC27M$pB_a<Q6?Lk8N8q$9#W6O,_Qh$_UNXkC$;jT2pT!S6kjkhbZ[*R\KC<)gE8$p+)"'l<>AO[L+#r8\omQ@dt,jHA2"\WMAW</P]Q<6\U@/aN@C\nq]pW'Cq[QRqbnA-8g_@:&`@rWEdN4&4g<+lH0S+Fdf)XJ.5"Jb@;8bmo,KM,8C[:?*H)Z>^:ul+*ps18*9e9N[!\db!VdteeL&BVpG\!SeF]X:ScLZn&9C,:GCVDF:'Mp^Q&P:WX<>+3t:k5Uj@Ihh+*2'%MAHbhs;MEHgN5:*&st,iWGW:^0#-$\>0ng4t=mH!^<Zi]U*PZStQF-2COLbJ/aY9&8803XJ.uR>-gd7BLo$8iY6)dW4^1kX1".*S#dn/Knb,;"'n,Qi4R[,K%i(:)R_?'=hUg;8("^P]cf;2P]oV5:5-nI2*de;'q4sGN#G^u&G_.SD9m:$<]MBa8?H#hYYZZ;e!C7U.k)O)4G6hY6H.Le9lSPe%iiS'h7!>lSQ11i)MnO_2B!QS;3M]9G+_tSLdeL)*[t&S4Y@Ws;eA&j00`8UdG;$U-D:`!Y%nRu@Y0SRWkjZNcQ%04!g^+*Y0`U#PVtO_5BKE5_T9BoLc^iK:P*kg[Q51%Y\5Jf%5!en];WcT5e&=;Z8Q$oBA[L>m5_aV!DK0^J^PZG[B!tCY!'^QD4dib/q5OS)1R6QVW6u.;0BQs!ms,km9M8gE=1,-hk!FNHS%]q?r5E*7`&smBkj[(O,AiZjWrG(W^4>TrkGPF6-P+KLo?):F2MKIM;XR0hY9Gq,^IOG"#Rg7Rh83m1h_D:cne!4^PWBXE)/&8M&U7:!3N(%Z$l)**NcsL-52G][A&Kf9q1<n!f`aB=k3]rgmXW65(\Rk+4F80-SJo\d(uKZP.Q?sb=^b#DA.5=pl0ZRLY/LmAR3]c/PF0^VR$^0D2pbh2kidFR$OL[\]5+)UXLl($ZqdU4;PpJJMP^egGI&FjrhL%4.pL5RQQmJ'p[d8M>.$T^3t7rofI!_mf)2=jmBstf=/qm]>5@1ARY[PW[.*&&@F=tXcqm7>Mm0*H%'t\-bR+&]6f"uinNGJ?U.8eEBC`=3M\:>#pkptN[E/='1FC;6>23mct;[HUea'%GXUq@`Y0Ok5B8X+XlACe3gZun*5[OD`247B37%=.*j:)E#X"mremr1GJ5i>\AkT</d)omKl($.V#)0E-@kQ9PCQgtuYa[L7[\C2LC(F!,T#@:'T-1Sa`F=q]jpQKBoV>@G(609o1umu[Tlc:PERWiBnS$qSC<\54d)ZD662BOn"[;gcjMahomhJH](Oa_OW+RMrP_("p%XZS#,jtsV_AD*ZH.0D-U5;h'eMMn9)@De8ZO?'Q5nG3$H'aq";6Hj6+LVf!?PKjWlZ$Q4aFi,Z,)VKAEMCrs#YNob%b:4l9Ohb!RJKpodqBgPS^8>pSLW6\$j(]Td=`+&4>e8b/ij;ee;0S3F@7iJi=qs"G3s7SJ2!_V%HV_I/5>n3SgVp9`rIV7'`R=]kc)i8P1r=S]t?WJ%3sYi)T%^Z3r/p_RTK@''1$U9.1hGN%1&-er9A$SmDdc<$*$(MI!.MVI..bj/1q2JPTc5N^L"StODt'2bba(NG`"XiJ#U"3q]da%/dLli0n'3#!f@gZE+Jj/@jEuZ!er%E0=eI\N")2uJWR"`gGU^)gGb_B=ZL1mR2m+q<+e^WCaV:rg'*?HBgfrNNS.+s,?oZ9H96Y.c=]WLlXoE#Xb'ZT8C[3t@RWDL`jY*K6rTQC8#3nsO`#74H"`kF0R"oi=e0VK1O,i5O"D;0kB,(,VC?3JW:?_lP)/:V32<1p!W9rSi!46;TD]^ee<!u~>endstream
 endobj
-310 0 obj
+246 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3764
 >>
 stream
 GauHMmr-t%&cJ<9@W=Y1?Qh0#D)mB#E%[KsD1$>=jUe)/0NR7,g7%*nG*c6o^V4VuQ]u%Gc93C#'%dsgm`s&%Hh1i/'Ee7Po$=ZSiq5XNHoi%[O]\^'E0<o5ik>+qn`&.:nXDOeEKSK)ojiG))G\UI17:li"s]7(-e#oN>hCns0T<&.B$";:V?p9T`7`CQ@;NLen"e4:dOHsiN+Ut)`IGhc0=9lXK@B?Z17oOM/([D;%rV@o9Pa)<@@PpR=dKo?jC.B3GX)WFa0a3?G(mV3M.?l&Af(5*)k>5%,,((h)-d_c<A+6mfYRs#ZSZ!a\T')2hg^#p.C?u_-#L@0.rCjW:AjFqpB=hTbuQf8[Ab1\9MJA5YJ#B]!ilW/=-^$sAO;Xmg7#<DV0CgR`Q^o8b-LQ?5=c"=d0rOL'k^/ceE9fm3GoSTg5Eg-O1"r+RX2[+4`miC^QcAAY'T2_Q%#JZmZJlF.,hfi1W1:U[*AH4[!jCjPq>ug<,146Gu]5>E0If5Wa%Ei%+pC%Rp2teo3>fq3KD-L@P]QA=3b"r$h6-ADKG&*m*qp!Vtc)3Q#6scF=Er00aA?-)pi;h-Ss&MA;pF(cnV%dVF-KinS*A:V_Q$P/t=oupLs'>;$M,_@!Y#VcYa4$#8\PEra6Xl-lY6<c0]/.!Nkn:`L^1'kCma-&%Ng';m,(C_PBAB"C("TAm$554)aI\QnmPFil]a;\kE]+VopqmpFrf\D"s-g#saEG;)0-N@;ek@VarDm2>PYI9Z0i+pSuFuDK(oUc.2"NAsh4Vn"$F-Ft460F"F^fHCbDa<r5U$I;?8k"9Ec#?$;ToINFQqKf<H\rp1Q5QF_1T4E,0g;-EQW?kWpK4b^R7mLlO1@m&]PM!-Kd%<K"uhWI@?/eO#$"ISDkX<YJa$iSW^3XJaEY.')QT$XuI+dq*&ciF<(Z3nW@5KG,a^t'QM["$lb^S6qUA(.aL>(oK[bJAU>EaXTe,.+hF_)oS1JdB#C0gnio6U^H:(7MPn(2tn4"-[GeI:@rLMcAdq&gl(.V*lb',/\Up:*J%VmpC2m%TFbRI^SD",fgfS^#E:9PtJI.obT<Z,1u@.N<tA*>=0:q2ormA4i$JZX`UQ,/qb0oo;3.47Ejk?mFEH@puC&"__26%MKNHL&<.dS[4[(pDf=bIjl1q#A54(A3qsUhk%<@<%].mAQ&$n`_)]*\Y%4P#GbVTTV,`PsDDr9"2Y6aSaZ!E$f:!oS-);WQ`<R6fW\)[S,NAP5)+Fi0ps[ue$0U@VL,en;bqL%*8K78db7@j:A<,`pG1a2X`"llo<A/Eaif^,8GL'gOi=kQ=3@A+ZA_/qjq8^U"JT,Thh5<huWW`Wu&PH+J076G1MX8am\,18cM\^o]cjgJG*"gI[=3MG\.n`GXbB/60'RYKanu17iE&^$BU/gR\Ok\VL0<\rlPl4J7T<ce"*4Ml6pa_oX4=<l?Qc$Y4-f4Ah>(k;MDY`<g=)Y5o"dS##L>&Y"L_YFD+F4=`#AH'3*jB3ja:e"];F&8Mq'dY^2CSR6fW?h5@X2(Tb0iBTL\if^^#L$X__Eb"?f'Z!O*[MVgqN66R$"=o/Yi!0hZ4NJ5!<kk=m6nD\q`!DUTJ<kEa\rUDfUjq7Z)'!Wu6UH#)d%..cj:h9Pjs066RkZR<b>H!d.YXR]:/h<XbDNDk>P<^-]?Z=<`<T:Q0Rs-W'NtH>Spg,Z9Y*!IF0b]HHGAiFbcgcc-"gU,"'.(ddTq5.OqP23B9S;/;`j^!@a-&LdXHp`)GJcggi'l_3p7oHBKHU<XhsQqF8MXb;`LnoIMO`_,<$"A"I7DZVnT"8\gHW9WO!n&"1).(CP.M*Q:["(8[PIac8Y)daB>R7X.^pJdIr#>YUL1$TNa6Lj^fn[G!KY,NSI]+.Dd=P=ff&(atTeHmZ2";iMQHb"Ru%n=ko0t#CpG#76r1M*-SB(*MjS`N(8Wk?!%R/XcF_&b@Eahese=I<S=W7Ys/jkAFuLD+DA/ePj;OINfq1&5q<PBeqO#6(DG-OMsW5:p6GYJu42-XI%-Ni&F8.rrT'>])hTV)V<!UYakj8F5o0(p7tWnfSN<j`SsM$N0)Jj$3a$X%p/Z"j;m;IsPpTg[i[EP9K[)-n$PI;$r^pK/UkL8N<HRMQ*/BE(OqB#G7rZ:`FE(GdQ/7L&>TrGMK5UE!pD8hQf&:Pol\)bj4mbC$lE^bN%]r4V/dJ8!p@a)(K5J'T5XFeIJAL9NE/5ni35U6YcdQkZJj!#QL]]B&b7`IPd[hluH`Tf!BI#MJcbsL0jS%L+1ZR-G*(H\7UF*h*eI;HJQV5pT%O3,<26JG%Nr>C$FX\0gQ,RE%P(IWf1E4%1:&1;M0j'AKf:ad2]"1;Aq$Z9\I9P!,:!n/>&CtM#K^hQGQ"HYcqNc"b/t$`2%SSW35d+Eb)U2:qp<)dBk-mn<eD$6I=4p)@Xr<0/PSe)29tI`;=I`*kinXg:\G8KZqBSUr5Mg:A7/@2*`:b/hg[FonkitctA%j%UVfS!h7QfnU2F32Gn/28aO%*(r%NM!G<UR&e,[m0H(q%hG^&Wi:`XZN3XMSC+c!g?m9,RXMDM!Ut)6-;+,[2dN/oRY=qkpq4lS,1)7rJ"h&sjA%qCW?WrZ_3hEVHZ+r^BFRUX-'mNu+E\@ptJe!d;;^5#"0pO"=an9<:eDpp8&*Fa9Zb&8ph\J-m:Wk\A([=JW"UKf\IZQ[4oVO&Dh!QC<FHh.&*tjXp]/FMSpgF>GXm(+VL_1PI4rSRO-OhB_#Uhj-E['_PWCBK^X*GZt-Cu6e5/"]Vaf]G):QGD>-:lU1TXiN!Q-lS<\q0=U/*iS)>2,G)A9#tQm?)53$NsjJVU1t9jAor4g8=Nh>^;S$XCorHUVGD;UnOZX_th%c-tGRb`BK;lRkYF08,n#k3CB:#Z[Ses+rDnUc#AZf\ESH`IGY&^I8=q\XM#;s=VGK-Zf<s$'u9(rP[k/hee2h-cX#;f`c53%?F41[hUI6D"<PmRWd68/pWtq1?/M-cbb-[c9t^pKn!-,k^(GuP;n^:`,W_OrK<A6QgX'(7XgCblGAgr\@1H-uZOZNS7^"cLK@.RX&Y/+Qk(.T6]SsYLXJu%E!RYksXPmYF_uSHB"Qh;9M/fgkVagb;C"rQRS2G_PZN`fi?VcMHIbJH7d5W_:0&7k5b$p=(&3b[W8"^Hb-ec#=.SUb!0Yc#=n_l?Mj<CNDF@rr*F?#M.QT&")OI*LLn$a^;h9C'+-_86:XCQ5TcsZNZ;#kuCR_iGV@"m&]-5tZ_Umh+me3PTc+:P>,Gf&)N4*uG>&p`s/Z`)UX)A=Os67C"&\NIIso=$(s,XIT_:h$<S/M0u($S'A#6!0dimY:>!"SNLPgke'j>@Qq![1*+)15B0B^&lE-VH,QH0G`XAB>f@i-Lo9h]>N)SpS/HY)C3d/2CZL>,!_kiYrZ*1Uta8uRp\K3qgfAo/j_A!#_W;$3NSoZU*J<"4k^0;!FcM/p(."2f5!in40_0n+>0,5=a!\.;Ld=`o@P:`_1$40U`Pt:TOF]hK;^*D?eHhK:5EL)Fb1Gti9Ag*6@SXX/%4-_Hcp_-U[[#.EIDp*>D&gJ7aV5eT]utC.J1gPNIC'QAb/@n1)6d,@ts'uSa=feDno,9,G[EZDQ>n$3M^qlC=7)B'Q4n?&aLQpZT)9-L7UXPkAi\1I*KR&K8_enoUWlt._El_^T7.ST>,1-arSQ6EsG)#MQ4j8c'pBSp1";NhDGM0&)[2+K%)VkNs6IVCW)/2!ger4#6~>endstream
 endobj
-311 0 obj
+247 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3735
 >>
 stream
 GauHM=`YN@&q9SY5ilRb]Af4P&O1)'G3l"KQ*iN8\8!N)i!d\XKc*PaN%"PSn(5>p'PDfm;Q2X_3CfjjYJ4t8fF\(Br+DNSG.D52?]WiQbgouVRRU5a^1'=/TDeSe]!J1OX(YgFO!^ptBXV<rF>dD6a"3ZRB>`8_R2rspWh`GRd?9K%&Ys%*m,kP'-;N7?ga%5a"<.llo7+(=8%/C5aZOlh2H`Jll1)B5-eR_JiVu6Pk34U\RBK/n3"%3s)Z(jK&hoc9TIXr<[pmOT&M0<QnFq=?=AE!e?^Gi$^s;Rq.h(Ghj0"'0Y8+P2Kl\G^;WiZee)p;VKZ1H/fnROk,#9Dk:'KL=QLUJNhn1&`6H!mpA+ooPblnDK=b2WT[OE5<.<i1>B6YfUFA4I41P(%sI)ia..DPWW@U9gOnrlVs[^>hj[3Fs4Qs;$d@VlY,M2^]$(Nh+sKOm3\D0C&Ec1]lH1%>68c:6(3mkp<fq*.M\]g/OfK>2o%BOTR_;(09G=@+;7KlZVBrMcDs\_Y/_\_d?6#l)5/:3@&ooj*Bo3D/88M##(>7Z1sJ1G5+=X+h=Y`H4"Id1Y=`.uM^g0je..p:p.WO%4KCac+n^K$S=HN/"Bp?/M%ilP)D?O*KTf;[9a,&%1EWqYdbdWt11Eoei$CO]^a&gB[r>\2lOaVhqd#Be=U*g^?(_*c)g57%oTu)!',uM6M#e;rEWfo;%4MORuj/)='CEr?'uObK:h#LK?6nBleO8UdK/@_[i%^MB:'L.I+3f!YJ%,N:\tR1l72]HJ>_J4n),hmU_?)fLqQGUbG[QLWVN7SO%p+7eVNPeE<OAeTKJ82O+I-K]-s<\udm+$Db5\HctmfM91ldT;WANSWu?N9(R_M)o7`U+QJ;de%nL7(8i@j/%!N/lIP1#;=<Uf\"blgo2qN0r=Vi^&HcYk8eMo^*86<5(B4;6k$m9,6Tddqf*4qfc*N2hkk0sE&\C.Z6j8<JGKtS<0A\mQdGm1r[QO7Ul.E;O1f/qtbnf"^nr5;0,;WTe$;T6#Rf`XmO"!87aJY'i0A^!@QT)C>DEc2\G0OOOdJ]RHWDO.$;:Yg!fUJ@767*3:)!_A,"02^DKaeq%="&5aa3ZX_fXU\2f7JrS`=:%lm3%L*T4ne=$D;MHWNm*9*CJf%Tttpf,R'E`mjjVk"L9Lm#tPX:-[%ad^npq52b@/+a$F+.7pVK]%X\BA\O006?Qqkj6'nZ,g1baZI$p*r&#LURaXsktK'-['AhS(0>u60!p\&0QlQngO=E!;m+.,`t7e;^]7hHC/6j-eE%7*M5*rMO'!dkK4d;ZaeJhl]-+%eUh_bk>ke3&jIK'hK;b---m5k85JQ.o3IW#I;Y>Sg0CUnf-ON2;4^Fm++7I/V_WIBJD(?5fAi>-#=o,a6O[[jAgC(Hmr52n,CoX=<.B\&]*FP2:S.KW<d-$!d/p$@(l#.W],)RK35(Fn,Ba/,52]]9%ns0h?)iO>>\EC6L3F/Q%%@b(p:I4Z&[t0(bN]3q&NaUbCCf3F/UgM1-&:n>$/[giU9*!!aXF90Eu'USJJ>QT:e3HiuRpNiJh:l[]>^=c'_QmYUbRqF\ItQfF1rd;ZO!NZi5K)NIj>b2MSo3'X+I+IQ16jKm7X'Bgam^tFu3P+'EaV9=P*&sOY*5[Q^)Z5iOXfd5I%$=Nu"65(Zc[tpBE=7JB!9>NCl6@.ggM)[L=ShgUd4n(QNE5;>p7HY<>r2B0$NT3q&4*m_iXX[Jcab,&D;:F_EP5&`)G^u_HE*:^LQp"uJJ0md&3nLH^WkJ9k!P<T,6'R6dRO=\P++l@J4@uIb>Qeg/F:m`g&b?Knd&S03$g<I'_&-XMo'sKq-ft^i'THGCSMiCq-Cn_H.km2c&_WrYP]n&s=lu1ddQ,d,\t^J-<p+it"B0glUW)VSn?^'Dmh(,Z&99WdD7"@FX3IXqAi+7Fm&=7FN[5EWBH(gOM1@6mWRdA<6!8#V%U4Q?L$"6cfnoh60S55B]._pq^^3#p;5*E8GR>#FZN,=J0$.6G\8n8!F>0seT=#U370/fa#I21:@B1AEJ]0&=`"E9V-0)r15f?IcCkeYP7$Ym`/#Y4pc2Q-OjL(isQ--RE(K@[TLH@`ZFn![Oj<Xd3%`QZ%/JZh5T'3r8Q@q>\[bt#s1%Cd7K5X[mFG[GYjN+=6+T<69PsA:[#Ad#3>c;O4a.0fD:A!2:!pqOt^7JW(?4ktYP0&Y(n$)+E(A5"n/t%%LJkLmHHGN=&_R,L'<60=^p,s?hruI94Y?t9TP9.[O:-8ZU<9CoO_F%a*)C4O?D9`d=7>=\,&k#Sm"YI>82c-ALN%tje0La91S*^p;l`mIQ'T=IKb4NukU[dp"jiNnAPsiW<!H"F;,%f="S'1!N>-1<3%GosbKS%fUIJ1.LhA%^d9u!M!&ZR\moM;:sG,rt7T4Z)Z2#]s#0XgFJe[%5;N`P$QJ`nLnaYL$#AqePeFU5[gWpJH:AsgVPAKMAdmI>^6_rei[6e>9?hO)Q<mX>@3,_7Fuj)Q":HSGEm<-[]-c10"K1W!TZ!d,^,9EPlf@o9bmZLa!>0\cmpc97Zt(^S8]O!;X6/hm,'meh0&i'Y;E91&IsX#d:o#O!WO[:auf[7@dr)>pc<>AeDc&Zr=7p"cB`5Cj&V?gc!#^S.A#;;hIl`'!pol+k)a2#<tc6A[WXG8"*!*^u5>m_'sB5>I:;6FRg.Q_&<GD"2]ioX-[nLI?QSk`^9HMPDZP5o!bmkVMgX%BNZa1)$C+l6Hclc$lCb&2)UEGZeT4&g]*)Lj2b%<\"l$LnK=&FlZ>1!#"'@I,@nJkdk(hnBc'eD8OAQ,hF?p(Q*iE[np%S%\SV<p%WT[!%0QVT9@d\'oDh\2o%eN@YXgb7;l"RW:,6Y)-@a+d2W_P/qFE=TH.dLC69QH;Y"!Fgr`Ee66YWbI"1=gH,PYeIV=YWf0m;EUnO$a.$-qJbY/e:[[dp$G"__HQ@+W'itDP=(.eN)(l>pf+O\`(E(Cgn_Kr&E=7+Ig!=bM@:hY\7C)PJ)E<?`H0!,,p-pKVdeP@1$[7#*0ZmAY"6$^&SD)_Cs&<0]s5d8:eg#h3_$efY+`:mAK6m0f<&'P/5afdXO,[t%M@I'W1$M#]PrnG&CCS7S+'bC$@;oV&=7g+,)7a!`Wj;u*05JjdC]VFj=d<m37&E<SKTll9l[c>ne>?G;8,,[um8d[0,#%@u"/Q#&8*Sap_&J<&jr?^C*!tSQ`Stm/>?)\GY$-X,RB/B_0IM(k9h_K!pr[d.ol4VGUp%H0q]-XG58,/Lj0B8P9H41Z?EllZ=%"O=d$@s.%*_5L=i$U%?P678[2[:]7#kYn>A:;=D^?jP+/*a@3\Snk3F\Grqgp6f[62@6hT'.0&RPfBa7UGe\cqDs0Zc.m^Ps/CqV6uI'3<MM]0A+tiYpm$*X"tX2IG^a;BKfRJ7Z/'nr8OD6X"S4_eX1cWeVhOipt>6kY$\I"?RE\LLX-q'O7Xep^@B9I1h#_L"9%R#%NWkZJ:Q?QfNrS\T$?"LLZ<m\`q/B@YlFV$^KF,m706C!jjuFa!32sK7G.G!PsbBU%96O,bu2/p%_o^j,Z5e,f.LWp.[[01W]!$DI?,Y-GEnh.f['`lSVOtKK`W'$;(;WU^XcH@lpTY`!N,@YYPc-)T^%Z!7asM+hV8U2*dBrROl&gtV519]]#Q^.n3SDT!g?qL0MhS2o?*r7UObuS[F#,967Obi"ErJ)rr\0AV@E~>endstream
 endobj
-312 0 obj
+248 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3817
 >>
 stream
 Gb!Sn?$"aY(4GYT\?djSmRW;N/Z#caM4M"gmFGJlREW%/%Rbm])NnJ.:l=i0pK[2\ZKP$CLX&YmRDuN<i-q2Cm^Z_[1r+T.s8Oc!HF]b_YD4qSd42$P,acsDL0h!rqX@MXc()ON"LICf_0@[Q:+n&`9IGb7Lk=l%3`sVJCj<e#g3k^ajtrM2fJTL`]>I71E(f'p'CCL91`D<b?dn9N>5aBR4Ba]b:LQT%;J[Tf#=m,>#F74XO)W8'BEgt!H\[T%@l?<CiKuR8nW%i9@L@joJ%!/MZbbaN632S+cene/KNjRUUo"#j3;SCpocho=:1d+1Y5J2.8u9UF5lN!HHl:.UOFf1g1#O'*-ds4BF*nlZGiK+s>ZnZ5AN]so=n[,f#(Fs`%\!B.#;,qLK4`$Y:1/#FK^!:aF?s=pRI_J,%#3;5P00:O5X6Y`8(MBqTJ-sI`QFrD!m=IAfm+cHXA)<&RHSJ9U17/pFReDGjn80JrV6(UAa^^qm"1J@r[LL\iRj,b,(()-KSgph9N;DL&\,'=87]KV"8XIAmrY-oe"c16&acB6b/2(Q.i*a<IJ`T'V6u2FJQGHV,'hZfCeN[B^%mD)7P>De^>I*ZW=LKEiLf4=p37*diEeN4-5LBl6B[a=-SS)]Rrg[Uj+qG1762/541>@)D9pfDa+G,>3Ib;SCcAI._S(i2'L-[jB4,ha5>?NfkM!H"[Jh9c9GaH-W,bZMCO+:Z>EDk<-BVi86284b#Q@u0<CV7B[r@lORhtAnd4e`lWQ7Y_=XYm2^-_\-?1^g6T!?j&jJ]M'i%9Q@>n57dBgcMFJpfZE!9oErCKb>Tb*5!7CS/15W+LA%*_W8M_4Mq)pP>p"h5B#hGVFA474/G=g2(&9:]m-V5Y?QZNg,'WcP&:,HT643Sb^,o)00_Z,UhG'Rkg_K#FmqZ-W?DD/t>^t/WA(G(*S`]]ogjMj-J6J-pq8l/B]p!OosW5I`rJ-*8us_,\%h^J9[!9n[[M[HE++`S;SUN>PdmTlGhT&L0VF&IaO4AYmobHSCS"XPKGqLp8umS]]I\L1KT^'3K.?6DiA*(nY;rr66JM8Y[B`4C+GMC3UN\(C+#=E,AY1o73:X4S73.t[.nHB?nMbp.edff)IF0Q'^0Ntf88?(:]O]'5B\jY#]/XaSmQ@qWj_6qG+L)P!FbdBB7&[ZJSoT[h3JWr'75Cabe`2tn=4C:oHnQI4P8EgmWDqu[MuX?nj\6YBG=,^-*Tq^^=.N.<LT?q*<K($#&Wn2bc43cSgEd3H&nQ53G;n4b(bSL6RtB%*Wq/D0L##LhcU>f:r5K?C5X9tAuu_:;o/m:I-9fF^`l:iTcT>`FdF$I*4QHV()[`!#q&']^,-TD=BHjlTKePb2HYD:d>"ldDiKA"qI;c`<tZ1h%m@KhM4,(nJ"g>?r)GdmrjNPWKDua!3115Lr6CSdI.Tg8#bWWtIg8d$B16ej_O"H@kK9`bfV)qSX`8qNC:Cd)g094%\EY1lFi5<\SAO][`%j`^<J%C,o2l6sEgIGB.$),*4"k7SDAgnh(BcL5g)Y3jEd=]dKL38\\YXGC;3*83&i?)TD1O*Qn*YPp*k_[cAZ'Je3#gs-eeUpq\fQ^!<q$4a/@29nEu@:kLD98%c0<+!,0cONCsTH]:*^1R+A;CVB\rXP],/MVD;9B!A\kL/MM`cV@N%RgoJe-7V0^1XN=9b^Aab*Ikpker't.M9CNV,NB/tPtU<uI3h)7p:7:HFEEI.*kneDLR.1^sX<gpm_UhZjdE8O?]f9(ISmcK(<D@Fp>XB"&MIFBU3f3'^K%kJd<^,Uo&Gq9:V1[Gd>Leie]8,%g$';qooS9ZkfY[9][T_mbH5_K@Z`4%c*rXR@0(QQVG8du]M:35hBHO_JUb;hqe#[N"t#;NVjO^k#(C_#Z8QOM/FbD2X4Bmru,TK+aWf!.2L1fb^O#P\jDZmPM0Rs&e:MZ<59H,8"u4\uK&]_Z3>g-)%[,Gq*lT<Z/\ka5$KMt3J"$OLL7_>,?*JJ+_,qB(Yq):07%UP9L4%jSV5!TaR*ZOh,Bc=5j-LfL)T(&Dgm!K9Rq1FJqIB+YU*TOaWmY/5>^jDU"oqAp#@4/LlVr&RjS!"0GsB5Za8`L]FLek`kh!'VR7:;7W]*IdO%^bV]*5_,$]H0pZdkHU2O@h@n/G1p"d.P%KIG&hK]\ko?OCChpfO;.QW*/7_3ShFZ`;atCK=/c6]b,Y6@\M=jH@UiOs1](^=naR#K)dX#t)74*)gmGCo8E#>$V?Y[_Xc/]7j2gFBbRg*)ZeVLdk`Bc1:C`.)IGM/7Fc;e9KK^*c"-R;%H"Y,kB;ZRM9X*MuC?5ePHeSXjBPfm52u#*2j>P@i6)[jPJtG*q`P^d2O,<YNji*Vh\L=3\&cnb1l!3BmGMiG5qYg9@gZ?tdIs8HDpE=B@7Jc^kg:cMQ+.bs[8MKE6*B&d+$ACJRrE<0!'&r2G8qq&!I/pD]/otRKd=Cu/X%,XN0Z:clqG)p459SLHUY<*C!U)?YCQ5c,QT0<(htQj,*Uu:p<@LtBdpk)1K8pUGgl*/VD$q+&AY"36Dh\,QlaWRcQmE'oo@htcZ!16M:#%Fc*8d9?@-6aK"[@'lp;li29,lcikeWEQ6MM\1bqEV9!DoVR,$J<OEaV:!Ok")o];sZM(EZVNkf_KNkVM%6\<qD__pO:t5!8)$(?H;^cNalB#Sar)n>B/0!31N6L9mm41;7hq\t6=$C@;&V:?R>(Iqqo=OApH.F=b.eVXN[ZIgsQ03:uKJ=[Tf&:B]!m.+XJ`d\0t$_Shh"/*8L';X0]eKf!NVoI7=Ln.HFei2T$SQ9mjWD;Tr^:=U`=^)(XP2DUKXh%,mMRkfUgludF&5M'4u>tkK%/,E&Y64jRUP.r9_;"M>!i0V9AodMqdAH%[-ZeZf+M,-H$'1<9Q**n-m(k)GD*G<=Z=J^uE49kR)2*,7l/P2<YOe?GX\E1MWmj(P2>.n(I1C;_/?r[s@Y3*gpg5S0ZEKlWH0Qjd`7rR#9Z2NK8^QP#8k,$)Qd9d:Ljt5GN,1FaOSm?of7#S#7Wk'G9'_+it[WX3:$9#TGOk;&r3IlO*s+r=1HQ\7frh3U[k$Qkp*l9JQD3.hu$G8@np#=T,],gq9T'k,Ub?8>\'r<Gmc8Q,)bW@-Fr]ZP&na&asN(m0GU[D$Idc)J823D=hVjdU-OPI`o1_%0>X&u%CW0'(7$TN->a)sLT587"E@Tt[tii2a0#l%Xr)j/_WYeA<7^'g8fL"t@=*>\`X#Ii7S#0ZnqkjnEgbWf'MAZnI"Aq2S_QESoI[s&?Mlbjfb;r&5D>/S/DVdSuF'DphOkBMG8ke)&+/Y;TPQGXUKBOWA*Vc/%;+?aC2Fi)k:YT/b!<+7Bl3L]6\leq>\#p97TI[C&B8/YRl*Cbffie5mH5;9I"->INH1Q[P\)^raaUZ]c=@)4cL11:UtT!T9JXN2H>-nN+UK2,2?<@\U^[.TpIXqk@Q9i9a=,gE`SIj6g"B7UarG:\&8LV4@nX&ejqYE(e;UcTJJ^$[FYr-6jLRf#Sa(BukUF:%n>m]#J/L0K5_*)GFh9r9fbAZbdQ4DHbDf>3K"='tQNdlY(M]]Wah*V*Da#.qr;VS+JArN-dGp0*:0BpGEV\V;c>%D't8fnrM;kEuUn=Z>q2VK;e29;<,jh<+Pa(,hOkI-s,eJuj#7T"mA=WP-e?)JqW33O\#Y`lTeo")Y*5#lAoChGS_H0utY:/GJsQb5H?e=$*WGT9$52?nm2aj(b/j%V?7NM9(4ebQ8cliRInfP<#tc`Ka;\?UW7VfZG]0Q8A'hD#3G3i/&SL~>endstream
 endobj
-313 0 obj
+249 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3260
 >>
 stream
 GauHMCN%tK(&a_2ENrm9((qk7Ot:*?'TP,g#4!OP<WQA<MdSp_a]T-7g)3eoqWiLr$t$I0%;L!C!-0V#BC=g8F3blI1rI)\IjQJhRgm&[(K3Go9h+Xs>0uDdhJQZup8WPHjp.7#Wr5+B^RW?f$]5_C`T:o2d;lL^?*;<3r'K3,^0!g>RP,oP>12*kEFWf_d#Z&@#@Sq'BCjZGC%Eilrka#B?<j'T@D_N2a<egqB^O\c=hf3A;_DPY9Zga_gq+B/$.pIdkIkcG0A_\IU)5Ma0(F!?]3$^7ia::fpcrJ]6;hN&9oY?>UZin]<#\H+9<?i>b(S3&jYcgj<98NOjesplD3#stSZ6]k'FG=g7<0cVPS,KO+^IK;>*I(,/n@P1W5=1cF3brbT)2_:?*-f>>PmTehp"7[cOPZ-$0S+sR;;07.OWtN]pE@W`Q3cP+-'XKAL4IWAb7+F-ZNE8E/Q+'\t6YbY+M^m2m0pnE-5X_KVLnk.8)YXq;t6#O;E?+B02rdS`4?1&ij,!^C"\["(JmkU<\]LLW:!L847.!m_bWbUa]kT]C+>,MB*mRV7:R[8ro5c<AJ]NfLa4)TU9oRCpbha<,cY^E@#2=iO/5a<=KJ7XTe36H`RTkR@("_7SbgW%fO4*;:j5sN$H""C>1!k^kK/`3(:jH8Oc5!!/=L5"TjIfrX239i6`O\-_[*)"O?2_@k.ql=2m!d;h`KH[]*il+5Va7?pk#[jS_iS6ud`_/Z!"m",ej!E"-@/P[nlnkdDp%mo*8n"juOmW2cSnW=h*dkYkk97VdjYH_daBY\.Uul)q.R-[S8RVPuTF:3p_q$Fh9"Q\9AhjTES^dePq>>U)'fdj>Z1rEK-"Aa5is$JE6bWG/du]?L.oaE^UL#_A5/[(;H3CoSsn#:S$:fXlsr"*IY[Ys_?c8,(]/_@K.@Q00R]N^NrK455EGLrF(nE"[+dl8.P\1?n1hpF'gt1i`3N4f)1jo`WiCU)PB*&r.#'=q?oH8rZEC4nlQr,j;*XnBoX<Ip(n`nM[*co\[O&n#5.4,$Odp&Y5[1bdd'o(<`)>21@X%jRQY3B/hsLfD4M]^J?r7p^\^Bc_%A`B1OC--.7Z;o9IY(LKU2d\BC#9p<&h]a[0[fq1g%5A_7u!CaK/r8`gYGi"$$S[,cBc;-=jYg@Qg.H_XKg.#M5aU2Jre4_Z?CO%B^'nQc;H@fctPfc`e9/)@PP8QCB6b/TtfT.9@DB,NjCk6]9eaFlJ0/Q3,:HDf/\XoQ"iXlAN<Ea0FMk&$Ba8d>"dI!pDFO)i@tqn<$PR8OYfRNA\,i*E2uK<iH,cqK7,GNa,abq9gRnUUuhcS[6WScoN*WHr`XG*2,/cM>U=T)'%n'PupX2Ap=LBcPZ@;0g$"`[NBP@l/uTiRi0.TXLJ#S1BYUhUYi6P2g5FMOTAiesScrEGSqRlioCs,ML:.TUJH'!Micu?4(ZN!#-[k32s\J*%O3)Q$]L@'gPM2-=c,-S5sod6\b$*Z:nFi&Z_:mS?0C)RUb]2.<&7/p$J4(c<,$BGE_*jX(C`'i(SPPN+g*ki;#Y3FFYTd]KOsM"4c5LTp]oW\]Z.PYh4#ZLM7"s\c[7*+3csBQ<[,)5KIUnUDHeL@eS"**;p?`bkt*e3bUDN#%oN\Rob(jCMdt(4@<9uK,0^=H^CZm\@6_sTTX?Y=iEUjW.!EY"oti(S][1^C%A!"'X.OVo=03kjOU4K@_O%kjTaEd1GE/`:`L\a5[ip<>%nVV7PL=t&KT>)%k@)0+n'!j"I&dc^eg*^aTK&pE`WOerS6l&N`Au-Sk\7DJ6&1$"o8^4b1kno3%Z,=1d(MF_Ii;X"N?Per5DuU;""OQb2dGQ_D6#.K5:T`o1H0A^q?5T6]l4/0^a7JfYg`U9QKS3*$D6aE5-7ucs!,?Gg5@XF(h>bqSSb/5pVtb:ct`rnRF[c`[sJ3+c#tia(akZ&`*maleMhG/LYD%6clM8W'&]$H6f;dT\SaDj58m0j&p$E"X!:W+4P=(pE%K_CVU``7ka>E1S\MQ];:\s8_nPY"<XbMmmiJ&9U1K<D_'6@*[4".CY9f660q>`1%@aRMPIZ'k=;740I?=HKm\PC'm*o8?3,fSd,:h9V77>i;uD->Vrd1_oQ6*JrKNg)=8sL[]%ZPuh`ooqr!YkSS<uC?mUp@CMo85HU@b9#)UgD<E6:KNll&s4j%+#P48g!P<]mkkgjJsGrSuM=+0XPV]_r2$^:q4j\Tr7=rR5-6-`d\C3pNEum'@(n_2#<3<2t;4F+*rI2*W!mak)KT<pm:uf`Nl@5SWi.-l-KbnDr[3Q3bO,nc8%9E6!G"I/A_8q8=lsL_Dg%lVV70(6^m;?qJ=MN@'6cN"a7Y"PV5>=q#*=*BS@FkPk>^Oe(p*;`nEqdhB)'9,!6s/58`ab@NDsnkLKD'$o!)_:]meRqP-eH1Yis!Z9>='5A=-7'#6+>H:ZPO4_&^@7:Qnb:30#(/DZo4p7?B087qkQn?XcjHma)4p_3g-%CU^ol9QX>l3:Z3p=q>S-'l10&hXt<<YSPmTWTc+JElZojq`O=5*FHH!3bD5IN&ghpm)g+43l*m-T0+d`.:P!pJLbc^EV>#[?<*N%0S@PaRLKE4i,6h(Ju/:4,q@WYi+uHelRK:J)][>atT"lh03MUA775q(9Ph8p^'VDro:sI@HbICMluK-,[FVe-Y"FVBb2Qs)GW\=se+N6W?:s`WI:95'Ik)=?eTWj[)JtXtNn0B,P>=D]i&SiQbhEY>V6&m#X)MYM6^o(_rc,@bNJ<_XUUf>F$@]_TPb'Qirp-jfm[">jA5A77Mm.,S)"Be]1a&5UYm6?LaenY29JA8S!0$L4Nfib")Pe:>ao90f"BTJU@\AH0R]1(_0S4HI^"C?C"rW>U7M$rECP(gsrMFo[e3k;kcO64KPh8oHNhA[pa.\;egep(?TCOVTB$FJQfikV(s<rDgJPM!AU.<Pl^u<F:mr?WYrf;2HR@)U\6V;\QbMQ21PiE!jS'40T-BaM50Rk[K3jX\6/8lIrD8j_=I"_j`pcaEfAW5>rbB\ja')1G-f@p%#ofV>?oBQO8_<sUN8%dN_6tVIsG.;NLjEcpdR0>[jL<BpPj51Qe`\To/6L=T*7[rmMOsMMWrF_,+ODRK)QN5Uo:CC^8_@1LYh;HP:uU=muYTo?f`F+:?jC):TPZLb/p<1645!<g`>8g<*@+5F_KWg$)Pjg"KJYdTh>HbHPJ/_CRGkO9*kN\"GH(1nMNMDq@@o;pA+~>endstream
 endobj
-314 0 obj
+250 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3641
 >>
 stream
 Gatm=?$Fdf&q/qEeD#:jAqZuUAtKJ7il'+h0\LEjSpfgbH:D`s[89L;L0q^)](P<m+lkVQJ<=$keQ'(rh'rKsnLLiY7iB^t/NnRs:_;&u:VkhUe+T5ZgckW-XEh/7(E7;G4SNHW0NbEtRkNnC59t/%?hg*JPm@:2BQg"$]etKO&%cFqn_7cYb:''V6l@(8.4Oo,jZdI+9A:P5cbYBpf`EMm?]'JhD1f72_m7Z=$U;Gd.)U+E]j?Go"aM%hjNmAZ4:"t\[OoN)i=)c>2>3Ys0Ncd&#AhAog'*&b0%eC;"l<i+ihk@DmGmL0k;o+bg/!<.fm^e&\o2t3TC^.q2^)U6G&GsC[^uNniOlEY>cm1qJ@q<K&,p.h(\dh7)ncu5`^[t;fmNtZpYqI@o1G=t65roRSWA.VoNEr<+dugnqn@]8fjcDEY=b?-UoEQQQ3KjChG]]\eq+9,*pQG]eY=IFb8FdaFM@N+Obe[j8/Wo-+aNurKTqVqFO'Y;3UsqjQA0EcObQZ3]$*YSab7ecdWq).jucU[8j89(@'b5):VHZ"X,O^plY%Xr!/O<KMFnph`"0S5U*/*9T-:8[A!YnTc$]NnM**-_(bS!GUJr)Zq95@&,r5X>m9sN49M,*Fj\>J5&qu-@Fdg\=c"ee$*S$u+U@'4jL]n&q67TnM4-^n$>H1<YcX6Y!T2QP[/uo:F(g5A2\9mrS(+#=:;U-.LKr>V?YpPCcN`*l3QV&`M>tGZ!EM@l\1]$c/=0Je[]61A0A0/oVP28.g,+&VmkN'VI;('O\Q`"OA`SHB2])7q1&Xu@14Dn2W<.0l`'re/*]$.+9+rdV7H`)3j,2EK!-BmY&Y_[_%bCdmd(W!g@FAuts*j9\Sl3b^2'6"r-S_+=cMhs1A>GUitf`GW.geBDXT+HobA4%djS`+=g[@_M.lk%Ri0[?%fmR<[Ie.t$hB;Eo-"UTX".9==Cb`kSK)YX,Alsc%0Cs;Pa?B:7S73YH%rI2%O\d%5=27TbDaA<?K@#1n<J(oZUht-$S3D/9(fHSQO68+0_YL4*]]4(%!,Mt(R-;k!kKf&%A:\r-E85q=(n4l@nZ1ZT\1/`HQ`Z;;D*;4Wa5[T!87.dncm>lV\'rAL%rrR8d=&5)[C]go)lV'_Qc./jF1'jA>f(Zf\4;B>7M)L2=J91Nh7eNubK>V_sNYdgO;pMCQ,0,tDbuqb<crI&Yijd@`:k)_R8eI[$iAfmXlDO]F[osm%I]HQ$;n;rVg'moq%6^9&S0;DPR-M<h39,/qDB*I_oJ*$Mf9ar+J%:d;#g)'!kK=B7&`3q-0KO`2Mh[XDU5G*is"S+ReV44*O^_^R%9KB)G)[aWE9AR1%]P;#V95iWEmsd*$Y\7tTWNbOUY`#?NiIH=3J)3T;V@>'#$&Hi+PCjU:NJqP=F+GS;NtkYa8F;dBW6uX8/0CuEI[^hQA5tH>W2hQ^0'gg_ZALS8/J)m4(Zo:V'sq:D$TQJ:4&"/_r+XoTOAU/Al)n*<:*q$:k0%Pa>0nKG'P1!7&pSb_7./_.0Bo&,,>s'W!<`Z'ZEGUq\fFk54_gEV8$2t\"50<ZiluNr\Jlp(4?`7]<3>nH3!q)V>'\oh`^X&chtVZpAIA9F#26-&,JH!c"Na@cgH&iEf7qE\=`Vg_Sl`$bAZ03rL;Jd%;>;OpJ^tOpNmHX0S8I,/'cJ5ce/kfmLb+b53"S0iW*d4a0pcYP8BmA>b[o!fX:2ts)lR\R]F&tlR&@'UM8HfL2e[:>fEF*n/;[N)a/)FRKG09KPYLsG/moG:!()[53_XuI_DqD9_Vl>Q@HQ]m(bS1jc'Q@Q`Ju%F3`/RDhi4lPJntREgS[(WK./pVlKZR_@$f7+<k)j.T9[ki/NIf,n5[NM9krlTMiZNO7SG@<j6CmjnT:7)=I5X5.;12a*cu%c_tO>BF$)0@9I8\=m1hH&^n:RbJ&FI\6;(PP9:9Zk4%2'GlquT7D>!U$>(e]AnM[B=KhH!lh./hofV_u:ul^#e]q)#%a3N[QULq<91;]Do@g^M)AV-:l3UUhlj"NZW'[N,\k64)!b(,NQ<T&1'P'MO])+ck)r?3-'?09BTe_pb"?#9VLsNni!<_?cT]sjh/I]L6E6.FR^m.8k,K<KS>f*B'W3HC>iA1a@1bCBMrB?L=D6)^"01"oCX\DeG3)X%MTutVrpL+M(TlBb&MHgWp&@^qM]T;I@\T'].->qf-enIijFHK5_SaM/'D$aYRL3!5k%4q^>lGP-^&0@Jk%%VKWrU62D3j29&Wgf"[@4s#pKq1,f]6cH,kQFP`,J<'n:?\?ngoO@5\l<S8*\<P'?\9[>-@ei@SCX'=Yqri2YdTKtoJJbk)W&luX@#FqDXeW6F&%3ZnXYX"A1Z+I@*cLd98TgV`KBSOPQ"\@30bo'n0D$D*:FY/6#fNIAPjpX&<,X4b?[lLkbGc^n8,/9])K[WaFa1[8E[Hi:jcX7l;U%4BL5p$PmXOG_8t-H-Wi=MOrJ[sHI"2o48>OWTqgPGTrBr5DQZ4rP5oIsW[;kLdiG6I77=11YHMm@&5HJN!+$4fHPqC,XZ*Jk72dP/ES3D3FA=]_kL,gJW&qOZb?nH0BbVu>EliRG1(DmG[Gm4ZkL_Mc[IpTFSsIkgl5$S9V4HUlZXtg.Y3$+jd']EY17c_,cs&jRs..L9pN7Mf<iZI-I*Ji[i[j"(iL1MW;t)di&D*')Vlqe#gP.Y%efaM3fQG-6PL$[[P8KX&Fe24cZ7QZE]V'hi6ka-N[WSi=Vr;V#ie@[2K8,8cnD"%28LDT@VBoOf/Y.OC%Lb!+-KnJ[I%*thI3O4P#3]Y44aNM?JXDG.f-t1ac_]:[ZbUnc!bDPkZ:EqPeTBYqd[pXuJ'nK3D:>FJ_JTnfi1bNJ?ba@aY;Js+V_]N5o(L+n)`R^6\\QqXY<m"1chZ<R'G3?G_S-G,IqiUi.^I0LSqVBqQ.)=`P3^N!`ca3G&h$d/;AE!TOGY#+33/a_\17_2QUPB/_?!^shX3j9Y+.?+g%?0]E.8_FE['7X4fhN3V<(k/._.hMaC45f`R6(Mb`\#MB8kHVlYMZ->K7!$NRnRo>LWY+]s;-52kL+"jLi9UWhm)6cP=3jq6uQ%XALRl7V3&4.>SD@9YnFbcN[3qP7/5a+G8eR5tqSE3>-Gm?Qjr;l8P_H9ePm:nnS?`CrJ2k^3\1"%(1P!/TY2>&uL*&5IE_87!LZ4ZAiKM#!80^'R#sX%us:C4Dn@$HoS)pb+g&GN)VsE;P7T@Fi9Rb.'r??_>KN^)fq(qmlAj:%<8:GgfDEVe8Qu+VoP;cQ39WfLEEf)*;L3%7?K9?dU94;J-OoDo+oq%92)ccZ&-p?+K6;B19HsC[aSnh5YU!u6*q`fNLHg!]WpS'9u(([FCRdAq.%5c8Z9dT#i*aS-XC*?ma6tFGm`8'lZ@o/`lNl:'%XSb6g4-Z]r>*JaeH(oe(p?<W7-4Fn&.a$CH+Q3[r&p,U/77Hh9NF&b-A51E\@V(6)1X)"Z!Pugp<+MXp);gIfWpY&Pc<d-T?^p$21sC.]TT*!K"&&h6<$`OHmP&EVjnaULJH^n!G<q$&km_jWSkUTTCS9Yrs&p*]ql7SK0]%q(^cL$4i&ZHR12/-MDfUQDrhOq01M(H(Ss;g&D)F4UI\~>endstream
 endobj
-315 0 obj
+251 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3749
 >>
 stream
 GauHMgQL;L&q0LUT^jq/OuOY.pWM._P/Q4F?,otY=)I%",!cMn$.&Z$NVrHr)B^GS1mc.Wg:1U-8>u!*qD9O2,Q*DSheC3bM\Wl%.;!S:<]Q'cd=eX)g$@1p0@/?2$[T(:B'o2']M.>LS4/Y+A3!7a1n@<1b69[@qEit0T?O#59;W;sQL*Ve@AQ]0A\W2JmC<f[)'uV=Ygk,0qN5=^^,R-/@D_Q(Hm;`Um[a:kQ?@rrBUOk#0J4rj`Gt(tE^g]$0hJs2-]*$kB2K'BAkW%`)pK04(=A2$)*D:CX*;<=?0$6Wr.<V(DMjCT"fmX@[E'2oXPO:rjCVUPY3]I3Q>=At;qr3a5H^KEfif-pP@^RbbnY[C2:FS7B#Bo3b%muAIElTD99R==$F/OnP[oR-nqF3*<h&*!(NQ:DHnXe;CTZrn](fFo9d/0469!SS$Nhb:eR_LAXE!ZW+Wmnk0&O?j^Of6!*Nrusbg:6Q7=)B;S/6Kimh8L[\a#,[$RKgrZeXc-+fJ)1>3Sq^efD.ILCNL6)kPWt8-B9<."\7jcoc(Gdb;M1U*q4o6HlKB?-&717]'(#86Vpu&dBOPY#6tgH&_tnV$CTE2I8YRd1(3$%$Dg(dMYASj@\B"$4d=%F$&0mGiQ*i9OH;9$craTKSs:gO?Bqm)]84AWIsp'.#LObGW]T=4hDiI<p-lkG$Aa'BT'^tK4R9W02]*3\MVm\\G1W?)Q2Q'$7A"pQKh+1S7/+Lei`m^<&P$>$@XD.(H>/:gW&;:'pa.<:`R\!3V/c8S[<Es]#o-KPX85Q;[2)bIIoGE&$=-5]ueqn2oZR_gS:/'d2nG@`X7HBq\LVk-.'W.k:.cNQqb=>>,R`ec7E,>qJ]6$O`SsZYs_iej/%LbMV!jH"[ghrC[HsU"ZIATFHtJreWkMojA%*MDFN8U+e4,c)%B74<(s7.=u2c7ar<`LU6(:L-cLO"JO+2cIW,pfU6ZC/DeUSD*mG\Q7Ur+ULeqeLRDpd]i2?+.^hEkS>?Q.>hoYfB]Cn@=Bd<AKmnu!5r4`q?s83)\:I'At`92aIX/Z5oHpEC^pZ8ddHbQr"BPN+t=AoSNh&'JhCYL,!j[,_c3`KXq?ZS;81haX%qaqn`XbN7ran/\N;WYaqTYuA/Bd>$XQR?YOA!6]9+jf-Q;dL/<)BgV7*#N@c)\&s9Te-qn3PZD0M*aQ@.s\]0E`n/tW5R^unU=@H_8-`qbgCt.'FV%6('#IJ$3!H]hlpiC\cXn[5#<%DpqP2p#RW!9Cro-P7;+Ac)RAncp,`:+bkT"gnh.E&P0X5fSBQ;^gQJ=;&6?[pi@_j>/%G2Jp53X/5jZ3^:4iYJ#cRqbFm@**0N6P3bBK-I"U&8,kZ_uTbMQW3SK*O>'fCB.@p_S-F/n:9m&pCpQ>Hec+ra&Q$=^O57JlrXL@l1>i,#eF[,u/[GgJu#@gEidKeu"Y`N,KoO6!R8/<1@!erHHp3GEUWohaAjchF*rIOgJPf@SDGWt?X%IRg)A12S2GZ$%=^VDRa^_\#Fne7CD3P_QQ-bfU4Wr'd:eU.'<O/<a&f"%ocp:4uk7JL?Z'iZ:4McA;Jn&`p4Sh?D;iZk/V48>tiFe-8#`;:2)%i>hi?Y"O+;G'aK^ob.tS6`fq"n?SkdG?mE%<Q].p0ip\Y],D82+E.M99&Cau&FE[5$>Nig.T.CpNOU@<='<Q"s6!r"o8&@RfLDjj80Ju6`=Z4.l=HM<2*k1.q.:sM#ED(84XcWPb0%o(Ja(,@&LQ,A6sP&dnLE@0D;D.EeO3A"j6cB?;)1oe]l>=M#E")R&UADUVDa3Q<c;P=KV^8$UhVKHB7+Q=VM2IC:8Fq]mOSIT!-K=_B/Y9>TX<D]_:8o`?e[Hr>Fss(e4kU=,E%Lk!=CsNq-B^qH"s_Z.`!M@d*,aj#?2ALB/b?4>*Zh.$'n@E5r.t)&<3QF"b)7sb>F4lMB\\:8$b9=h2'IFclQ/qE?)A*,;mW_+'[!9'.)66NC9f>4.Ylea%]0l9?99`b]pMe)r][jbuabKeR7>"f^C@,W7%1p7=E3qn:'^S$M@'2(^<9UQ(ucAQT"ui-?Y!+.MlQ)9k@+Ce29iFF4[9gJ',@uL4['IrCq1n]#)oul6+TiB*bmJj)-(oLi!]Z;B'b7+\Rhe>G:s"*f?r^3orIoF4OP6R&!]dX.*1^TbA2L(5^Ijo2\q!F&h^u[]?S-_0qGf,.;/sNsp^7n:KLoJK(ip,hbMU*D3$'5`8IjI_g'p.D\-Z!7qG#Li;7)_?,dA4?X*-1otd$&'^sBgb!+Y$`i%@6TY;\,=8k<b2k0nJ0OEU,4*=F^$JP32P_eh8>MCLMg$uYqq+5[*3n*uPPS`:^`Y_XU^m*6"2hlOCBO!=)3cG%IHh)I_5eKZjuY1'*`sXi6XG=VJG`6'GfN+E5W1Cl!P[@3ZD$1o8nZZcXO3S*V]L2A/EKr"T9F0V@WL09IJ6LN(\lY#%(`Y],qq08C>15'<"!+F7m4EUgh3!F0_Vm#8rgFjH8EP,aSHlD:f+;\Tm2Rh\>ooXVc&bdB'3@L#W5K$YaCUI[0-$9+hMTtALYTif(*eJ6u@95H31]jo71+r'i;pkS5()l/f^7m(MH)K;S*-3KgNDaI7!n"rq>V!7)V0c3X^JpV(^aW8<(N),('mQQoui#a@b4(#stK:/O8GS5R*%o(7jXc[.=@c>\Eg$">/@/8LOl!<_Vu%Mmdu]7`"96L]T78$/pKW\$fMeEc(Y')UoF,:rcsfki@D1'!.QR<2ih^RS5hn0XgBrF#rbV]3*:?q34=kG5a*AEBJH=<A("**%sQ%L[c@a=T0Njd@Y@X_n%urj4YN0QLeWJ6+Yh[:[$\)17iYrM3IFoA9"58AGGTi-U^^BO%W.^-gsPX*km52`K"36,i*T_(GPV$GX[5L)hX]?h1$trZ'sOe/*<N6(X^mWNEm.1gkt_[nLN+Q-m-YFKH`YD;u6e/O]o5jnt=_,KUV%nC(JfQ,mRL*p5[jG:]Eu<a7D))&r,:`Is`O,J?DhbQ;"r-0<hA5@G?fW1"<:/RM=Su(5GQKn#U5%Chu$F/q4cEW>DtSV/2LlDBsqFDA=!B-iK#+(>sEJjQd_GEAu`%Bg,aC?ac;[`sW.sQ5e4'",(e:gW.5'B#9jl1KedaVGN%F%m)JF5nq6N).3<d5[^BM'FA`U9-ShO[*K?7l;I('@#mnESqA&LmSY'p,5ngC+p(3`nO36!(9\[gC_$@d#?erXoCqURNCSTs=T7HX1YMA'mA/.0Aa:2O:LnCT4BM5__!,8V^gm]:pR;2&9C\"7c(DF_bh`eTY1I@CG/,lDl-ZR;13PiKh.f4iOnPQQl*+Mr*.(Z='`;WT\B=sZ"_ht#(#g(h7pC"sS11;nf;)2QEZC]%5^a&SYEs]`EHBe]R7e-Zoarm__@55]N'U($83sYme.jWNrC!%1?emi,g[gh^j&plS.o(GUs0YPH1m[BhY',h,M^[$VD$%im$Pg?^3Bibapfp2cL>r)0B$ZcF$p63k\qr\p;!qGXBST<eJK\f0Htg1BO()$q\Yo=V=p*WCAi%5=!X5X3,^@^r8Y6(<Ze>=2@?`2:X'O>g^.DJr?:!@ejP&Md3>B+ZQZ)EoVe=D)8Qudb(?9,7"G:pBGg,%Er!`Gr*K;^V$;@'"p;&m6iT[<8`1Il0GW*2Fc\VODBCWNZ%RSc1a62q3bW\//a7'f04Zp^(n2*.oS-1A%3UMK1M>q\)D`jF3=nK^`$?(B9J(V+-!?5RSh>~>endstream
 endobj
-316 0 obj
+252 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 3177
 >>
 stream
 GauHNfll+0&q/)-i:KZX\g<cFQ8;<oe'9pi-]5%uj;"O7&T)CfOEQklT3L7=Ki0bTRH-a;5qI`$<J@HRfZ_3>gO'2[@rGH8m)!AC_c@^gHXi,=Y1Ohs2ue/%]p[9+q05g1O57?VqboEHHuEm_D!ZM_24lV2V$V=Q\i1MQR,a74C<Qn*h'uDjaSs0/qN3;E*6XcJK<>,bX5@U8c:$R_+[S8SDZus%N;X1,T'YI]*"3<doT*XkM)4hXGRfQ]&)Wsq:F@DlJdDq*p?`aK+5'Qs0fHdT.Jd6Zn>pqd1TL_=k>MU5`EG&*8#PgDj8."7..6nq-YqElY9)WIIr%j6o+.p::QJe&3dWUAacbk9rn]D6/oa%dE0tJ['6+omBjcJNg^4'p3qHUGNEu,\<^Hf]c`@4`)c$cI@p``tXD?:rKC_nBpQ<rcPIZLAi8-mDMirX^CtjGp4D/qsP6\'jpMT;Cj9V[=G)(.ER-2"VqUr<bBC8X/1HCR?9,q2OR3m\GDYqKABY/[s?7]ApaAs,Lq=_[s%,&V*r1"5Lji:Bskm_Eb#,u(:r$Kug#GHsm+coGHkpfYHYmn#`B09<Q=9u:!-UMSan:Urg:UZ6BK1D>bCn:#M1%#e(@l?[9BqTgrF+dR,9SY_D/5%3*ljhrec_dVg::\-*ho-0%"=h*[%[h-g9]nO)!IK?6(QEPJf"6TF?n&6"ZAc!=(lm"$k@31!H3nC4qQ'1P6?T*j59Lp#)MLK"3uQ.f7hVW>2VKn"f`9u#jKf6'?>bkR9f<L030R2GH=sR8_;X_1@P@@PlU9)Q&2o[k?4.e9i??:U@kH!lg\:EtEWJ[i\.0GikZN<!4>(o4!Nl5CaG"G_c9!*&%iN%U5pU5n"_j-@R0_=OQ#RSU_\4et4X$f1#Ch1P;f;8R02s,>bpZ`:6c"@FTW.NP6okIh+">$7]G(]n]\X#X6otkET*l,X^[iO:hDs$Bp4Pc<rl$8'D8d1%8Q@;Uq]jc\"[dH]olYA!h'-1a)p(1\e]pE$'KT%M>.o]Q4dj<md`9`U/m=ZZKG$j!R+*ZYEs,,>muIU`gTe0=n06SITlmB)ruFuW-1?_]mPBtAf`;Loa/YlcH/J.^_eKlJ;+*d=D5%&)gQBTO7)6-[Z$g`q`uhVAjn65/qfmR=F`p+oQfj]PC_q'PK>>d';q^2J^^3+8nct"MX<dqWdO\.Qhsr+;$oDjh8;u-Z5mH_0I99:XPN>j0#'Yb^J?X6n;Yh")W9#q]L[=0PH-C/M)Mth5[1o`iI\j3RQ,3K;MUDn><s#ER..ZA(Y,\q]%M#&)"P5ld7Jah`O19l(3_YHF%Eqp,i@W.!.3dqh)A0o)8<*l*Kq]/M&,.75*17]<,5\@\OU)4.$i"bhDtPEla+fU\Hrhc"*dsnSJ/!pj?!0<YaIeVRpD[X0"a$G,P\.l9?En".i4+39qun!u7;EK>`NtZ^iD.#*KFL$]qIEI74ljtt7UK*K;&S%?Au!1:Od'&[IPD^?eW'1IQ.*I!FJ[1@PdmL1>[@O3"9/8tAiuV[/C_MrRHlqU&)U>/]Bn\Y)[Q/i:]tc<#u`op[gb,)=7>IhWX!IbSnaQ/q0[ne\au\dAT`=$BDXh6CJPsLp!UIPh<a'G^*ue@?.JAcO8?+a&+-s#fSR23g.f?F\,Bu!rH>4`C=iD\CYat^h<W@U?8T9,ka\;+>q'ndrp%bkB-ufj1iI,&mUa-h+4l(u7L_>FZa!6/")iLU9jTfJCXm<7=KW*%,ZAOj/iP>27(<gK@;%5Mh^Tcd^ItO=A5rtm.l9XP_6XO\nf)-U'V@9]C#g'B%k(JpM:28U]B74q7WN"Conk*Q1.8:^N,:5s`jF>iU51RY'QQB#Cia28A%j8`2AIURq=>TWjB\>):^ZQCU_.\4L;Z@hnqC4D+dWYL.JKJt/"J&h\@_aUC@pu?ViC[-+!(X">B@uZ:C%2DC;$AA;Z.(\H)(>+dJ`qjeJ`.3IiPAR3d7(L%WHn/?pFBEIE@![ir38X$_OTTP(Q!CrCu,H7%N^ka)[EQ2;'YG/*,W>-%D(1S/n*boNm5<ook'SKH0f0S"8Tfj?ZOpJkY5UV<JLEG*>kd*fEgpb6/D%:\tg28c_H2Q+`U+,"/t'8iJ!;)c/<npO#W`9kJ-e`#4aneoEL/:ETWP>&9(p(3=#G/[u;?o>h,sTh+HbA;ps[QQ)k?`L/,Q4_0!#)c^TsU]b%8;7`NGO__Kc`Hf/"AJUMM/CkGj&G"F86l=E%c2lJPK^`M7.SrtthnrSrOIV?$>[5$*1PpR55t3,CV9i,/f.I5Jh#P'q6D@.S'o@LM>bGUE2QFD((b)f4.PT)<\h#K55=F]1TBqN!&#S'Fm!kJ!*7-NJ!O&;rhZ&\,6ITN*q.of&g%k*O,<8!j:?GSl[UqT0&g?PE;3eM/@NF;Y^N@UI)'ar"#lRPbDL`8.adU$h&5S:/aTo1U,hfN98B=)k*8>EgX]YsJZ5(FaA5M;lTtD2.@qi8U>b:G6LZ!-4jIQ0X;>m8!CYOd/V5X`',S3879r0:`-t;An;%Ho':'m7\\e/Y2bf)LQUl$+P+VdO1MUG!%EV4L_Z3bQBM*UW&IKqVIKAJCnbGo%l+Dk@r0.P"?FoADZLRZg;0W^HmVotN!qf')\Jr%gqh6'f7g"39YWTI*BI*tq)8X'$pP$Uh"mt4<1\3l@*;[a$8&Wtr/=B4XgTiA;tbuW"@qp]pCiRG&26Y[^il`j]#^KNiQ^)F,=[-=Lr0pPdK1<VX_UW7$d3eA8@)]ddn-QMf++_o`lkt3E/A6$i%@h<,&cDV\UC2a#0)*R[>OW3;&8q,cMC/7?_/[>dt^QkaRE8$0h.CE=TlT+2Bed=iBq1P?H98\Hc/H[%OZq?cV6Pf9?![Zi@9>$+,:J2lAE@n0L8l6Gf:T6p%O%M*&+uc!OZDc-F^MXh=5B=H/N6?g@*ROcLZH1a`Jbg+==K^:#g'ZW)[HB(:;(f@s,06e$_F0F8[bHUg3tuF0!Ym1RL%9H.q?KKRL5qA8+CsCW23i%tYmhoSYi@-I","gRr*Dbb8J%mYWIALU8QlGNB1'G,]oW#hBVf=j$gOZHT8M3sIl]eZ+75bQ:j"\'%baXlgS'DX%R"@1kFqV>1m$bD@8\@^fr@j@.bQVIPlJYa`=(R=rp.nVOUWcl14]@)hF01Wp@:<YYrD[dBf.tL~>endstream
 endobj
-317 0 obj
+253 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 2705
 >>
 stream
 Gb!;'flH+2o%d[#<I'C`2%P63b`ah=:1h\@F_i@nWm+QOU*,;&*ZC.2OkPjl"$@j`Z6^u*33gX@"Tj+Gd0I9X^rB`UY&O[8h&*4l!eeF8#/iB)(n\X"n^3\uk"-sC7&Jk#RncA.(P(arDIc["4kI$8&B%g++:WGE2aa70M,5uF?/1JK&MN&I-Dn7GE1f,^^Obof(k4&EDCkE"%nTm,A9/7!gR.j_;V"R>La=27)J;$I&gY__^a-W7KJ&Y_CZn!W%K@\r#[Xg73((t3M=D!Dirt3cPtedH;j\:gPnt/g61BgZ3E5c1ApKLd0hZM*L=>^\QR7Y-8I9H8XHlFA#J=^=AX13c:uZjNAnl$_X@19@_FhJr_bq2@H!Ic4N=#\F4J*D+I),4ub=]"Amr^1:Thbb$bQp/D7[>9cO?g(@ir\N"i/nR>C6/G[L"Wp@9)c74W7+N2lt1he"V`m3@>-W-[epQ5j0_NNcn1sM2OMGUg'Ksr%jl0pZbhR-JQtS/;!t.M$0/IW@BBsh.0X1]SYr$uG="d(pl0YM.[!07FOUi$]bI[E7&?h"Zl0[JNe0og5(,(ain<^p^=9dRY[-gri$H]"<[B],^6Oc+[n$E$p?cN9K%ctA(P3ah2-VCV(WX>^.IKgNnK^4Dn$-u13\+Y\?pm)M:tBkL&3it]RMmIG(b_Sq&5lGZGI/Y&10/CWYk2d&Ed((;Jh7eY6u[;YdipF%_J.0]:9"YtSeS_XR^-t]I5Tfhn8BX7%2`A&H&R9;hjJli(0Zm(.OHW)/'tGppElj7Ot5G^?,`,Y*,lh+*c`&H[?k./-LkJK_WX5F^YQ3O_Q_RZ_[sAi&:(hu7Cj%m5T;%e4Af<%-E7H;dpIFlI.pZ\D5-X/=U2.`Uoj.p7WUrmQBUq7E;?\]fe3<`L0OQ\#(-cZ@@MF.?%Ukfp2_PnF_AFP]WBJ#/#*UG<AJ,&(+R(nVId`2Vnh:/rJOL9>,#kjGEaEf_*fILahuE8U[83L_kbQ#\CqFdlYAS8g8r&mbpN>5MhVBI%MZ5c`B<69^A,hHjm6N5GmT*TecjO0rm<1S_iuj30nDHQaPk-C=uSXSn34?\_.Gi:(:-Wpd5P<pBM6M.0"c#eOec25BEIR4;'o9dmZ6<n=t,-rA]6>gr>h*W@_&bX&kq;op`5Ds.Y+XaN-?&>%[Ci*W&:?Rl]2['11*ugA'X[9(/FD=o"8'JJ.0?T")XRB^e($S+kkp[U<W1(D*1[44?;,cSuXN"drq<FD:8%J-)TD'h!;0*LEn'-H-*N"p/!L@EgbKunbLik4$;i[\=L29Gh*f!<K\[`L?D3,9NQ4FjnuP$7?PELbrNARo8>,dYkXY3FnJsGUpKZ%4MOHUO\5o`2]/U%8_Pe3h@Y<\T%EAa/`[Ep5FfANs)=XGlQ9.JZL=JF&#9XJeRmL52P(n*.>jnF"$,(OW2"4%>]%TEX"QWe-9Y.39G5)#mKUi[5Q1NMrPr1],dh!(5Lms'rD5&3>QDYM0WB;%X^oi@e'DYuIVmUWE-7XLnY12(T1YNX_:<s:nZ47YN7oJ3npq$,01VLT3ne\qeJ?4%p5@Wb<,GAUK`F;22RE'hFO\tZMB/@`<u%dG/;HIS#rpU_3@YsN]E:%;GIP]^TD80Va:'9G)1W)8O%'CFQ&H`nr;Hsn^[4YU=]7DJpF0@Hnb)+`0mdD2qg@.E=_[?En\-$1jn*_$hKS"_[iWTeG!'lY@D$GI2^WIe-,BfLAs@TRm\ckc^2%H\n^5(OjpK]J9iZUiqLn]W>ICn&PTrfLNbf@(ZMhWLm&+\::9B6bjAqriL/#e$D5)8U"`&d7?u@It5LMmPC#QD0d^)b2Jp#a+KZh@pI[:iA7RLOu[&C!9q8T_+pQ^D>(1M/UE+M+=:a<>Rk1^3:XaE?V&:6.g.lnP6SMpk(_c^0[\H>'mR,]/R`NEd=9DuA:d]0;I#+/<i^T.L`Gh9m>LO<uXDbVRPR@$WiM4#[7J7Ug.H=SjS(n"m8,TT?KL/C0Pa=sX2?j8qO)DZJmf;F8#<A4C!WR[K?[Jugj2<U6%8hbX-V)=oON4[qSN;%AdS*,XTi=?Wr7METTlH'Mjcu:ZnoZCf)`=NG2KjY_SKFGkEY;]FaCeiCF&&rgsaE+.L2]$Ub#QE<h;;b_`XJYl9*inOH[8tu'C:UX=U<sIjKAl`@YCpitk:B(A\!eY_res&5#T8QJ]L`C@[b%tnj0D_iosN?(FbYg7HG+*?D8t1IkauMci4/7k$okZ(a+XaQhD6d3eK$$bE"Q<h^6pk=)"+E<T$=^9rL"HjS=-ZDDmF2Zls%pF?<Re'!s@45a]E[%cRf:GbGou$3FZ_S1"*]&AC`jt(KHdhOBjPFd+>Hp5(X;]c39^S;\&hXG>63?jPo5!E`41:e==.8Tkc&,/hAWKs!IWEp(;p9>gV*+L6#fbfd)h+^kOJ`DN4Dg-G^rEIN<DA&(8#ojk"GEQd@jo(9:$/;RN$jN-5KE*A.ukf4NC#Vm]lBQ.<#&I1F_,V.^JAMjcPqRjl,,7k*Y@O^Z!WhZk#2q*/CXUeaHJL4%Cs1K(;WB^;XB11YYFNT4:5Z<Z!_5F1Dg_cOd_#pk)dFL7ZsKNMD8`0]R!%2WIHCXN,s--j>G!GB1Hn^57(\3O]tpg5Z1^aV;J<T9*=P6kh5LC7dM+BSkr-?60&]#G.U)2QG&25k]>bo89AV*3kh^R*a6kRRfQ@K-~>endstream
 endobj
-318 0 obj
+254 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 2211
 >>
 stream
 Gb!l!D3NF,&H9tYfU72^0='TH38rTm8'@-L"%(b1[ZaR)-#p1A,K[K$Va%mGfsqL_8tqtmknIaFZ/jI'j*c2R<X9rJ)qof5)W9Q_k`ZRp#\H^8P9>G01H;#_HZsBFR@&P>0HTWenMCU%%"]a!VP=EK1eC3d$-8BW+<71)j'Vpc)PGRumU';HKZr';*L"GWP8p;o2#\,"^VT7e,BN=i1epo%gF([36b#AT-#.TZ3Pne%BS)H>]%8pS0eWkh,9dPUiq,eFP9;c\">Qo<8g&qq,Rkoai3.B_qSW9(UZbdkPdPk**bCN\`d+ifK6E#Y2GWXe3,dHD.[q0W@`+Y)(\$hR)d%-X4385%%I?b9n0=,K]P`"$ZE!hnku'>=f[W0[d9>j:4eT0qej`=UjGGQ>Z(_M69@S=:k^+`V'rTIC:7T2r'VJnoTIrXK.q!YJ.k[s4:mDF1A;MuPGkL&n%?Es7e\'9m1co3-!(VpZ%LS?!JCR)MMjj3k<_RS2kuq=(/aO1W'U#\`QHbRcNc0i3<gWIh^"TDUp/N@s.L'Zo=!*3A4Gj$I@H*%0cH-VtMe(Khc)Sq6a8QEU/&cEhf8:%>M8c:T[X.ub6St)4BpmK&4's;Oa>)>,a8W;9h6;7U.4o<0T$)ji$8s2_97rcr*]T)2IY;Sh7VekXQZSQ%B\NnX!fU[T%udb4(b[u%kjirA@kZOZ#Y]IQr^D<_Fp>Wc:qRUG?D,.MQh9*/K=PZV67\)oTp<0^eQ[TUdZtV,_09np)DGc(pq@JVamuoGIKNB2l8X/'VP>gPO,%IMl?0T"j0/dTk5Wk#<4&!:!1tt<LX3mnks,%O?Cd]O^,S@!lFJ0egK$X]]\Js][m4"D)`l'AMiX@!:-B5BWLN-J._\'p)?[pB]!(W_;sTnl,^BAcd-6*=Kq2C".fK`b@#6)[NUWcIlh4sXQFIXFV9![Zl2XaR-_WKWifU"^?jJ>Xi#je7^^BZ>\]*?s=G)RO<YhfuaslR7nRm@8B)c#g@P0)K/Oe(K8<,;8\<OjV$=7&CmI>^3?!RWXaKsjTn1,dg?6K&=BK2`0LtjUOl@`R=ZCZZ72;92CP9faTP9]\U;'(R1N@>Z&q++iJ#s2O<HoI0Oa_XHgrMU?7!AeOI2JMIo)S(,O=:)5N4@6M_+!W3"JB=KLEZ7*'gZLd`IJi^G^(W(2"?=<n<,*\T8?1GhU"PZ!abKM>FG^i-1Ql767.,U=f8[RNMI[fU#.#"PHV5B8KOjA/^rDB;p2e<B8`l)?`f?R3a93%3[DqnBSr"GTp@W.MFN$+77LUq`eI+G1k/[JrBC*](T<!"?f'rMSl#Wub<M-t_q$Bg#(EAF"8lRI/%T9E*D"\4M4iST'].<):HO[5)mHdKEj;ZCKTt?->9ncjM)pmrRfrF:l<EYSI;DX</'sKLrheL8Km]u<Np[pD?UNi`@K-$hK8S@Z<]c*[g*Rl2Mb:Z'eA5M<Jf8]4D2lGX#aDE#U\jka]P-o(-8C$)[on_i,+_oU&7(,fh/s+q\Oc2uf.5'eaXt2Q?_t2\.FL\!PojW''nBUE=Nd3:VlJ/C#mo;NfHfKstCmI'OhuEOR:7V.'LP[7"hVY4"\N_gq6?L,md2=W5rUo!',<%N>J7D'8U+m4pL<7l.oM9''BGd9jdE0%6#4oN.k-qCabNZ,mJ5>O83DUVdo]KF;j3Zg-IH!f)rs*[&Rel>[&kAOB>9L6kQ[=N/a!^6Nm*]rCZ9s@ZrYh$^1kP_!/SS)IOUa?KI+.=eatbmVp]l1^HhVt&i-=>Nm/,ODkQ/j?O2]n:`UE?=d!r]]+W7:@Yp0KmLccGo8%/Bb[^XZ*?^XYbUr'R8nF$C?M[+o6Ip:psBsdT?LkIJR[l'bK\E3Uk'[SQ,\(@03nl74BfbT%IrtMI+Pn:nf?[bfZ4ubU^CKhW/ZL%ZpU:Y4$8VAsD,ciX[$/CX126;&/4'.#IW<]*""Q\mS<Nm/MoU5kdR1Eaei&hg]CA_U-#MDKi2Z;#7o9#h59-TePZEq0]p9)Aup.l)]H6p\8Op%I)K0f_0*HJm@?QDl^BrbYb8h@A5\$b0mfeW[/M#YR,nYm%INg]aEc)DqoSOmF]faP9A%JGhF>Fp&P(ReR;kJ,64KV)0UR.k,Yc/A_!2@B>Q@7=Xu3eGUg*XfP(RD!#(6Qt=?n!O;j*-8YN%qg%rD0(!fQd(u\$^>Ej?;bhi:43sSE:6SWNN4u~>endstream
 endobj
-319 0 obj
+255 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 896
 >>
 stream
 Gatn%?#S1G'Sc)N/'d6AfT,Q/m`NPB&r".WD@i7!a)/L9EH%FkS+uM5DRss!D%1512/1D,lh<M&4t-Z]^8_"j-,@,$a9`%86T,#biXiCkn3/r/FjNY,/hk.^s#U][5)g2j@2+_a+)ho`hC&OjmhX8V4cF@fIY=h<$&>FfRF6H`+.:DU9FL>Q5CNdh'kFL0c)l[s&6TAO/(n/-9t#)W>%dTO^>1*/M,!-og+g8oNs7T.1aqa]P7o$9*-AUH_#!^j^jZnc'Q@g%"X@4O*<(cBT5H;`Gb=COBc,L8^qFRCPU:D2nmPeTK`E]jJe\_g"#qrmAoGJhCK\pZE$Gb4<<YhmK1`41g__V8JN%.'j(Mjph7P%E[9@"iWF;r%@RV3;m#;/d&MG7ZKR+`=$rG^S5\h<P*UR\dUC]dn!VJ@l,J$\HHJUm^qYu1l1_B-J(a`6mAAo!O-\:HsRF"hg0]lUS68PBYK>EE49!QS\6W&tLX1[Pk+`'f2aF6KS9"Q6QR'Lt.:n.`:,8>LB#^u\93M)2sjccdKJQ;O.p1u#a?OT;#/S-P;:C"9:adHRnMol<"Wb#U]?YG`bNq\<\%RZALT#3<!n/FP>27Mc:W).=@a,7@&/V+e=Wnhs]MDpoH$@)""*#;J^/jeno09?H0q]k&1,I*ZGG342LE`>BWdB"`#'$uN&fO<DP)1,\m7!Ds`6"HmMD2S%a4%r[]1hICFJ^.-;[(.LUXm+W65-i@_o'--CH5m?G2c[C:i-lkPA5L??c.pr;CS6`8C;:[9b4L8?6ETTjFt%+%1h+nMS-^bs/s*)m/ENGWOHc;)Zu$E2>MKCc([eIa_dRZ5/2I<A##G43N44XfcaDRje[3l>]u+o*(@<E6MY,mE)t==1SG\9P*;fif+("^~>endstream
 endobj
-320 0 obj
+256 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 625
 >>
@@ -2307,7 +1562,7 @@ stream
 GasIdc#9(*'Yih7GXjeh`\uJ:h3oou%^!*\*-S8[&TEB#!1>R0ZG1k7/p(g6%jE19Idd6L*XjIr=Emn!^p8K8c%'d^*eC.5L#N;;`T$c(\l&GN-ZV6q8^<aFJ>=C6.0h%p6$!3Qk8W&14dAD9(BgYE&:HSS]r`4*Pd^Qg=q.!BGm2/G.,O`eB8n)I8E"c*\^S@D=m]j4p0>fR-0#DlWts"f'h\!1#gFgA,nMEPN655W-mX7b]]R!t:p%C=ke1u41O]!!lk5?,$&kPg1A;nJ;[D[gW]u#Zle5`XE"VUQY7;/&`XH8JTskL]j7E>Sd;Z>dB_l]K>oV)p`kcc/E&El^p6C1V<./u?h,L+afUbE,^TY&!O2c%VD4!L(f@pu7[k9*UZ4"f]ct>O6j?Jhle+%Ve:tjRh`h.0X8`2eL\AeC]J\WC7Vt5H&$S"HZO)V?If2\[Ag-,i9rDW/@GXQ/#IRf,?F^AD(3-Q4r`N]dbaNh;-g_/)V'?J'"o&/]Ns03kMZRpj*aFjRc_Ll1qA!n#IJTI"!JLcn:^tBF2L:22(j5XC5D5"]Gk%@J?CLF_g5Lu3rl/6H%rS_ogg)A*d*;EW1kKo:4RA5L2EI0JncKeS@nI)WTroF~>endstream
 endobj
 xref
-0 321
+0 257
 0000000000 65535 f 
 0000000061 00000 n 
 0000000124 00000 n 
@@ -2316,329 +1571,265 @@ xref
 0000307702 00000 n 
 0000307814 00000 n 
 0000307919 00000 n 
-0000308118 00000 n 
-0000308318 00000 n 
-0000308504 00000 n 
-0000308698 00000 n 
-0000308887 00000 n 
-0000309100 00000 n 
-0000309297 00000 n 
-0000309547 00000 n 
-0000309743 00000 n 
-0000310013 00000 n 
-0000310213 00000 n 
-0000310430 00000 n 
-0000310614 00000 n 
-0000310812 00000 n 
-0000311010 00000 n 
-0000311206 00000 n 
-0000311444 00000 n 
-0000311631 00000 n 
-0000311881 00000 n 
-0000312142 00000 n 
-0000312328 00000 n 
-0000312522 00000 n 
-0000312782 00000 n 
-0000312979 00000 n 
-0000313162 00000 n 
-0000313363 00000 n 
-0000313553 00000 n 
-0000313803 00000 n 
-0000392793 00000 n 
-0000393313 00000 n 
-0000393667 00000 n 
-0000393853 00000 n 
-0000394040 00000 n 
-0000394241 00000 n 
-0000394439 00000 n 
-0000394622 00000 n 
-0000394809 00000 n 
-0000395010 00000 n 
-0000395271 00000 n 
-0000395519 00000 n 
-0000395792 00000 n 
-0000395993 00000 n 
-0000396173 00000 n 
-0000396367 00000 n 
-0000396564 00000 n 
-0000396764 00000 n 
-0000396983 00000 n 
-0000397183 00000 n 
-0000397383 00000 n 
-0000397579 00000 n 
-0000397780 00000 n 
-0000398060 00000 n 
-0000398284 00000 n 
-0000398507 00000 n 
-0000398702 00000 n 
-0000398962 00000 n 
-0000399162 00000 n 
-0000399423 00000 n 
-0000399672 00000 n 
-0000399876 00000 n 
-0000400085 00000 n 
-0000400358 00000 n 
-0000400556 00000 n 
-0000400757 00000 n 
-0000400981 00000 n 
-0000401178 00000 n 
-0000401402 00000 n 
-0000401592 00000 n 
-0000401842 00000 n 
-0000402035 00000 n 
-0000402301 00000 n 
-0000402493 00000 n 
-0000402687 00000 n 
-0000402901 00000 n 
-0000403093 00000 n 
-0000403317 00000 n 
+0000308077 00000 n 
+0000308236 00000 n 
+0000308395 00000 n 
+0000308555 00000 n 
+0000308713 00000 n 
+0000308872 00000 n 
+0000309031 00000 n 
+0000309191 00000 n 
+0000309350 00000 n 
+0000309620 00000 n 
+0000309779 00000 n 
+0000309996 00000 n 
+0000310153 00000 n 
+0000310310 00000 n 
+0000310467 00000 n 
+0000310625 00000 n 
+0000310863 00000 n 
+0000311023 00000 n 
+0000311183 00000 n 
+0000311343 00000 n 
+0000311503 00000 n 
+0000311663 00000 n 
+0000311823 00000 n 
+0000311983 00000 n 
+0000312143 00000 n 
+0000312303 00000 n 
+0000312462 00000 n 
+0000312622 00000 n 
+0000391612 00000 n 
+0000392132 00000 n 
+0000392486 00000 n 
+0000392645 00000 n 
+0000392805 00000 n 
+0000392965 00000 n 
+0000393125 00000 n 
+0000393281 00000 n 
+0000393441 00000 n 
+0000393601 00000 n 
+0000393761 00000 n 
+0000393919 00000 n 
+0000394192 00000 n 
+0000394352 00000 n 
+0000394512 00000 n 
+0000394672 00000 n 
+0000394832 00000 n 
+0000394991 00000 n 
+0000395150 00000 n 
+0000395309 00000 n 
+0000395468 00000 n 
+0000395626 00000 n 
+0000395786 00000 n 
+0000396066 00000 n 
+0000396225 00000 n 
+0000396383 00000 n 
+0000396543 00000 n 
+0000396702 00000 n 
+0000396861 00000 n 
+0000397021 00000 n 
+0000397180 00000 n 
+0000397338 00000 n 
+0000397498 00000 n 
+0000397771 00000 n 
+0000397931 00000 n 
+0000398089 00000 n 
+0000398249 00000 n 
+0000398405 00000 n 
+0000398565 00000 n 
+0000398724 00000 n 
+0000398884 00000 n 
+0000399044 00000 n 
+0000399310 00000 n 
+0000399470 00000 n 
+0000399630 00000 n 
+0000399790 00000 n 
+0000399950 00000 n 
+0000400110 00000 n 
+0000400270 00000 n 
+0000400430 00000 n 
+0000400590 00000 n 
+0000400750 00000 n 
+0000400910 00000 n 
+0000401070 00000 n 
+0000401230 00000 n 
+0000401390 00000 n 
+0000401546 00000 n 
+0000401705 00000 n 
+0000401864 00000 n 
+0000402189 00000 n 
+0000402349 00000 n 
+0000402508 00000 n 
+0000402667 00000 n 
+0000402826 00000 n 
+0000402985 00000 n 
+0000403145 00000 n 
+0000403305 00000 n 
 0000403567 00000 n 
-0000403781 00000 n 
-0000403979 00000 n 
-0000404171 00000 n 
-0000404372 00000 n 
-0000404562 00000 n 
-0000404756 00000 n 
-0000404953 00000 n 
-0000405199 00000 n 
-0000405410 00000 n 
-0000405659 00000 n 
-0000405984 00000 n 
-0000406245 00000 n 
-0000406494 00000 n 
-0000406743 00000 n 
-0000406943 00000 n 
-0000407162 00000 n 
-0000407387 00000 n 
-0000407599 00000 n 
-0000407861 00000 n 
-0000408112 00000 n 
-0000408299 00000 n 
-0000408548 00000 n 
-0000408783 00000 n 
-0000408970 00000 n 
-0000409231 00000 n 
-0000409429 00000 n 
-0000409630 00000 n 
-0000409820 00000 n 
-0000410071 00000 n 
-0000410270 00000 n 
-0000410458 00000 n 
-0000410659 00000 n 
-0000410846 00000 n 
-0000411034 00000 n 
-0000411235 00000 n 
-0000411435 00000 n 
-0000411660 00000 n 
-0000411856 00000 n 
-0000412118 00000 n 
-0000412315 00000 n 
-0000412517 00000 n 
-0000412705 00000 n 
-0000412956 00000 n 
-0000413218 00000 n 
-0000413469 00000 n 
-0000413720 00000 n 
-0000413970 00000 n 
-0000414185 00000 n 
-0000414436 00000 n 
-0000414698 00000 n 
-0000414885 00000 n 
-0000415087 00000 n 
-0000415268 00000 n 
-0000415470 00000 n 
-0000415677 00000 n 
-0000415886 00000 n 
-0000416079 00000 n 
-0000416281 00000 n 
-0000416468 00000 n 
-0000416663 00000 n 
-0000416924 00000 n 
-0000417121 00000 n 
-0000417342 00000 n 
-0000417530 00000 n 
-0000417780 00000 n 
-0000417959 00000 n 
-0000418158 00000 n 
-0000418356 00000 n 
-0000418560 00000 n 
-0000418762 00000 n 
-0000418987 00000 n 
-0000419189 00000 n 
-0000419440 00000 n 
-0000419665 00000 n 
-0000419914 00000 n 
-0000420116 00000 n 
-0000420307 00000 n 
-0000420558 00000 n 
-0000420783 00000 n 
-0000420996 00000 n 
-0000421209 00000 n 
-0000421407 00000 n 
-0000421605 00000 n 
-0000421786 00000 n 
-0000421972 00000 n 
-0000422216 00000 n 
-0000422461 00000 n 
-0000422645 00000 n 
-0000422834 00000 n 
-0000423029 00000 n 
-0000423229 00000 n 
-0000423410 00000 n 
-0000423596 00000 n 
-0000423777 00000 n 
-0000423963 00000 n 
-0000424143 00000 n 
-0000424326 00000 n 
-0000424503 00000 n 
-0000424685 00000 n 
-0000424866 00000 n 
-0000425052 00000 n 
-0000425233 00000 n 
-0000425419 00000 n 
-0000425600 00000 n 
-0000425786 00000 n 
-0000425967 00000 n 
-0000426153 00000 n 
-0000426397 00000 n 
-0000426645 00000 n 
-0000426840 00000 n 
-0000427040 00000 n 
-0000427214 00000 n 
-0000427393 00000 n 
-0000427588 00000 n 
-0000427786 00000 n 
-0000427981 00000 n 
-0000428180 00000 n 
-0000428372 00000 n 
-0000428569 00000 n 
-0000428763 00000 n 
-0000428961 00000 n 
-0000429177 00000 n 
-0000429397 00000 n 
-0000429613 00000 n 
-0000429833 00000 n 
-0000430831 00000 n 
-0000431020 00000 n 
-0000431214 00000 n 
-0000431469 00000 n 
-0000431725 00000 n 
-0000431969 00000 n 
-0000432217 00000 n 
-0000432417 00000 n 
-0000432622 00000 n 
-0000432825 00000 n 
-0000433032 00000 n 
-0000433224 00000 n 
-0000433421 00000 n 
-0000433618 00000 n 
-0000433820 00000 n 
-0000434038 00000 n 
-0000434260 00000 n 
-0000434455 00000 n 
-0000434655 00000 n 
-0000434873 00000 n 
-0000435096 00000 n 
-0000435283 00000 n 
-0000435475 00000 n 
-0000435661 00000 n 
-0000435852 00000 n 
-0000436070 00000 n 
-0000436293 00000 n 
-0000436488 00000 n 
-0000436688 00000 n 
-0000436872 00000 n 
-0000437061 00000 n 
-0000437267 00000 n 
-0000437478 00000 n 
-0000437722 00000 n 
-0000437967 00000 n 
-0000438222 00000 n 
-0000438478 00000 n 
-0000438722 00000 n 
-0000438970 00000 n 
-0000439165 00000 n 
-0000439363 00000 n 
-0000439582 00000 n 
-0000439806 00000 n 
-0000440012 00000 n 
-0000440223 00000 n 
-0000440467 00000 n 
-0000440712 00000 n 
-0000440893 00000 n 
-0000441079 00000 n 
-0000441323 00000 n 
-0000441571 00000 n 
-0000441751 00000 n 
-0000441936 00000 n 
-0000442131 00000 n 
-0000442330 00000 n 
-0000442514 00000 n 
-0000442703 00000 n 
-0000442898 00000 n 
-0000443097 00000 n 
-0000443292 00000 n 
-0000443491 00000 n 
-0000443672 00000 n 
-0000443858 00000 n 
-0000444046 00000 n 
-0000444239 00000 n 
-0000444493 00000 n 
-0000444748 00000 n 
-0000444939 00000 n 
-0000445135 00000 n 
-0000445348 00000 n 
-0000445566 00000 n 
-0000445748 00000 n 
-0000445935 00000 n 
-0000446743 00000 n 
-0000446987 00000 n 
-0000447232 00000 n 
-0000447440 00000 n 
-0000447653 00000 n 
-0000447845 00000 n 
-0000448042 00000 n 
-0000448228 00000 n 
-0000448419 00000 n 
-0000448663 00000 n 
-0000448911 00000 n 
-0000449166 00000 n 
-0000449422 00000 n 
-0000449613 00000 n 
-0000449809 00000 n 
-0000450135 00000 n 
-0000450252 00000 n 
-0000450451 00000 n 
-0000450523 00000 n 
-0000450839 00000 n 
-0000451031 00000 n 
-0000451378 00000 n 
-0000454297 00000 n 
-0000457710 00000 n 
-0000461300 00000 n 
-0000463560 00000 n 
-0000467320 00000 n 
-0000471199 00000 n 
-0000475056 00000 n 
-0000478884 00000 n 
-0000482794 00000 n 
-0000486147 00000 n 
-0000489881 00000 n 
-0000493723 00000 n 
-0000496993 00000 n 
-0000499791 00000 n 
-0000502095 00000 n 
-0000503083 00000 n 
+0000403728 00000 n 
+0000403888 00000 n 
+0000404047 00000 n 
+0000404282 00000 n 
+0000404443 00000 n 
+0000404604 00000 n 
+0000404765 00000 n 
+0000404925 00000 n 
+0000405085 00000 n 
+0000405336 00000 n 
+0000405535 00000 n 
+0000405696 00000 n 
+0000405856 00000 n 
+0000406016 00000 n 
+0000406177 00000 n 
+0000406337 00000 n 
+0000406496 00000 n 
+0000406656 00000 n 
+0000406817 00000 n 
+0000406978 00000 n 
+0000407134 00000 n 
+0000407295 00000 n 
+0000407456 00000 n 
+0000407617 00000 n 
+0000407778 00000 n 
+0000407939 00000 n 
+0000408100 00000 n 
+0000408260 00000 n 
+0000408421 00000 n 
+0000408582 00000 n 
+0000408743 00000 n 
+0000408904 00000 n 
+0000409065 00000 n 
+0000409226 00000 n 
+0000409387 00000 n 
+0000409548 00000 n 
+0000409708 00000 n 
+0000409869 00000 n 
+0000410030 00000 n 
+0000410191 00000 n 
+0000410352 00000 n 
+0000410513 00000 n 
+0000410673 00000 n 
+0000410834 00000 n 
+0000410990 00000 n 
+0000411150 00000 n 
+0000411306 00000 n 
+0000411467 00000 n 
+0000411627 00000 n 
+0000411788 00000 n 
+0000411949 00000 n 
+0000412110 00000 n 
+0000412271 00000 n 
+0000412432 00000 n 
+0000412592 00000 n 
+0000412751 00000 n 
+0000412912 00000 n 
+0000413072 00000 n 
+0000413233 00000 n 
+0000413394 00000 n 
+0000413555 00000 n 
+0000413716 00000 n 
+0000413876 00000 n 
+0000414037 00000 n 
+0000414223 00000 n 
+0000414468 00000 n 
+0000414657 00000 n 
+0000414857 00000 n 
+0000415043 00000 n 
+0000415229 00000 n 
+0000415412 00000 n 
+0000415594 00000 n 
+0000415780 00000 n 
+0000415966 00000 n 
+0000416152 00000 n 
+0000416338 00000 n 
+0000416586 00000 n 
+0000416786 00000 n 
+0000416965 00000 n 
+0000417163 00000 n 
+0000417362 00000 n 
+0000417559 00000 n 
+0000417757 00000 n 
+0000417977 00000 n 
+0000418197 00000 n 
+0000419021 00000 n 
+0000419215 00000 n 
+0000419471 00000 n 
+0000419719 00000 n 
+0000419924 00000 n 
+0000420131 00000 n 
+0000420328 00000 n 
+0000420530 00000 n 
+0000420752 00000 n 
+0000420952 00000 n 
+0000421175 00000 n 
+0000421367 00000 n 
+0000421558 00000 n 
+0000421781 00000 n 
+0000421981 00000 n 
+0000422170 00000 n 
+0000422381 00000 n 
+0000422626 00000 n 
+0000422882 00000 n 
+0000423130 00000 n 
+0000423328 00000 n 
+0000423552 00000 n 
+0000423763 00000 n 
+0000424008 00000 n 
+0000424194 00000 n 
+0000424442 00000 n 
+0000424627 00000 n 
+0000424826 00000 n 
+0000425015 00000 n 
+0000425214 00000 n 
+0000425413 00000 n 
+0000425599 00000 n 
+0000425792 00000 n 
+0000426047 00000 n 
+0000426243 00000 n 
+0000426461 00000 n 
+0000426648 00000 n 
+0000427156 00000 n 
+0000427401 00000 n 
+0000427614 00000 n 
+0000427811 00000 n 
+0000428002 00000 n 
+0000428250 00000 n 
+0000428506 00000 n 
+0000428702 00000 n 
+0000428969 00000 n 
+0000429086 00000 n 
+0000429285 00000 n 
+0000429357 00000 n 
+0000429673 00000 n 
+0000429865 00000 n 
+0000430212 00000 n 
+0000433131 00000 n 
+0000436544 00000 n 
+0000440134 00000 n 
+0000442394 00000 n 
+0000446154 00000 n 
+0000450033 00000 n 
+0000453890 00000 n 
+0000457718 00000 n 
+0000461628 00000 n 
+0000464981 00000 n 
+0000468715 00000 n 
+0000472557 00000 n 
+0000475827 00000 n 
+0000478625 00000 n 
+0000480929 00000 n 
+0000481917 00000 n 
 trailer
 <<
 /ID 
-[<5f45f36749dc794f901e933512cbe0d8><5f45f36749dc794f901e933512cbe0d8>]
+[<5dbf1671e1072b61ec94cd8d3820d65d><5dbf1671e1072b61ec94cd8d3820d65d>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 301 0 R
-/Root 300 0 R
-/Size 321
+/Info 237 0 R
+/Root 236 0 R
+/Size 257
 >>
 startxref
-503800
+482634
 %%EOF
