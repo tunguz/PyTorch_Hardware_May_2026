@@ -10,6 +10,7 @@ Silicon MPS.
 - PDF version: [State of PyTorch Hardware Acceleration May 2026.pdf](State%20of%20PyTorch%20Hardware%20Acceleration%20May%202026.pdf)
 - Source research brief: [deep-research-report.md](deep-research-report.md)
 - Infographic: [infographic.jpeg](infographic.jpeg)
+- Source infographic: [assets/pytorch-hardware-2026-infographic.jpg](assets/pytorch-hardware-2026-infographic.jpg)
 
 ## Repository Contents
 
@@ -17,6 +18,7 @@ Silicon MPS.
 - `State of PyTorch Hardware Acceleration May 2026.pdf` - static PDF report
 - `deep-research-report.md` - source research brief used for the report
 - `infographic.jpeg` - visual summary
+- `assets/pytorch-hardware-2026-infographic.jpg` - source infographic image
 - `README.md` - project overview, license, and citation information
 
 ## Citation

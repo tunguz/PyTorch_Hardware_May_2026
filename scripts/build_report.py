@@ -5,17 +5,18 @@ from __future__ import annotations
 
 import html
 import re
+import shutil
 import textwrap
 from pathlib import Path
 
 import markdown
-from PIL import Image, ImageDraw, ImageFont
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import (
+    Image as ReportImage,
     PageBreak,
     Paragraph,
     SimpleDocTemplate,
@@ -31,6 +32,7 @@ HTML_OUT = ROOT / "index.html"
 README_OUT = ROOT / "README.md"
 PDF_OUT = ROOT / "State of PyTorch Hardware Acceleration May 2026.pdf"
 INFOGRAPHIC_OUT = ROOT / "infographic.jpeg"
+INFOGRAPHIC_SOURCE = ROOT / "assets" / "pytorch-hardware-2026-infographic.jpg"
 
 TITLE = "State of PyTorch Hardware Acceleration: May 2026"
 SHORT_TITLE = "PyTorch Hardware 2026"
@@ -145,64 +147,9 @@ def matrix_table_html() -> str:
 
 
 def build_infographic() -> None:
-    width, height = 1800, 1200
-    img = Image.new("RGB", (width, height), "#f8fafc")
-    draw = ImageDraw.Draw(img)
-
-    def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
-        candidates = [
-            "/System/Library/Fonts/Supplemental/Arial Bold.ttf" if bold else "/System/Library/Fonts/Supplemental/Arial.ttf",
-            "/System/Library/Fonts/Helvetica.ttc",
-        ]
-        for path in candidates:
-            try:
-                return ImageFont.truetype(path, size)
-            except OSError:
-                continue
-        return ImageFont.load_default()
-
-    title_font = font(62, True)
-    subtitle_font = font(30)
-    card_title = font(34, True)
-    body_font = font(25)
-    small_font = font(22)
-
-    draw.rectangle((0, 0, width, 190), fill="#111827")
-    draw.text((70, 48), SHORT_TITLE, font=title_font, fill="#ffffff")
-    draw.text((72, 126), "May 15, 2026 backend scorecard for PyTorch LLM and ViT workflows", font=subtitle_font, fill="#cbd5e1")
-
-    cards = [
-        ("CUDA", "#2563eb", "Default cluster standard", "Best compiler, attention, profiling, and distributed path."),
-        ("ROCm", "#dc2626", "Credible second cluster target", "Strong MI300X/MI325X story, but needs curated stacks."),
-        ("TPU", "#16a34a", "Excellent if XLA-shaped", "Scale and economics are real; PyTorch remains PJRT/XLA-first."),
-        ("Apple MPS", "#7c3aed", "Best local-human backend", "High-memory prototyping and inference, not compile parity."),
-    ]
-
-    x0, y0 = 70, 245
-    card_w, card_h = 805, 210
-    for i, (name, color, headline, body) in enumerate(cards):
-        x = x0 + (i % 2) * 875
-        y = y0 + (i // 2) * 260
-        draw.rounded_rectangle((x, y, x + card_w, y + card_h), radius=22, fill="#ffffff", outline="#cbd5e1", width=2)
-        draw.rectangle((x, y, x + 14, y + card_h), fill=color)
-        draw.text((x + 42, y + 28), name, font=card_title, fill="#0f172a")
-        draw.text((x + 42, y + 78), headline, font=body_font, fill=color)
-        wrapped = textwrap.wrap(body, 54)
-        for line_i, line in enumerate(wrapped):
-            draw.text((x + 42, y + 122 + line_i * 31), line, font=small_font, fill="#334155")
-
-    draw.text((70, 815), "Recommendation", font=card_title, fill="#0f172a")
-    recommendation = (
-        "Standardize on PyTorch as the programming model, CUDA as the cluster reference backend, "
-        "and Apple Silicon as the local prototyping edge. Add ROCm or TPU only as intentional, "
-        "owned platform choices."
-    )
-    for i, line in enumerate(textwrap.wrap(recommendation, 105)):
-        draw.text((70, 870 + i * 34), line, font=body_font, fill="#334155")
-
-    draw.line((70, 1040, 1730, 1040), fill="#cbd5e1", width=3)
-    draw.text((70, 1085), "Source: deep-research-report.md. Prior-report citation retained in README and report references.", font=small_font, fill="#475569")
-    img.save(INFOGRAPHIC_OUT, quality=92)
+    if not INFOGRAPHIC_SOURCE.exists():
+        raise FileNotFoundError(f"Missing source infographic: {INFOGRAPHIC_SOURCE}")
+    shutil.copyfile(INFOGRAPHIC_SOURCE, INFOGRAPHIC_OUT)
 
 
 def build_html(md_text: str) -> None:
@@ -375,6 +322,8 @@ def build_pdf(md_text: str) -> None:
         author=AUTHOR,
     )
     story = [
+        ReportImage(str(INFOGRAPHIC_OUT), width=6.3 * inch, height=9.45 * inch),
+        PageBreak(),
         Paragraph(TITLE, title_style),
         Paragraph(SUBTITLE, subtitle_style),
         Paragraph(f"{AUTHOR} - Version 1.0 - May 15, 2026", subtitle_style),
@@ -478,6 +427,7 @@ Silicon MPS.
 - PDF version: [State of PyTorch Hardware Acceleration May 2026.pdf](State%20of%20PyTorch%20Hardware%20Acceleration%20May%202026.pdf)
 - Source research brief: [deep-research-report.md](deep-research-report.md)
 - Infographic: [infographic.jpeg](infographic.jpeg)
+- Source infographic: [assets/pytorch-hardware-2026-infographic.jpg](assets/pytorch-hardware-2026-infographic.jpg)
 
 ## Repository Contents
 
@@ -485,6 +435,7 @@ Silicon MPS.
 - `State of PyTorch Hardware Acceleration May 2026.pdf` - static PDF report
 - `deep-research-report.md` - source research brief used for the report
 - `infographic.jpeg` - visual summary
+- `assets/pytorch-hardware-2026-infographic.jpg` - source infographic image
 - `README.md` - project overview, license, and citation information
 
 ## Citation
