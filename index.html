@@ -25,6 +25,7 @@
     .report-body .footnote { margin-top: 2rem; border-top: 1px solid #e2e8f0; padding-top: 1rem; font-size: .88rem; }
     .report-body .footnote ol { padding-left: 1.25rem; }
     .report-body .footnote li { margin: .45rem 0; }
+    .report-body img { display: block; width: 100%; max-width: 760px; height: auto; margin: 1.4rem auto; border: 1px solid #e2e8f0; border-radius: .5rem; }
     .report-body table, .matrix-table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .92rem; }
     .report-body th, .report-body td, .matrix-table th, .matrix-table td { border: 1px solid #e2e8f0; padding: .85rem; vertical-align: top; }
     .report-body th, .matrix-table th { background: #f1f5f9; color: #0f172a; font-weight: 700; text-align: left; }
@@ -64,7 +65,9 @@
         <div class="sticky-sidebar pr-4">
           <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Contents</h5>
           <ul class="space-y-1 sidebar-link"><li><a href="#method-and-evidence-base">Method and Evidence Base</a></li>
+<li><a href="#what-changed-since-2025">What Changed Since 2025</a></li>
 <li><a href="#executive-decision-matrix">Executive Decision Matrix</a></li>
+<li><a href="#ergonomics-and-scalability-map">Ergonomics and Scalability Map</a></li>
 <li><a href="#deep-dive-on-the-torch-compile-landscape">Deep Dive on the torch.compile Landscape</a></li>
 <li><a href="#the-flashattention-test">The FlashAttention Test</a></li>
 <li><a href="#local-and-cloud-delineation">Local and Cloud Delineation</a></li>
@@ -72,6 +75,8 @@
 <li><a href="#counter-positions">Counter-Positions</a></li>
 <li><a href="#final-recommendation">Final Recommendation</a></li>
 <li><a href="#reproducibility-appendix">Reproducibility Appendix</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#grouped-bibliography">Grouped Bibliography</a></li>
 <li><a href="#references">References</a></li></ul>
         </div>
       </aside>
@@ -128,6 +133,44 @@
 <p>The source hierarchy is: official PyTorch release notes, blogs, and documentation first; vendor hardware, product, pricing, and installation pages second; official project repositories and issue trackers third; and the previous report plus the user-provided <code>PyTorch Hardware in May 2026.pdf</code> as continuity and prior-synthesis material. GitHub issues are treated as evidence of maturity, maintenance direction, and failure modes, not as authoritative hardware specifications. <sup id="fnref2:50"><a class="footnote-ref" href="#fn:50">50</a></sup> <sup id="fnref2:51"><a class="footnote-ref" href="#fn:51">51</a></sup> <sup id="fnref2:52"><a class="footnote-ref" href="#fn:52">52</a></sup> <sup id="fnref2:53"><a class="footnote-ref" href="#fn:53">53</a></sup> <sup id="fnref:57"><a class="footnote-ref" href="#fn:57">57</a></sup> <sup id="fnref:59"><a class="footnote-ref" href="#fn:59">59</a></sup> <sup id="fnref:60"><a class="footnote-ref" href="#fn:60">60</a></sup> <sup id="fnref:62"><a class="footnote-ref" href="#fn:62">62</a></sup></p>
 <p>The inclusion boundary is public, current documentation for CUDA, ROCm, TPU/XLA, MPS, and related local Apple inference workflows. This version excludes private benchmarks, procurement-specific pricing, undisclosed cloud discounts, and undocumented roadmap claims. When a vendor claim is retained, the report treats it as vendor-stated evidence rather than an independently reproduced benchmark.</p>
 <p>The ratings are ordinal expert assessments, not measured benchmark scores. <strong>High</strong>, <strong>Medium</strong>, and <strong>Low</strong> are not equal-interval numeric values; they summarize how dependable each backend appears for a senior PyTorch team after accounting for documentation, installation path, compiler maturity, kernel availability, profiling support, and operational friction.</p>
+<h2 id="what-changed-since-2025">What Changed Since 2025</h2>
+<p>The 2025 predecessor already argued that PyTorch hardware acceleration had become a heterogeneous, compiler-shaped landscape rather than a simple CUDA-only story. The 2026 update changes the emphasis from <strong>"alternatives are emerging"</strong> to <strong>"alternatives are usable, but only under clearer operating conditions."</strong> <sup id="fnref:64"><a class="footnote-ref" href="#fn:64">64</a></sup></p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>2025 framing</th>
+<th>May 2026 update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CUDA</td>
+<td>CUDA/H100/Blackwell remained the operational baseline.</td>
+<td>CUDA is still the default cluster reference, but the reason is now broader than raw hardware: upstream FlashAttention-4, CuTeDSL/GEMM work, expanded graph capture, and Nsight visibility into compiled graphs make the compiler-and-profiler loop unusually complete.</td>
+</tr>
+<tr>
+<td>ROCm</td>
+<td>ROCm was improving quickly but still felt like a Triton/CK parity project.</td>
+<td>ROCm has become a credible deliberate adoption target, especially in curated MI300X/MI325X-class environments; the remaining caveat is operational discipline rather than basic feasibility.</td>
+</tr>
+<tr>
+<td>TPU/XLA</td>
+<td>TPU was powerful but visibly XLA-shaped, with graph-break and recompilation friction.</td>
+<td>TPU remains powerful and cloud-economically interesting, but PyTorch/XLA is still a bridge; the TorchTPU roadmap and TPU7x/Ironwood documentation make the transition state more explicit.</td>
+</tr>
+<tr>
+<td>Apple Silicon</td>
+<td>Apple was already the local high-memory prototyping story, but not a datacenter training story.</td>
+<td>Apple's local case is stronger because of larger unified-memory systems, MPS operator/startup improvements, and MLX momentum; the gap is still compiled PyTorch performance and datacenter scalability.</td>
+</tr>
+<tr>
+<td>Recommendation</td>
+<td>Use CUDA as the safest cluster default, with alternatives for specific workloads.</td>
+<td>Standardize on PyTorch as the common code surface, CUDA as cluster truth, Apple as local prototyping edge, and add ROCm/TPU only when their operating models are intentional.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="executive-decision-matrix">Executive Decision Matrix</h2>
 <p>The matrix below is a synthesis of upstream PyTorch 2.8 - 2.12 release notes, vendor installation guidance, backend-specific compiler documentation, and current issue trackers. The ratings are intentionally practical. "Maturity" means "how often a senior engineer can stay inside normal PyTorch habits without being surprised." "Cost efficiency" includes software friction and team time, not just silicon list price. Apple scores high there only for <strong>local workstations and local inference</strong>, not because it competes with datacenter accelerators on throughput. TPU scores high there only when the workload shape matches the TPU/XLA model and the team is comfortable living inside Google's operational model. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <table>
@@ -311,6 +354,9 @@
 <p>If the question is <strong>"what is the most interesting alternative?"</strong>, ROCm now deserves a serious seat at the table. PyTorch 2.8 added functional support for the new <code>gfx950</code> architecture on ROCm 7 with max-autotune coverage in TorchInductor and the Composable Kernel backend; ROCm documentation now treats Triton and CK as first-class optimization tools; and AMD's current <code>primus</code> training images ship with a modern stack that includes PyTorch, Triton, FlashAttention 2.8.3, Transformer Engine 2.8, hipBLASLt, and RCCL. But AMD's own docs still recommend Docker as the preferred installation path specifically to avoid environment issues, which tells you that ROCm's software story is improving faster than its "boring install" story. <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> <sup id="fnref2:62"><a class="footnote-ref" href="#fn:62">62</a></sup> <sup id="fnref:63"><a class="footnote-ref" href="#fn:63">63</a></sup></p>
 <p>If the question is <strong>"what wins on cloud economics when the workload is XLA-friendly?"</strong>, TPU is still formidable. Google's public pricing shows <strong>TPU v5p at $4.20 per chip-hour</strong> in Iowa, <strong>Trillium at $2.70 per chip-hour</strong>, and <strong>Ironwood at $12.00 per chip-hour</strong> in the same region. Google's eighth-generation TPU announcement is more specific about system claims: TPU 8t is described as delivering nearly <strong>3×</strong> compute performance per pod over the previous generation, while TPU 8t and 8i are described as delivering up to <strong>2×</strong> better performance per watt over Ironwood. The catch is that PyTorch on TPU still lives behind PyTorch/XLA and XLA-native constraints, rather than feeling like a normal accelerator backend in the way CUDA does. <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> <sup id="fnref3:53"><a class="footnote-ref" href="#fn:53">53</a></sup> <sup id="fnref:54"><a class="footnote-ref" href="#fn:54">54</a></sup> <sup id="fnref:55"><a class="footnote-ref" href="#fn:55">55</a></sup></p>
 <p>If the question is <strong>"what is the fairest answer for local prototyping?"</strong>, Apple deserves more respect than datacenter-biased analyses usually give it. Apple's current public Mac lineup relevant to this discussion is unusually strong on memory capacity: Mac Studio currently ships with <strong>M4 Max or M3 Ultra</strong>, M3 Ultra scales to <strong>512GB unified memory</strong>, and Apple explicitly positions it for extremely large local AI workloads; meanwhile the current MacBook Pro line includes <strong>M5 Max</strong> systems with up to <strong>128GB unified memory</strong>. PyTorch 2.12 also moved all MPS tensors to unified memory unconditionally, which narrows the conceptual gap between PyTorch MPS and frameworks like MLX that were designed around Apple's shared-memory model from the start. What Apple still does not have is a production-grade PyTorch compiler stack equivalent to CUDA. <sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup> <sup id="fnref4:50"><a class="footnote-ref" href="#fn:50">50</a></sup> <sup id="fnref2:57"><a class="footnote-ref" href="#fn:57">57</a></sup> <sup id="fnref:58"><a class="footnote-ref" href="#fn:58">58</a></sup></p>
+<h2 id="ergonomics-and-scalability-map">Ergonomics and Scalability Map</h2>
+<p><img alt="Two-axis map of PyTorch hardware backends by PyTorch-native ergonomics and datacenter scalability" src="backend-position-map.png" /></p>
+<p>The map compresses the report's main thesis into two axes. CUDA sits high on both PyTorch-native ergonomics and datacenter scalability. ROCm is moving toward the upper-right but still depends on curated environments. TPU is highly scalable but less PyTorch-native because XLA/PJRT remain part of the programming model. Apple MPS/MLX is the local-ergonomics outlier: excellent for desk-side and laptop workflows, but not a datacenter scaling answer.</p>
 <h2 id="deep-dive-on-the-torch-compile-landscape">Deep Dive on the torch.compile Landscape</h2>
 <p>The right way to think about <code>torch.compile</code> in 2026 is not as one compiler, but as a <strong>frontend contract</strong> with multiple backend personalities. The frontend has become more capable. PyTorch 2.8 introduced structured control-flow operators such as <code>cond</code>, <code>while_loop</code>, <code>scan</code>, <code>associative_scan</code>, and <code>map</code>, specifically so models with nontrivial control flow could be expressed in a way compatible with <code>torch.compile</code> and <code>torch.export</code>. By early 2026, PyTorch's own docs were also publishing explicit guidance on common graph breaks, dynamic-shape pitfalls, and compiler-safe control flow. That matters because the frontend story has clearly matured. The backend story, however, still determines whether those graphs become fast code, fragile code, or a support ticket. <sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></p>
 <p>On <strong>CUDA</strong>, <code>torch.compile</code> is no longer merely "TorchInductor plus Triton." It is now a layered system with multiple codegen paths and backend choices. PyTorch 2.8 added CUTLASS backend support for both <code>torch.compile</code> and AOTInductor, and by April 2026 PyTorch was publicly showing state-of-the-art GEMM generation on <strong>B200</strong> using TorchInductor's <strong>CuTeDSL backend</strong>. PyTorch 2.10 reduced kernel-launch overhead with combo-kernel fusion, PyTorch 2.12 added a new device-agnostic <code>torch.accelerator.Graph</code> API and expanded graph capture behavior, and Nsight Systems 2026.2 added direct visibility into optimized graphs generated by <code>torch.compile</code>. In other words, CUDA has the thing the other backends still lack: a virtuous loop connecting PyTorch graph capture, mature codegen targets, hardware-specific kernel innovation, and first-party profiling. <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup> <sup id="fnref5:50"><a class="footnote-ref" href="#fn:50">50</a></sup> <sup id="fnref3:60"><a class="footnote-ref" href="#fn:60">60</a></sup></p>
@@ -461,36 +507,115 @@
 </tbody>
 </table>
 <p>If two teams disagree about a backend, this appendix is the first place to look. Many apparent disagreements reduce to different driver versions, container images, dtypes, attention kernels, or shape policies rather than a true contradiction about the hardware.</p>
+<h2 id="glossary">Glossary</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Compact definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AOTInductor</td>
+<td>Ahead-of-time packaging path for TorchInductor graphs, useful when compiled artifacts need to be exported or deployed outside the immediate Python session.</td>
+</tr>
+<tr>
+<td>AOTriton</td>
+<td>AMD/ROCm path for precompiled Triton attention kernels, reducing some runtime compilation friction on supported ROCm systems.</td>
+</tr>
+<tr>
+<td>CK / Composable Kernel</td>
+<td>AMD's C++ template kernel library for high-performance GPU primitives; often used where ROCm needs highly tuned alternatives to generic Triton kernels.</td>
+</tr>
+<tr>
+<td>FlexAttention</td>
+<td>PyTorch attention API that lets users express attention variants in Python while allowing PyTorch to generate specialized fused kernels where supported.</td>
+</tr>
+<tr>
+<td>PJRT</td>
+<td>Portable JIT runtime used by PyTorch/XLA and other XLA clients to run compiled programs on accelerator backends such as TPU.</td>
+</tr>
+<tr>
+<td>Pallas</td>
+<td>JAX/XLA custom-kernel programming model used on TPU as an analogue to the custom-kernel role Triton often plays on GPUs.</td>
+</tr>
+<tr>
+<td>Unified memory</td>
+<td>Apple Silicon memory model where CPU and GPU share one physical memory pool, making large local models easier to fit than on discrete CPU-plus-VRAM systems.</td>
+</tr>
+<tr>
+<td>XLA</td>
+<td>Accelerated Linear Algebra compiler stack used by TPU and other accelerators; it rewards static shapes, graph-friendly control flow, and disciplined synchronization.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grouped-bibliography">Grouped Bibliography</h2>
+<p>The numbered footnotes remain the canonical references. This grouping is a quick scan of the source base by project or vendor.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Representative sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PyTorch core, compiler, and releases</td>
+<td>PyTorch 2.7, 2.8, 2.11, and 2.12 release material; compiler graph-break docs; FlexAttention/FlashAttention-4; Warp Specialization; PyTorch Start Locally. <sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> <sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup> <sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup> <sup id="fnref2:9"><a class="footnote-ref" href="#fn:9">9</a></sup> <sup id="fnref2:17"><a class="footnote-ref" href="#fn:17">17</a></sup> <sup id="fnref2:19"><a class="footnote-ref" href="#fn:19">19</a></sup> <sup id="fnref2:20"><a class="footnote-ref" href="#fn:20">20</a></sup> <sup id="fnref2:22"><a class="footnote-ref" href="#fn:22">22</a></sup> <sup id="fnref2:39"><a class="footnote-ref" href="#fn:39">39</a></sup> <sup id="fnref9:50"><a class="footnote-ref" href="#fn:50">50</a></sup> <sup id="fnref4:51"><a class="footnote-ref" href="#fn:51">51</a></sup> <sup id="fnref3:52"><a class="footnote-ref" href="#fn:52">52</a></sup></td>
+</tr>
+<tr>
+<td>AMD ROCm</td>
+<td>ROCm PyTorch installation guidance and ROCm model acceleration libraries. <sup id="fnref2:13"><a class="footnote-ref" href="#fn:13">13</a></sup> <sup id="fnref2:23"><a class="footnote-ref" href="#fn:23">23</a></sup> <sup id="fnref2:24"><a class="footnote-ref" href="#fn:24">24</a></sup> <sup id="fnref2:40"><a class="footnote-ref" href="#fn:40">40</a></sup> <sup id="fnref2:46"><a class="footnote-ref" href="#fn:46">46</a></sup> <sup id="fnref4:59"><a class="footnote-ref" href="#fn:59">59</a></sup> <sup id="fnref5:62"><a class="footnote-ref" href="#fn:62">62</a></sup> <sup id="fnref4:63"><a class="footnote-ref" href="#fn:63">63</a></sup></td>
+</tr>
+<tr>
+<td>Google TPU/XLA</td>
+<td>TPU pricing, TPU v5p/v6e/TPU7x docs, TPU software versions, PyTorch/XLA docs and repository, Pallas, quantized ops, tracing/execution-time guidance, and Google's eighth-generation TPU announcement. <sup id="fnref2:7"><a class="footnote-ref" href="#fn:7">7</a></sup> <sup id="fnref2:14"><a class="footnote-ref" href="#fn:14">14</a></sup> <sup id="fnref2:15"><a class="footnote-ref" href="#fn:15">15</a></sup> <sup id="fnref2:16"><a class="footnote-ref" href="#fn:16">16</a></sup> <sup id="fnref2:25"><a class="footnote-ref" href="#fn:25">25</a></sup> <sup id="fnref2:26"><a class="footnote-ref" href="#fn:26">26</a></sup> <sup id="fnref2:33"><a class="footnote-ref" href="#fn:33">33</a></sup> <sup id="fnref2:41"><a class="footnote-ref" href="#fn:41">41</a></sup> <sup id="fnref2:47"><a class="footnote-ref" href="#fn:47">47</a></sup> <sup id="fnref7:53"><a class="footnote-ref" href="#fn:53">53</a></sup> <sup id="fnref3:54"><a class="footnote-ref" href="#fn:54">54</a></sup> <sup id="fnref5:55"><a class="footnote-ref" href="#fn:55">55</a></sup> <sup id="fnref4:56"><a class="footnote-ref" href="#fn:56">56</a></sup> <sup id="fnref3:61"><a class="footnote-ref" href="#fn:61">61</a></sup></td>
+</tr>
+<tr>
+<td>Apple and MLX</td>
+<td>Apple Silicon product/newsroom pages, MPS backend notes and environment variables, MPS compile tracker, and MLX README. <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup> <sup id="fnref2:8"><a class="footnote-ref" href="#fn:8">8</a></sup> <sup id="fnref2:18"><a class="footnote-ref" href="#fn:18">18</a></sup> <sup id="fnref2:27"><a class="footnote-ref" href="#fn:27">27</a></sup> <sup id="fnref2:28"><a class="footnote-ref" href="#fn:28">28</a></sup> <sup id="fnref2:30"><a class="footnote-ref" href="#fn:30">30</a></sup> <sup id="fnref2:31"><a class="footnote-ref" href="#fn:31">31</a></sup> <sup id="fnref2:35"><a class="footnote-ref" href="#fn:35">35</a></sup> <sup id="fnref2:38"><a class="footnote-ref" href="#fn:38">38</a></sup> <sup id="fnref2:42"><a class="footnote-ref" href="#fn:42">42</a></sup> <sup id="fnref2:44"><a class="footnote-ref" href="#fn:44">44</a></sup> <sup id="fnref2:48"><a class="footnote-ref" href="#fn:48">48</a></sup> <sup id="fnref4:57"><a class="footnote-ref" href="#fn:57">57</a></sup> <sup id="fnref4:58"><a class="footnote-ref" href="#fn:58">58</a></sup></td>
+</tr>
+<tr>
+<td>NVIDIA</td>
+<td>Hopper architecture, NVLink/NVLink Switch, and Nsight Systems release notes. <sup id="fnref2:34"><a class="footnote-ref" href="#fn:34">34</a></sup> <sup id="fnref2:37"><a class="footnote-ref" href="#fn:37">37</a></sup> <sup id="fnref2:43"><a class="footnote-ref" href="#fn:43">43</a></sup> <sup id="fnref5:60"><a class="footnote-ref" href="#fn:60">60</a></sup></td>
+</tr>
+<tr>
+<td>Prior edition</td>
+<td>State of PyTorch Hardware Acceleration 2025. <sup id="fnref2:64"><a class="footnote-ref" href="#fn:64">64</a></sup></td>
+</tr>
+</tbody>
+</table>
 <h2 id="references">References</h2>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>PyTorch 2.8 Release Blog. https://pytorch.org/blog/pytorch-2-8/&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>PyTorch 2.8 Release Blog. https://pytorch.org/blog/pytorch-2-8/&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>Apple reveals M3 Ultra, taking Apple silicon to a new extreme. https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>Apple reveals M3 Ultra, taking Apple silicon to a new extreme. https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
 <p>PyTorch: Start Locally. https://pytorch.org/get-started/locally/&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p>PyTorch 2.12 Release Blog. https://pytorch.org/blog/pytorch-2-12-release-blog/&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p>PyTorch 2.12 Release Blog. https://pytorch.org/blog/pytorch-2-12-release-blog/&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:5">
-<p>PyTorch 2.7 Release Blog. https://pytorch.org/blog/pytorch-2-7/&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p>PyTorch 2.7 Release Blog. https://pytorch.org/blog/pytorch-2-7/&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:6">
 <p>PyTorch 2.8 Release Blog. https://pytorch.org/blog/pytorch-2-8/&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:7">
-<p>TPU Pricing | Google Cloud. https://cloud.google.com/tpu/pricing&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>TPU Pricing | Google Cloud. https://cloud.google.com/tpu/pricing&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 <li id="fn:8">
-<p>Mac Studio. https://www.apple.com/mac-studio/&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p>Mac Studio. https://www.apple.com/mac-studio/&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
 </li>
 <li id="fn:9">
-<p>PyTorch 2.8 Release Blog. https://pytorch.org/blog/pytorch-2-8/&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+<p>PyTorch 2.8 Release Blog. https://pytorch.org/blog/pytorch-2-8/&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 <li id="fn:10">
 <p>PyTorch 2.8 Release Blog. https://pytorch.org/blog/pytorch-2-8/&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
@@ -502,157 +627,160 @@
 <p>PyTorch 2.8 Release Blog. https://pytorch.org/blog/pytorch-2-8/&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
 </li>
 <li id="fn:13">
-<p>PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+<p>PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
 </li>
 <li id="fn:14">
-<p>Eager Mode + Compile API. https://docs.pytorch.org/xla/master/eager_mode.html&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+<p>Eager Mode + Compile API. https://docs.pytorch.org/xla/master/eager_mode.html&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
 </li>
 <li id="fn:15">
-<p>Enabling PyTorch on XLA Devices (e.g. Google TPU). https://github.com/pytorch/xla&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+<p>Enabling PyTorch on XLA Devices (e.g. Google TPU). https://github.com/pytorch/xla&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
 </li>
 <li id="fn:16">
-<p>PyTorch/XLA documentation. https://docs.pytorch.org/xla/release/2.0/index.html&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+<p>PyTorch/XLA documentation. https://docs.pytorch.org/xla/release/2.0/index.html&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
 </li>
 <li id="fn:17">
-<p>PyTorch 2.11 Release Blog. https://pytorch.org/blog/pytorch-2-11-release-blog/&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+<p>PyTorch 2.11 Release Blog. https://pytorch.org/blog/pytorch-2-11-release-blog/&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:17" title="Jump back to footnote 17 in the text">&#8617;</a></p>
 </li>
 <li id="fn:18">
-<p>torch.compile on MPS progress tracker, Issue #150121. https://github.com/pytorch/pytorch/issues/150121&#160;<a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+<p>torch.compile on MPS progress tracker, Issue #150121. https://github.com/pytorch/pytorch/issues/150121&#160;<a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 18 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:18" title="Jump back to footnote 18 in the text">&#8617;</a></p>
 </li>
 <li id="fn:19">
-<p>PyTorch 2.12 Release Blog. https://pytorch.org/blog/pytorch-2-12-release-blog/&#160;<a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+<p>PyTorch 2.12 Release Blog. https://pytorch.org/blog/pytorch-2-12-release-blog/&#160;<a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 19 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:19" title="Jump back to footnote 19 in the text">&#8617;</a></p>
 </li>
 <li id="fn:20">
-<p>FlexAttention + FlashAttention-4: Fast and Flexible. https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+<p>FlexAttention + FlashAttention-4: Fast and Flexible. https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:20" title="Jump back to footnote 20 in the text">&#8617;</a></p>
 </li>
 <li id="fn:21">
 <p>FlexAttention + FlashAttention-4: Fast and Flexible. https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 21 in the text">&#8617;</a></p>
 </li>
 <li id="fn:22">
-<p>Enabling advanced GPU features in PyTorch - Warp Specialization. https://pytorch.org/blog/warp-specialization/&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+<p>Enabling advanced GPU features in PyTorch - Warp Specialization. https://pytorch.org/blog/warp-specialization/&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 22 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:22" title="Jump back to footnote 22 in the text">&#8617;</a></p>
 </li>
 <li id="fn:23">
-<p>Model acceleration libraries - ROCm Documentation. https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+<p>Model acceleration libraries - ROCm Documentation. https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 23 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:23" title="Jump back to footnote 23 in the text">&#8617;</a></p>
 </li>
 <li id="fn:24">
-<p>PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html&#160;<a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+<p>PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html&#160;<a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 24 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:24" title="Jump back to footnote 24 in the text">&#8617;</a></p>
 </li>
 <li id="fn:25">
-<p>Custom Kernels via Pallas. https://docs.pytorch.org/xla/master/features/pallas.html&#160;<a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+<p>Custom Kernels via Pallas. https://docs.pytorch.org/xla/master/features/pallas.html&#160;<a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 25 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:25" title="Jump back to footnote 25 in the text">&#8617;</a></p>
 </li>
 <li id="fn:26">
-<p>Quantized Operations - PyTorch/XLA master documentation. https://docs.pytorch.org/xla/master/perf/quantized_ops.html&#160;<a class="footnote-backref" href="#fnref:26" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+<p>Quantized Operations - PyTorch/XLA master documentation. https://docs.pytorch.org/xla/master/perf/quantized_ops.html&#160;<a class="footnote-backref" href="#fnref:26" title="Jump back to footnote 26 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:26" title="Jump back to footnote 26 in the text">&#8617;</a></p>
 </li>
 <li id="fn:27">
-<p>torch.compile on MPS progress tracker, Issue #150121. https://github.com/pytorch/pytorch/issues/150121&#160;<a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 27 in the text">&#8617;</a></p>
+<p>torch.compile on MPS progress tracker, Issue #150121. https://github.com/pytorch/pytorch/issues/150121&#160;<a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 27 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:27" title="Jump back to footnote 27 in the text">&#8617;</a></p>
 </li>
 <li id="fn:28">
-<p>MLX README. https://github.com/ml-explore/mlx/blob/main/README.md&#160;<a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 28 in the text">&#8617;</a></p>
+<p>MLX README. https://github.com/ml-explore/mlx/blob/main/README.md&#160;<a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 28 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:28" title="Jump back to footnote 28 in the text">&#8617;</a></p>
 </li>
 <li id="fn:29">
 <p>FlexAttention + FlashAttention-4: Fast and Flexible. https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/&#160;<a class="footnote-backref" href="#fnref:29" title="Jump back to footnote 29 in the text">&#8617;</a></p>
 </li>
 <li id="fn:30">
-<p>MPS backend notes. https://docs.pytorch.org/docs/stable/notes/mps.html&#160;<a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 30 in the text">&#8617;</a></p>
+<p>MPS backend notes. https://docs.pytorch.org/docs/stable/notes/mps.html&#160;<a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 30 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:30" title="Jump back to footnote 30 in the text">&#8617;</a></p>
 </li>
 <li id="fn:31">
-<p>Apple introduces M4 Pro and M4 Max. https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/&#160;<a class="footnote-backref" href="#fnref:31" title="Jump back to footnote 31 in the text">&#8617;</a></p>
+<p>Apple introduces M4 Pro and M4 Max. https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/&#160;<a class="footnote-backref" href="#fnref:31" title="Jump back to footnote 31 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:31" title="Jump back to footnote 31 in the text">&#8617;</a></p>
 </li>
 <li id="fn:32">
 <p>PyTorch releases. https://github.com/pytorch/pytorch/releases&#160;<a class="footnote-backref" href="#fnref:32" title="Jump back to footnote 32 in the text">&#8617;</a></p>
 </li>
 <li id="fn:33">
-<p>Cloud TPU v5p. https://docs.cloud.google.com/tpu/docs/v5p&#160;<a class="footnote-backref" href="#fnref:33" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+<p>Cloud TPU v5p. https://docs.cloud.google.com/tpu/docs/v5p&#160;<a class="footnote-backref" href="#fnref:33" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:33" title="Jump back to footnote 33 in the text">&#8617;</a></p>
 </li>
 <li id="fn:34">
-<p>NVIDIA Hopper Architecture. https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/&#160;<a class="footnote-backref" href="#fnref:34" title="Jump back to footnote 34 in the text">&#8617;</a></p>
+<p>NVIDIA Hopper Architecture. https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/&#160;<a class="footnote-backref" href="#fnref:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:34" title="Jump back to footnote 34 in the text">&#8617;</a></p>
 </li>
 <li id="fn:35">
-<p>MPS backend notes. https://docs.pytorch.org/docs/stable/notes/mps.html&#160;<a class="footnote-backref" href="#fnref:35" title="Jump back to footnote 35 in the text">&#8617;</a></p>
+<p>MPS backend notes. https://docs.pytorch.org/docs/stable/notes/mps.html&#160;<a class="footnote-backref" href="#fnref:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:35" title="Jump back to footnote 35 in the text">&#8617;</a></p>
 </li>
 <li id="fn:36">
 <p>PyTorch: Start Locally. https://pytorch.org/get-started/locally/&#160;<a class="footnote-backref" href="#fnref:36" title="Jump back to footnote 36 in the text">&#8617;</a></p>
 </li>
 <li id="fn:37">
-<p>Nsight Systems Release Notes. https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html&#160;<a class="footnote-backref" href="#fnref:37" title="Jump back to footnote 37 in the text">&#8617;</a></p>
+<p>Nsight Systems Release Notes. https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html&#160;<a class="footnote-backref" href="#fnref:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:37" title="Jump back to footnote 37 in the text">&#8617;</a></p>
 </li>
 <li id="fn:38">
-<p>Apple reveals M3 Ultra, taking Apple silicon to a new extreme. https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/&#160;<a class="footnote-backref" href="#fnref:38" title="Jump back to footnote 38 in the text">&#8617;</a></p>
+<p>Apple reveals M3 Ultra, taking Apple silicon to a new extreme. https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/&#160;<a class="footnote-backref" href="#fnref:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:38" title="Jump back to footnote 38 in the text">&#8617;</a></p>
 </li>
 <li id="fn:39">
-<p>Common graph breaks - PyTorch 2.12 compiler docs. https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/compile/programming_model.common_graph_breaks.html&#160;<a class="footnote-backref" href="#fnref:39" title="Jump back to footnote 39 in the text">&#8617;</a></p>
+<p>Common graph breaks - PyTorch 2.12 compiler docs. https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/compile/programming_model.common_graph_breaks.html&#160;<a class="footnote-backref" href="#fnref:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:39" title="Jump back to footnote 39 in the text">&#8617;</a></p>
 </li>
 <li id="fn:40">
-<p>PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html&#160;<a class="footnote-backref" href="#fnref:40" title="Jump back to footnote 40 in the text">&#8617;</a></p>
+<p>PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html&#160;<a class="footnote-backref" href="#fnref:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:40" title="Jump back to footnote 40 in the text">&#8617;</a></p>
 </li>
 <li id="fn:41">
-<p>PyTorch/XLA documentation. https://docs.pytorch.org/xla/release/2.0/index.html&#160;<a class="footnote-backref" href="#fnref:41" title="Jump back to footnote 41 in the text">&#8617;</a></p>
+<p>PyTorch/XLA documentation. https://docs.pytorch.org/xla/release/2.0/index.html&#160;<a class="footnote-backref" href="#fnref:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:41" title="Jump back to footnote 41 in the text">&#8617;</a></p>
 </li>
 <li id="fn:42">
-<p>MPS environment variables. https://docs.pytorch.org/docs/2.8/_sources/mps_environment_variables.md.txt&#160;<a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 42 in the text">&#8617;</a></p>
+<p>MPS environment variables. https://docs.pytorch.org/docs/2.8/_sources/mps_environment_variables.md.txt&#160;<a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 42 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:42" title="Jump back to footnote 42 in the text">&#8617;</a></p>
 </li>
 <li id="fn:43">
-<p>Nsight Systems Release Notes. https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html&#160;<a class="footnote-backref" href="#fnref:43" title="Jump back to footnote 43 in the text">&#8617;</a></p>
+<p>Nsight Systems Release Notes. https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html&#160;<a class="footnote-backref" href="#fnref:43" title="Jump back to footnote 43 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:43" title="Jump back to footnote 43 in the text">&#8617;</a></p>
 </li>
 <li id="fn:44">
-<p>Apple reveals M3 Ultra, taking Apple silicon to a new extreme. https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/&#160;<a class="footnote-backref" href="#fnref:44" title="Jump back to footnote 44 in the text">&#8617;</a></p>
+<p>Apple reveals M3 Ultra, taking Apple silicon to a new extreme. https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/&#160;<a class="footnote-backref" href="#fnref:44" title="Jump back to footnote 44 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:44" title="Jump back to footnote 44 in the text">&#8617;</a></p>
 </li>
 <li id="fn:45">
 <p>PyTorch 2.7 Release Blog. https://pytorch.org/blog/pytorch-2-7/&#160;<a class="footnote-backref" href="#fnref:45" title="Jump back to footnote 45 in the text">&#8617;</a></p>
 </li>
 <li id="fn:46">
-<p>PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html&#160;<a class="footnote-backref" href="#fnref:46" title="Jump back to footnote 46 in the text">&#8617;</a></p>
+<p>PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html&#160;<a class="footnote-backref" href="#fnref:46" title="Jump back to footnote 46 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:46" title="Jump back to footnote 46 in the text">&#8617;</a></p>
 </li>
 <li id="fn:47">
-<p>TPU Pricing | Google Cloud. https://cloud.google.com/tpu/pricing&#160;<a class="footnote-backref" href="#fnref:47" title="Jump back to footnote 47 in the text">&#8617;</a></p>
+<p>TPU Pricing | Google Cloud. https://cloud.google.com/tpu/pricing&#160;<a class="footnote-backref" href="#fnref:47" title="Jump back to footnote 47 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:47" title="Jump back to footnote 47 in the text">&#8617;</a></p>
 </li>
 <li id="fn:48">
-<p>PyTorch 2.11 Release Blog. https://pytorch.org/blog/pytorch-2-11-release-blog/&#160;<a class="footnote-backref" href="#fnref:48" title="Jump back to footnote 48 in the text">&#8617;</a></p>
+<p>PyTorch 2.11 Release Blog. https://pytorch.org/blog/pytorch-2-11-release-blog/&#160;<a class="footnote-backref" href="#fnref:48" title="Jump back to footnote 48 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:48" title="Jump back to footnote 48 in the text">&#8617;</a></p>
 </li>
 <li id="fn:49">
 <p>PyTorch: Start Locally. https://pytorch.org/get-started/locally/&#160;<a class="footnote-backref" href="#fnref:49" title="Jump back to footnote 49 in the text">&#8617;</a></p>
 </li>
 <li id="fn:50">
-<p>PyTorch 2.12 Release Blog. https://pytorch.org/blog/pytorch-2-12-release-blog/&#160;<a class="footnote-backref" href="#fnref:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:50" title="Jump back to footnote 50 in the text">&#8617;</a></p>
+<p>PyTorch 2.12 Release Blog. https://pytorch.org/blog/pytorch-2-12-release-blog/&#160;<a class="footnote-backref" href="#fnref:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:50" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:50" title="Jump back to footnote 50 in the text">&#8617;</a></p>
 </li>
 <li id="fn:51">
-<p>PyTorch 2.11 Release Blog. https://pytorch.org/blog/pytorch-2-11-release-blog/&#160;<a class="footnote-backref" href="#fnref:51" title="Jump back to footnote 51 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:51" title="Jump back to footnote 51 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:51" title="Jump back to footnote 51 in the text">&#8617;</a></p>
+<p>PyTorch 2.11 Release Blog. https://pytorch.org/blog/pytorch-2-11-release-blog/&#160;<a class="footnote-backref" href="#fnref:51" title="Jump back to footnote 51 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:51" title="Jump back to footnote 51 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:51" title="Jump back to footnote 51 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:51" title="Jump back to footnote 51 in the text">&#8617;</a></p>
 </li>
 <li id="fn:52">
-<p>PyTorch 2.7 Release Blog. https://pytorch.org/blog/pytorch-2-7/&#160;<a class="footnote-backref" href="#fnref:52" title="Jump back to footnote 52 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:52" title="Jump back to footnote 52 in the text">&#8617;</a></p>
+<p>PyTorch 2.7 Release Blog. https://pytorch.org/blog/pytorch-2-7/&#160;<a class="footnote-backref" href="#fnref:52" title="Jump back to footnote 52 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:52" title="Jump back to footnote 52 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:52" title="Jump back to footnote 52 in the text">&#8617;</a></p>
 </li>
 <li id="fn:53">
-<p>TPU7x (Ironwood) | Google Cloud Documentation. https://docs.cloud.google.com/tpu/docs/tpu7x&#160;<a class="footnote-backref" href="#fnref:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:53" title="Jump back to footnote 53 in the text">&#8617;</a></p>
+<p>TPU7x (Ironwood) | Google Cloud Documentation. https://docs.cloud.google.com/tpu/docs/tpu7x&#160;<a class="footnote-backref" href="#fnref:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:53" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:53" title="Jump back to footnote 53 in the text">&#8617;</a></p>
 </li>
 <li id="fn:54">
-<p>Our eighth generation TPUs: two chips for the agentic era. https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/&#160;<a class="footnote-backref" href="#fnref:54" title="Jump back to footnote 54 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:54" title="Jump back to footnote 54 in the text">&#8617;</a></p>
+<p>Our eighth generation TPUs: two chips for the agentic era. https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/&#160;<a class="footnote-backref" href="#fnref:54" title="Jump back to footnote 54 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:54" title="Jump back to footnote 54 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:54" title="Jump back to footnote 54 in the text">&#8617;</a></p>
 </li>
 <li id="fn:55">
-<p>TPU software versions | Google Cloud Documentation. https://docs.cloud.google.com/tpu/docs/runtimes&#160;<a class="footnote-backref" href="#fnref:55" title="Jump back to footnote 55 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:55" title="Jump back to footnote 55 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:55" title="Jump back to footnote 55 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:55" title="Jump back to footnote 55 in the text">&#8617;</a></p>
+<p>TPU software versions | Google Cloud Documentation. https://docs.cloud.google.com/tpu/docs/runtimes&#160;<a class="footnote-backref" href="#fnref:55" title="Jump back to footnote 55 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:55" title="Jump back to footnote 55 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:55" title="Jump back to footnote 55 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:55" title="Jump back to footnote 55 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:55" title="Jump back to footnote 55 in the text">&#8617;</a></p>
 </li>
 <li id="fn:56">
-<p>Tracing Time vs. Execution Time in PyTorch/XLA. https://docs.pytorch.org/xla/master/learn/trace-vs-execution-time.html&#160;<a class="footnote-backref" href="#fnref:56" title="Jump back to footnote 56 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:56" title="Jump back to footnote 56 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:56" title="Jump back to footnote 56 in the text">&#8617;</a></p>
+<p>Tracing Time vs. Execution Time in PyTorch/XLA. https://docs.pytorch.org/xla/master/learn/trace-vs-execution-time.html&#160;<a class="footnote-backref" href="#fnref:56" title="Jump back to footnote 56 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:56" title="Jump back to footnote 56 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:56" title="Jump back to footnote 56 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:56" title="Jump back to footnote 56 in the text">&#8617;</a></p>
 </li>
 <li id="fn:57">
-<p>MacBook Pro - Tech Specs - Apple. https://www.apple.com/macbook-pro/specs/&#160;<a class="footnote-backref" href="#fnref:57" title="Jump back to footnote 57 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:57" title="Jump back to footnote 57 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:57" title="Jump back to footnote 57 in the text">&#8617;</a></p>
+<p>MacBook Pro - Tech Specs - Apple. https://www.apple.com/macbook-pro/specs/&#160;<a class="footnote-backref" href="#fnref:57" title="Jump back to footnote 57 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:57" title="Jump back to footnote 57 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:57" title="Jump back to footnote 57 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:57" title="Jump back to footnote 57 in the text">&#8617;</a></p>
 </li>
 <li id="fn:58">
-<p>Apple reveals M3 Ultra, taking Apple silicon to a new extreme. https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/&#160;<a class="footnote-backref" href="#fnref:58" title="Jump back to footnote 58 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:58" title="Jump back to footnote 58 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:58" title="Jump back to footnote 58 in the text">&#8617;</a></p>
+<p>Apple reveals M3 Ultra, taking Apple silicon to a new extreme. https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/&#160;<a class="footnote-backref" href="#fnref:58" title="Jump back to footnote 58 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:58" title="Jump back to footnote 58 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:58" title="Jump back to footnote 58 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:58" title="Jump back to footnote 58 in the text">&#8617;</a></p>
 </li>
 <li id="fn:59">
-<p>AMD Instinct MI300 Series Accelerators. https://www.amd.com/en/products/accelerators/instinct/mi300.html&#160;<a class="footnote-backref" href="#fnref:59" title="Jump back to footnote 59 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:59" title="Jump back to footnote 59 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:59" title="Jump back to footnote 59 in the text">&#8617;</a></p>
+<p>AMD Instinct MI300 Series Accelerators. https://www.amd.com/en/products/accelerators/instinct/mi300.html&#160;<a class="footnote-backref" href="#fnref:59" title="Jump back to footnote 59 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:59" title="Jump back to footnote 59 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:59" title="Jump back to footnote 59 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:59" title="Jump back to footnote 59 in the text">&#8617;</a></p>
 </li>
 <li id="fn:60">
-<p>NVIDIA NVLink and NVLink Switch. https://www.nvidia.com/en-us/data-center/nvlink/&#160;<a class="footnote-backref" href="#fnref:60" title="Jump back to footnote 60 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:60" title="Jump back to footnote 60 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:60" title="Jump back to footnote 60 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:60" title="Jump back to footnote 60 in the text">&#8617;</a></p>
+<p>NVIDIA NVLink and NVLink Switch. https://www.nvidia.com/en-us/data-center/nvlink/&#160;<a class="footnote-backref" href="#fnref:60" title="Jump back to footnote 60 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:60" title="Jump back to footnote 60 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:60" title="Jump back to footnote 60 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:60" title="Jump back to footnote 60 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:60" title="Jump back to footnote 60 in the text">&#8617;</a></p>
 </li>
 <li id="fn:61">
-<p>TPU v6e | Google Cloud Documentation. https://docs.cloud.google.com/tpu/docs/v6e&#160;<a class="footnote-backref" href="#fnref:61" title="Jump back to footnote 61 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:61" title="Jump back to footnote 61 in the text">&#8617;</a></p>
+<p>TPU v6e | Google Cloud Documentation. https://docs.cloud.google.com/tpu/docs/v6e&#160;<a class="footnote-backref" href="#fnref:61" title="Jump back to footnote 61 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:61" title="Jump back to footnote 61 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:61" title="Jump back to footnote 61 in the text">&#8617;</a></p>
 </li>
 <li id="fn:62">
-<p>PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html&#160;<a class="footnote-backref" href="#fnref:62" title="Jump back to footnote 62 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:62" title="Jump back to footnote 62 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:62" title="Jump back to footnote 62 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:62" title="Jump back to footnote 62 in the text">&#8617;</a></p>
+<p>PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html&#160;<a class="footnote-backref" href="#fnref:62" title="Jump back to footnote 62 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:62" title="Jump back to footnote 62 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:62" title="Jump back to footnote 62 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:62" title="Jump back to footnote 62 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:62" title="Jump back to footnote 62 in the text">&#8617;</a></p>
 </li>
 <li id="fn:63">
-<p>Model acceleration libraries - ROCm Documentation. https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html&#160;<a class="footnote-backref" href="#fnref:63" title="Jump back to footnote 63 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:63" title="Jump back to footnote 63 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:63" title="Jump back to footnote 63 in the text">&#8617;</a></p>
+<p>Model acceleration libraries - ROCm Documentation. https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html&#160;<a class="footnote-backref" href="#fnref:63" title="Jump back to footnote 63 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:63" title="Jump back to footnote 63 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:63" title="Jump back to footnote 63 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:63" title="Jump back to footnote 63 in the text">&#8617;</a></p>
+</li>
+<li id="fn:64">
+<p>State of PyTorch Hardware Acceleration 2025. https://tunguz.github.io/PyTorch_Hardware_2025/&#160;<a class="footnote-backref" href="#fnref:64" title="Jump back to footnote 64 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:64" title="Jump back to footnote 64 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

@@ -16,6 +16,18 @@ The inclusion boundary is public, current documentation for CUDA, ROCm, TPU/XLA,
 
 The ratings are ordinal expert assessments, not measured benchmark scores. **High**, **Medium**, and **Low** are not equal-interval numeric values; they summarize how dependable each backend appears for a senior PyTorch team after accounting for documentation, installation path, compiler maturity, kernel availability, profiling support, and operational friction.
 
+## What Changed Since 2025
+
+The 2025 predecessor already argued that PyTorch hardware acceleration had become a heterogeneous, compiler-shaped landscape rather than a simple CUDA-only story. The 2026 update changes the emphasis from **“alternatives are emerging”** to **“alternatives are usable, but only under clearer operating conditions.”** [^64]
+
+| Area | 2025 framing | May 2026 update |
+|---|---|---|
+| CUDA | CUDA/H100/Blackwell remained the operational baseline. | CUDA is still the default cluster reference, but the reason is now broader than raw hardware: upstream FlashAttention-4, CuTeDSL/GEMM work, expanded graph capture, and Nsight visibility into compiled graphs make the compiler-and-profiler loop unusually complete. |
+| ROCm | ROCm was improving quickly but still felt like a Triton/CK parity project. | ROCm has become a credible deliberate adoption target, especially in curated MI300X/MI325X-class environments; the remaining caveat is operational discipline rather than basic feasibility. |
+| TPU/XLA | TPU was powerful but visibly XLA-shaped, with graph-break and recompilation friction. | TPU remains powerful and cloud-economically interesting, but PyTorch/XLA is still a bridge; the TorchTPU roadmap and TPU7x/Ironwood documentation make the transition state more explicit. |
+| Apple Silicon | Apple was already the local high-memory prototyping story, but not a datacenter training story. | Apple’s local case is stronger because of larger unified-memory systems, MPS operator/startup improvements, and MLX momentum; the gap is still compiled PyTorch performance and datacenter scalability. |
+| Recommendation | Use CUDA as the safest cluster default, with alternatives for specific workloads. | Standardize on PyTorch as the common code surface, CUDA as cluster truth, Apple as local prototyping edge, and add ROCm/TPU only when their operating models are intentional. |
+
 ## Executive Decision Matrix
 
 The matrix below is a synthesis of upstream PyTorch 2.8–2.12 release notes, vendor installation guidance, backend-specific compiler documentation, and current issue trackers. The ratings are intentionally practical. “Maturity” means “how often a senior engineer can stay inside normal PyTorch habits without being surprised.” “Cost efficiency” includes software friction and team time, not just silicon list price. Apple scores high there only for **local workstations and local inference**, not because it competes with datacenter accelerators on throughput. TPU scores high there only when the workload shape matches the TPU/XLA model and the team is comfortable living inside Google’s operational model. [^4]
@@ -68,6 +80,12 @@ If the question is **“what is the most interesting alternative?”**, ROCm now
 If the question is **“what wins on cloud economics when the workload is XLA-friendly?”**, TPU is still formidable. Google’s public pricing shows **TPU v5p at $4.20 per chip-hour** in Iowa, **Trillium at $2.70 per chip-hour**, and **Ironwood at $12.00 per chip-hour** in the same region. Google’s eighth-generation TPU announcement is more specific about system claims: TPU 8t is described as delivering nearly **3×** compute performance per pod over the previous generation, while TPU 8t and 8i are described as delivering up to **2×** better performance per watt over Ironwood. The catch is that PyTorch on TPU still lives behind PyTorch/XLA and XLA-native constraints, rather than feeling like a normal accelerator backend in the way CUDA does. [^7] [^53] [^54] [^55]
 
 If the question is **“what is the fairest answer for local prototyping?”**, Apple deserves more respect than datacenter-biased analyses usually give it. Apple’s current public Mac lineup relevant to this discussion is unusually strong on memory capacity: Mac Studio currently ships with **M4 Max or M3 Ultra**, M3 Ultra scales to **512GB unified memory**, and Apple explicitly positions it for extremely large local AI workloads; meanwhile the current MacBook Pro line includes **M5 Max** systems with up to **128GB unified memory**. PyTorch 2.12 also moved all MPS tensors to unified memory unconditionally, which narrows the conceptual gap between PyTorch MPS and frameworks like MLX that were designed around Apple’s shared-memory model from the start. What Apple still does not have is a production-grade PyTorch compiler stack equivalent to CUDA. [^8] [^50] [^57] [^58]
+
+## Ergonomics and Scalability Map
+
+![Two-axis map of PyTorch hardware backends by PyTorch-native ergonomics and datacenter scalability](backend-position-map.png)
+
+The map compresses the report’s main thesis into two axes. CUDA sits high on both PyTorch-native ergonomics and datacenter scalability. ROCm is moving toward the upper-right but still depends on curated environments. TPU is highly scalable but less PyTorch-native because XLA/PJRT remain part of the programming model. Apple MPS/MLX is the local-ergonomics outlier: excellent for desk-side and laptop workflows, but not a datacenter scaling answer.
 
 ## Deep Dive on the torch.compile Landscape
 
@@ -199,6 +217,32 @@ This report is a synthesis, not a benchmark paper. Teams using it to make procur
 
 If two teams disagree about a backend, this appendix is the first place to look. Many apparent disagreements reduce to different driver versions, container images, dtypes, attention kernels, or shape policies rather than a true contradiction about the hardware.
 
+## Glossary
+
+| Term | Compact definition |
+|---|---|
+| AOTInductor | Ahead-of-time packaging path for TorchInductor graphs, useful when compiled artifacts need to be exported or deployed outside the immediate Python session. |
+| AOTriton | AMD/ROCm path for precompiled Triton attention kernels, reducing some runtime compilation friction on supported ROCm systems. |
+| CK / Composable Kernel | AMD’s C++ template kernel library for high-performance GPU primitives; often used where ROCm needs highly tuned alternatives to generic Triton kernels. |
+| FlexAttention | PyTorch attention API that lets users express attention variants in Python while allowing PyTorch to generate specialized fused kernels where supported. |
+| PJRT | Portable JIT runtime used by PyTorch/XLA and other XLA clients to run compiled programs on accelerator backends such as TPU. |
+| Pallas | JAX/XLA custom-kernel programming model used on TPU as an analogue to the custom-kernel role Triton often plays on GPUs. |
+| Unified memory | Apple Silicon memory model where CPU and GPU share one physical memory pool, making large local models easier to fit than on discrete CPU-plus-VRAM systems. |
+| XLA | Accelerated Linear Algebra compiler stack used by TPU and other accelerators; it rewards static shapes, graph-friendly control flow, and disciplined synchronization. |
+
+## Grouped Bibliography
+
+The numbered footnotes remain the canonical references. This grouping is a quick scan of the source base by project or vendor.
+
+| Group | Representative sources |
+|---|---|
+| PyTorch core, compiler, and releases | PyTorch 2.7, 2.8, 2.11, and 2.12 release material; compiler graph-break docs; FlexAttention/FlashAttention-4; Warp Specialization; PyTorch Start Locally. [^1] [^4] [^5] [^9] [^17] [^19] [^20] [^22] [^39] [^50] [^51] [^52] |
+| AMD ROCm | ROCm PyTorch installation guidance and ROCm model acceleration libraries. [^13] [^23] [^24] [^40] [^46] [^59] [^62] [^63] |
+| Google TPU/XLA | TPU pricing, TPU v5p/v6e/TPU7x docs, TPU software versions, PyTorch/XLA docs and repository, Pallas, quantized ops, tracing/execution-time guidance, and Google’s eighth-generation TPU announcement. [^7] [^14] [^15] [^16] [^25] [^26] [^33] [^41] [^47] [^53] [^54] [^55] [^56] [^61] |
+| Apple and MLX | Apple Silicon product/newsroom pages, MPS backend notes and environment variables, MPS compile tracker, and MLX README. [^2] [^8] [^18] [^27] [^28] [^30] [^31] [^35] [^38] [^42] [^44] [^48] [^57] [^58] |
+| NVIDIA | Hopper architecture, NVLink/NVLink Switch, and Nsight Systems release notes. [^34] [^37] [^43] [^60] |
+| Prior edition | State of PyTorch Hardware Acceleration 2025. [^64] |
+
 ## References
 
 [^1]: PyTorch 2.8 Release Blog. https://pytorch.org/blog/pytorch-2-8/
@@ -264,3 +308,4 @@ If two teams disagree about a backend, this appendix is the first place to look.
 [^61]: TPU v6e | Google Cloud Documentation. https://docs.cloud.google.com/tpu/docs/v6e
 [^62]: PyTorch on ROCm installation. https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html
 [^63]: Model acceleration libraries - ROCm Documentation. https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html
+[^64]: State of PyTorch Hardware Acceleration 2025. https://tunguz.github.io/PyTorch_Hardware_2025/

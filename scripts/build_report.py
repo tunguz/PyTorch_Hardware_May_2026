@@ -33,6 +33,7 @@ README_OUT = ROOT / "README.md"
 PDF_OUT = ROOT / "State of PyTorch Hardware Acceleration May 2026.pdf"
 INFOGRAPHIC_OUT = ROOT / "infographic.jpeg"
 INFOGRAPHIC_SOURCE = ROOT / "assets" / "pytorch-hardware-2026-infographic.jpg"
+POSITION_MAP_OUT = ROOT / "backend-position-map.png"
 
 TITLE = "State of PyTorch Hardware Acceleration: May 2026"
 SHORT_TITLE = "PyTorch Hardware 2026"
@@ -153,6 +154,62 @@ def build_infographic() -> None:
     shutil.copyfile(INFOGRAPHIC_SOURCE, INFOGRAPHIC_OUT)
 
 
+def build_position_map() -> None:
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    points = [
+        ("NVIDIA CUDA", 9.0, 9.3, "#0077BB", "o", (8, 8)),
+        ("AMD ROCm", 6.6, 7.5, "#EE7733", "s", (8, -20)),
+        ("Google TPU/XLA", 4.4, 9.0, "#009988", "^", (-112, 8)),
+        ("Apple MPS/MLX", 7.2, 2.5, "#7C3AED", "D", (8, 8)),
+    ]
+
+    plt.rcParams.update({
+        "font.family": "sans-serif",
+        "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
+        "font.size": 10,
+    })
+    fig, ax = plt.subplots(figsize=(7.2, 5.1), dpi=180)
+    ax.set_facecolor("#f8fafc")
+    fig.patch.set_facecolor("white")
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
+    ax.set_xlabel("PyTorch-native ergonomics", fontweight="bold")
+    ax.set_ylabel("Datacenter scalability", fontweight="bold")
+    ax.set_title("Backend Position Map", fontsize=15, fontweight="bold", pad=14)
+    ax.grid(True, color="#cbd5e1", linewidth=0.8, alpha=0.75)
+    ax.axvline(5, color="#94a3b8", linewidth=1.1)
+    ax.axhline(5, color="#94a3b8", linewidth=1.1)
+    ax.text(8.95, 9.85, "Cluster default", ha="right", va="top", color="#334155", fontsize=8.5)
+    ax.text(1.05, 9.85, "Compiler/cloud specialist", ha="left", va="top", color="#334155", fontsize=8.5)
+    ax.text(8.95, 0.35, "Local-first edge", ha="right", va="bottom", color="#334155", fontsize=8.5)
+    ax.text(1.05, 0.35, "Low fit for this report", ha="left", va="bottom", color="#94a3b8", fontsize=8.5)
+
+    for label, x, y, color, marker, offset in points:
+        ax.scatter([x], [y], s=150, color=color, marker=marker, edgecolor="white", linewidth=1.7, zorder=3)
+        ax.annotate(
+            label,
+            (x, y),
+            xytext=offset,
+            textcoords="offset points",
+            fontsize=10,
+            fontweight="bold",
+            color="#0f172a",
+            bbox={"boxstyle": "round,pad=0.28", "facecolor": "white", "edgecolor": "#cbd5e1", "linewidth": 0.8},
+        )
+
+    ax.set_xticks(range(0, 11, 2))
+    ax.set_yticks(range(0, 11, 2))
+    for spine in ax.spines.values():
+        spine.set_color("#94a3b8")
+    fig.tight_layout()
+    fig.savefig(POSITION_MAP_OUT, bbox_inches="tight")
+    plt.close(fig)
+
+
 def build_html(md_text: str) -> None:
     intro, sections = split_sections(md_text)
     intro_body = intro.split("\n", 1)[1].strip() if intro.startswith("# ") else intro
@@ -192,6 +249,7 @@ def build_html(md_text: str) -> None:
     .report-body .footnote {{ margin-top: 2rem; border-top: 1px solid #e2e8f0; padding-top: 1rem; font-size: .88rem; }}
     .report-body .footnote ol {{ padding-left: 1.25rem; }}
     .report-body .footnote li {{ margin: .45rem 0; }}
+    .report-body img {{ display: block; width: 100%; max-width: 760px; height: auto; margin: 1.4rem auto; border: 1px solid #e2e8f0; border-radius: .5rem; }}
     .report-body table, .matrix-table {{ width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .92rem; }}
     .report-body th, .report-body td, .matrix-table th, .matrix-table td {{ border: 1px solid #e2e8f0; padding: .85rem; vertical-align: top; }}
     .report-body th, .matrix-table th {{ background: #f1f5f9; color: #0f172a; font-weight: 700; text-align: left; }}
@@ -354,6 +412,19 @@ def build_pdf(md_text: str) -> None:
                     table_lines = []
                 story.append(Paragraph(html.escape(line[4:].strip()), h3_style))
                 continue
+            image_match = re.match(r"!\[(.*?)\]\((.*?)\)", line.strip())
+            if image_match:
+                if paragraph:
+                    story.append(make_para(" ".join(paragraph), body_style))
+                    paragraph = []
+                if table_lines:
+                    append_markdown_table(story, table_lines, small_style)
+                    table_lines = []
+                image_path = ROOT / image_match.group(2)
+                if image_path.exists():
+                    story.append(ReportImage(str(image_path), width=6.7 * inch, height=4.75 * inch))
+                    story.append(Spacer(1, 0.12 * inch))
+                continue
             if line.startswith("|"):
                 if paragraph:
                     story.append(make_para(" ".join(paragraph), body_style))
@@ -436,6 +507,7 @@ Version: {REPORT_VERSION}
 - PDF version: [State of PyTorch Hardware Acceleration May 2026.pdf](State%20of%20PyTorch%20Hardware%20Acceleration%20May%202026.pdf)
 - Source research brief: [deep-research-report.md](deep-research-report.md)
 - Infographic: [infographic.jpeg](infographic.jpeg)
+- Backend position map: [backend-position-map.png](backend-position-map.png)
 - Source infographic: [assets/pytorch-hardware-2026-infographic.jpg](assets/pytorch-hardware-2026-infographic.jpg)
 
 ## Repository Contents
@@ -444,6 +516,7 @@ Version: {REPORT_VERSION}
 - `State of PyTorch Hardware Acceleration May 2026.pdf` - static PDF report
 - `deep-research-report.md` - source research brief used for the report
 - `infographic.jpeg` - visual summary
+- `backend-position-map.png` - two-axis backend ergonomics and scalability map
 - `assets/pytorch-hardware-2026-infographic.jpg` - source infographic image
 - `README.md` - project overview, license, and citation information
 
@@ -498,6 +571,7 @@ changes were made.
 def main() -> None:
     source = clean_source(SOURCE.read_text(encoding="utf-8"))
     build_infographic()
+    build_position_map()
     build_html(source)
     build_pdf(source)
     build_readme()
