@@ -139,6 +139,19 @@ def add_visible_footnote_numbers(html_text: str) -> str:
     return re.sub(r'<li id="fn:(\d+)">\s*<p>(.*?)</p>', replacement, html_text, flags=re.S)
 
 
+def remove_dangling_footnote_backrefs(html_text: str) -> str:
+    ids = set(re.findall(r'id="([^"]+)"', html_text))
+
+    def replacement(match: re.Match[str]) -> str:
+        return match.group(0) if match.group("target") in ids else ""
+
+    return re.sub(
+        r'(?P<prefix>(?:&#160;|\s)*)<a class="footnote-backref" href="#(?P<target>[^"]+)"[^>]*>.*?</a>',
+        replacement,
+        html_text,
+    )
+
+
 def rating_badge(value: str) -> str:
     css = {"High": "rating-high", "Medium": "rating-medium", "Low": "rating-low"}[value]
     return f'<span class="rating {css}">{value}</span>'
@@ -233,6 +246,7 @@ def build_html(md_text: str) -> None:
     )
     report_html = add_heading_ids(report_html, sections)
     report_html = add_visible_footnote_numbers(report_html)
+    report_html = remove_dangling_footnote_backrefs(report_html)
     nav = "\n".join(f'<li><a href="#{slug}">{title}</a></li>' for title, slug, _ in sections)
     platforms = list(RATINGS)
     scores = {feature: [SCORES[RATINGS[p][feature]] for p in platforms] for feature in ["Maturity", "torch.compile", "Kernels", "Debugging", "Cost Efficiency"]}
