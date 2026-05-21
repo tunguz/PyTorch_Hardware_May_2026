@@ -1,0 +1,1103 @@
+
+<!DOCTYPE html>
+
+<html data-content_root="../../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Install PyTorch on ROCm" name="description"/>
+<meta content="installation, docker, PyTorch, deep learning, AMD, ROCm" name="keywords"/>
+<title>PyTorch on ROCm installation — ROCm installation (Linux)</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
+<link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../_static/pygments.css?v=8f2a1f02" rel="stylesheet" type="text/css"/>
+<link href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" rel="stylesheet" type="text/css"/>
+<link href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
+<link href="../../_static/custom.css?v=24396f60" rel="stylesheet" type="text/css"/>
+<link href="../../_static/rocm_header.css?v=e999025a" rel="stylesheet" type="text/css"/>
+<link href="../../_static/rocm_footer.css?v=7095035a" rel="stylesheet" type="text/css"/>
+<link href="../../_static/fonts.css?v=fcff5274" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
+<link as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
+<script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/documentation_options.js?v=a38137d5"></script>
+<script src="../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+<script src="../../_static/copybutton.js?v=f281be69"></script>
+<script async="async" src="../../_static/code_word_breaks.js?v=327952c4"></script>
+<script async="async" src="../../_static/renameVersionLinks.js?v=929fe5e4"></script>
+<script async="async" src="../../_static/rdcMisc.js?v=01f88d96"></script>
+<script async="async" src="../../_static/theme_mode_captions.js?v=15f4ec5d"></script>
+<script defer="defer" src="../../_static/search.js?v=90a4452c"></script>
+<script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+<script src="../../_static/design-tabs.js?v=f930bc37"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'install/3rd-party/pytorch-install';</script>
+<script async="async" src="https://download.amd.com/js/analytics/analyticsinit.js"></script>
+<link href="https://www.amd.com/content/dam/code/images/favicon/favicon.ico" rel="icon"/>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<link href="tensorflow-install.html" rel="next" title="TensorFlow on ROCm installation"/>
+<link href="../post-install.html" rel="prev" title="Post-installation instructions"/>
+<meta content="vo35SZt_GASsTHAEmdww7AYKPCvZyzLvOXBl8guBME4" name="google-site-verification"/>
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="advanced-micro-devices-linux-install-docs" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/install/3rd-party/pytorch-install.html" /><meta name="readthedocs-http-status" content="200" /></head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>Back to top</button>
+<input class="sidebar-toggle" id="pst-primary-sidebar-checkbox" type="checkbox"/>
+<label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+<input class="sidebar-toggle" id="pst-secondary-sidebar-checkbox" type="checkbox"/>
+<label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+</div>
+<div class="pst-async-banner-revealer d-none">
+<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
+</div>
+<aside aria-label="Announcement" class="bd-header-announcement">
+<div class="bd-header-announcement__content">The ROCm 7.13.0 technology preview release documentation is available at <a href="https://rocm.docs.amd.com/en/7.13.0-preview/" id="rocm-banner">ROCm Preview documentation</a>. For production use, continue to use ROCm 7.2.3 documentation.</div>
+</aside>
+<header class="common-header">
+<nav class="navbar navbar-expand-xl">
+<div class="container-fluid main-nav rocm-header">
+<div class="header-logo">
+<div class="header-logo-title">
+<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" data-tracking-information="mainMenuToggle" id="nav-icon" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<a class="navbar-brand" href="https://www.amd.com/">
+<img alt="AMD Logo" class="d-inline-block align-text-top hover-opacity" src="../../_static/images/amd-header-logo.svg" title="AMD Logo" width="90"/>
+</a>
+<div class="vr mx-40 my-25"></div>
+<a class="klavika-font hover-opacity" href="https://rocm.docs.amd.com/en/latest">ROCm™ Software 7.2.3</a>
+</div>
+<a class="header-all-versions hover-opacity" href="https://rocm.docs.amd.com/en/latest/release/versions.html">Version List</a>
+</div>
+<div class="icon-nav text-center d-flex ms-auto"></div>
+</div>
+</nav>
+<nav class="navbar navbar-expand-xl second-level-nav">
+<div class="container-fluid main-nav">
+<div class="navbar-nav-container collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav nav-mega me-auto mb-2 mb-lg-0 col-xl-10">
+<li class="nav-item">
+<a aria-expanded="false" class="nav-link top-level header-menu-links" href="https://github.com/ROCm/rocm-install-on-linux" id="navgithub" role="button" target="_blank">
+                                        GitHub
+                                    </a>
+</li>
+<li class="nav-item">
+<a aria-expanded="false" class="nav-link top-level header-menu-links" href="https://github.com/ROCm/ROCm/discussions" id="navcommunity" role="button" target="_blank">
+                                        Community
+                                    </a>
+</li>
+<li class="nav-item">
+<a aria-expanded="false" class="nav-link top-level header-menu-links" href="https://rocm.blogs.amd.com/" id="navblogs" role="button" target="_blank">
+                                        Blogs
+                                    </a>
+</li>
+<li class="nav-item">
+<a aria-expanded="false" class="nav-link top-level header-menu-links" href="https://www.amd.com/en/developer/resources/rocm-hub.html" id="navrocm-developer-hub" role="button" target="_blank">
+                                        ROCm Developer Hub
+                                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link top-level header-menu-links dropdown-toggle header-nav-dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navrocm-toolkits" role="button">
+                                        ROCm Toolkits
+                                    </a>
+<ul aria-labelledby="navrocm-toolkits" class="dropdown-menu header-nav-dropdown-menu">
+<li><a class="dropdown-item" href="https://rocm.docs.amd.com/projects/rocm-ds/en/latest/index.html" target="_blank">ROCm Data Science</a></li>
+<li><a class="dropdown-item" href="https://rocm.docs.amd.com/projects/rocm-finance/en/latest/index.html" target="_blank">ROCm Finance</a></li>
+<li><a class="dropdown-item" href="https://rocm.docs.amd.com/projects/rocm-ls/en/latest/index.html" target="_blank">ROCm Life Science</a></li>
+<li><a class="dropdown-item" href="https://rocm.docs.amd.com/projects/rocm-llmext/en/latest/index.html" target="_blank">ROCm LLMExt</a></li>
+<li><a class="dropdown-item" href="https://rocm.docs.amd.com/projects/rocm-simulation/en/latest/index.html" target="_blank">ROCm Simulation</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a aria-expanded="false" class="nav-link top-level header-menu-links" href="https://instinct.docs.amd.com" id="navsystems-and-infra-docs" role="button" target="_blank">
+                                        Systems and Infra Docs
+                                    </a>
+</li>
+<li class="nav-item">
+<a aria-expanded="false" class="nav-link top-level header-menu-links" href="https://www.amd.com/en/developer/resources/infinity-hub.html" id="navinfinity-hub" role="button" target="_blank">
+                                        Infinity Hub
+                                    </a>
+</li>
+<li class="nav-item">
+<a aria-expanded="false" class="nav-link top-level header-menu-links" href="https://github.com/ROCm/rocm-install-on-linux/issues/new/choose" id="navsupport" role="button" target="_blank">
+                                        Support
+                                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+<div class="sidebar-header-items__center">
+<div class="navbar-item">
+<a class="navbar-brand logo" href="https://rocm.docs.amd.com/en/latest">
+<p>ROCm documentation</p>
+</a></div>
+</div>
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="../../index.html">
+<p class="title logo__title">ROCm installation (Linux)</p>
+</a></div>
+<div class="sidebar-primary-item">
+<script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Install ROCm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../reference/system-requirements.html">System requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/user-kernel-space-compat-matrix.html">User &amp; AMD GPU Driver (amdgpu)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick start installation guide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../detailed-install.html">Detailed install</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../install-overview.html">Installation methods</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../install-methods/package-manager-index.html">Package manager</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/package-manager/package-manager-ubuntu.html">Ubuntu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/package-manager/package-manager-debian.html">Debian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/package-manager/package-manager-rhel.html">Red Hat Enterprise Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/package-manager/package-manager-ol.html">Oracle Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/package-manager/package-manager-rl.html">Rocky Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/package-manager/package-manager-sles.html">SUSE Linux Enterprise Server</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../install-methods/multi-version-install-index.html">Multi-version installation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/multi-version-install/multi-version-install-ubuntu.html">Ubuntu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/multi-version-install/multi-version-install-debian.html">Debian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/multi-version-install/multi-version-install-rhel.html">Red Hat Enterprise Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/multi-version-install/multi-version-install-ol.html">Oracle Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/multi-version-install/multi-version-install-rl.html">Rocky Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../install-methods/multi-version-install/multi-version-install-sles.html">SUSE Linux Enterprise Server</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../rocm-runfile-installer.html">ROCm Runfile Installer</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../post-install.html">Post-installation instructions</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Install deep learning frameworks</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">PyTorch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tensorflow-install.html">TensorFlow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jax-install.html">JAX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dgl-install.html">DGL</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">How to</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../how-to/docker.html">Run Docker containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to/spack.html">Use Spack</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../reference/package-manager-integration.html">Package details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/install-faq.html">Troubleshooting</a></li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content" role="main">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Toggle primary sidebar">
+<span class="fa-solid fa-angle-right"></span>
+</label></div>
+<div class="header-article-item">
+<nav aria-label="Breadcrumb" class="d-print-none">
+<ul class="bd-breadcrumbs">
+<li class="breadcrumb-item breadcrumb-home">
+<a aria-label="Home" class="nav-link" href="../../index.html">
+<i class="fa-solid fa-home"></i>
+</a>
+</li>
+<li aria-current="page" class="breadcrumb-item active">PyTorch on...</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>PyTorch on ROCm installation</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-pytorch">Install PyTorch</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-prebuilt-docker-image-with-pytorch-pre-installed">Use a prebuilt Docker image with PyTorch pre-installed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-image-support">Docker image support</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-wheels-package">Use a wheels package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-pytorch-from-source">Build PyTorch from source</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-pytorch-upstream-dockerfile">Use the PyTorch upstream Dockerfile</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-the-pytorch-installation">Test the PyTorch installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-a-pytorch-example">Run a PyTorch example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mnist-pytorch-example">MNIST PyTorch example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imagenet-pytorch-example">ImageNet PyTorch example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section id="pytorch-on-rocm-installation">
+<h1>PyTorch on ROCm installation<a class="headerlink" href="#pytorch-on-rocm-installation" title="Link to this heading">#</a></h1><div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-p-2 sd-rounded-1 docutils" id="rocm-docs-core-article-info">
+<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
+<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
+<div class="sd-container-fluid sd-sphinx-override docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0" style="color:gray;">
+<span class="sd-pr-2 article-info-date-svg">
+<svg aria-hidden="true" class="sd-octicon sd-octicon-calendar" height="16.0px" version="1.1" viewbox="0 0 16 16" width="16.0px">
+<path d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z" fill-rule="evenodd"></path>
+</svg>
+</span>
+                            2026-05-06
+                        </p>
+</div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0" style="color:gray;">
+<span class="sd-pr-2 article-info-read-time-svg">
+<svg aria-hidden="true" class="sd-octicon sd-octicon-clock" height="16.0px" version="1.1" viewbox="0 0 16 16" width="16.0px">
+<path d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z" fill-rule="evenodd"></path>
+</svg>
+</span>
+                            13 min read time
+                        </p>
+</div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils" style="color:gray;">
+                        Applies to Linux
+                    </div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0" style="color:gray;"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p><a class="reference external" href="https://pytorch.org/">PyTorch</a> is an open-source tensor library designed for deep learning.
+PyTorch on ROCm provides mixed-precision and large-scale training using AMD <a class="reference external" href="https://github.com/ROCm/MIOpen">MIOpen</a>
+and <a class="reference external" href="https://github.com/ROCm/rccl">RCCL</a> libraries.</p>
+<p>This topic covers setup instructions and the necessary files to build, test, and run
+PyTorch with ROCm support in a Docker environment. To learn more about PyTorch on ROCm,
+including its use cases, recommendations, as well as hardware and software compatibility,
+see <a class="reference external" href="https://rocm.docs.amd.com/en/latest/compatibility/ml-compatibility/pytorch-compatibility.html" title="(in ROCm Documentation v7.2.3)"><span>PyTorch compatibility</span></a>.</p>
+<section id="install-pytorch">
+<h2>Install PyTorch<a class="headerlink" href="#install-pytorch" title="Link to this heading">#</a></h2>
+<p>To install PyTorch for ROCm, you have the following options:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#using-docker-with-pytorch-pre-installed"><span class="std std-ref">Use a prebuilt Docker image with PyTorch pre-installed</span></a> <strong>(recommended)</strong></p>
+<ul>
+<li><p><a class="reference internal" href="#pytorch-docker-support"><span class="std std-ref">Docker image support</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#using-wheels-package"><span class="std std-ref">Use a wheels package</span></a></p></li>
+<li><p><a class="reference internal" href="#using-pytorch-upstream-docker-image"><span class="std std-ref">Use the PyTorch upstream Dockerfile</span></a></p></li>
+</ul>
+<section id="use-a-prebuilt-docker-image-with-pytorch-pre-installed">
+<span id="using-docker-with-pytorch-pre-installed"></span><h3>Use a prebuilt Docker image with PyTorch pre-installed<a class="headerlink" href="#use-a-prebuilt-docker-image-with-pytorch-pre-installed" title="Link to this heading">#</a></h3>
+<p>The recommended setup to get a PyTorch environment is through Docker, as it avoids potential installation issues.
+The tested, prebuilt image includes PyTorch, ROCm, and other dependencies. See <a class="reference internal" href="#pytorch-docker-support"><span class="std std-ref">Docker image support</span></a>.
+To install ROCm on bare metal, follow <a class="reference internal" href="../install-overview.html"><span class="doc">ROCm installation overview</span></a>.</p>
+<ol class="arabic">
+<li><p>Download the latest public <a class="reference external" href="https://hub.docker.com/r/rocm/pytorch">PyTorch Docker image</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>rocm/pytorch:latest
+</pre></div>
+</div>
+<div class="admonition important" id="pytorch-docker-latest-note">
+<p class="admonition-title">Important</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">rocm/pytorch:latest</span></code> tag points to
+a Docker image with the latest ROCm-tested release of PyTorch.</p>
+</div>
+<p>You can download Docker images with specific ROCm, PyTorch, and operating
+system versions. See the available tags on
+<a class="reference external" href="https://hub.docker.com/r/rocm/pytorch/tags">Docker Hub</a>.</p>
+</li>
+<li><p>Start a Docker container using the image.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cap-add<span class="o">=</span>SYS_PTRACE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--security-opt<span class="w"> </span><span class="nv">seccomp</span><span class="o">=</span>unconfined<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--device<span class="o">=</span>/dev/kfd<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--device<span class="o">=</span>/dev/dri<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--group-add<span class="w"> </span>video<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ipc<span class="o">=</span>host<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--shm-size<span class="w"> </span>8G<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>rocm/pytorch:latest
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will automatically download the image if it does not exist on the host. You can also pass the <code class="docutils literal notranslate"><span class="pre">-v</span></code> argument to mount any data directories from the host onto the container.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="docker-image-support">
+<span id="pytorch-docker-support"></span><h3>Docker image support<a class="headerlink" href="#docker-image-support" title="Link to this heading">#</a></h3>
+<p>AMD validates and publishes ready-made <a class="reference external" href="https://hub.docker.com/r/rocm/pytorch">PyTorch</a> images
+with ROCm backends on Docker Hub. The following Docker image tags and associated inventories are
+validated for ROCm 7.2.3.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio"/>
+<label class="sd-tab-label" for="sd-tab-item-0">
+PyTorch 2.9.1</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio"/>
+<label class="sd-tab-label" for="sd-tab-item-3">
+Python 3.12</label><div class="sd-tab-content docutils">
+<p class="rubric">Docker pull tag</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>rocm/pytorch:rocm7.2.3_ubuntu24.04_py3.12_pytorch_release_2.9.1
+</pre></div>
+</div>
+<p class="rubric">Additional software components</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ubuntu</p></th>
+<th class="head"><p>Apex</p></th>
+<th class="head"><p>torchvision</p></th>
+<th class="head"><p>UCX</p></th>
+<th class="head"><p>Open MPI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>24.04</p></td>
+<td><p><a class="reference external" href="https://repo.radeon.com/rocm/manylinux/rocm-rel-7.2.3/">1.9.0+rocm7.2.3</a></p></td>
+<td><p><a class="reference external" href="https://github.com/pytorch/vision/tree/v0.24.0">0.24.0</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/u/ucx/">1.16.0+ds-5ubuntu1</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/o/openmpi/">4.1.6-7ubuntu2</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>See
+<code class="docutils literal notranslate"><span class="pre">rocm/pytorch:rocm7.2.3_ubuntu24.04_py3.12_pytorch_release_2.9.1</span></code>
+on <a class="reference external" href="https://hub.docker.com/layers/rocm/pytorch/rocm7.2.3_ubuntu24.04_py3.12_pytorch_release_2.9.1/images/sha256-1cd127c6561fae2c61d1f8185878f7c9702b4504ba0960e442abb0b50257cb71">Docker Hub</a>.</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio"/>
+<label class="sd-tab-label" for="sd-tab-item-4">
+Python 3.10</label><div class="sd-tab-content docutils">
+<p class="rubric">Docker pull tag</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>rocm/pytorch:rocm7.2.3_ubuntu22.04_py3.10_pytorch_release_2.9.1
+</pre></div>
+</div>
+<p class="rubric">Additional software components</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ubuntu</p></th>
+<th class="head"><p>Apex</p></th>
+<th class="head"><p>torchvision</p></th>
+<th class="head"><p>UCX</p></th>
+<th class="head"><p>Open MPI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>22.04</p></td>
+<td><p><a class="reference external" href="https://repo.radeon.com/rocm/manylinux/rocm-rel-7.2.3/">1.9.0+rocm7.2.3</a></p></td>
+<td><p><a class="reference external" href="https://github.com/pytorch/vision/tree/v0.24.0">0.24.0</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/u/ucx/">1.12.1~rc2-1</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/o/openmpi/">4.1.2-2ubuntu1</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>See
+<code class="docutils literal notranslate"><span class="pre">rocm/pytorch:rocm7.2.3_ubuntu22.04_py3.10_pytorch_release_2.9.1</span></code>
+on <a class="reference external" href="https://hub.docker.com/layers/rocm/pytorch/rocm7.2.3_ubuntu22.04_py3.10_pytorch_release_2.9.1/images/sha256-916474644e4e9f1189c77127d1179e04309084a030084380962843a3bfa6539b">Docker Hub</a>.</p>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio"/>
+<label class="sd-tab-label" for="sd-tab-item-1">
+PyTorch 2.8.0</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-2" type="radio"/>
+<label class="sd-tab-label" for="sd-tab-item-5">
+Python 3.12</label><div class="sd-tab-content docutils">
+<p class="rubric">Docker pull tag</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>rocm/pytorch:rocm7.2.3_ubuntu24.04_py3.12_pytorch_release_2.8.0
+</pre></div>
+</div>
+<p class="rubric">Additional software components</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ubuntu</p></th>
+<th class="head"><p>Apex</p></th>
+<th class="head"><p>torchvision</p></th>
+<th class="head"><p>UCX</p></th>
+<th class="head"><p>Open MPI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>24.04</p></td>
+<td><p><a class="reference external" href="https://repo.radeon.com/rocm/manylinux/rocm-rel-7.2.3/">1.8.0+rocm7.2.3</a></p></td>
+<td><p><a class="reference external" href="https://github.com/pytorch/vision/tree/v0.23.0">0.23.0</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/u/ucx/">1.16.0+ds-5ubuntu1</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/o/openmpi/">4.1.6-7ubuntu2</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>See
+<code class="docutils literal notranslate"><span class="pre">rocm/pytorch:rocm7.2.3_ubuntu24.04_py3.12_pytorch_release_2.8.0</span></code>
+on <a class="reference external" href="https://hub.docker.com/layers/rocm/pytorch/rocm7.2.3_ubuntu24.04_py3.12_pytorch_release_2.8.0/images/sha256-fb8f93e77f6c3b860497a46970237e949f2473c35df86db5135cb52093bc88dd">Docker Hub</a>.</p>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-2" type="radio"/>
+<label class="sd-tab-label" for="sd-tab-item-6">
+Python 3.10</label><div class="sd-tab-content docutils">
+<p class="rubric">Docker pull tag</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>rocm/pytorch:rocm7.2.3_ubuntu22.04_py3.10_pytorch_release_2.8.0
+</pre></div>
+</div>
+<p class="rubric">Additional software components</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ubuntu</p></th>
+<th class="head"><p>Apex</p></th>
+<th class="head"><p>torchvision</p></th>
+<th class="head"><p>UCX</p></th>
+<th class="head"><p>Open MPI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>22.04</p></td>
+<td><p><a class="reference external" href="https://repo.radeon.com/rocm/manylinux/rocm-rel-7.2.3/">1.8.0+rocm7.2.3</a></p></td>
+<td><p><a class="reference external" href="https://github.com/pytorch/vision/tree/v0.23.0">0.23.0</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/u/ucx/">1.12.1~rc2-1</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/o/openmpi/">4.1.2-2ubuntu1</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>See
+<code class="docutils literal notranslate"><span class="pre">rocm/pytorch:rocm7.2.3_ubuntu22.04_py3.10_pytorch_release_2.8.0</span></code>
+on <a class="reference external" href="https://hub.docker.com/layers/rocm/pytorch/rocm7.2.3_ubuntu22.04_py3.10_pytorch_release_2.8.0/images/sha256-883e5d3de092fefbffc99c190f949503748216f575fe824fce0bd2ad7634af0b">Docker Hub</a>.</p>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio"/>
+<label class="sd-tab-label" for="sd-tab-item-2">
+PyTorch 2.7.1</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-7" name="sd-tab-set-3" type="radio"/>
+<label class="sd-tab-label" for="sd-tab-item-7">
+Python 3.12</label><div class="sd-tab-content docutils">
+<p class="rubric">Docker pull tag</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>rocm/pytorch:rocm7.2.3_ubuntu24.04_py3.12_pytorch_release_2.7.1
+</pre></div>
+</div>
+<p class="rubric">Additional software components</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ubuntu</p></th>
+<th class="head"><p>Apex</p></th>
+<th class="head"><p>torchvision</p></th>
+<th class="head"><p>UCX</p></th>
+<th class="head"><p>Open MPI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>24.04</p></td>
+<td><p><a class="reference external" href="https://repo.radeon.com/rocm/manylinux/rocm-rel-7.2.3/">1.7.0+rocm7.2.3</a></p></td>
+<td><p><a class="reference external" href="https://github.com/pytorch/vision/tree/v0.22.1">0.22.1</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/u/ucx/">1.16.0+ds-5ubuntu1</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/o/openmpi/">4.1.6-7ubuntu2</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>See
+<code class="docutils literal notranslate"><span class="pre">rocm/pytorch:rocm7.2.3_ubuntu24.04_py3.12_pytorch_release_2.7.1</span></code>
+on <a class="reference external" href="https://hub.docker.com/layers/rocm/pytorch/rocm7.2.3_ubuntu24.04_py3.12_pytorch_release_2.7.1/images/sha256-9b377637f1b0694d30e65dcd7370351db73e4975a9be05d82d4be616299fd879">Docker Hub</a>.</p>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-3" type="radio"/>
+<label class="sd-tab-label" for="sd-tab-item-8">
+Python 3.10</label><div class="sd-tab-content docutils">
+<p class="rubric">Docker pull tag</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>rocm/pytorch:rocm7.2.3_ubuntu22.04_py3.10_pytorch_release_2.7.1
+</pre></div>
+</div>
+<p class="rubric">Additional software components</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ubuntu</p></th>
+<th class="head"><p>Apex</p></th>
+<th class="head"><p>torchvision</p></th>
+<th class="head"><p>UCX</p></th>
+<th class="head"><p>Open MPI</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>22.04</p></td>
+<td><p><a class="reference external" href="https://repo.radeon.com/rocm/manylinux/rocm-rel-7.2.3/">1.7.0+rocm7.2.3</a></p></td>
+<td><p><a class="reference external" href="https://github.com/pytorch/vision/tree/v0.22.1">0.22.1</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/u/ucx/">1.12.1~rc2-1</a></p></td>
+<td><p><a class="reference external" href="http://archive.ubuntu.com/ubuntu/pool/universe/o/openmpi/">4.1.2-2ubuntu1</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>See
+<code class="docutils literal notranslate"><span class="pre">rocm/pytorch:rocm7.2.3_ubuntu22.04_py3.10_pytorch_release_2.7.1</span></code>
+on <a class="reference external" href="https://hub.docker.com/layers/rocm/pytorch/rocm7.2.3_ubuntu22.04_py3.10_pytorch_release_2.7.1/images/sha256-4d98719922d014abe55e2a1962660e1039b9e8f5925e787855d9881f609ea13d">Docker Hub</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="use-a-wheels-package">
+<span id="using-wheels-package"></span><span id="install-pytorch-wheels"></span><h3>Use a wheels package<a class="headerlink" href="#use-a-wheels-package" title="Link to this heading">#</a></h3>
+<p>PyTorch supports the ROCm platform by providing tested wheels packages. To access this feature, go
+to <a class="reference external" href="https://pytorch.org/get-started/locally/">pytorch.org/get-started/locally/</a>. For the correct
+wheels command, you must select <strong>Linux</strong>, <strong>Python</strong>, <strong>pip</strong>, and <strong>ROCm</strong> in the matrix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The available ROCm release varies between the <strong>PyTorch Build</strong> of <code class="docutils literal notranslate"><span class="pre">Stable</span></code> or <code class="docutils literal notranslate"><span class="pre">Nightly</span></code>.
+More recent releases are generally available through the Nightly builds.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Setting up the environment for the wheel installation</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg aria-hidden="true" class="sd-octicon sd-octicon-chevron-right" height="1.5em" version="1.1" viewbox="0 0 24 24" width="1.5em"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ol class="arabic">
+<li><p class="sd-card-text">Choose one of the following three options:</p>
+<p class="sd-card-text"><strong>Option 1:</strong></p>
+<ol class="loweralpha">
+<li><p class="sd-card-text">Download a base Docker image with the correct ROCm version.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Base OS</p></th>
+<th class="head"><p class="sd-card-text">Docker Image</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">Ubuntu 22.04</p></td>
+<td><p class="sd-card-text"><a class="reference external" href="https://hub.docker.com/r/rocm/dev-ubuntu-22.04">rocm/dev-ubuntu-22.04</a></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Ubuntu 24.04</p></td>
+<td><p class="sd-card-text"><a class="reference external" href="https://hub.docker.com/r/rocm/dev-ubuntu-24.04">rocm/dev-ubuntu-24.04</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li><p class="sd-card-text">Pull the selected image.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>rocm/dev-ubuntu-22.04:latest
+</pre></div>
+</div>
+</li>
+<li><p class="sd-card-text">Start a Docker container using the downloaded image.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--device<span class="o">=</span>/dev/kfd<span class="w"> </span>--device<span class="o">=</span>/dev/dri<span class="w"> </span>--group-add<span class="w"> </span>video<span class="w"> </span>rocm/dev-ubuntu-22.04:latest
+</pre></div>
+</div>
+</li>
+</ol>
+<p class="sd-card-text"><strong>Option 2:</strong></p>
+<ol class="loweralpha">
+<li><p class="sd-card-text">Select a base OS Docker image. Check <a class="reference internal" href="../../reference/system-requirements.html#system-requirements"><span class="std std-ref">System requirements (Linux)</span></a>.</p></li>
+<li><p class="sd-card-text">Pull selected base OS image (Ubuntu 22.04, for example).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu:22.04
+</pre></div>
+</div>
+</li>
+<li><p class="sd-card-text">Start a Docker container using the downloaded image.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--device<span class="o">=</span>/dev/kfd<span class="w"> </span>--device<span class="o">=</span>/dev/dri<span class="w"> </span>--group-add<span class="w"> </span>video<span class="w"> </span>ubuntu:22.04
+</pre></div>
+</div>
+</li>
+<li><p class="sd-card-text">Install ROCm using the directions in the <a class="reference internal" href="../install-overview.html#rocm-install-overview"><span class="std std-ref">ROCm installation overview</span></a> section.</p></li>
+</ol>
+<p class="sd-card-text"><strong>Option 3:</strong></p>
+<p class="sd-card-text">Install on bare-metal. Check <a class="reference internal" href="../../reference/system-requirements.html#system-requirements"><span class="std std-ref">System requirements (Linux)</span></a> and install ROCm using the
+instructions in the <a class="reference internal" href="../install-overview.html#rocm-install-overview"><span class="std std-ref">ROCm installation overview</span></a> section.</p>
+</li>
+<li><p class="sd-card-text">Install the required dependencies for the wheels package.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libjpeg-dev<span class="w"> </span>python3-dev<span class="w"> </span>python3-pip
+pip3<span class="w"> </span>install<span class="w"> </span>wheel<span class="w"> </span>setuptools
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</details><ul>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">torch</span></code>, <code class="docutils literal notranslate"><span class="pre">torchvision</span></code>, and <code class="docutils literal notranslate"><span class="pre">torchaudio</span></code>, as specified in the <a class="reference external" href="https://pytorch.org/get-started/locally/">installation matrix</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>--pre<span class="w"> </span>torch<span class="w"> </span>torchvision<span class="w"> </span>torchaudio<span class="w"> </span>--index-url<span class="w"> </span>https://download.pytorch.org/whl/nightly/rocm7.2
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above command uses the ROCm 7.2 PyTorch wheel. If you want a different version of ROCm, modify the command accordingly.</p>
+</div>
+</li>
+</ul>
+</section>
+<section id="build-pytorch-from-source">
+<span id="building-pytorch-from-source"></span><span id="using-pytorch-rocm-docker-image"></span><h3>Build PyTorch from source<a class="headerlink" href="#build-pytorch-from-source" title="Link to this heading">#</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">rocm/pytorch:latest</span></code> image, uninstall the preinstalled PyTorch
+package, and rebuild PyTorch from source. This ensures compatibility with your
+specific ROCm version, GPU architecture, and project requirements.</p>
+<ol class="arabic">
+<li><p>Download the latest PyTorch Docker image.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>rocm/pytorch:latest
+</pre></div>
+</div>
+</li>
+<li><p>Start a Docker container using the downloaded image.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cap-add<span class="o">=</span>SYS_PTRACE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--security-opt<span class="w"> </span><span class="nv">seccomp</span><span class="o">=</span>unconfined<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--device<span class="o">=</span>/dev/kfd<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--device<span class="o">=</span>/dev/dri<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--group-add<span class="w"> </span>video<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ipc<span class="o">=</span>host<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--shm-size<span class="w"> </span>8G<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>rocm/pytorch:latest
+</pre></div>
+</div>
+</li>
+<li><p>Uninstall the pre-installed PyTorch inside the container. Otherwise, the prebuilt ROCm PyTorch from the
+container might conflict with your source build.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>uninstall<span class="w"> </span>-y<span class="w"> </span>torch<span class="w"> </span>torchvision<span class="w"> </span>torchaudio
+</pre></div>
+</div>
+</li>
+<li><p>Clone the PyTorch repository.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pytorch/pytorch.git
+<span class="nb">cd</span><span class="w"> </span>pytorch
+git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
+</pre></div>
+</div>
+</li>
+<li><p>(Optional) Set your ROCm architecture.</p>
+<p>By default, PyTorch builds for a broad set of AMD architectures. To speed
+up compilation, you can target only your GPU architecture.</p>
+<p>To determine your architecture:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rocminfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>gfx
+</pre></div>
+</div>
+<p>Then set the <code class="docutils literal notranslate"><span class="pre">PYTORCH_ROCM_ARCH</span></code> environment variable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PYTORCH_ROCM_ARCH</span><span class="o">=</span>&lt;uarch&gt;
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">&lt;uarch&gt;</span></code> with the result from <code class="docutils literal notranslate"><span class="pre">rocminfo</span></code> (for example, <code class="docutils literal notranslate"><span class="pre">gfx90a</span></code>, <code class="docutils literal notranslate"><span class="pre">gfx1030</span></code>). See <a class="reference internal" href="../../reference/system-requirements.html#system-requirements"><span class="std std-ref">System requirements (Linux)</span></a>
+for the list of AMD GPU architectures.</p>
+</li>
+<li><p>Build and install PyTorch following the instructions in
+<a class="github reference external" href="https://github.com/pytorch/pytorch?tab=readme-ov-file#install-pytorch">pytorch/pytorch</a>.</p></li>
+</ol>
+</section>
+<section id="use-the-pytorch-upstream-dockerfile">
+<span id="using-pytorch-upstream-docker-image"></span><h3>Use the PyTorch upstream Dockerfile<a class="headerlink" href="#use-the-pytorch-upstream-dockerfile" title="Link to this heading">#</a></h3>
+<p>If you don’t want to use a prebuilt base Docker image, you can build a custom base Docker image
+using scripts from the PyTorch repository. This uses a standard Docker image from operating system
+maintainers and installs all the required dependencies, including:</p>
+<ul class="simple">
+<li><p>ROCm</p></li>
+<li><p>torchvision</p></li>
+<li><p>Conda packages</p></li>
+<li><p>The compiler toolchain</p></li>
+</ul>
+<ol class="arabic">
+<li><p>Clone the PyTorch repository.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pytorch/pytorch.git
+<span class="nb">cd</span><span class="w"> </span>pytorch
+git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
+</pre></div>
+</div>
+</li>
+<li><p>Build the PyTorch Docker image.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>.ci/docker
+./build.sh<span class="w"> </span>pytorch-linux-&lt;os-version&gt;-rocm&lt;rocm-version&gt;-py&lt;python-version&gt;<span class="w"> </span>-t<span class="w"> </span>rocm/pytorch:build_from_dockerfile
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;os-version&gt;</span></code> = <code class="docutils literal notranslate"><span class="pre">ubuntu20.04</span></code> (or <code class="docutils literal notranslate"><span class="pre">focal</span></code>), <code class="docutils literal notranslate"><span class="pre">ubuntu22.04</span></code> (or <code class="docutils literal notranslate"><span class="pre">jammy</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;rocm-version&gt;</span></code> = <code class="docutils literal notranslate"><span class="pre">6.0</span></code>, <code class="docutils literal notranslate"><span class="pre">6.1</span></code>, <code class="docutils literal notranslate"><span class="pre">6.2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;python-version&gt;</span></code> = <code class="docutils literal notranslate"><span class="pre">3.8</span></code> - <code class="docutils literal notranslate"><span class="pre">3.11</span></code></p></li>
+</ul>
+<p>To verify that your image was successfully created, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>image<span class="w"> </span>ls<span class="w"> </span>rocm/pytorch:build_from_dockerfile
+</pre></div>
+</div>
+<p>If successful, the output looks like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>REPOSITORY<span class="w">    </span>TAG<span class="w">                       </span>IMAGE<span class="w"> </span>ID<span class="w">         </span>CREATED<span class="w">           </span>SIZE
+rocm/pytorch<span class="w">  </span>build_from_dockerfile<span class="w">     </span>17071499be47<span class="w">     </span><span class="m">2</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">     </span><span class="m">32</span>.8GB
+</pre></div>
+</div>
+</li>
+<li><p>Start a Docker container using the image with the mounted PyTorch folder.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--cap-add<span class="o">=</span>SYS_PTRACE<span class="w"> </span>--security-opt<span class="w"> </span><span class="nv">seccomp</span><span class="o">=</span>unconfined<span class="w"> </span><span class="se">\</span>
+--user<span class="w"> </span>root<span class="w"> </span>--device<span class="o">=</span>/dev/kfd<span class="w"> </span>--device<span class="o">=</span>/dev/dri<span class="w"> </span><span class="se">\</span>
+--group-add<span class="w"> </span>video<span class="w"> </span>--ipc<span class="o">=</span>host<span class="w"> </span>--shm-size<span class="w"> </span>8G<span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span>~/pytorch:/pytorch<span class="w"> </span>rocm/pytorch:build_from_dockerfile
+</pre></div>
+</div>
+<p>You can also pass the <code class="docutils literal notranslate"><span class="pre">-v</span></code> argument to mount any data directories from the host onto the container.</p>
+</li>
+<li><p>Go to the PyTorch directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/pytorch
+</pre></div>
+</div>
+</li>
+<li><p>Set ROCm architecture.</p>
+<p>To determine your AMD architecture, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rocminfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>gfx
+</pre></div>
+</div>
+<p>The result looks like this (for <code class="docutils literal notranslate"><span class="pre">gfx1030</span></code> architecture):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Name:<span class="w">                    </span>gfx1030
+Name:<span class="w">                    </span>amdgcn-amd-amdhsa--gfx1030
+</pre></div>
+</div>
+<p>Set the <code class="docutils literal notranslate"><span class="pre">PYTORCH_ROCM_ARCH</span></code> environment variable to specify the architectures you want to
+build PyTorch for.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PYTORCH_ROCM_ARCH</span><span class="o">=</span>&lt;uarch&gt;
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">&lt;uarch&gt;</span></code> is the architecture reported by the <code class="docutils literal notranslate"><span class="pre">rocminfo</span></code> command.</p>
+</li>
+<li><p>Build PyTorch.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.ci/pytorch/build.sh
+</pre></div>
+</div>
+<p>This converts PyTorch CUDA sources to <a class="reference external" href="https://rocm.docs.amd.com/projects/HIP/en/latest/index.html" title="(in HIP Documentation v7.2.53211)"><span class="xref std std-doc">HIP</span></a> and builds the
+PyTorch framework.</p>
+<p>To check if your build is successful, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span><span class="c1"># should return 0 if success</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="test-the-pytorch-installation">
+<span id="test-pytorch-installation"></span><h2>Test the PyTorch installation<a class="headerlink" href="#test-the-pytorch-installation" title="Link to this heading">#</a></h2>
+<p>You can use PyTorch unit tests to validate your PyTorch installation. If you used a
+<strong>prebuilt PyTorch Docker image from AMD ROCm Docker Hub</strong> or installed an
+<strong>official wheels package</strong>, validation tests are not necessary.</p>
+<p>If you want to manually run unit tests to validate your PyTorch installation fully, follow these steps:</p>
+<ol class="arabic">
+<li><p>Import the torch package in Python to test if PyTorch is installed and accessible.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not run the following command from the PyTorch home directory.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import torch'</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">'Success'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">'Failure'</span>
+</pre></div>
+</div>
+</li>
+<li><p>Check if the GPU is accessible from PyTorch. In the PyTorch framework, <code class="docutils literal notranslate"><span class="pre">torch.cuda</span></code> is a generic way
+to access the GPU. This can only access an AMD GPU if one is available.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import torch; print(torch.cuda.is_available())'</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run unit tests to validate the PyTorch installation fully.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must run the following command from the PyTorch home directory.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTORCH_TEST_WITH_ROCM</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>python3<span class="w"> </span>test/run_test.py<span class="w"> </span>--verbose<span class="w"> </span><span class="se">\</span>
+--include<span class="w"> </span>test_nn<span class="w"> </span>test_torch<span class="w"> </span>test_cuda<span class="w"> </span>test_ops<span class="w"> </span><span class="se">\</span>
+test_unary_ufuncs<span class="w"> </span>test_binary_ufuncs<span class="w"> </span>test_autograd
+</pre></div>
+</div>
+<p>This command ensures that the required environment variable is set to skip certain unit tests for
+ROCm. This also applies to wheel installs in a non-controlled environment.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure your PyTorch source code corresponds to the PyTorch wheel or the installation in the
+Docker image. Incompatible PyTorch source code can give errors when running unit tests.</p>
+</div>
+<p>Some tests may be skipped, as appropriate, based on your system configuration. ROCm doesn’t
+support all PyTorch features; tests that evaluate unsupported features are skipped. Other tests might
+be skipped, depending on the host or GPU memory and the number of available GPUs.</p>
+<p>If the compilation and installation are correct, all tests will pass.</p>
+</li>
+<li><p>(Optional) Run individual unit tests.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTORCH_TEST_WITH_ROCM</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>python3<span class="w"> </span>test/test_nn.py<span class="w"> </span>--verbose
+</pre></div>
+</div>
+<p>You can replace <code class="docutils literal notranslate"><span class="pre">test_nn.py</span></code> with any other test set.</p>
+</li>
+</ol>
+</section>
+<section id="run-a-pytorch-example">
+<h2>Run a PyTorch example<a class="headerlink" href="#run-a-pytorch-example" title="Link to this heading">#</a></h2>
+<p>The PyTorch examples repository provides basic examples that exercise the functionality of your
+framework.</p>
+<p>Two of our favorite testing databases are:</p>
+<ul class="simple">
+<li><p><strong>MNIST</strong> (Modified National Institute of Standards and Technology): A database of handwritten
+digits that can be used to train a Convolutional Neural Network for <strong>handwriting recognition</strong>.</p></li>
+<li><p><strong>ImageNet</strong>: A database of images that can be used to train a network for
+<strong>visual object recognition</strong>.</p></li>
+</ul>
+<section id="mnist-pytorch-example">
+<h3>MNIST PyTorch example<a class="headerlink" href="#mnist-pytorch-example" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>Clone the PyTorch examples repository.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pytorch/examples.git
+</pre></div>
+</div>
+</li>
+<li><p>Go to the MNIST example folder.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>examples/mnist
+</pre></div>
+</div>
+</li>
+<li><p>Follow the instructions in the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file in this folder to install the requirements. Then run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>main.py
+</pre></div>
+</div>
+<p>This generates the following output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">Train</span> <span class="n">Epoch</span><span class="p">:</span> <span class="mi">14</span> <span class="p">[</span><span class="mi">58240</span><span class="o">/</span><span class="mi">60000</span> <span class="p">(</span><span class="mi">97</span><span class="o">%</span><span class="p">)]</span>     <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.010128</span>
+<span class="n">Train</span> <span class="n">Epoch</span><span class="p">:</span> <span class="mi">14</span> <span class="p">[</span><span class="mi">58880</span><span class="o">/</span><span class="mi">60000</span> <span class="p">(</span><span class="mi">98</span><span class="o">%</span><span class="p">)]</span>     <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.001348</span>
+<span class="n">Train</span> <span class="n">Epoch</span><span class="p">:</span> <span class="mi">14</span> <span class="p">[</span><span class="mi">59520</span><span class="o">/</span><span class="mi">60000</span> <span class="p">(</span><span class="mi">99</span><span class="o">%</span><span class="p">)]</span>     <span class="n">Loss</span><span class="p">:</span> <span class="mf">0.005261</span>
+
+<span class="n">Test</span> <span class="nb">set</span><span class="p">:</span> <span class="n">Average</span> <span class="n">loss</span><span class="p">:</span> <span class="mf">0.0252</span><span class="p">,</span> <span class="n">Accuracy</span><span class="p">:</span> <span class="mi">9921</span><span class="o">/</span><span class="mi">10000</span> <span class="p">(</span><span class="mi">99</span><span class="o">%</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="imagenet-pytorch-example">
+<h3>ImageNet PyTorch example<a class="headerlink" href="#imagenet-pytorch-example" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>Clone the PyTorch examples repository (if you didn’t already do this in the preceding MNIST
+example).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pytorch/examples.git
+</pre></div>
+</div>
+</li>
+<li><p>Go to the ImageNet example folder.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>examples/imagenet
+</pre></div>
+</div>
+</li>
+<li><p>Follow the instructions in the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file in this folder to install the Requirements. Then run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>main.py
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="troubleshooting">
+<span id="troubleshooting-pytorch"></span><h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>What to do if you get the following error when trying to run PyTorch:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>hipErrorNoBinaryForGPU:<span class="w"> </span>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>code<span class="w"> </span>object<span class="w"> </span><span class="k">for</span><span class="w"> </span>all<span class="w"> </span>current<span class="w"> </span>devices!
+</pre></div>
+</div>
+<p>The error denotes that the installation of PyTorch and/or other dependencies or libraries do not support the current GPU. To workaround this issue, use the following steps:</p>
+<ol class="arabic">
+<li><p>Confirm that the hardware supports the ROCm stack. Refer to <a class="reference internal" href="../../reference/system-requirements.html#system-requirements"><span class="std std-ref">System requirements (Linux)</span></a> and <a class="reference external" href="https://rocm.docs.amd.com/projects/install-on-windows/en/latest/reference/system-requirements.html#system-requirements-win" title="(in HIP SDK for Windows v7.1.1)"><span>System requirements for Windows</span></a>.</p></li>
+<li><p>Determine the gfx target.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rocminfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>gfx
+</pre></div>
+</div>
+</li>
+<li><p>Check if PyTorch is compiled with the correct gfx target.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">TORCHDIR</span><span class="o">=</span><span class="k">$(</span><span class="w"> </span>dirname<span class="w"> </span><span class="k">$(</span><span class="w"> </span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import torch; print(torch.__file__)'</span><span class="w"> </span><span class="k">)</span><span class="w"> </span><span class="k">)</span>
+llvm-readobj<span class="w"> </span>--offloading<span class="w"> </span><span class="nv">$TORCHDIR</span>/lib/libtorch_hip.so<span class="w"> </span><span class="c1"># check for gfx target</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Recompile PyTorch with the right gfx target if compiling from the source if
+the hardware is not supported.</p>
+</div>
+</li>
+</ol>
+</li>
+<li><p>What if you are unable to access Docker or GPU in user accounts?</p>
+<p>Ensure that the user is added to docker, video, and render Linux groups as described in <a class="reference internal" href="../prerequisites.html#group-permissions"><span class="std std-ref">Configuring permissions for GPU access</span></a>.</p>
+</li>
+<li><p>Can you install PyTorch directly on bare metal?</p>
+<p>Bare-metal installation of PyTorch is supported through wheels. For more information, see <a class="reference internal" href="#using-wheels-package"><span class="std std-ref">Use a wheels package</span></a>.</p>
+</li>
+<li><p>How do you profile PyTorch workloads?</p>
+<p>Use the PyTorch Profiler as described in <a class="reference external" href="https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/workload.html#mi300x-pytorch-profiler" title="(in ROCm Documentation v7.2.3)"><span>PyTorch Profiler</span></a> to profile GPU kernels on ROCm.</p>
+</li>
+</ul>
+</section>
+</section>
+</article>
+<footer class="prev-next-footer d-print-none">
+<div class="prev-next-area">
+<a class="left-prev" href="../post-install.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Post-installation instructions</p>
+</div>
+</a>
+<a class="right-next" href="tensorflow-install.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">TensorFlow on ROCm installation</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-pytorch">Install PyTorch</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-prebuilt-docker-image-with-pytorch-pre-installed">Use a prebuilt Docker image with PyTorch pre-installed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-image-support">Docker image support</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-wheels-package">Use a wheels package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-pytorch-from-source">Build PyTorch from source</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-pytorch-upstream-dockerfile">Use the PyTorch upstream Dockerfile</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-the-pytorch-installation">Test the PyTorch installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-a-pytorch-example">Run a PyTorch example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mnist-pytorch-example">MNIST PyTorch example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imagenet-pytorch-example">ImageNet PyTorch example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<p>
+</p>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+<footer class="rocm-footer">
+<div class="container-lg">
+<section class="bottom-menu menu py-45">
+<div class="row d-flex align-items-center">
+<div class="col-12 text-center">
+<ul>
+<li><a href="https://www.amd.com/en/corporate/copyright" target="_blank">Terms and Conditions</a></li>
+<li><a href="https://rocm.docs.amd.com/en/latest/about/license.html">ROCm Licenses and Disclaimers</a></li>
+<li><a href="https://www.amd.com/en/corporate/privacy" target="_blank">Privacy</a></li>
+<li><a href="https://www.amd.com/en/corporate/trademarks" target="_blank">Trademarks</a></li>
+<li><a href="https://www.amd.com/content/dam/amd/en/documents/corporate/cr/supply-chain-transparency.pdf" target="_blank">Supply Chain Transparency</a></li>
+<li><a href="https://www.amd.com/en/corporate/competition" target="_blank">Fair and Open Competition</a></li>
+<li><a href="https://www.amd.com/system/files/documents/amd-uk-tax-strategy.pdf" target="_blank">UK Tax Strategy</a></li>
+<li><a href="https://www.amd.com/en/corporate/cookies" target="_blank">Cookie Policy</a></li>
+<!-- OneTrust Cookies Settings button start -->
+<li><a class="ot-sdk-show-settings" href="#cookie-settings" id="ot-sdk-btn">Cookie Settings</a></li>
+<!-- OneTrust Cookies Settings button end -->
+</ul>
+</div>
+</div>
+<div class="row d-flex align-items-center">
+<div class="col-12 text-center">
+<div>
+<span class="copyright">© 2026 Advanced Micro Devices, Inc</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</footer>
+<!-- <div id="rdc-watermark-container">
+    <img id="rdc-watermark" src="../../_static/images/alpha-watermark.svg" alt="DRAFT watermark"/>
+</div> -->
+</body>
+</html>

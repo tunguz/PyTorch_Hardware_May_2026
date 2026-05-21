@@ -9,16 +9,20 @@ import html
 import json
 import mimetypes
 import re
+import subprocess
 import sys
-import time
-import urllib.error
-import urllib.request
+import tempfile
+import urllib.parse
 from pathlib import Path
 from typing import Any
 
 
 REF_RE = re.compile(r"^\[\^(\d+)\]:\s*(.*?)\s+(https?://\S+)\s*$", re.MULTILINE)
 TITLE_RE = re.compile(rb"<title[^>]*>(.*?)</title>", re.IGNORECASE | re.DOTALL)
+HTML_REDIRECT_RE = re.compile(
+    rb"""(?:url=|href=|location\.replace\()["']?([^"'>)]+)""",
+    re.IGNORECASE,
+)
 
 
 def slugify(text: str, limit: int = 72) -> str:
@@ -48,51 +52,78 @@ def html_title(body: bytes) -> str:
     return html.unescape(title.decode("utf-8", errors="replace"))
 
 
-def fetch(url: str, retries: int = 2) -> dict[str, Any]:
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/125.0 Safari/537.36 reference-archive"
-        ),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*;q=0.5",
-        "Accept-Encoding": "identity",
-    }
+def html_redirect_target(body: bytes, base_url: str) -> str:
+    if len(body) > 20_000:
+        return ""
+    if b"Redirecting" not in body[:5_000] and b"location.replace" not in body[:5_000]:
+        return ""
+    match = HTML_REDIRECT_RE.search(body[:10_000])
+    if not match:
+        return ""
+    target = html.unescape(match.group(1).decode("utf-8", errors="replace").strip())
+    if not target or target.startswith("javascript:"):
+        return ""
+    return urllib.parse.urljoin(base_url, target)
 
-    last_error = ""
+
+def fetch(url: str, retries: int = 2) -> dict[str, Any]:
+    user_agent = (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/125.0 Safari/537.36 reference-archive"
+    )
+
     for attempt in range(retries + 1):
+        with tempfile.NamedTemporaryFile(delete=False) as body_file:
+            body_path = Path(body_file.name)
+        curl = [
+            "curl",
+            "--location",
+            "--silent",
+            "--show-error",
+            "--compressed",
+            "--max-time",
+            "75",
+            "--retry",
+            "1",
+            "--user-agent",
+            user_agent,
+            "--output",
+            str(body_path),
+            "--write-out",
+            "\n%{http_code}\n%{url_effective}\n%{content_type}\n",
+            url,
+        ]
+        completed = subprocess.run(curl, text=True, capture_output=True, check=False)
+        body = body_path.read_bytes() if body_path.exists() else b""
+        body_path.unlink(missing_ok=True)
+
+        write_out = completed.stdout.splitlines()
+        status_text = write_out[-3] if len(write_out) >= 3 else ""
+        final_url = write_out[-2] if len(write_out) >= 2 else ""
+        content_type = write_out[-1] if len(write_out) >= 1 else ""
         try:
-            request = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(request, timeout=45) as response:
-                body = response.read()
-                return {
-                    "ok": 200 <= response.status < 400 and len(body) > 0,
-                    "status": response.status,
-                    "final_url": response.geturl(),
-                    "content_type": response.headers.get("Content-Type", ""),
-                    "bytes": len(body),
-                    "sha256": hashlib.sha256(body).hexdigest(),
-                    "title": html_title(body),
-                    "body": body,
-                    "error": "",
-                }
-        except urllib.error.HTTPError as exc:
-            body = exc.read()
+            status = int(status_text)
+        except ValueError:
+            status = None
+
+        target = html_redirect_target(body, final_url or url)
+        if target and target != url:
+            return fetch(target, retries=retries)
+
+        ok = completed.returncode == 0 and status is not None and 200 <= status < 400 and len(body) > 0
+        if ok or attempt == retries:
             return {
-                "ok": False,
-                "status": exc.code,
-                "final_url": exc.geturl(),
-                "content_type": exc.headers.get("Content-Type", "") if exc.headers else "",
+                "ok": ok,
+                "status": status,
+                "final_url": final_url,
+                "content_type": content_type,
                 "bytes": len(body),
                 "sha256": hashlib.sha256(body).hexdigest() if body else "",
                 "title": html_title(body),
                 "body": body,
-                "error": str(exc),
+                "error": completed.stderr.strip(),
             }
-        except Exception as exc:  # noqa: BLE001 - archive script should report every URL failure.
-            last_error = f"{type(exc).__name__}: {exc}"
-            if attempt < retries:
-                time.sleep(1.5 * (attempt + 1))
 
     return {
         "ok": False,
@@ -115,6 +146,8 @@ def main() -> int:
     report_path = Path(sys.argv[1])
     output_dir = Path(sys.argv[2])
     output_dir.mkdir(parents=True, exist_ok=True)
+    for old_file in output_dir.glob("ref-*"):
+        old_file.unlink()
 
     text = report_path.read_text(encoding="utf-8")
     refs = [

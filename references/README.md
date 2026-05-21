@@ -2,75 +2,12 @@
 
 - Report: `deep-research-report.md`
 - Total numbered references: 64
-- Successful fetches: 0
-- Failed fetches: 64
+- Successful fetches: 64
+- Failed fetches: 0
 - Duplicate URL entries preserved: 28
 
 ## Failed Fetches
 
-- [^1]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-8/
-- [^2]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/
-- [^3]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/get-started/locally/
-- [^4]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-12-release-blog/
-- [^5]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-7/
-- [^6]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-8/
-- [^7]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://cloud.google.com/tpu/pricing
-- [^8]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://www.apple.com/mac-studio/
-- [^9]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-8/
-- [^10]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-8/
-- [^11]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-7/
-- [^12]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-8/
-- [^13]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html
-- [^14]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.pytorch.org/xla/master/eager_mode.html
-- [^15]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://github.com/pytorch/xla
-- [^16]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.pytorch.org/xla/release/2.0/index.html
-- [^17]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-11-release-blog/
-- [^18]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://github.com/pytorch/pytorch/issues/150121
-- [^19]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-12-release-blog/
-- [^20]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/
-- [^21]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/
-- [^22]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/warp-specialization/
-- [^23]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html
-- [^24]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html
-- [^25]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.pytorch.org/xla/master/features/pallas.html
-- [^26]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.pytorch.org/xla/master/perf/quantized_ops.html
-- [^27]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://github.com/pytorch/pytorch/issues/150121
-- [^28]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://github.com/ml-explore/mlx/blob/main/README.md
-- [^29]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/
-- [^30]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.pytorch.org/docs/stable/notes/mps.html
-- [^31]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/
-- [^32]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://github.com/pytorch/pytorch/releases
-- [^33]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.cloud.google.com/tpu/docs/v5p
-- [^34]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/
-- [^35]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.pytorch.org/docs/stable/notes/mps.html
-- [^36]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/get-started/locally/
-- [^37]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html
-- [^38]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/
-- [^39]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/compile/programming_model.common_graph_breaks.html
-- [^40]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html
-- [^41]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.pytorch.org/xla/release/2.0/index.html
-- [^42]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.pytorch.org/docs/2.8/_sources/mps_environment_variables.md.txt
-- [^43]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.nvidia.com/nsight-systems/ReleaseNotes/index.html
-- [^44]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/
-- [^45]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-7/
-- [^46]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html
-- [^47]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://cloud.google.com/tpu/pricing
-- [^48]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-11-release-blog/
-- [^49]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/get-started/locally/
-- [^50]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-12-release-blog/
-- [^51]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-11-release-blog/
-- [^52]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://pytorch.org/blog/pytorch-2-7/
-- [^53]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.cloud.google.com/tpu/docs/tpu7x
-- [^54]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/
-- [^55]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.cloud.google.com/tpu/docs/runtimes
-- [^56]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.pytorch.org/xla/master/learn/trace-vs-execution-time.html
-- [^57]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://www.apple.com/macbook-pro/specs/
-- [^58]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://www.apple.com/newsroom/2025/03/apple-reveals-m3-ultra-taking-apple-silicon-to-a-new-extreme/
-- [^59]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://www.amd.com/en/products/accelerators/instinct/mi300.html
-- [^60]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://www.nvidia.com/en-us/data-center/nvlink/
-- [^61]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://docs.cloud.google.com/tpu/docs/v6e
-- [^62]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/3rd-party/pytorch-install.html
-- [^63]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference-optimization/model-acceleration-libraries.html
-- [^64]: status=None error=URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known> url=https://tunguz.github.io/PyTorch_Hardware_2025/
+None.
 
 See `manifest.csv` and `manifest.json` for the full audit.

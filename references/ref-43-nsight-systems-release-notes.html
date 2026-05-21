@@ -1,0 +1,882 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Release Notes &#8212; Nsight Systems</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/nvidia-sphinx-theme.css?v=d0aa047a" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script rel="preload" src="../_static/modal-table.js"></script>
+    <script src="../_static/documentation_options.js?v=abac1776"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ReleaseNotes/index';</script>
+    <script src="../_static/version-patch.js?v=3e13fdd2"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installation Guide" href="../InstallationGuide/index.html" />
+    <link rel="prev" title="Nsight Systems" href="../index.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 16, 2026"/>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Nsight Systems - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Nsight Systems - Home"/>
+  
+  
+    <p class="title logo__title">Nsight Systems</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+
+<div>
+  <ul class="bd-navbar-elements navbar-nav">
+  
+    <li class="nav-item pst-header-nav-item">
+      
+      <span>v2026.2 |</span>
+      
+    </li>
+  
+    <li class="nav-item pst-header-nav-item">
+      
+      <a class="nav-link nav-external" href="https://docs.nvidia.com/nsight-systems/Archives/index.html">Archive</a>
+      
+    </li>
+  
+  </ul>
+</div>
+</div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Nsight Systems - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Nsight Systems - Home"/>
+  
+  
+    <p class="title logo__title">Nsight Systems</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+
+<div>
+  <ul class="bd-navbar-elements navbar-nav">
+  
+    <li class="nav-item pst-header-nav-item">
+      
+      <span>v2026.2 |</span>
+      
+    </li>
+  
+    <li class="nav-item pst-header-nav-item">
+      
+      <a class="nav-link nav-external" href="https://docs.nvidia.com/nsight-systems/Archives/index.html">Archive</a>
+      
+    </li>
+  
+  </ul>
+</div>
+</div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../InstallationGuide/index.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../UserGuide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AnalysisGuide/index.html">Post-Collection Analysis Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CopyrightAndLicenses/index.html">Copyright and Licenses</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Archives</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Archives/index.html">Archives</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Release Notes</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="release-notes">
+<h1>Release Notes<a class="headerlink" href="#release-notes" title="Link to this heading">#</a></h1>
+<p>Release notes and known issues.</p>
+<section id="what-s-new">
+<h2>What’s New<a class="headerlink" href="#what-s-new" title="Link to this heading">#</a></h2>
+<section id="deprecation-note">
+<h3>Deprecation note:<a class="headerlink" href="#deprecation-note" title="Link to this heading">#</a></h3>
+<p>The new <code class="docutils literal notranslate"><span class="pre">--cpu-metrics</span></code> option is designed to replace the existing
+<code class="docutils literal notranslate"><span class="pre">--cpu-core-events</span></code> and <code class="docutils literal notranslate"><span class="pre">--cpu-core-metrics</span></code> options. In upcoming releases,
+using either of the old options will produce a deprecation notice. Note that
+<code class="docutils literal notranslate"><span class="pre">--cpu-metrics</span></code> is mutually exclusive with the two legacy options and cannot be
+combined with them.</p>
+<p><strong>Note:</strong> This deprecation notice does not affect the <code class="docutils literal notranslate"><span class="pre">--cpu-core-events</span></code> option in
+Nsight Systems Embedded Platforms Edition.</p>
+</section>
+<section id="nsight-systems-2026-2-highlights">
+<h3>Nsight Systems 2026.2 Highlights:<a class="headerlink" href="#nsight-systems-2026-2-highlights" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>New</strong></p>
+<ul>
+<li><p><strong>Amazon S3 and compatible API Trace</strong></p>
+<ul>
+<li><p>Trace S3 access APIs in these libraries: AWS Common Runtime S3 client, Boto3, S3TorchConnector, and TensorFlow I/O</p></li>
+</ul>
+</li>
+<li><p><strong>Github catalog for Third party plugins</strong></p>
+<ul>
+<li><p>Third parties, such as hardware vendors, can install plugin manifests into a predefined system-wide location on Linux and Windows</p></li>
+<li><p>Environment variable NSYS_PLUGIN_SEARCH_DIRS is added to allow arbitrary search paths</p></li>
+<li><p>See <a class="reference internal" href="../UserGuide/index.html#nsight-systems-plugins"><span class="std std-ref">Nsight Systems Plugins</span></a></p></li>
+</ul>
+</li>
+<li><p><strong>NVTX support for Rust</strong></p>
+<ul>
+<li><p>The NVTX github repository now includes Rust bindings for all classic v3 APIs</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Improvements</strong></p>
+<ul>
+<li><p><strong>PyTorch</strong></p>
+<ul>
+<li><p>Annotate optimized graphs generated by torch.compile including CUDA graphs</p></li>
+</ul>
+</li>
+<li><p><strong>NCCL</strong></p>
+<ul>
+<li><p>Copy engine collectives support (with NCCL 2.29)</p></li>
+<li><p>Proxy network operations support</p></li>
+<li><p>Correlation of p2p operations</p></li>
+</ul>
+</li>
+<li><p><strong>CUDA</strong></p>
+<ul>
+<li><p>MPS MLOPart (Memory Locality Optimized Partition) devices trace</p></li>
+<li><p>Green context resource allocations (TPC &amp; work queue) visualization in the timeline and stats system</p></li>
+<li><p>CUDA Graph trace support for node-level tracing of device-launched graphs when hardware trace is enabled</p></li>
+</ul>
+</li>
+<li><p><strong>Vulkan</strong></p>
+<ul>
+<li><p>Support VK_KHR_descriptor_heap and VK_EXT_mesh_shader extensions</p></li>
+</ul>
+</li>
+<li><p><strong>Reflex SDK</strong></p>
+<ul>
+<li><p>Graphics pipeline stages visualization</p></li>
+<li><p>Present the cascade of frame generation stages</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Nsight Cloud</strong></p>
+<ul>
+<li><p>Updated Operator and Streamer on <a class="reference external" href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/devtools/collections/nsight-cloud/artifacts">NGC</a> with support for Docker and Kubernetes</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="known-issues">
+<h2>Known Issues<a class="headerlink" href="#known-issues" title="Link to this heading">#</a></h2>
+<section id="general-issues">
+<h3>General Issues<a class="headerlink" href="#general-issues" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>If you see high branch mis-predicts and instruction TLB refills, we suggest
+you try <a class="github reference external" href="https://github.com/NVIDIA/cpu-code-locality-tool">NVIDIA/cpu-code-locality-tool</a> to further
+optimize your code for NVIDIA Grace’s code caches.</p></li>
+<li><p>RoCE counters for ConnectX NICs are not available with version 2025.6.</p></li>
+<li><p>Nsight Systems trace features that require process injection (e.g. OSRT, NVTX,
+CUDA trace) may fail to collect data and cause unstable behavior when
+profiling applications that use seccomp to restrict system calls, such as
+Linux’s <cite>file</cite> utility. The injection library may violate the process’s
+seccomp policy, causing thread/process termination and/or other unstable
+behaviors like leaving the application hanging in a zombie process state.
+Disable seccomp in the target application if possible or use only
+non-injection-based profiling features (e.g. CPU sampling, GPU metrics
+sampling) for those applications.</p></li>
+<li><p>The current release of Nsight Systems CLI doesn’t support naming a session
+with a name longer than 127 characters. Profiling an executable with a name
+exceeding 111 characters is also unsupported by the <code class="docutils literal notranslate"><span class="pre">nsys</span> <span class="pre">profile</span></code> command.
+Those limitations will be removed in a future version of the CLI.</p></li>
+<li><p>Nsight Systems 2020.4 introduces collection of thread scheduling information
+without full sampling. While this allows system information at a lower cost,
+it does add overhead. To turn off thread schedule information collection, add
+<code class="docutils literal notranslate"><span class="pre">--cpuctxsw=none</span></code> to your command line or turn off in the GUI.</p></li>
+<li><p>Profiling greater than 5 minutes is not officially supported at this time.
+Profiling high activity applications, on high performance machines, over a
+long analysis time can create large result files that may take a very long
+time to load, run out of memory, or lock up the system. If you have a complex
+application, we recommend starting with a short profiling session duration of
+no more than 5 minutes for your initial profile. If your application has a
+natural repeating pattern, often referred to as a frame or an iteration, you
+will typically only need a few of these. This suggested limit will increase
+in future releases.</p></li>
+<li><p>Attaching or re-attaching to a process from the GUI is not supported with the
+x86_64 Linux target. Equivalent results can be obtained by using
+the interactive CLI to launch the process and then starting and stopping
+analysis at multiple points.</p></li>
+<li><p>To reduce overhead, Nsight Systems traces a subset of API calls likely to
+impact performance when tracing APIs rather than all possible calls. There
+is currently no way to change the subset being traced when using the CLI.
+See respective library portion of this documentation for a list of calls
+traced by default. The CLI limitation will be removed in a future version of
+the product.</p></li>
+<li><p>There is an upper bound on the default size used by the tool to record trace
+events during the collection. If you see the following diagnostic error, then
+Nsight Systems hit the upper limit.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Reached</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">limit</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">recording</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="n">events</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">process</span><span class="p">.</span>
+<span class="w">       </span><span class="n">Try</span><span class="w"> </span><span class="n">reducing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">profiling</span><span class="w"> </span><span class="n">duration</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">reduce</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">features</span>
+<span class="w">       </span><span class="n">traced</span><span class="p">.</span>
+</pre></div>
+</div>
+</li>
+<li><p>When profiling a framework or application that uses CUPTI, like some versions
+of TensorFlow(tm), Nsight Systems will not be able to trace CUDA usage due to
+limitations in CUPTI. These limitations will be corrected in a future version
+of CUPTI. Consider turning off the application’s use of CUPTI if CUDA tracing
+is required.</p></li>
+<li><p>Tracing an application that uses a memory allocator that is not thread-safe
+is not supported.</p></li>
+<li><p>Tracing OS Runtime libraries in an application that preloads glibc symbols is
+unsupported and can lead to undefined behavior.</p></li>
+<li><p>Nsight Systems cannot profile applications launched through a virtual window
+manager like GNU Screen.</p></li>
+<li><p>Using Nsight Systems MPI trace functionality with the Darshan runtime module
+can lead to segfaults. To resolve the issue, unload the module.</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">module</span><span class="w"> </span><span class="n">unload</span><span class="w"> </span><span class="n">darshan</span><span class="o">-</span><span class="n">runtime</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Profiling MPI Fortran APIs with MPI_Status as an argument, e.g. MPI_Recv,
+MPI_Test[all], MPI_Wait[all], can potentially cause memory corruption for
+MPICH versions 3.0.x. The reason is that the MPI_Status structure in MPICH
+3.0.x has a different memory layout than in other MPICH versions
+(2.1.x and &gt;=3.1.x have been tested) and the version (3.3.2) we used to
+compile the Nsight Systems MPI interception library.</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">nsys</span> <span class="pre">export</span></code> to export to an SQLite database will fail if the
+destination filesystem doesn’t support file locking. The error message will
+mention:</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">exception</span><span class="o">::</span><span class="n">what</span><span class="o">:</span><span class="w"> </span><span class="n">database</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">locked</span>
+</pre></div>
+</div>
+<ul>
+<li><p>On some Linux systems when VNC is used, some widgets can be rendered
+incorrectly, or Nsight Systems can crash when opening Analysis Summary or
+Diagnostics Summary pages. In this case, try forcing a specific software
+renderer: <code class="docutils literal notranslate"><span class="pre">GALLIUM_DRIVER=llvmpipe</span> <span class="pre">nsys-ui</span></code></p></li>
+<li><p>Due to <a class="reference external" href="https://github.com/open-mpi/ompi/issues/6648">a known bug in Open MPI 4.0.1</a>, target application may
+crash at the end of execution when being profiled by Nsight Systems. To avoid
+the issue, use a different Open MPI version, or add <code class="docutils literal notranslate"><span class="pre">--mca</span> <span class="pre">btl</span> <span class="pre">^vader</span></code>
+option to <code class="docutils literal notranslate"><span class="pre">mpirun</span></code> command line.</p></li>
+<li><p>The multiprocessing module in Python is commonly used by customers to create
+new processes. On Linux, the module defaults to using the “fork” mode where
+it forks new processes, but does not call exec. According to the POSIX
+standard, fork without exec leads to undefined behavior and tools like
+Nsight Systems that rely on injection are only allowed to make
+async-signal-safe calls in such a process. This makes it very hard for tools
+like Nsight Systems to collect profiling information. See
+<a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#contexts-and-start-methods">https://docs.python.org/3/library/multiprocessing.html#contexts-and-start-methods</a></p>
+<p>Use the set_start_method in the multiprocessing module to change the start
+method to “spawn” which is much safer and allows tools like Nsight Systems to
+collect data. See the code example given in the link above.</p>
+<p>The user needs to ensure that processes exit gracefully (by using close and
+join methods, for example, in the multiprocessing module’s objects).
+Otherwise, Nsight Systems cannot flush buffers properly and you might end up
+with missing traces.</p>
+</li>
+<li><p>When the CLI sequence launch, start, stop is used to profile a process-tree,
+LinuxPerf does a depth first search (DFS) to find all of the threads launched
+by the process-tree before programming the OS to collect the data. If, during
+the DFS, one or more threads are created by the process tree, it is possible
+those threads won’t be found and LinuxPerf would not collect data for them.</p>
+<p>Note that once a thread is programmed via perf_event_open, any subsequent
+children processes or threads generated by that thread will be tracked since
+the perf_event_open inherit bit is set.</p>
+<p>No other CLI command sequence suffers from this possible issue. Also, if a
+systemwide mode is used, the issue does not exist.</p>
+</li>
+</ul>
+</section>
+<section id="vgpu-issues">
+<span id="id1"></span><h3>vGPU Issues<a class="headerlink" href="#vgpu-issues" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>When running Nsight Systems on vGPU you should always use the profiler grant. See <a class="reference external" href="https://docs.nvidia.com/grid/latest/grid-vgpu-user-guide/index.html#enabling-cuda-toolkit-profilers-vgpu">Virtual GPU Software Documentation</a> for details on enabling NVIDIA CUDA Toolkit profilers for NVIDIA vGPUs. Without the grant, unexpected migrations may crash a running session, report an error and abort. It may also silently produce a corrupted report which may be unloadable or show inaccurate data with no warning.</p></li>
+<li><p>Starting with vGPU 13.0, device level metrics collection is exposed to end users even on vGPU. Device level metrics will give info about all the work being executed on the GPU. The work might be in the same VM or some other VM running on the same physical GPU.</p></li>
+<li><p>As of CUDA 11.4 and R470 TRD1 driver release, Nsight Systems is supported in a vGPU environment which requires a vGPU license. If the license is not obtained after 20 minutes, the tool will still work but the reported GPU performance metrics data will be inaccurate. This is because of a feature in vGPU environment which reduces performance but retains functionality as specified in <a class="reference external" href="https://docs.nvidia.com/grid/latest/grid-licensing-user-guide/index.html#software-enforcement-grid-licensing">Grid Licensing User Guide</a>.</p></li>
+</ul>
+</section>
+<section id="docker-issues">
+<h3>Docker Issues<a class="headerlink" href="#docker-issues" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>In a Docker, when a system’s host utilizes a kernel older than v4.3, it is not possible for Nsight Systems to collect sampling data unless both the host and Docker are running a RHEL or CentOS operating system utilizing kernel version 3.10.1-693 or newer. A user override for this will be made available in a future version.</p></li>
+<li><p>When <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span></code> is called on a running container and stdout is kept open from a command invoked inside that shell, the exec shell hangs until the command exits. You can avoid this issue by running with <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">--tty</span></code>. See the bug reports at:</p></li>
+<li><p><a class="github reference external" href="https://github.com/moby/moby/issues/33039">moby/moby#33039</a></p></li>
+<li><p><a class="github reference external" href="https://github.com/drud/ddev/issues/732">drud/ddev#732</a></p></li>
+</ul>
+</section>
+<section id="cuda-trace-issues">
+<h3>CUDA Trace Issues<a class="headerlink" href="#cuda-trace-issues" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>If a system is in the CC-DevTools mode (CC stands for Confidential Compute)
+and Nsight Systems is used to trace CUDA in an application using libcrypto,
+Nsight Systems may crash when the application exits. The crash occurs during
+the application teardown and causes profiler data loss. To avoid losing CUDA
+tracing data in this situation, a few options exist.</p>
+<p>1. Add a cudaDeviceSynchronize call to the application immediately before the
+application exits. Nsight Systems flushes all available data on a
+synchronization and data loss will be avoided.</p>
+<p>2. Add a cudaProfilerStop call to the application immediately before the
+application exits and set the Nsight Systems <code class="docutils literal notranslate"><span class="pre">--flush-on-cudaprofilerstop</span></code>
+switch to true.  In this case, Nsight Systems will flush all available data
+at this point.</p>
+<p>3. End the profile before the application exits using one of many Nsight Systems
+mechanisms to end a profile. For example;</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Set a collection duration that ends before the application exits (see
+the <code class="docutils literal notranslate"><span class="pre">--duration</span></code> switch).</p></li>
+<li><p>Use a capture range to only collect data during a specific period of the
+application’s execution (see the <code class="docutils literal notranslate"><span class="pre">--capture-range</span></code> switch).</p></li>
+<li><p>Set the CUDA flush interval to frequently flush data during a profile. Any
+data collected after the last flush and before the application’s exit will
+likely be lost. Note that frequent CUDA flushes will increase profiling
+overhead.</p></li>
+<li><p>Use the Nsight Systems CLI’s <code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">launch</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code> commands
+to manually start and stop a collection before the application exits.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The <cite>cudaMemPrefetchAsync()</cite> API allows the user to specify a stream to
+enqueue a memory prefetch operation. However, Nsight Systems does not get the
+stream information for UVM page migrations from the UVM backend. Thus,
+Nsight Systems cannot show stream information correctly correlated with a
+<cite>cudaMemPrefetchAsync()</cite> API call. This will be fixed in a future version.</p></li>
+<li><p>When using CUDA Toolkit 10.X, tracing of DtoD memory copy operations may
+result in a crash. To avoid this issue, update CUDA Toolkit to 11.X or the
+latest version.</p></li>
+<li><p>Nsight Systems will not trace kernels when a CDP (CUDA Dynamic Parallelism)
+kernel is found in a target application on Volta devices or later.</p></li>
+<li><p>On Tegra platforms, CUDA trace requires root privileges. Use the
+<strong>Launch as root</strong> checkbox in project settings to make the profiled
+application run as root.</p></li>
+<li><p>If the target application uses multiple streams from multiple threads,
+CUDA event buffers may not be released properly. In this case, you will see
+the following diagnostic error:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Couldn&#39;t allocate CUPTI bufer x times. Some CUPTI events may
+       be missing.
+</pre></div>
+</div>
+<p>Please contact the Nsight Systems team.</p>
+</li>
+<li><p>In this version of Nsight Systems, if you are starting and stopping profiling
+inside your application using the interactive CLI, the CUDA memory allocation
+graph generation is only guaranteed to be correct in the first profiling
+range. This limitation will be removed in a future version of the product.</p></li>
+<li><p>CUDA GPU trace collection requires a fraction of GPU memory. If your
+application utilizes all available GPU memory, CUDA trace might not work or
+can break your application. As an example cuDNN application can crash with
+<code class="docutils literal notranslate"><span class="pre">CUDNN_STATUS_INTERNAL_ERROR</span></code> error if GPU memory allocation fails.</p></li>
+<li><p>For older Linux kernels, prior to 4.4, when profiling very short-lived
+applications (~1 second) that exit in the middle of the profiling session, it
+is possible that Nsight Systems will not show the CUDA events on the timeline.</p></li>
+<li><p>When more than 64k serialized CUDA kernels and memory copies are executed in
+the application, you may encounter the following exception during profiling:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">InvalidArgumentException</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Wrong event order detected&quot;</span>
+</pre></div>
+</div>
+<p>Please upgrade to the CUDA 9.2 driver at minimum to avoid this problem. If
+you cannot upgrade, you can get a partial analysis, missing potentially a
+large fraction of CUDA events, by using the CLI.</p>
+</li>
+<li><p>On Vibrante, when running a profiling session with multiple targets that are
+guest VMs in a CCC configuration behind a NAT, you may encounter an error
+with the following text during profiling:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Failed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">sync</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">device</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>Please edit the group connection settings, select <strong>Targets on the same SoC</strong>
+checkbox there and try again.</p>
+</li>
+<li><p>When using the 455 driver, as shipped with CUDA Tool Kit 11.1, and tracing
+CUDA with Nsight Systems you many encounter a crash when the application
+exits. To avoid this issue, end your profiling session before the application
+exits or update your driver.</p></li>
+</ul>
+</section>
+<section id="multi-report-analysis-issues">
+<h3>Multi Report Analysis Issues<a class="headerlink" href="#multi-report-analysis-issues" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Be aware that setting up Dask analysis on your workstation requires some additional work on the system. For small data inputs, running the recipes without Dask may be faster.</p></li>
+</ul>
+</section>
+</section>
+<section id="deprecated-features">
+<h2>Deprecated Features<a class="headerlink" href="#deprecated-features" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Nsight Systems versions, starting with 2026.2 do not provide support for the
+legacy <code class="docutils literal notranslate"><span class="pre">json</span></code> and <code class="docutils literal notranslate"><span class="pre">text</span></code> export options. <code class="docutils literal notranslate"><span class="pre">json</span></code> has been replaced with
+the new <code class="docutils literal notranslate"><span class="pre">jsonlines</span></code> option. If you need to use the old exports, we recommend you use
+an older version, downloadable from <a class="reference external" href="https://developer.nvidia.com/gameworksdownload">https://developer.nvidia.com/gameworksdownload</a>.</p></li>
+<li><p>Nsight Systems versions, starting with 2026.2 have changed the available
+options for <code class="docutils literal notranslate"><span class="pre">nic-metrics</span></code> on the command line from <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>
+to <code class="docutils literal notranslate"><span class="pre">lf</span></code>, <code class="docutils literal notranslate"><span class="pre">hf</span></code> and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Currently the old options continue to work
+with the old behavior, but they will be removed in a future version of the
+product.</p></li>
+<li><p>Nsight Systems versions, starting with 2026.1 do not provide support for the
+legacy <code class="docutils literal notranslate"><span class="pre">--nvprof</span></code> CLI option. If you need to convert a script that uses this
+option, see an archived version of the documentation for the Nsight Systems CLI
+equivalent options.</p></li>
+<li><p>Nsight Systems versions, starting with 2025.4 do not provide support for Pascal
+or Volta architectures, we recommend you use an older version, downloadable from
+<a class="reference external" href="https://developer.nvidia.com/gameworksdownload">https://developer.nvidia.com/gameworksdownload</a>.</p></li>
+<li><p>Nsight Systems versions, starting with 2024.2 do not provide support for Power
+PC, we recommend you use an older version, downloadable from
+<a class="reference external" href="https://developer.nvidia.com/gameworksdownload">https://developer.nvidia.com/gameworksdownload</a>.</p></li>
+<li><p>Nsight Systems versions, starting with 2024.4 do not provide support for
+cuBLAS versions prior to 11.4. If you cannot update your cuBLAS, we recommend
+you use an older version, downloadable from
+<a class="reference external" href="https://developer.nvidia.com/gameworksdownload">https://developer.nvidia.com/gameworksdownload</a>.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Nsight Systems</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../InstallationGuide/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Installation Guide</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+
+
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-new">What’s New</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deprecation-note">Deprecation note:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nsight-systems-2026-2-highlights">Nsight Systems 2026.2 Highlights:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#known-issues">Known Issues</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-issues">General Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vgpu-issues">vGPU Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-issues">Docker Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda-trace-issues">CUDA Trace Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-report-analysis-issues">Multi Report Analysis Issues</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deprecated-features">Deprecated Features</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+<div class="footer-links">
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/">Privacy Policy</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/">Manage My Privacy</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/preferences/start/">Do Not Sell or Share My Data</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/about-nvidia/terms-of-service/">Terms of Service</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/about-nvidia/accessibility/">Accessibility</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/about-nvidia/company-policies/">Corporate Policies</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/product-security/">Product Security</a>
+   | 
+  
+  
+  
+  <a class="external" href="https://www.nvidia.com/en-us/contact/">Contact</a>
+  
+  
+  
+</div>
+</div>
+      
+        <div class="footer-item">
+
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2018-2026, NVIDIA Corporation &amp; Affiliates. All rights reserved.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 16, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>
